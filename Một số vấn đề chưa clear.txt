@@ -1,0 +1,6 @@
+- Một số câu hỏi thắc mắc:
+	+ Trang người dùng sử dụng được ở chế độ đa màn hình, còn trang admin chỉ dùng được chế độ màn hình desktop có được không?
+	+ Làm sao để rang buộc được dữ liệu trog mô hình 3 lớp:
+	+ Cách lưu đặt thư mục ảnh, js, css trong code
+	+ Khi muốn bỏ hết những thay đổi vừa mói hay đổi trong github hì làm ntn?
+	+ Cách sử dụng Ajax control toolkit cho textbox

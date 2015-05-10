@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{389FC292-A5C5-455C-A941-2B1E668CB893}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RealEstate.Business</RootNamespace>
+    <AssemblyName>RealEstate.Business</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdvertiseService.cs" />
+    <Compile Include="ApartmentService.cs" />
+    <Compile Include="BannerService.cs" />
+    <Compile Include="CategoryService.cs" />
+    <Compile Include="CityService.cs" />
+    <Compile Include="CompanyService.cs" />
+    <Compile Include="ContractAdvertisingService.cs" />
+    <Compile Include="CustomerService.cs" />
+    <Compile Include="DistrictService.cs" />
+    <Compile Include="GroupService.cs" />
+    <Compile Include="HomeService.cs" />
+    <Compile Include="HomeTypeService.cs" />
+    <Compile Include="LandService.cs" />
+    <Compile Include="LandTypeService.cs" />
+    <Compile Include="LanguageService.cs" />
+    <Compile Include="LinkService.cs" />
+    <Compile Include="LocationService.cs" />
+    <Compile Include="MemberService.cs" />
+    <Compile Include="MotelService.cs" />
+    <Compile Include="MotelTypeService.cs" />
+    <Compile Include="PageService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RealEstateOwnersTypeService.cs" />
+    <Compile Include="RealEstateService.cs" />
+    <Compile Include="RealEstateTypeService.cs" />
+    <Compile Include="RegionService.cs" />
+    <Compile Include="StaffService.cs" />
+    <Compile Include="SupportService.cs" />
+    <Compile Include="UserService.cs" />
+    <Compile Include="UsersService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RealEstate.Common\RealEstate.Common.csproj">
+      <Project>{c8a69b1b-fd4b-4ef9-9792-6f545b6e7ee7}</Project>
+      <Name>RealEstate.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RealEstate.Data\RealEstate.DataAccess.csproj">
+      <Project>{91c8af54-3e05-40c8-8498-7b59201bebe5}</Project>
+      <Name>RealEstate.DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

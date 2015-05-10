@@ -1,0 +1,17 @@
+﻿#footer-bottom {
+    margin-top: -5px;
+    /*width: 980px;*/
+    /*height: 100px;*/
+    text-align: center;
+    background: #252B16;
+}
+
+h2, hr {
+    font-size: 15px;
+    line-height: 36px;
+    font-weight: normal;
+    font-family: arial;
+}
+hr {
+    margin: 2px;
+}

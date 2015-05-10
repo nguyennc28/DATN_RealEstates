@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{91C8AF54-3E05-40C8-8498-7B59201BEBE5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RealEstate.DataAccess</RootNamespace>
+    <AssemblyName>RealEstate.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FredCK.FCKeditorV2">
+      <HintPath>..\bin\FredCK.FCKeditorV2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=e44a2bc38ed2c13c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\bin\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception">
+      <HintPath>..\bin\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdvertiseController.cs" />
+    <Compile Include="AdvertiseInfo.cs" />
+    <Compile Include="ApartmentController.cs" />
+    <Compile Include="ApartmentInfo.cs" />
+    <Compile Include="BannerController.cs" />
+    <Compile Include="BannerInfo.cs" />
+    <Compile Include="CategorysController.cs" />
+    <Compile Include="CategorysInfo.cs" />
+    <Compile Include="CityController.cs" />
+    <Compile Include="CityInfo.cs" />
+    <Compile Include="CompanyController.cs" />
+    <Compile Include="CompanyInfo.cs" />
+    <Compile Include="ContractAdvertisingController.cs" />
+    <Compile Include="ContractAdvertisingInfo.cs" />
+    <Compile Include="CustomerController.cs" />
+    <Compile Include="CustomerInfo.cs" />
+    <Compile Include="DistrictController.cs" />
+    <Compile Include="DistrictInfo.cs" />
+    <Compile Include="GroupController.cs" />
+    <Compile Include="GroupInfo.cs" />
+    <Compile Include="HomeController.cs" />
+    <Compile Include="HomeInfo.cs" />
+    <Compile Include="HomeTypeController.cs" />
+    <Compile Include="HomeTypeInfo.cs" />
+    <Compile Include="LandController.cs" />
+    <Compile Include="LandInfo.cs" />
+    <Compile Include="LandTypeController.cs" />
+    <Compile Include="LandTypeInfo.cs" />
+    <Compile Include="LanguageController.cs" />
+    <Compile Include="LanguageInfo.cs" />
+    <Compile Include="LinkController.cs" />
+    <Compile Include="LinkInfo.cs" />
+    <Compile Include="LocationController.cs" />
+    <Compile Include="LocationInfo.cs" />
+    <Compile Include="MemberController.cs" />
+    <Compile Include="MemberInfo.cs" />
+    <Compile Include="MotelController.cs" />
+    <Compile Include="MotelInfo.cs" />
+    <Compile Include="MotelTypeController.cs" />
+    <Compile Include="MotelTypeInfo.cs" />
+    <Compile Include="PageController.cs" />
+    <Compile Include="PageInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RealEstateController.cs" />
+    <Compile Include="RealEstateInfo.cs" />
+    <Compile Include="RealEstateNewsController.cs" />
+    <Compile Include="RealEstateNewsInfo.cs" />
+    <Compile Include="RealEstateOwnersTypeController.cs" />
+    <Compile Include="RealEstateOwnersTypeInfo.cs" />
+    <Compile Include="RealEstateTypeController.cs" />
+    <Compile Include="RealEstateTypeInfo.cs" />
+    <Compile Include="RegionController.cs" />
+    <Compile Include="RegionInfo.cs" />
+    <Compile Include="SqlDataProvider.cs" />
+    <Compile Include="StaffController.cs" />
+    <Compile Include="StaffInfo.cs" />
+    <Compile Include="SupportController.cs" />
+    <Compile Include="SupportInfo.cs" />
+    <Compile Include="UserController.cs" />
+    <Compile Include="UserInfo.cs" />
+    <Compile Include="UsersController.cs" />
+    <Compile Include="UsersInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

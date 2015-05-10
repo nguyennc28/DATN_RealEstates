@@ -1,0 +1,582 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{92FC469D-2ECE-4B78-A41C-FF674995D6CD}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RealEstate</RootNamespace>
+    <AssemblyName>RealEstate</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\..\bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="FredCK.FCKeditorV2, Version=2.6.3.30006, Culture=neutral, PublicKeyToken=4f86767c9b519a06, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\FredCK.FCKeditorV2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin.Master" />
+    <Content Include="Admins\Modules\DistrictManager.ascx" />
+    <Content Include="Admins\Modules\Login.ascx" />
+    <Content Include="Admins\UserManager.aspx" />
+    <Content Include="App_Themes\Admin\images\object_10.ico" />
+    <Content Include="App_Themes\Admin\images\open.png" />
+    <Content Include="App_Themes\Admin\images\object_11.ico" />
+    <Content Include="App_Themes\Admin\images\closed.png" />
+    <Content Include="Controls\AdminFooter.ascx" />
+    <Content Include="Controls\BannerNgang.ascx" />
+    <Content Include="Controls\FeBannerSlide.ascx" />
+    <Content Include="Controls\FeNavbar.ascx" />
+    <Content Include="Controls\FeFooter.ascx" />
+    <Content Include="Controls\Menu.ascx" />
+    <Content Include="css\bootstrap-responsive.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\Controls\FeFooter.css" />
+    <Content Include="css\css.css" />
+    <Content Include="css\Modules\SearchBoxMain.css" />
+    <Content Include="css\Modules\StyleMastercss.css" />
+    <Content Include="css\StyleFrontEnd1Master.css" />
+    <Content Include="css\styleMainMaster.css" />
+    <Content Include="Default2.aspx" />
+    <Content Include="Icons\Create.png" />
+    <Content Include="Icons\facebook_login4.png" />
+    <Content Include="Icons\Login.png" />
+    <Content Include="Icons\Dial.png" />
+    <Content Include="Icons\Fb.png" />
+    <Content Include="Icons\Gg.png" />
+    <Content Include="Icons\Globe.png" />
+    <Content Include="Icons\Help_symbol.png" />
+    <Content Include="Icons\Help.png" />
+    <Content Include="Icons\Home.png" />
+    <Content Include="Icons\Home_48.png" />
+    <Content Include="Icons\Key.png" />
+    <Content Include="Icons\Lock.png" />
+    <Content Include="Icons\Lock_off.png" />
+    <Content Include="Icons\Logo.png" />
+    <Content Include="Icons\Register.png" />
+    <Content Include="img\arrow.png" />
+    <Content Include="img\arrow2.png" />
+    <Content Include="img\color.jpg" />
+    <Content Include="img\cross-pattern.png" />
+    <Content Include="img\featured\1.jpg" />
+    <Content Include="img\featured\2.jpg" />
+    <Content Include="img\glyphicons-halflings-white.png" />
+    <Content Include="img\glyphicons-halflings.png" />
+    <Content Include="img\lightbox\close.png" />
+    <Content Include="img\lightbox\loading.gif" />
+    <Content Include="img\lightbox\next.png" />
+    <Content Include="img\lightbox\prev.png" />
+    <Content Include="img\thumb-small01.png" />
+    <Content Include="img\thumb-small02.png" />
+    <Content Include="img\thumb1.jpg" />
+    <Content Include="img\thumb2.jpg" />
+    <Content Include="js\application.js" />
+    <Content Include="js\bootstrap-alert.js" />
+    <Content Include="js\bootstrap-button.js" />
+    <Content Include="js\bootstrap-carousel.js" />
+    <Content Include="js\bootstrap-collapse.js" />
+    <Content Include="js\bootstrap-dropdown.js" />
+    <Content Include="js\bootstrap-modal.js" />
+    <Content Include="js\bootstrap-popover.js" />
+    <Content Include="js\bootstrap-scrollspy.js" />
+    <Content Include="js\bootstrap-tab.js" />
+    <Content Include="js\bootstrap-tooltip.js" />
+    <Content Include="js\bootstrap-transition.js" />
+    <Content Include="js\bootstrap-typeahead.js" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\html5.js" />
+    <Content Include="js\jquery-1.7.1.min.js" />
+    <Content Include="js\jquery-ui-1.8.18.custom.min.js" />
+    <Content Include="js\jquery.smooth-scroll.min.js" />
+    <Content Include="js\lightbox.js" />
+    <Content Include="js\modules\SearchBoxMain.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Modules\ModulesHome\SaleHousing.ascx" />
+    <Content Include="Modules\SearchBoxMain.ascx" />
+    <Content Include="Modules\UserManager.ascx" />
+    <Content Include="Pages\Demo.aspx" />
+    <Content Include="Pages\Icons\Create.png" />
+    <Content Include="Pages\Icons\Dial.png" />
+    <Content Include="Pages\Icons\Fb.png" />
+    <Content Include="Pages\Icons\Gg.png" />
+    <Content Include="Pages\Icons\Globe.png" />
+    <Content Include="Pages\Icons\Help.png" />
+    <Content Include="Pages\Icons\Help_symbol.png" />
+    <Content Include="Pages\Icons\Home.png" />
+    <Content Include="Pages\Icons\Home_48.png" />
+    <Content Include="Pages\Icons\Key.png" />
+    <Content Include="Pages\Icons\Lock.png" />
+    <Content Include="Pages\Icons\Lock_off.png" />
+    <Content Include="Pages\Icons\Logo.png" />
+    <Content Include="Pages\Icons\Register.png" />
+    <Content Include="Pages\img\arrow.png" />
+    <Content Include="Pages\img\arrow2.png" />
+    <Content Include="Pages\Login.aspx" />
+    <Content Include="Pages\WebForm1.aspx" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery.shockwave.effects.js" />
+    <Content Include="Scripts\jquery.shockwave.js" />
+    <Content Include="Upload\Banner\banner_1_03.jpg" />
+    <Content Include="Upload\Banner\banner_1_05.jpg" />
+    <Content Include="Upload\Banner\banner_1_07.jpg" />
+    <Content Include="Upload\Banner\banner_1_09.jpg" />
+    <Content Include="Upload\Banner\banner_1_01.jpg" />
+    <Content Include="Upload\Banner\banner_1_04.jpg" />
+    <Content Include="Upload\Banner\banner_1_06.jpg" />
+    <Content Include="Upload\Banner\banner_1_08%29.jpg" />
+    <Content Include="Upload\Banner\banner_1_10.jpg" />
+    <Content Include="Upload\Banner\banner_1_02.jpg" />
+    <Content Include="Upload\Footer\Footer.png" />
+    <Content Include="Upload\Images\anh1.jpg" />
+    <Content Include="Upload\Images\anh2.jpg" />
+    <Content Include="Upload\Images\anh3.jpg" />
+    <Content Include="Upload\Images\anh4.jpg" />
+    <Content Include="Upload\Images\anh5.jpg" />
+    <Content Include="Pages\Home.aspx" />
+    <Content Include="WebForm1.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admins\CityManager.aspx" />
+    <Content Include="Admins\Default.aspx" />
+    <Content Include="Admins\LinksManager.aspx" />
+    <Content Include="Admins\Login.aspx" />
+    <Content Include="Admins\User.aspx" />
+    <Content Include="App_Themes\Admin\images\add.png" />
+    <Content Include="App_Themes\Admin\images\asc.gif" />
+    <Content Include="App_Themes\Admin\images\back.png" />
+    <Content Include="App_Themes\Admin\images\bg.jpg" />
+    <Content Include="App_Themes\Admin\images\bg_admin.jpg" />
+    <Content Include="App_Themes\Admin\images\bg_login.jpg" />
+    <Content Include="App_Themes\Admin\images\blank.gif" />
+    <Content Include="App_Themes\Admin\images\bottom.jpg" />
+    <Content Include="App_Themes\Admin\images\calendar.png" />
+    <Content Include="App_Themes\Admin\images\check.gif" />
+    <Content Include="App_Themes\Admin\images\closed.gif" />
+    <Content Include="App_Themes\Admin\images\control_li_split.gif" />
+    <Content Include="App_Themes\Admin\images\cross.png" />
+    <Content Include="App_Themes\Admin\images\delete.png" />
+    <Content Include="App_Themes\Admin\images\desc.gif" />
+    <Content Include="App_Themes\Admin\images\edit.png" />
+    <Content Include="App_Themes\Admin\images\flag_en.gif" />
+    <Content Include="App_Themes\Admin\images\flag_vi.gif" />
+    <Content Include="App_Themes\Admin\images\group-expand-sprite.gif" />
+    <Content Include="App_Themes\Admin\images\icon.png" />
+    <Content Include="App_Themes\Admin\images\icon_adv.jpg" />
+    <Content Include="App_Themes\Admin\images\icon_ask.jpg" />
+    <Content Include="App_Themes\Admin\images\icon_billing.jpg" />
+    <Content Include="App_Themes\Admin\images\icon_contact.jpg" />
+    <Content Include="App_Themes\Admin\images\icon_email.jpg" />
+    <Content Include="App_Themes\Admin\images\icon_gnews.jpg" />
+    <Content Include="App_Themes\Admin\images\icon_gpro.jpg" />
+    <Content Include="App_Themes\Admin\images\icon_lang.jpg" />
+    <Content Include="App_Themes\Admin\images\icon_news.jpg" />
+    <Content Include="App_Themes\Admin\images\icon_ocontact.jpg" />
+    <Content Include="App_Themes\Admin\images\icon_page.jpg" />
+    <Content Include="App_Themes\Admin\images\icon_plan.jpg" />
+    <Content Include="App_Themes\Admin\images\icon_pro.jpg" />
+    <Content Include="App_Themes\Admin\images\icon_report.jpg" />
+    <Content Include="App_Themes\Admin\images\icon_system.jpg" />
+    <Content Include="App_Themes\Admin\images\icon_user.jpg" />
+    <Content Include="App_Themes\Admin\images\icon_user_right.jpg" />
+    <Content Include="App_Themes\Admin\images\menu_bg.jpg" />
+    <Content Include="App_Themes\Admin\images\menu_left.jpg" />
+    <Content Include="App_Themes\Admin\images\menu_right.jpg" />
+    <Content Include="App_Themes\Admin\images\nav_bg.jpg" />
+    <Content Include="App_Themes\Admin\images\open.gif" />
+    <Content Include="App_Themes\Admin\images\page_add.png" />
+    <Content Include="App_Themes\Admin\images\page_save.png" />
+    <Content Include="App_Themes\Admin\images\play_green.png" />
+    <Content Include="App_Themes\Admin\images\record_red.png" />
+    <Content Include="App_Themes\Admin\images\refresh.png" />
+    <Content Include="App_Themes\Admin\images\start.png" />
+    <Content Include="App_Themes\Admin\images\stop.png" />
+    <Content Include="App_Themes\Admin\images\stop1.png" />
+    <Content Include="App_Themes\Admin\images\top.jpg" />
+    <Content Include="App_Themes\Admin\images\top_bg_c.jpg" />
+    <Content Include="App_Themes\Admin\images\top_bg_l.jpg" />
+    <Content Include="App_Themes\Admin\images\top_bg_r.jpg" />
+    <Content Include="App_Themes\Admin\images\uncheck.gif" />
+    <Content Include="App_Themes\Admin\images\uplevel.png" />
+    <Content Include="App_Themes\Admin\images\XPWindowBG.jpg" />
+    <Content Include="App_Themes\Admin\images\XPWindowLeft.jpg" />
+    <Content Include="App_Themes\Admin\images\XPWindowright.jpg" />
+    <Content Include="App_Themes\Admin\layout.css" />
+    <Content Include="Controls\AdminLeft.ascx" />
+    <Content Include="Controls\AdminTop.ascx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Modules\PageManager.ascx" />
+    <Content Include="Modules\Test.ascx" />
+    <Content Include="Scripts\jquery-1.4.2.min.js" />
+    <Content Include="Tintuc.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admins\CityManager.aspx.cs">
+      <DependentUpon>CityManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admins\CityManager.aspx.designer.cs">
+      <DependentUpon>CityManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admins\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admins\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admins\LinksManager.aspx.cs">
+      <DependentUpon>LinksManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admins\LinksManager.aspx.designer.cs">
+      <DependentUpon>LinksManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admins\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admins\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admins\Modules\DistrictManager.ascx.cs">
+      <DependentUpon>DistrictManager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admins\Modules\DistrictManager.ascx.designer.cs">
+      <DependentUpon>DistrictManager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admins\Modules\Login.ascx.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admins\Modules\Login.ascx.designer.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admins\User.aspx.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admins\User.aspx.designer.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admins\UserManager.aspx.cs">
+      <DependentUpon>UserManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admins\UserManager.aspx.designer.cs">
+      <DependentUpon>UserManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AdminFooter.ascx.cs">
+      <DependentUpon>AdminFooter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AdminFooter.ascx.designer.cs">
+      <DependentUpon>AdminFooter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AdminLeft.ascx.cs">
+      <DependentUpon>AdminLeft.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AdminLeft.ascx.designer.cs">
+      <DependentUpon>AdminLeft.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AdminTop.ascx.cs">
+      <DependentUpon>AdminTop.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AdminTop.ascx.designer.cs">
+      <DependentUpon>AdminTop.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BannerNgang.ascx.cs">
+      <DependentUpon>BannerNgang.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\BannerNgang.ascx.designer.cs">
+      <DependentUpon>BannerNgang.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FeBannerSlide.ascx.cs">
+      <DependentUpon>FeBannerSlide.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\FeBannerSlide.ascx.designer.cs">
+      <DependentUpon>FeBannerSlide.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FeNavbar.ascx.cs">
+      <DependentUpon>FeNavbar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\FeNavbar.ascx.designer.cs">
+      <DependentUpon>FeNavbar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FeFooter.ascx.cs">
+      <DependentUpon>FeFooter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\FeFooter.ascx.designer.cs">
+      <DependentUpon>FeFooter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Menu.ascx.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Menu.ascx.designer.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default2.aspx.cs">
+      <DependentUpon>Default2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default2.aspx.designer.cs">
+      <DependentUpon>Default2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd.Master.cs">
+      <DependentUpon>FrontEnd.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEnd.Master.designer.cs">
+      <DependentUpon>FrontEnd.Master</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd1.Master.cs">
+      <DependentUpon>FrontEnd1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEnd1.Master.designer.cs">
+      <DependentUpon>FrontEnd1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd2.Master.cs">
+      <DependentUpon>FrontEnd2.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEnd2.Master.designer.cs">
+      <DependentUpon>FrontEnd2.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ModulesHome\SaleHousing.ascx.cs">
+      <DependentUpon>SaleHousing.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\ModulesHome\SaleHousing.ascx.designer.cs">
+      <DependentUpon>SaleHousing.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\PageManager.ascx.cs">
+      <DependentUpon>PageManager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\PageManager.ascx.designer.cs">
+      <DependentUpon>PageManager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SearchBoxMain.ascx.cs">
+      <DependentUpon>SearchBoxMain.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\SearchBoxMain.ascx.designer.cs">
+      <DependentUpon>SearchBoxMain.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Test.ascx.cs">
+      <DependentUpon>Test.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Test.ascx.designer.cs">
+      <DependentUpon>Test.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\UserManager.ascx.cs">
+      <DependentUpon>UserManager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\UserManager.ascx.designer.cs">
+      <DependentUpon>UserManager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Demo.aspx.cs">
+      <DependentUpon>Demo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Demo.aspx.designer.cs">
+      <DependentUpon>Demo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Tintuc.aspx.cs">
+      <DependentUpon>Tintuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tintuc.aspx.designer.cs">
+      <DependentUpon>Tintuc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+    <Folder Include="Modules\ModulesLand\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="FrontEnd.Master" />
+    <Content Include="Site1.Master" />
+    <Content Include="FrontEnd1.Master" />
+    <Content Include="FrontEnd2.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\RealEstate.Business\RealEstate.Business.csproj">
+      <Project>{389fc292-a5c5-455c-a941-2b1e668cb893}</Project>
+      <Name>RealEstate.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RealEstate.Common\RealEstate.Common.csproj">
+      <Project>{c8a69b1b-fd4b-4ef9-9792-6f545b6e7ee7}</Project>
+      <Name>RealEstate.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RealEstate.Data\RealEstate.DataAccess.csproj">
+      <Project>{91c8af54-3e05-40c8-8498-7b59201bebe5}</Project>
+      <Name>RealEstate.DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2271</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1413/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost:1413/</IISAppRootUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

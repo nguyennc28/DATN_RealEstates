@@ -1,0 +1,158 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="FrontEnd.master.cs" Inherits="RealEstate.FrontEnd" %>
+
+<%@ Register Src="~/Controls/FeNavbar.ascx" TagPrefix="uc1" TagName="FeNavbar" %>
+<%@ Register Src="~/Controls/FeBannerSlide.ascx" TagPrefix="uc1" TagName="FeBannerSlide" %>
+<%@ Register Src="~/Controls/Menu.ascx" TagPrefix="uc1" TagName="Menu" %>
+<%@ Register Src="~/Controls/BannerNgang.ascx" TagPrefix="uc1" TagName="BannerNgang" %>
+<%@ Register Src="~/Controls/My_uSlide.ascx" TagPrefix="uc1" TagName="My_uSlide" %>
+<%@ Register Src="~/Modules/SearchBoxMain.ascx" TagPrefix="uc1" TagName="SearchBoxMain" %>
+<%@ Register Src="~/Controls/FeFooter.ascx" TagPrefix="uc1" TagName="FeFooter" %>
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet"/>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css' />
+    <link href="css/SearchBoxMain.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <%-- Navbar --%>
+        <div class="navbar navbar-fixed-top">
+            <uc1:FeNavbar runat="server" ID="FeNavbar" />
+        </div>
+        <div class="container">
+            <!--Start Carousel-->
+            <div id="myCarousel" class="carousel slide">
+                <uc1:FeBannerSlide runat="server" ID="FeBannerSlide" />
+                <%--<uc1:BannerNgang runat="server" id="BannerNgang" />--%>
+                <%--<uc1:My_uSlide runat="server" ID="My_uSlide" />--%>
+            </div>
+            <!--End Carousel-->
+            <div class="navbar navbar-fixed-top">
+                <uc1:Menu runat="server" ID="Menu" />
+            </div>
+            <div class="row" style="margin-top: 40px;">
+                <div class="span3">
+                    <uc1:SearchBoxMain runat="server" ID="SearchBoxMain" />
+                </div>
+                <div class="span3">
+                    <p>
+                        Theo công cụ đánh giá website uy tín và phổ biến nhất thế giới hiện nay, SimilarWeb, những tháng đầu năm 2015, Batdongsan.com.vn tiếp tục có những bước tăng trưởng nhảy vọt, lượng truy cập của website bỏ xa các trang web đứng thứ 2 và thứ 3 trong cùng lĩnh...
+                    </p>
+                </div>
+                <div class="span3">
+                    <p>
+                        Theo công cụ đánh giá website uy tín và phổ biến nhất thế giới hiện nay, SimilarWeb, những tháng đầu năm 2015, Batdongsan.com.vn tiếp tục có những bước tăng trưởng nhảy vọt, lượng truy cập của website bỏ xa các trang web đứng thứ 2 và thứ 3 trong cùng lĩnh...
+                    </p>
+                </div>
+                <div class="span3">
+                    <p>
+                        Theo công cụ đánh giá website uy tín và phổ biến nhất thế giới hiện nay, SimilarWeb, những tháng đầu năm 2015, Batdongsan.com.vn tiếp tục có những bước tăng trưởng nhảy vọt, lượng truy cập của website bỏ xa các trang web đứng thứ 2 và thứ 3 trong cùng lĩnh...
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="span4">
+                    <h3>Deep Sky<small> By <a href="#">Srawat56</a></small></h3>
+                    <a rel="lightbox" href="img/thumb1.jpg">
+                        <img src="img/thumb1.jpg" alt=""></a>
+                </div>
+                <div class="span4">
+                    <h3>Nature's Valley<small> By <a href="#">Paul venter</a></small></h3>
+                    <a rel="lightbox" href="img/thumb2.jpg">
+                        <img src="img/thumb2.jpg" alt=""></a>
+                </div>
+                <div class="span4">
+                    <h3>Details</h3>
+                    <blockquote>
+                        Respond is a fully responsive website template utilizing Twitter's Bootstrap framework. What does that mean? First of all, the website will respond according to the size of the viewers browser window. Go on, try it out. Resize your window. On top of that, the framework offers loads of ready-to-go features. Check it out with the button below.
+                        <br>
+                        <br>
+                        <em>- AwfulMedia.com</em>
+                    </blockquote>
+                    <p><a class="btn" href="#">All Features &raquo;</a></p>
+                </div>
+            </div>
+            <!--Start second row of columns-->
+            <div class="row">
+                <div class="span6 thumb-list">
+                    <a rel="lightbox" href="img/thumb-small01.png">
+                        <img src="img/thumb-small01.png" alt=""></a>
+                    <h3><a href="#">This Should Be Your Title.</a></h3>
+                    <p>This will be the description or something I guess. I don't know. Your choice.You could summarize something here. Keep it simple. Just a few short sentences. Maybe one large one? No, a few short ones.</p>
+                </div>
+                <div class="span6 thumb-list">
+                    <a rel="lightbox" href="img/thumb-small02.png">
+                        <img src="img/thumb-small02.png" alt=""></a>
+                    <h3><a href="#">This Should Be Your Title.</a></h3>
+                    <p>This will be the description or something I guess. I don't know. Your choice.</p>
+                    <a href="#" class="btn">Details</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span6 thumb-list">
+                    <a rel="lightbox" href="img/thumb-small01.png">
+                        <img src="img/thumb-small01.png" alt=""></a>
+                    <h3><a href="#">This Should Be Your Title.</a></h3>
+                    <p>This will be the description or something I guess. I don't know. Your choice.</p>
+                    <a href="#" class="btn">Details</a>
+                </div>
+                <div class="span6 thumb-list">
+                    <a rel="lightbox" href="img/thumb-small02.png">
+                        <img src="img/thumb-small02.png" alt=""></a>
+                    <h3><a href="#">This Should Be Your Title.</a></h3>
+                    <p>This will be the description or something I guess. I don't know. Your choice.</p>
+                    <a href="#" class="btn">Details</a>
+                </div>
+            </div>
+            
+            
+
+            <footer>
+                <uc1:FeFooter runat="server" ID="FeFooter" />
+            </footer>
+        </div>
+        <!-- /container -->
+        <script src="js/jquery-1.7.1.min.js"></script>
+        <script src="js/bootstrap-transition.js"></script>
+        <script src="js/bootstrap-carousel.js"></script>
+        <script src="js/bootstrap-alert.js"></script>
+        <script src="js/bootstrap-modal.js"></script>
+        <script src="js/bootstrap-dropdown.js"></script>
+        <script src="js/bootstrap-scrollspy.js"></script>
+        <script src="js/bootstrap-tab.js"></script>
+        <script src="js/bootstrap-tooltip.js"></script>
+        <script src="js/bootstrap-popover.js"></script>
+        <script src="js/bootstrap-button.js"></script>
+        <script src="js/bootstrap-collapse.js"></script>
+        <script src="js/bootstrap-typeahead.js"></script>
+        <script src="js/jquery-ui-1.8.18.custom.min.js"></script>
+        <script src="js/jquery.smooth-scroll.min.js"></script>
+        <script src="js/lightbox.js"></script>
+        <script>
+            $('.carousel').carousel({
+                interval: 5000
+            })
+        </script>
+        
+        <script src="js/modules/SearchBoxMain.js"></script>
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
