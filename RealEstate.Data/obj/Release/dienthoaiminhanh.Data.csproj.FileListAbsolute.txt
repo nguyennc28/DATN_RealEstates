@@ -1,0 +1,16 @@
+I:\Demo\TrangBanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Data\obj\Release\dienthoaiminhanh.Data.csprojResolveAssemblyReference.cache
+I:\Demo\Trang BanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Data\bin\Release\dienthoaiminhanh.Data.dll
+I:\Demo\Trang BanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Data\bin\Release\dienthoaiminhanh.Data.pdb
+I:\Demo\Trang BanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Data\bin\Release\FredCK.FCKeditorV2.dll
+I:\Demo\Trang BanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Data\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+I:\Demo\Trang BanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Data\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+I:\Demo\Trang BanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Data\bin\Release\Microsoft.Practices.ServiceLocation.dll
+I:\Demo\Trang BanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Data\bin\Release\Microsoft.Practices.Unity.dll
+I:\Demo\Trang BanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Data\bin\Release\Microsoft.Practices.Unity.Interception.dll
+I:\Demo\Trang BanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Data\obj\Release\dienthoaiminhanh.Data.csprojResolveAssemblyReference.cache
+I:\Demo\Trang BanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Data\obj\Release\dienthoaiminhanh.Data.dll
+I:\Demo\Trang BanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Data\obj\Release\dienthoaiminhanh.Data.pdb
+I:\Code\dienthoaiminhanh.Data\bin\Release\dienthoaiminhanh.Data.dll
+I:\Code\dienthoaiminhanh.Data\bin\Release\dienthoaiminhanh.Data.pdb
+I:\Code\dienthoaiminhanh.Data\obj\Release\dienthoaiminhanh.Data.dll
+I:\Code\dienthoaiminhanh.Data\obj\Release\dienthoaiminhanh.Data.pdb

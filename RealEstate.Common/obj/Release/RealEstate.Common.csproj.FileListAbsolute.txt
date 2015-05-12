@@ -1,0 +1,8 @@
+I:\Code\dienthoaiminhanh.Common\bin\Release\RealEstate.Common.dll
+I:\Code\dienthoaiminhanh.Common\bin\Release\RealEstate.Common.pdb
+I:\Code\dienthoaiminhanh.Common\bin\Release\dienthoaiminhanh.Business.dll
+I:\Code\dienthoaiminhanh.Common\bin\Release\dienthoaiminhanh.Data.dll
+I:\Code\dienthoaiminhanh.Common\bin\Release\dienthoaiminhanh.Business.pdb
+I:\Code\dienthoaiminhanh.Common\bin\Release\dienthoaiminhanh.Data.pdb
+I:\Code\dienthoaiminhanh.Common\obj\Release\RealEstate.Common.dll
+I:\Code\dienthoaiminhanh.Common\obj\Release\RealEstate.Common.pdb

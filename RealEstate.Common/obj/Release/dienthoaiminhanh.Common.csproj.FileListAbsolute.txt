@@ -1,0 +1,24 @@
+I:\Demo\TrangBanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Common\obj\Release\dienthoaiminhanh.Common.csprojResolveAssemblyReference.cache
+I:\Demo\Trang BanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Common\obj\Release\dienthoaiminhanh.Common.csprojResolveAssemblyReference.cache
+I:\Demo\Trang BanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Common\bin\Release\dienthoaiminhanh.Common.dll
+I:\Demo\Trang BanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Common\bin\Release\dienthoaiminhanh.Common.pdb
+I:\Demo\Trang BanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Common\bin\Release\dienthoaiminhanh.Business.dll
+I:\Demo\Trang BanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Common\bin\Release\dienthoaiminhanh.Data.dll
+I:\Demo\Trang BanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Common\bin\Release\FredCK.FCKeditorV2.dll
+I:\Demo\Trang BanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Common\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+I:\Demo\Trang BanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Common\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+I:\Demo\Trang BanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Common\bin\Release\Microsoft.Practices.ServiceLocation.dll
+I:\Demo\Trang BanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Common\bin\Release\Microsoft.Practices.Unity.dll
+I:\Demo\Trang BanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Common\bin\Release\Microsoft.Practices.Unity.Interception.dll
+I:\Demo\Trang BanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Common\bin\Release\dienthoaiminhanh.Business.pdb
+I:\Demo\Trang BanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Common\bin\Release\dienthoaiminhanh.Data.pdb
+I:\Demo\Trang BanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Common\obj\Release\dienthoaiminhanh.Common.dll
+I:\Demo\Trang BanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Common\obj\Release\dienthoaiminhanh.Common.pdb
+I:\Code\dienthoaiminhanh.Common\bin\Release\RealEstate.Common.dll
+I:\Code\dienthoaiminhanh.Common\bin\Release\RealEstate.Common.pdb
+I:\Code\dienthoaiminhanh.Common\bin\Release\dienthoaiminhanh.Business.dll
+I:\Code\dienthoaiminhanh.Common\bin\Release\dienthoaiminhanh.Data.dll
+I:\Code\dienthoaiminhanh.Common\bin\Release\dienthoaiminhanh.Business.pdb
+I:\Code\dienthoaiminhanh.Common\bin\Release\dienthoaiminhanh.Data.pdb
+I:\Code\dienthoaiminhanh.Common\obj\Release\RealEstate.Common.dll
+I:\Code\dienthoaiminhanh.Common\obj\Release\RealEstate.Common.pdb

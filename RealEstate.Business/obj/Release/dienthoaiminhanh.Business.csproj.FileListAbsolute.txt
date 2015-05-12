@@ -1,0 +1,24 @@
+I:\Demo\TrangBanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Business\bin\Release\dienthoaiminhanh.Business.dll
+I:\Demo\TrangBanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Business\bin\Release\dienthoaiminhanh.Business.pdb
+I:\Demo\TrangBanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Business\bin\Release\dienthoaiminhanh.Data.dll
+I:\Demo\TrangBanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Business\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+I:\Demo\TrangBanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Business\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+I:\Demo\TrangBanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Business\bin\Release\Microsoft.Practices.ServiceLocation.dll
+I:\Demo\TrangBanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Business\bin\Release\Microsoft.Practices.Unity.dll
+I:\Demo\TrangBanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Business\bin\Release\Microsoft.Practices.Unity.Interception.dll
+I:\Demo\TrangBanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Business\bin\Release\dienthoaiminhanh.Data.pdb
+I:\Demo\TrangBanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Business\obj\Release\dienthoaiminhanh.Business.csprojResolveAssemblyReference.cache
+I:\Demo\TrangBanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Business\obj\Release\dienthoaiminhanh.Business.dll
+I:\Demo\TrangBanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Business\obj\Release\dienthoaiminhanh.Business.pdb
+I:\Demo\Trang BanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Business\bin\Release\dienthoaiminhanh.Business.dll
+I:\Demo\Trang BanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Business\bin\Release\dienthoaiminhanh.Business.pdb
+I:\Demo\Trang BanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Business\bin\Release\dienthoaiminhanh.Data.dll
+I:\Demo\Trang BanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Business\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+I:\Demo\Trang BanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Business\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+I:\Demo\Trang BanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Business\bin\Release\Microsoft.Practices.ServiceLocation.dll
+I:\Demo\Trang BanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Business\bin\Release\Microsoft.Practices.Unity.dll
+I:\Demo\Trang BanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Business\bin\Release\Microsoft.Practices.Unity.Interception.dll
+I:\Demo\Trang BanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Business\bin\Release\dienthoaiminhanh.Data.pdb
+I:\Demo\Trang BanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Business\obj\Release\dienthoaiminhanh.Business.csprojResolveAssemblyReference.cache
+I:\Demo\Trang BanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Business\obj\Release\dienthoaiminhanh.Business.dll
+I:\Demo\Trang BanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Business\obj\Release\dienthoaiminhanh.Business.pdb

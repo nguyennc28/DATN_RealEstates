@@ -1,0 +1,4 @@
+I:\Code\dienthoaiminhanh.Data\bin\Release\RealEstate.DataAccess.dll
+I:\Code\dienthoaiminhanh.Data\bin\Release\RealEstate.DataAccess.pdb
+I:\Code\dienthoaiminhanh.Data\obj\Release\RealEstate.DataAccess.dll
+I:\Code\dienthoaiminhanh.Data\obj\Release\RealEstate.DataAccess.pdb

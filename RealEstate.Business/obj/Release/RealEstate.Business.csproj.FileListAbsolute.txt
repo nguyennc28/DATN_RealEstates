@@ -1,0 +1,17 @@
+I:\Code\dienthoaiminhanh.Business\obj\Release\RealEstate.Business.csprojResolveAssemblyReference.cache
+I:\Code\dienthoaiminhanh.Business\obj\Release\dienthoaiminhanh.Business.dll
+I:\Code\dienthoaiminhanh.Business\obj\Release\dienthoaiminhanh.Business.pdb
+I:\Code\dienthoaiminhanh.Business\bin\Release\dienthoaiminhanh.Business.dll
+I:\Code\dienthoaiminhanh.Business\bin\Release\dienthoaiminhanh.Business.pdb
+I:\Code\dienthoaiminhanh.Business\bin\Release\dienthoaiminhanh.Data.dll
+I:\Code\dienthoaiminhanh.Business\bin\Release\RealEstate.Common.dll
+I:\Code\dienthoaiminhanh.Business\bin\Release\RealEstate.DataAccess.dll
+I:\Code\dienthoaiminhanh.Business\bin\Release\FredCK.FCKeditorV2.dll
+I:\Code\dienthoaiminhanh.Business\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+I:\Code\dienthoaiminhanh.Business\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+I:\Code\dienthoaiminhanh.Business\bin\Release\Microsoft.Practices.ServiceLocation.dll
+I:\Code\dienthoaiminhanh.Business\bin\Release\Microsoft.Practices.Unity.dll
+I:\Code\dienthoaiminhanh.Business\bin\Release\Microsoft.Practices.Unity.Interception.dll
+I:\Code\dienthoaiminhanh.Business\bin\Release\RealEstate.Common.pdb
+I:\Code\dienthoaiminhanh.Business\bin\Release\RealEstate.DataAccess.pdb
+I:\Code\dienthoaiminhanh.Business\bin\Release\dienthoaiminhanh.Data.pdb

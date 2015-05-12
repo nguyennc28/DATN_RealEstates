@@ -1,0 +1,10 @@
+I:\Code\RealEstate.Common\bin\Debug\RealEstate.Common.dll
+I:\Code\RealEstate.Common\bin\Debug\RealEstate.Common.pdb
+I:\Code\RealEstate.Common\obj\Debug\RealEstate.Common.dll
+I:\Code\RealEstate.Common\obj\Debug\RealEstate.Common.pdb
+I:\Code\RealEstate.Common\obj\Debug\RealEstate.Common.csprojResolveAssemblyReference.cache
+G:\DATN\Code-2015-05-07\Code\RealEstate.Common\bin\Debug\RealEstate.Common.dll
+G:\DATN\Code-2015-05-07\Code\RealEstate.Common\bin\Debug\RealEstate.Common.pdb
+G:\DATN\Code-2015-05-07\Code\RealEstate.Common\obj\Debug\RealEstate.Common.csprojResolveAssemblyReference.cache
+G:\DATN\Code-2015-05-07\Code\RealEstate.Common\obj\Debug\RealEstate.Common.dll
+G:\DATN\Code-2015-05-07\Code\RealEstate.Common\obj\Debug\RealEstate.Common.pdb

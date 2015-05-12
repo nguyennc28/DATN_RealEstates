@@ -1,0 +1,50 @@
+F:\ASP.NET\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\bin\Debug\dienthoaiminhanh.Common.dll
+F:\ASP.NET\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\bin\Debug\dienthoaiminhanh.Common.pdb
+F:\ASP.NET\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\bin\Debug\dienthoaiminhanh.Business.dll
+F:\ASP.NET\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\bin\Debug\dienthoaiminhanh.Data.dll
+F:\ASP.NET\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\bin\Debug\FredCK.FCKeditorV2.dll
+F:\ASP.NET\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+F:\ASP.NET\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+F:\ASP.NET\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+F:\ASP.NET\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\bin\Debug\Microsoft.Practices.Unity.dll
+F:\ASP.NET\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+F:\ASP.NET\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\bin\Debug\MySql.Data.dll
+F:\ASP.NET\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\bin\Debug\dienthoaiminhanh.Business.pdb
+F:\ASP.NET\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\bin\Debug\dienthoaiminhanh.Data.pdb
+F:\ASP.NET\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\obj\Debug\dienthoaiminhanh.Common.csprojResolveAssemblyReference.cache
+F:\ASP.NET\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\obj\Debug\dienthoaiminhanh.Common.dll
+F:\ASP.NET\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\obj\Debug\dienthoaiminhanh.Common.pdb
+E:\ASP.NET\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\bin\Debug\dienthoaiminhanh.Common.dll
+E:\ASP.NET\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\bin\Debug\dienthoaiminhanh.Common.pdb
+E:\ASP.NET\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\bin\Debug\FredCK.FCKeditorV2.dll
+E:\ASP.NET\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+E:\ASP.NET\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+E:\ASP.NET\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+E:\ASP.NET\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\bin\Debug\Microsoft.Practices.Unity.dll
+E:\ASP.NET\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+E:\ASP.NET\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\bin\Debug\MySql.Data.dll
+E:\ASP.NET\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\obj\Debug\dienthoaiminhanh.Common.dll
+E:\ASP.NET\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\obj\Debug\dienthoaiminhanh.Common.pdb
+E:\ASP.NET\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\bin\Debug\dienthoaiminhanh.Business.dll
+E:\ASP.NET\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\bin\Debug\dienthoaiminhanh.Data.dll
+E:\ASP.NET\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\bin\Debug\dienthoaiminhanh.Business.pdb
+E:\ASP.NET\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\bin\Debug\dienthoaiminhanh.Data.pdb
+E:\ASP.NET\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\obj\Debug\dienthoaiminhanh.Common.csprojResolveAssemblyReference.cache
+D:\onsoft\source code\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\bin\Debug\dienthoaiminhanh.Common.dll
+D:\onsoft\source code\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\bin\Debug\dienthoaiminhanh.Common.pdb
+D:\onsoft\source code\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\bin\Debug\dienthoaiminhanh.Business.dll
+D:\onsoft\source code\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\bin\Debug\dienthoaiminhanh.Data.dll
+D:\onsoft\source code\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\bin\Debug\dienthoaiminhanh.Business.pdb
+D:\onsoft\source code\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\bin\Debug\dienthoaiminhanh.Data.pdb
+D:\onsoft\source code\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\obj\Debug\dienthoaiminhanh.Common.csprojResolveAssemblyReference.cache
+D:\onsoft\source code\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\obj\Debug\dienthoaiminhanh.Common.dll
+D:\onsoft\source code\dienthoaiminhanh.com\www\dienthoaiminhanh.Common\obj\Debug\dienthoaiminhanh.Common.pdb
+I:\Demo\TrangBanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Common\bin\Debug\dienthoaiminhanh.Common.dll
+I:\Demo\TrangBanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Common\bin\Debug\dienthoaiminhanh.Common.pdb
+I:\Demo\TrangBanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Common\bin\Debug\dienthoaiminhanh.Business.dll
+I:\Demo\TrangBanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Common\bin\Debug\dienthoaiminhanh.Data.dll
+I:\Demo\TrangBanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Common\bin\Debug\dienthoaiminhanh.Business.pdb
+I:\Demo\TrangBanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Common\bin\Debug\dienthoaiminhanh.Data.pdb
+I:\Demo\TrangBanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Common\obj\Debug\dienthoaiminhanh.Common.csprojResolveAssemblyReference.cache
+I:\Demo\TrangBanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Common\obj\Debug\dienthoaiminhanh.Common.dll
+I:\Demo\TrangBanDienThoai\manguon_inserteditdelete_admin\www\dienthoaiminhanh.Common\obj\Debug\dienthoaiminhanh.Common.pdb
