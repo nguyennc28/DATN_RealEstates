@@ -58,3 +58,5 @@ I:\DATN_RealEstates\DATN_RealEstates\RealEstate\RealEstate\bin\AjaxControlToolki
 I:\DATN_RealEstates\DATN_RealEstates\RealEstate\RealEstate\obj\Debug\RealEstate.csprojResolveAssemblyReference.cache
 I:\DATN_RealEstates\DATN_RealEstates\RealEstate\RealEstate\obj\Debug\RealEstate.dll
 I:\DATN_RealEstates\DATN_RealEstates\RealEstate\RealEstate\obj\Debug\RealEstate.pdb
+I:\DATN_RealEstates\DATN_RealEstates\RealEstate\RealEstate\bin\CKEditor.NET.dll
+I:\DATN_RealEstates\DATN_RealEstates\RealEstate\RealEstate\bin\CKEditor.NET.pdb

@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AdminFooter.ascx.cs" Inherits="RealEstate.Controls.AdminFooter" %>
 <style type="text/css">
     #footer {
-        height: 160px;
+        height: 80px;
         background: #252B16;
         width: 100%;
     }

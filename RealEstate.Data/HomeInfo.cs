@@ -79,12 +79,14 @@ namespace RealEstate.DataAccess
             set { _Name = value; }
         }
 
-        private string _Title;
-        public string Title
+        private string _TransactionType;
+        public string TransactionType
         {
-            get { return _Title; }
-            set { _Title = value; }
+            get { return _TransactionType; }
+            set { _TransactionType = value; }
         }
+
+
         private string _Tag;
 
         public string Tag
@@ -282,7 +284,7 @@ namespace RealEstate.DataAccess
 		{
 			this.HomeID = homeid;
 		}
-		public HomeInfo(string homeid, string hometypeid, string realestateownersid, string realestateownerstypeid, string realestateid, string name, string title, string tag, string description, string address, string price, string totalarea, string floorarea, string gargenarea, string homearea, string bedroomnumber, string tiernumber, string image1, string image2, string image3, string image4, string image5, string image6)
+        public HomeInfo(string homeid, string hometypeid, string realestateownersid, string realestateownerstypeid, string realestateid, string name, string transactionType, string tag, string description, string address, string price, string totalarea, string floorarea, string gargenarea, string homearea, string bedroomnumber, string tiernumber, string image1, string image2, string image3, string image4, string image5, string image6)
 		{
 			this.HomeID = homeid;
 			this.HomeTypeID = hometypeid;
@@ -290,7 +292,7 @@ namespace RealEstate.DataAccess
 			this.RealEstateOwnersTypeID = realestateownerstypeid;
 			this.RealEstateID = realestateid;
 		    this.Name = name;
-		    this.Title = title;
+            this.TransactionType = transactionType;
 		    this.Tag = tag;
 			this.Description = description;
 			this.Address = address;
@@ -317,10 +319,10 @@ namespace RealEstate.DataAccess
             obj.HomeID = (dr["HomeID"] is DBNull) ? string.Empty : dr["HomeID"].ToString();
             obj.HomeTypeID = (dr["HomeTypeID"] is DBNull) ? string.Empty : dr["HomeTypeID"].ToString();
             obj.RealEstateOwnersID = (dr["RealEstateOwnersID"] is DBNull) ? string.Empty : dr["RealEstateOwnersID"].ToString();
-            obj.RealEstateOwnersTypeID = (dr["RealEstateOwnersTypeID"] is DBNull) ? string.Empty : dr["RealEstateOwnersTypeID"].ToString();
+            //obj.RealEstateOwnersTypeID = (dr["RealEstateOwnersTypeID"] is DBNull) ? string.Empty : dr["RealEstateOwnersTypeID"].ToString();
             obj.RealEstateID = (dr["RealEstateID"] is DBNull) ? string.Empty : dr["RealEstateID"].ToString();
             obj.Name = (dr["Name"] is DBNull) ? string.Empty : dr["Name"].ToString();
-            obj.Title = (dr["Title"] is DBNull) ? string.Empty : dr["Title"].ToString();
+            obj.TransactionType = (dr["TransactionType"] is DBNull) ? string.Empty : dr["TransactionType"].ToString();
             obj.Tag = (dr["Tag"] is DBNull) ? string.Empty : dr["Tag"].ToString();
             obj.Description = (dr["Description"] is DBNull) ? string.Empty : dr["Description"].ToString();
             obj.Address = (dr["Address"] is DBNull) ? string.Empty : dr["Address"].ToString();

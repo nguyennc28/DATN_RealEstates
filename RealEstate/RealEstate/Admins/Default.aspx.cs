@@ -24,6 +24,9 @@ namespace RealEstate.Admins
                     case "DistrictManager":
                         ct = Page.LoadControl("/Admins/Modules/DistrictManager.ascx");
                         break;
+                    case "HomeManager":
+                        ct = Page.LoadControl("/Admins/Modules/HomeManager.ascx");
+                        break;
                     default:
                         ct = Page.LoadControl("/Admins/Modules/Login.ascx");
                         break;

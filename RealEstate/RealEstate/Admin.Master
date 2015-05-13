@@ -17,6 +17,10 @@
     .Control {
         background: #E0E1CC;
     }
+    .dgView {
+        width: 1144px;
+        overflow: auto;
+    }
 </style>
 
     <asp:ContentPlaceHolder ID="head" runat="server">

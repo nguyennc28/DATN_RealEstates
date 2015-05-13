@@ -129,10 +129,10 @@ namespace RealEstate.DataAccess
                 cmd.Parameters.Add(new SqlParameter("@HomeID", data.HomeID));
                 cmd.Parameters.Add(new SqlParameter("@HomeTypeID", data.HomeTypeID));
                 cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersID", data.RealEstateOwnersID));
-                cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersTypeID", data.RealEstateOwnersTypeID));
+                //cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersTypeID", data.RealEstateOwnersTypeID));
                 cmd.Parameters.Add(new SqlParameter("@RealEstateID", data.RealEstateID));
                 cmd.Parameters.Add(new SqlParameter("@Name", data.Name));
-                cmd.Parameters.Add(new SqlParameter("@Title", data.Title));
+                cmd.Parameters.Add(new SqlParameter("@Title", data.TransactionType));
                 cmd.Parameters.Add(new SqlParameter("@Tag", data.Tag));
                 cmd.Parameters.Add(new SqlParameter("@Description", data.Description));
                 cmd.Parameters.Add(new SqlParameter("@Address", data.Address));
@@ -174,10 +174,10 @@ namespace RealEstate.DataAccess
                 cmd.Parameters.Add(new SqlParameter("@HomeID", data.HomeID));
                 cmd.Parameters.Add(new SqlParameter("@HomeTypeID", data.HomeTypeID));
                 cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersID", data.RealEstateOwnersID));
-                cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersTypeID", data.RealEstateOwnersTypeID));
+                //cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersTypeID", data.RealEstateOwnersTypeID));
                 cmd.Parameters.Add(new SqlParameter("@RealEstateID", data.RealEstateID));
                 cmd.Parameters.Add(new SqlParameter("@Name", data.Name));
-                cmd.Parameters.Add(new SqlParameter("@Title", data.Title));
+                cmd.Parameters.Add(new SqlParameter("@Title", data.TransactionType));
                 cmd.Parameters.Add(new SqlParameter("@Tag", data.Tag));
                 cmd.Parameters.Add(new SqlParameter("@Description", data.Description));
                 cmd.Parameters.Add(new SqlParameter("@Address", data.Address));

@@ -81,7 +81,20 @@
     <ul>
         <li>
             <img alt="" src="/App_Themes/admin/images/icon_gpro.jpg" />
-            <a href="Default.aspx?mod=DistrictManager"> Quản lý quận huyện </a>
+            <a href="Default.aspx?mod=DistrictManager">Quản lý quận huyện </a>
+        </li>
+        <li>
+            <img alt="" src="/App_Themes/admin/images/icon_gpro.jpg" />
+            <a href="Default.aspx?mod=HomeManager">Quản lý Nhà </a>
+        </li>
+        <li>
+            <img alt="" src="/App_Themes/admin/images/icon_gpro.jpg" />
+            <a href="Default.aspx?mod=DistrictManager">Quản lý quận huyện </a>
+        </li>
+        <li>
+            <img alt="" src="/App_Themes/admin/images/icon_gpro.jpg" />
+            <a href="Default.aspx?mod=DistrictManager">Quản lý quận huyện </a>
+        </li>
     </ul>
 
 </asp:Panel>

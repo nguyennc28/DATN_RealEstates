@@ -20,3 +20,14 @@ G:\DATN\Code-2015-05-07\Code\RealEstate.Data\bin\Debug\Microsoft.Practices.Unity
 G:\DATN\Code-2015-05-07\Code\RealEstate.Data\obj\Debug\RealEstate.DataAccess.csprojResolveAssemblyReference.cache
 G:\DATN\Code-2015-05-07\Code\RealEstate.Data\obj\Debug\RealEstate.DataAccess.dll
 G:\DATN\Code-2015-05-07\Code\RealEstate.Data\obj\Debug\RealEstate.DataAccess.pdb
+I:\DATN_RealEstates\DATN_RealEstates\RealEstate.Data\bin\Debug\RealEstate.DataAccess.dll
+I:\DATN_RealEstates\DATN_RealEstates\RealEstate.Data\bin\Debug\RealEstate.DataAccess.pdb
+I:\DATN_RealEstates\DATN_RealEstates\RealEstate.Data\bin\Debug\FredCK.FCKeditorV2.dll
+I:\DATN_RealEstates\DATN_RealEstates\RealEstate.Data\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+I:\DATN_RealEstates\DATN_RealEstates\RealEstate.Data\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+I:\DATN_RealEstates\DATN_RealEstates\RealEstate.Data\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+I:\DATN_RealEstates\DATN_RealEstates\RealEstate.Data\bin\Debug\Microsoft.Practices.Unity.dll
+I:\DATN_RealEstates\DATN_RealEstates\RealEstate.Data\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+I:\DATN_RealEstates\DATN_RealEstates\RealEstate.Data\obj\Debug\RealEstate.DataAccess.csprojResolveAssemblyReference.cache
+I:\DATN_RealEstates\DATN_RealEstates\RealEstate.Data\obj\Debug\RealEstate.DataAccess.dll
+I:\DATN_RealEstates\DATN_RealEstates\RealEstate.Data\obj\Debug\RealEstate.DataAccess.pdb
