@@ -85,6 +85,27 @@ namespace RealEstate.DataAccess
             return list;
         }
         #endregion
+
+        #region
+
+        public List<HomeInfo> Home_GetByAll()
+        {
+            List<DataAccess.HomeInfo> list = new List<DataAccess.HomeInfo>();
+            DataAccess.HomeInfo obj = new DataAccess.HomeInfo();
+            DbCommand cmd = db.GetSqlStringCommand("SELECT * FROM HomeRE");
+            //DbCommand cmd = db.GetStoredProcCommand("SELECT * FROM HomeRE");
+            using (IDataReader dr = db.ExecuteReader(cmd))
+            {
+                while (dr.Read())
+                {
+                    list.Add(obj.HomeInfoIDataReader(dr));
+                }
+                dr.Close();
+                dr.Dispose();
+            }
+            return list;
+        }
+        #endregion
         #region[HomeInfo_Paging]
         public List<HomeInfo> HomeInfo_Paging(string CurentHomeInfo, string HomeInfoSize)
         {

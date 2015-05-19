@@ -18,7 +18,7 @@ namespace RealEstate.DataAccess
         {
             List<HomeTypeInfo> list = new List<HomeTypeInfo>();
             DataAccess.HomeTypeInfo obj = new DataAccess.HomeTypeInfo();
-            DbCommand cmd = db.GetStoredProcCommand("Group_SelectByID", Id);
+            DbCommand cmd = db.GetStoredProcCommand("HomeType_SelectByID", Id);
             using (IDataReader dr = db.ExecuteReader(cmd))
             {
                 while (dr.Read())
@@ -54,7 +54,7 @@ namespace RealEstate.DataAccess
         {
             List<DataAccess.HomeTypeInfo> list = new List<DataAccess.HomeTypeInfo>();
             DataAccess.HomeTypeInfo obj = new DataAccess.HomeTypeInfo();
-            DbCommand cmd = db.GetStoredProcCommand("Group_SelectTop", Top, Where, Order);
+            DbCommand cmd = db.GetStoredProcCommand("HomeType_SelectTop", Top, Where, Order);
             using (IDataReader dr = db.ExecuteReader(cmd))
             {
                 while (dr.Read())
@@ -72,7 +72,7 @@ namespace RealEstate.DataAccess
         {
             List<DataAccess.HomeTypeInfo> list = new List<DataAccess.HomeTypeInfo>();
             DataAccess.HomeTypeInfo obj = new DataAccess.HomeTypeInfo();
-            DbCommand cmd = db.GetStoredProcCommand("Group_SelectAll");
+            DbCommand cmd = db.GetStoredProcCommand("HomeType_SelectAll");
             using (IDataReader dr = db.ExecuteReader(cmd))
             {
                 while (dr.Read())
@@ -90,7 +90,7 @@ namespace RealEstate.DataAccess
         {
             List<DataAccess.HomeTypeInfo> list = new List<DataAccess.HomeTypeInfo>();
             DataAccess.HomeTypeInfo obj = new DataAccess.HomeTypeInfo();
-            DbCommand cmd = db.GetStoredProcCommand("Group_SelectPage", CurentHomeTypeInfo, HomeTypeInfoSize);
+            DbCommand cmd = db.GetStoredProcCommand("HomeType_SelectPage", CurentHomeTypeInfo, HomeTypeInfoSize);
             using (IDataReader dr = db.ExecuteReader(cmd))
             {
                 while (dr.Read())
@@ -124,7 +124,7 @@ namespace RealEstate.DataAccess
         #region[HomeTypeInfo_Insert]
         public bool HomeTypeInfo_Insert(HomeTypeInfo data)
         {
-            using (DbCommand cmd = db.GetStoredProcCommand("Group_Insert"))
+            using (DbCommand cmd = db.GetStoredProcCommand("HomeType_Insert"))
             {
                 //cmd.Parameters.Add(new SqlParameter("@GroupID", data.GroupID));
                 //cmd.Parameters.Add(new SqlParameter("@HomeTypeID", data.HomeTypeID));
@@ -149,7 +149,7 @@ namespace RealEstate.DataAccess
         #region[HomeTypeInfo_Update]
         public bool HomeTypeInfo_Update(HomeTypeInfo data)
         {
-            using (DbCommand cmd = db.GetStoredProcCommand("Group_Update"))
+            using (DbCommand cmd = db.GetStoredProcCommand("HomeType_Update"))
             {
                 cmd.Parameters.Add(new SqlParameter("@HomeTypeID", data.HomeTypeID));
                 cmd.Parameters.Add(new SqlParameter("@HomeTypeName", data.HomeTypeName));
@@ -173,7 +173,7 @@ namespace RealEstate.DataAccess
         #region[HomeTypeInfo_Delete]
         public bool HomeTypeInfo_Delete(string Id)
         {
-            DbCommand cmd = db.GetStoredProcCommand("Group_Delete", Id);
+            DbCommand cmd = db.GetStoredProcCommand("HomeType_Delete", Id);
             try
             {
                 db.ExecuteNonQuery(cmd);

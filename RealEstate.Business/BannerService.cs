@@ -6,7 +6,7 @@ using RealEstate.DataAccess;
 
 namespace RealEstate.Business
 {
-    class BannerService
+    public class BannerService
     {
         private static BannerController db = new BannerController();
         #region[Apartment_GetById]

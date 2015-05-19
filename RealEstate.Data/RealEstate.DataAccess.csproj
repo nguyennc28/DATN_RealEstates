@@ -87,6 +87,8 @@
     <Compile Include="GroupInfo.cs" />
     <Compile Include="HomeController.cs" />
     <Compile Include="HomeInfo.cs" />
+    <Compile Include="Homes.cs" />
+    <Compile Include="HomesController.cs" />
     <Compile Include="HomeTypeController.cs" />
     <Compile Include="HomeTypeInfo.cs" />
     <Compile Include="LandController.cs" />
@@ -112,6 +114,8 @@
     <Compile Include="RealEstateInfo.cs" />
     <Compile Include="RealEstateNewsController.cs" />
     <Compile Include="RealEstateNewsInfo.cs" />
+    <Compile Include="RealEstateOwnersController.cs" />
+    <Compile Include="RealEstateOwnersInfo.cs" />
     <Compile Include="RealEstateOwnersTypeController.cs" />
     <Compile Include="RealEstateOwnersTypeInfo.cs" />
     <Compile Include="RealEstateTypeController.cs" />

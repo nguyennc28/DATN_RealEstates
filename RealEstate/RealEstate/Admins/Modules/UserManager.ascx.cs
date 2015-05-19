@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using RealEstate.Business;
 using RealEstate.Common;
 using RealEstate.DataAccess;
+using AjaxControlToolkit;
 
 namespace RealEstate.Admins.Modules
 {
@@ -123,6 +124,7 @@ namespace RealEstate.Admins.Modules
             ControlClass.ResetControlValues(pnUpdate);
             pnView.Visible = false;
             Insert = true;
+            ModalPopupExtender1.Show();
         }
 
         protected void DeleteButton_Click(object sender, EventArgs e)
@@ -192,6 +194,11 @@ namespace RealEstate.Admins.Modules
             pnUpdate.Visible = false;
             Level = "";
             Insert = false;
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            ModalPopupExtender1.Show();
         }
 
     }

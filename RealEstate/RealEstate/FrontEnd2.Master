@@ -5,6 +5,8 @@
 <%@ Register Src="~/Controls/BannerNgang.ascx" TagPrefix="uc1" TagName="BannerNgang" %>
 <%@ Register Src="~/Modules/SearchBoxMain.ascx" TagPrefix="uc1" TagName="SearchBoxMain" %>
 <%@ Register Src="~/Controls/FeFooter.ascx" TagPrefix="uc1" TagName="FeFooter" %>
+<%--<%@ Register Src="~/Controls/FeBannerSlide1.ascx" TagPrefix="uc1" TagName="FeBannerSlide1" %>--%>
+
 
 <!DOCTYPE html>
 
@@ -33,6 +35,7 @@
             <!--Start Carousel-->
             <div id="myCarousel" class="carousel slide">
                 <uc1:FeBannerSlide runat="server" ID="FeBannerSlide" />
+                <%--<uc1:FeBannerSlide1 runat="server" ID="FeBannerSlide1" />--%>
             </div>
             <!--End Carousel-->
             <div class="navbar navbar-fixed-top">

@@ -29,7 +29,7 @@ namespace RealEstate.Admins.Modules
         }
         private void BindGrid()
         {
-            grdBrands.DataSource = HomeService.HomeInfo_GetByAll();
+            grdBrands.DataSource = HomeService.Home_GetByAll();
             grdBrands.DataBind();
             if (grdBrands.PageCount <= 1)
             {

@@ -80,6 +80,9 @@
 <asp:Panel ID="div9" CssClass="content" ClientIDMode="Static" runat="server">
     <ul>
         <li>
+            <img alt="" src="/App_Themes/admin/images/icon_user.jpg" /><asp:LinkButton
+                ID="lbtHomesManager" CausesValidation="false" runat="server" OnClick="LinkButton_Click">Quản lý Nhà</asp:LinkButton></li>
+        <li>
             <img alt="" src="/App_Themes/admin/images/icon_gpro.jpg" />
             <a href="Default.aspx?mod=DistrictManager">Quản lý quận huyện </a>
         </li>
@@ -89,7 +92,11 @@
         </li>
         <li>
             <img alt="" src="/App_Themes/admin/images/icon_gpro.jpg" />
-            <a href="Default.aspx?mod=DistrictManager">Quản lý quận huyện </a>
+            <a href="Default.aspx?mod=ApartmentManager">Quản căn hộ</a>
+        </li>
+        <li>
+            <img alt="" src="/App_Themes/admin/images/icon_gpro.jpg" />
+            <a href="Default.aspx?mod=UserManager">Người dùng </a>
         </li>
         <li>
             <img alt="" src="/App_Themes/admin/images/icon_gpro.jpg" />

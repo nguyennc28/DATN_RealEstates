@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
+using AjaxControlToolkit;
 
 namespace RealEstate.Admins
 {
@@ -20,12 +21,18 @@ namespace RealEstate.Admins
                 module = Server.HtmlEncode(Request.QueryString["mod"]);
                 HtmlGenericControl gel = new HtmlGenericControl("div");
                 switch (module)
-                {                    
+                {
+                    case "UserManager":
+                        ct = Page.LoadControl("/Admins/Modules/UserManager.ascx");
+                        break;
                     case "DistrictManager":
                         ct = Page.LoadControl("/Admins/Modules/DistrictManager.ascx");
                         break;
                     case "HomeManager":
                         ct = Page.LoadControl("/Admins/Modules/HomeManager.ascx");
+                        break;
+                    case "ApartmentManager":
+                        ct = Page.LoadControl("/Admins/Modules/ApartmentManager.ascx");
                         break;
                     default:
                         ct = Page.LoadControl("/Admins/Modules/Login.ascx");

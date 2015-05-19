@@ -106,6 +106,12 @@ namespace RealEstate.DataAccess
 				_RealEstateOwnersID = value;
 			}
 		}
+        private string _CategoryID;
+        public string CategoryID
+        {
+            get { return _CategoryID; }
+            set { _CategoryID = value; }
+        }
 		private string _Address;
 		public string Address
 		{ 

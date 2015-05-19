@@ -6,7 +6,7 @@ using RealEstate.DataAccess;
 
 namespace RealEstate.Business
 {
-    class ApartmentService
+    public class ApartmentService
     {
         private static ApartmentController db = new ApartmentController();
         #region[Apartment_GetById]

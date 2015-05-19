@@ -4,7 +4,6 @@
 <%@ Register Src="~/Controls/FeBannerSlide.ascx" TagPrefix="uc1" TagName="FeBannerSlide" %>
 <%@ Register Src="~/Controls/Menu.ascx" TagPrefix="uc1" TagName="Menu" %>
 <%@ Register Src="~/Controls/BannerNgang.ascx" TagPrefix="uc1" TagName="BannerNgang" %>
-<%@ Register Src="~/Controls/My_uSlide.ascx" TagPrefix="uc1" TagName="My_uSlide" %>
 <%@ Register Src="~/Modules/SearchBoxMain.ascx" TagPrefix="uc1" TagName="SearchBoxMain" %>
 <%@ Register Src="~/Controls/FeFooter.ascx" TagPrefix="uc1" TagName="FeFooter" %>
 

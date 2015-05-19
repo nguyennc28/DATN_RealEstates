@@ -68,11 +68,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin.Master" />
+    <Content Include="Admins\HomesManager.aspx" />
+    <Content Include="Admins\Modules\ApartmentManager.ascx" />
     <Content Include="Admins\Modules\DistrictManager.ascx" />
     <Content Include="Admins\Modules\HomeManager.ascx" />
     <Content Include="Admins\Modules\HomeTypeManager.ascx" />
     <Content Include="Admins\Modules\Login.ascx" />
     <Content Include="Admins\Modules\UserManager.ascx" />
+    <Content Include="Admins\Testaspx.aspx" />
     <Content Include="Admins\UserManager.aspx" />
     <Content Include="App_Themes\Admin\images\object_10.ico" />
     <Content Include="App_Themes\Admin\images\open.png" />
@@ -426,6 +429,7 @@
     <Content Include="Controls\AdminFooter.ascx" />
     <Content Include="Controls\BannerNgang.ascx" />
     <Content Include="Controls\FeBannerSlide.ascx" />
+    <Content Include="Controls\FeBannerSlide1.ascx" />
     <Content Include="Controls\FeNavbar.ascx" />
     <Content Include="Controls\FeFooter.ascx" />
     <Content Include="Controls\Menu.ascx" />
@@ -462,6 +466,10 @@
     <Content Include="img\featured\2.jpg" />
     <Content Include="img\glyphicons-halflings-white.png" />
     <Content Include="img\glyphicons-halflings.png" />
+    <Content Include="img\landscape\banner_1_01.jpg" />
+    <Content Include="img\landscape\banner_1_02.jpg" />
+    <Content Include="img\landscape\banner_1_03.jpg" />
+    <Content Include="img\landscape\banner_1_04.jpg" />
     <Content Include="img\lightbox\close.png" />
     <Content Include="img\lightbox\loading.gif" />
     <Content Include="img\lightbox\next.png" />
@@ -485,6 +493,9 @@
     <Content Include="js\bootstrap-typeahead.js" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery-1.9.1.min.js" />
+    <Content Include="js\FeBannerSlide1\jssor.js" />
+    <Content Include="js\FeBannerSlide1\jssor.slider.js" />
     <Content Include="js\html5.js" />
     <Content Include="js\jquery-1.7.1.min.js" />
     <Content Include="js\jquery-ui-1.8.18.custom.min.js" />
@@ -633,6 +644,13 @@
     <Compile Include="Admins\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admins\HomesManager.aspx.cs">
+      <DependentUpon>HomesManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admins\HomesManager.aspx.designer.cs">
+      <DependentUpon>HomesManager.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admins\LinksManager.aspx.cs">
       <DependentUpon>LinksManager.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -646,6 +664,13 @@
     </Compile>
     <Compile Include="Admins\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admins\Modules\ApartmentManager.ascx.cs">
+      <DependentUpon>ApartmentManager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admins\Modules\ApartmentManager.ascx.designer.cs">
+      <DependentUpon>ApartmentManager.ascx</DependentUpon>
     </Compile>
     <Compile Include="Admins\Modules\DistrictManager.ascx.cs">
       <DependentUpon>DistrictManager.ascx</DependentUpon>
@@ -681,6 +706,13 @@
     </Compile>
     <Compile Include="Admins\Modules\UserManager.ascx.designer.cs">
       <DependentUpon>UserManager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admins\Testaspx.aspx.cs">
+      <DependentUpon>Testaspx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admins\Testaspx.aspx.designer.cs">
+      <DependentUpon>Testaspx.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admins\User.aspx.cs">
       <DependentUpon>User.aspx</DependentUpon>
@@ -730,6 +762,13 @@
     </Compile>
     <Compile Include="Controls\FeBannerSlide.ascx.designer.cs">
       <DependentUpon>FeBannerSlide.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FeBannerSlide1.ascx.cs">
+      <DependentUpon>FeBannerSlide1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\FeBannerSlide1.ascx.designer.cs">
+      <DependentUpon>FeBannerSlide1.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\FeNavbar.ascx.cs">
       <DependentUpon>FeNavbar.ascx</DependentUpon>

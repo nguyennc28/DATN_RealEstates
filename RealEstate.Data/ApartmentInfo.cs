@@ -69,6 +69,22 @@ namespace RealEstate.DataAccess
 				_Description = value;
 			}
 		}
+
+        private string _Name;
+
+        public string Name
+        {
+            get { return _Name; }
+            set { _Name = value; }
+        }
+
+        private string _TransactionType;
+        public string TransactionType
+        {
+            get { return _TransactionType; }
+            set { _TransactionType = value; }
+        }
+
 		private string _Address;
 		public string Address
 		{ 
@@ -237,6 +253,18 @@ namespace RealEstate.DataAccess
                 _Image5 = value;
             }
         }
+        private string _Lang;
+        public string Lang
+        {
+            get
+            {
+                return _Lang;
+            }
+            set
+            {
+                _Lang = value;
+            }
+        }
 		#endregion
 
 		#region ***** Init Methods ***** 
@@ -279,6 +307,8 @@ namespace RealEstate.DataAccess
             obj.RealEstateOwnersID = (dr["RealEstateOwnersID"] is DBNull) ? string.Empty : dr["RealEstateOwnersID"].ToString();
             obj.RealEstateOwnersTypeID = (dr["RealEstateOwnersTypeID"] is DBNull) ? string.Empty : dr["RealEstateOwnersTypeID"].ToString();
             obj.RealEstateID = (dr["RealEstateID"] is DBNull) ? string.Empty : dr["RealEstateID"].ToString();
+            obj.Name = (dr["Name"] is DBNull) ? string.Empty : dr["Name"].ToString();
+            obj.TransactionType = (dr["TransactionType"] is DBNull) ? string.Empty : dr["TransactionType"].ToString();
             obj.Description = (dr["Description"] is DBNull) ? string.Empty : dr["Description"].ToString();
             obj.Address = (dr["Address"] is DBNull) ? string.Empty : dr["Address"].ToString();
             obj.Price = (dr["Price"] is DBNull) ? string.Empty : dr["Price"].ToString();
@@ -288,6 +318,7 @@ namespace RealEstate.DataAccess
             obj.HomeArea = (dr["HomeArea"] is DBNull) ? string.Empty : dr["HomeArea"].ToString();
             obj.RoomNumber = (dr["RoomNumber"] is DBNull) ? string.Empty : dr["RoomNumber"].ToString();
             obj.TierNumber = (dr["TierNumber"] is DBNull) ? string.Empty : dr["TierNumber"].ToString();
+            obj.Lang = (dr["Lang"] is DBNull) ? string.Empty : dr["Lang"].ToString();
             obj.Image1 = (dr["Image1"] is DBNull) ? string.Empty : dr["Image1"].ToString();
             obj.Image2 = (dr["Image2"] is DBNull) ? string.Empty : dr["Image2"].ToString();
             obj.Image3 = (dr["Image3"] is DBNull) ? string.Empty : dr["Image3"].ToString();

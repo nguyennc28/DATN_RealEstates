@@ -115,6 +115,8 @@ namespace RealEstate.DataAccess
                 dbCmd.Parameters.Add(new SqlParameter("@RealEstateOwnersID", data.RealEstateOwnersID));
                 dbCmd.Parameters.Add(new SqlParameter("@RealEstateOwnersTypeID", data.RealEstateOwnersTypeID));
                 dbCmd.Parameters.Add(new SqlParameter("@RealEstateID", data.RealEstateID));
+                dbCmd.Parameters.Add(new SqlParameter("@Name", data.Name));
+                dbCmd.Parameters.Add(new SqlParameter("@TransactionType", data.TransactionType));                
                 dbCmd.Parameters.Add(new SqlParameter("@Description", data.Description));
                 dbCmd.Parameters.Add(new SqlParameter("@Address", data.Address));
                 dbCmd.Parameters.Add(new SqlParameter("@Price", data.Price));
@@ -124,6 +126,7 @@ namespace RealEstate.DataAccess
                 dbCmd.Parameters.Add(new SqlParameter("@HomeArea", data.HomeArea));
                 dbCmd.Parameters.Add(new SqlParameter("@RoomNumber", data.RoomNumber));
                 dbCmd.Parameters.Add(new SqlParameter("@TierNumber", data.TierNumber));
+                dbCmd.Parameters.Add(new SqlParameter("@Lang", data.Lang));
                 dbCmd.Parameters.Add(new SqlParameter("@Image1", data.Image1));
                 dbCmd.Parameters.Add(new SqlParameter("@Image2", data.Image2));
                 dbCmd.Parameters.Add(new SqlParameter("@Image3", data.Image3));
@@ -147,6 +150,8 @@ namespace RealEstate.DataAccess
                 dbCmd.Parameters.Add(new SqlParameter("@RealEstateOwnersID", data.RealEstateOwnersID));
                 dbCmd.Parameters.Add(new SqlParameter("@RealEstateOwnersTypeID", data.RealEstateOwnersTypeID));
                 dbCmd.Parameters.Add(new SqlParameter("@RealEstateID", data.RealEstateID));
+                dbCmd.Parameters.Add(new SqlParameter("@Name", data.Name));
+                dbCmd.Parameters.Add(new SqlParameter("@TransactionType", data.TransactionType));  
                 dbCmd.Parameters.Add(new SqlParameter("@Description", data.Description));
                 dbCmd.Parameters.Add(new SqlParameter("@Address", data.Address));
                 dbCmd.Parameters.Add(new SqlParameter("@Price", data.Price));
@@ -156,6 +161,7 @@ namespace RealEstate.DataAccess
                 dbCmd.Parameters.Add(new SqlParameter("@HomeArea", data.HomeArea));
                 dbCmd.Parameters.Add(new SqlParameter("@RoomNumber", data.RoomNumber));
                 dbCmd.Parameters.Add(new SqlParameter("@TierNumber", data.TierNumber));
+                dbCmd.Parameters.Add(new SqlParameter("@Lang", data.Lang));
                 dbCmd.Parameters.Add(new SqlParameter("@Image1", data.Image1));
                 dbCmd.Parameters.Add(new SqlParameter("@Image2", data.Image2));
                 dbCmd.Parameters.Add(new SqlParameter("@Image3", data.Image3));

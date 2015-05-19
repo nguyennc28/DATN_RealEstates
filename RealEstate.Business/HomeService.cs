@@ -34,6 +34,12 @@ namespace RealEstate.Business
             return db.HomeInfo_GetByAll();
         }
         #endregion
+        #region
+        public static List<HomeInfo> Home_GetByAll()
+        {
+            return db.Home_GetByAll();
+        }
+        #endregion
         #region[HomeInfo_Paging]
         public static List<HomeInfo> HomeInfo_Paging(string CurentPage, string PageSize)
         {

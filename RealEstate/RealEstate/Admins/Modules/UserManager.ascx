@@ -1,5 +1,8 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserManager.ascx.cs" Inherits="RealEstate.Admins.Modules.UserManager" %>
- <div class="PageName">Quản lý người dùng</div>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="Ajax" %>
+<%--<asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>--%>
+<div class="content">
+<div class="PageName">Quản lý người dùng</div>
     
     <%-- Panel DataDridview --%>
     <asp:Panel ID="pnView" runat="server">
@@ -105,6 +108,9 @@
                     <asp:LinkButton CssClass="vrefresh" ID="lbtRefreshB" runat="server"
                         OnClick="RefreshButton_Click">Làm mới</asp:LinkButton></li>
                 <li><a class="vback" href="javascript:void(0);" onclick="window.history.go(-1);">Trở lại</a> </li>
+                <li>
+                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
+                </li>
             </ul>
         </div>
     </asp:Panel>
@@ -227,3 +233,7 @@
             </tr>
         </table>
     </asp:Panel>
+
+<Ajax:ModalPopupExtender ID="ModalPopupExtender1"  TargetControlID="lbtAddT" PopupControlID="pnUpdate" BackgroundCssClass="popUpStyle" runat="server"></Ajax:ModalPopupExtender>
+</div>
+

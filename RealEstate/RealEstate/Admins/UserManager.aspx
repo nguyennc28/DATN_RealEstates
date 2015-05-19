@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="UserManager.aspx.cs" Inherits="RealEstate.Admins.UserManager" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="Ajax" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -230,4 +231,6 @@
             </tr>
         </table>
     </asp:Panel>
+    
+    <Ajax:ModalPopupExtender ID="ModalPopupExtender1"  TargetControlID="lbtAddT" PopupControlID="pnUpdate" BackgroundCssClass="popUpStyle" runat="server"></Ajax:ModalPopupExtender>
 </asp:Content>
