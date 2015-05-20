@@ -153,6 +153,8 @@ namespace RealEstate.DataAccess
                 //cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersTypeID", data.RealEstateOwnersTypeID));
                 cmd.Parameters.Add(new SqlParameter("@RealEstateID", data.RealEstateID));
                 cmd.Parameters.Add(new SqlParameter("@Name", data.Name));
+                cmd.Parameters.Add(new SqlParameter("@Name", data.Title));
+                cmd.Parameters.Add(new SqlParameter("@Name", data.CreateDate));
                 cmd.Parameters.Add(new SqlParameter("@Title", data.TransactionType));
                 cmd.Parameters.Add(new SqlParameter("@Tag", data.Tag));
                 cmd.Parameters.Add(new SqlParameter("@Description", data.Description));
@@ -198,6 +200,8 @@ namespace RealEstate.DataAccess
                 //cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersTypeID", data.RealEstateOwnersTypeID));
                 cmd.Parameters.Add(new SqlParameter("@RealEstateID", data.RealEstateID));
                 cmd.Parameters.Add(new SqlParameter("@Name", data.Name));
+                cmd.Parameters.Add(new SqlParameter("@Name", data.Title));
+                cmd.Parameters.Add(new SqlParameter("@Name", data.CreateDate));
                 cmd.Parameters.Add(new SqlParameter("@Title", data.TransactionType));
                 cmd.Parameters.Add(new SqlParameter("@Tag", data.Tag));
                 cmd.Parameters.Add(new SqlParameter("@Description", data.Description));

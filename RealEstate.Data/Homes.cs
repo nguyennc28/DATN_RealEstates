@@ -86,6 +86,21 @@ namespace RealEstate.DataAccess
             set { _TransactionType = value; }
         }
 
+        private string _Title;
+
+        public string Title
+        {
+            get { return _Title; }
+            set { _Title = value; }
+        }
+
+        private string _CreateDate;
+
+        public string CreateDate
+        {
+            get { return _CreateDate; }
+            set { _CreateDate = value; }
+        }
 
         private string _Tag;
 
@@ -427,6 +442,8 @@ namespace RealEstate.DataAccess
             //obj.RealEstateOwnersTypeID = (dr["RealEstateOwnersTypeID"] is DBNull) ? string.Empty : dr["RealEstateOwnersTypeID"].ToString();
             //obj.RealEstateID = (dr["RealEstateID"] is DBNull) ? string.Empty : dr["RealEstateID"].ToString();
             obj.Name = (dr["Name"] is DBNull) ? string.Empty : dr["Name"].ToString();
+            obj.Title = (dr["Title"] is DBNull) ? string.Empty : dr["Title"].ToString();
+            obj.CreateDate = (dr["CreateDate"] is DBNull) ? string.Empty : dr["CreateDate"].ToString();
             obj.TransactionType = (dr["TransactionType"] is DBNull) ? string.Empty : dr["TransactionType"].ToString();
             obj.Tag = (dr["Tag"] is DBNull) ? string.Empty : dr["Tag"].ToString();
             obj.Description = (dr["Description"] is DBNull) ? string.Empty : dr["Description"].ToString();

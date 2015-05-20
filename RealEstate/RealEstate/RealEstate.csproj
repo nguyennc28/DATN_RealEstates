@@ -503,6 +503,7 @@
     <Content Include="js\lightbox.js" />
     <Content Include="js\modules\SearchBoxMain.js" />
     <Content Include="Login.aspx" />
+    <Content Include="Modules\ModulesHome\SaleHome.ascx" />
     <Content Include="Modules\ModulesHome\SaleHousing.ascx" />
     <Content Include="Modules\SearchBoxMain.ascx" />
     <Content Include="Modules\UserManager.ascx" />
@@ -835,6 +836,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ModulesHome\SaleHome.ascx.cs">
+      <DependentUpon>SaleHome.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\ModulesHome\SaleHome.ascx.designer.cs">
+      <DependentUpon>SaleHome.ascx</DependentUpon>
     </Compile>
     <Compile Include="Modules\ModulesHome\SaleHousing.ascx.cs">
       <DependentUpon>SaleHousing.ascx</DependentUpon>
