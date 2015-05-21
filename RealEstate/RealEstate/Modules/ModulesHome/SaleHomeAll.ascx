@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SaleHome.ascx.cs" Inherits="RealEstate.Modules.ModulesHome.SaleHome" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SaleHomeAll.ascx.cs" Inherits="RealEstate.Modules.ModulesHome.SaleHomeAll" %>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
 <link href="http://zkiwi.com/demobox/css/style-demo.css" rel="stylesheet" media="all" />
 <link href="../../css/Modules/ModuleHome/StyleModuleHome.css" rel="stylesheet" />
@@ -26,7 +26,6 @@
         });
     })
 </script>
-
 <div class="row">
     <div class="span10">
         <div class="tabbed">

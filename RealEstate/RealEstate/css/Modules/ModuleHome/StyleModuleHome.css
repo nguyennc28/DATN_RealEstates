@@ -1,0 +1,53 @@
+﻿.tabbed {
+    padding: 30px 0 0;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+    .tabbed .tabcont {
+        background: #eee;
+        padding: 20px;
+    }
+
+        .tabbed .tabcont .tabcontent {
+            display: none;
+            position: relative;
+            line-height: 20px;
+        }
+
+            .tabbed .tabcont .tabcontent img {
+                max-width: 100%;
+            }
+
+            .tabbed .tabcont .tabcontent.active {
+                display: block;
+            }
+
+.tabnav {
+    position: absolute;
+    left: 0;
+    top: -1px;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+}
+
+    .tabnav li {
+        float: left;
+    }
+
+        .tabnav li a {
+            height: 30px;
+            line-height: 30px;
+            padding: 0 14px;
+            font-size: 13px;
+            font-weight: bold;
+            border-radius: 5px 5px 0 0;
+            display: block;
+            color: #3E9409;
+        }
+
+        .tabnav li.active a {
+            background: #404533;
+            color: #fff;
+        }

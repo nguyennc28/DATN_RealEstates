@@ -33,7 +33,7 @@ namespace RealEstate.Controls
                         chuoi += "<li> <a href = \" Default2.aspx?mod=" + listMenu[i].Tag + "\">" + listMenu[i].Name + "</a><ul>";
                         for (int j = 0; j < listSubMenu.Count; j++)
                         {
-                            chuoi += "<li><a href=\" Default2.aspx?mod=" + listMenu[i].Tag + "\">" + listSubMenu[j].Name + "</a></li>";
+                            chuoi += "<li><a href=\" Default2.aspx?mod=" + listSubMenu[j].Tag + "\">" + listSubMenu[j].Name + "</a></li>";
                         }
                         chuoi += "</ul></li>";                        
                     }

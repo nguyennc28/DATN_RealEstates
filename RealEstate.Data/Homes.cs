@@ -217,6 +217,19 @@ namespace RealEstate.DataAccess
 				_TierNumber = value;
 			}
 		}
+
+        private string _CreateBy;
+        public string CreateBy
+        {
+            get
+            {
+                return _CreateBy;
+            }
+            set
+            {
+                _CreateBy = value;
+            }
+        }
 		private string _Image1;
 		public string Image1
 		{ 
@@ -455,6 +468,7 @@ namespace RealEstate.DataAccess
             obj.HomeArea = (dr["HomeArea"] is DBNull) ? string.Empty : dr["HomeArea"].ToString();
             obj.BedroomNumber = (dr["BedroomNumber"] is DBNull) ? string.Empty : dr["BedroomNumber"].ToString();
             obj.TierNumber = (dr["TierNumber"] is DBNull) ? string.Empty : dr["TierNumber"].ToString();
+            obj.CreateBy = (dr["CreateBy"] is DBNull) ? string.Empty : dr["CreateBy"].ToString();
             obj.Image1 = (dr["Image1"] is DBNull) ? string.Empty : dr["Image1"].ToString();
             obj.Image2 = (dr["Image2"] is DBNull) ? string.Empty : dr["Image2"].ToString();
             obj.Image3 = (dr["Image3"] is DBNull) ? string.Empty : dr["Image3"].ToString();
