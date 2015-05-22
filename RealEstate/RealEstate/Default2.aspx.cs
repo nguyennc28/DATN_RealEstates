@@ -23,6 +23,9 @@ namespace RealEstate
                     case "login":
                         ct = Page.LoadControl("login");
                         break;
+                    case "Home":
+                        ct = Page.LoadControl("/Modules/Home.ascx");
+                        break;
                     case "SaleHomeAll":
                         ct = Page.LoadControl("/Modules/ModulesHome/SaleHomeAll.ascx");
                         break;
@@ -48,7 +51,7 @@ namespace RealEstate
                         ct = Page.LoadControl("/Modules/ModulesHome/SaleHousing.ascx");
                         break;
                     default:
-                        ct = Page.LoadControl("/Modules/Test.ascx");
+                        ct = Page.LoadControl("/Modules/Home.ascx");
                         break;
                 }
                 gel.Controls.Add(ct);

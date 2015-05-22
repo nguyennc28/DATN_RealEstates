@@ -59,7 +59,7 @@
         <div class="nav-collapse">            
             <div id="nav">
                 <ul>
-                    <li> <a href="Default2.aspx?mod=SaleHousing"><img src="Icons/Home_48.png" style="width: 25px; height: 25px;"/></a></li>
+                    <li> <a href="Default2.aspx?mod=Home"><img src="Icons/Home_48.png" style="width: 25px; height: 25px;"/></a></li>
                     <asp:Literal ID="ltrMenu" runat="server"></asp:Literal>
                 </ul>                
             </div>

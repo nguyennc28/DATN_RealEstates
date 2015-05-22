@@ -5,19 +5,19 @@
         <div class="is-padded">
             <nav>
                 <h2>Liên kết website:</h2>
-                <hr>
-                <ul>
-                    <%--<li><img src="Icons/Home.png" style="width: 16px; height: 16px;"/><a href="#">Trang chủ</a></li>
-                    <li><img src="Icons/Globe.png" style="width: 16px; height: 16px;"/><a href="#">Hướng dẫn sử dụng</a></li>
-                    <li><img src="Icons/Globe.png" style="width: 16px; height: 16px;"/><a href="#">Quy định sử dụng</a></li>
-                    <li><img src="Icons/Globe.png" style="width: 16px; height: 16px;"/><a href="#">Hỗ trợ</a></li>
-                    <li><img src="Icons/Globe.png" style="width: 16px; height: 16px;"/><a href="#">Liên hệ quảng cáo</a></li>
-                    <li><img src="Icons/Help_symbol.png" style="width: 16px; height: 16px;"/><a href="#">Góp ý - trợ giúp</a></li>
-                    <li><a href="#">Các doanh nghiệp - chủ đầu tư</a></li>
-                    <li><a href="#">Các dự án mới</a></li>
-                    <li><img src="Icons/Globe.png" style="width: 16px; height: 16px;"/><a href="#">Nghiên cứu thị trường</a></li>                   
-                    <li><img src="Icons/Globe.png" style="width: 16px; height: 16px;"/><p>Hotline: <span style="font-weight: bold">09.888.679.10</span></p></li> --%>
-                </ul>
+                <hr/>
+                <% if (listLinks == null)
+                   {%>
+                       <p>Dữ liệu đang được cập nhật!</p>
+                   <%} %>
+                <%
+                   else
+                   {%>
+                <% foreach (var lstLinks in listLinks)
+                   {%>
+                       <ul><li><a href="<%=lstLinks.Link1 %>"> <%=lstLinks.Name %></a></li></ul>
+                   <%} %>                      
+                   <%} %>                
             </nav>
         </div>
     </div>

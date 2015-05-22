@@ -18,7 +18,7 @@ namespace RealEstate.DataAccess
         {
             List<LocationInfo> list = new List<LocationInfo>();
             DataAccess.LocationInfo obj = new DataAccess.LocationInfo();
-            DbCommand cmd = db.GetStoredProcCommand("Group_SelectByID", Id);
+            DbCommand cmd = db.GetStoredProcCommand("Links_SelectByID", Id);
             using (IDataReader dr = db.ExecuteReader(cmd))
             {
                 while (dr.Read())
@@ -54,7 +54,7 @@ namespace RealEstate.DataAccess
         {
             List<DataAccess.LocationInfo> list = new List<DataAccess.LocationInfo>();
             DataAccess.LocationInfo obj = new DataAccess.LocationInfo();
-            DbCommand cmd = db.GetStoredProcCommand("Group_SelectTop", Top, Where, Order);
+            DbCommand cmd = db.GetStoredProcCommand("Links_SelectTop", Top, Where, Order);
             using (IDataReader dr = db.ExecuteReader(cmd))
             {
                 while (dr.Read())
@@ -72,7 +72,7 @@ namespace RealEstate.DataAccess
         {
             List<DataAccess.LocationInfo> list = new List<DataAccess.LocationInfo>();
             DataAccess.LocationInfo obj = new DataAccess.LocationInfo();
-            DbCommand cmd = db.GetStoredProcCommand("Group_SelectAll");
+            DbCommand cmd = db.GetStoredProcCommand("Links_SelectAll");
             using (IDataReader dr = db.ExecuteReader(cmd))
             {
                 while (dr.Read())
@@ -90,7 +90,7 @@ namespace RealEstate.DataAccess
         {
             List<DataAccess.LocationInfo> list = new List<DataAccess.LocationInfo>();
             DataAccess.LocationInfo obj = new DataAccess.LocationInfo();
-            DbCommand cmd = db.GetStoredProcCommand("Group_SelectPage", CurentLocationInfo, LocationInfoSize);
+            DbCommand cmd = db.GetStoredProcCommand("Links_SelectPage", CurentLocationInfo, LocationInfoSize);
             using (IDataReader dr = db.ExecuteReader(cmd))
             {
                 while (dr.Read())
@@ -124,7 +124,7 @@ namespace RealEstate.DataAccess
         #region[LocationInfo_Insert]
         public bool LocationInfo_Insert(LocationInfo data)
         {
-            using (DbCommand cmd = db.GetStoredProcCommand("Group_Insert"))
+            using (DbCommand cmd = db.GetStoredProcCommand("Links_Insert"))
             {
                 cmd.Parameters.Add(new SqlParameter("@xcoor", data.xcoor));
                 cmd.Parameters.Add(new SqlParameter("@ycoor", data.ycoor));
@@ -149,7 +149,7 @@ namespace RealEstate.DataAccess
         #region[LocationInfo_Update]
         public bool LocationInfo_Update(LocationInfo data)
         {
-            using (DbCommand cmd = db.GetStoredProcCommand("Group_Update"))
+            using (DbCommand cmd = db.GetStoredProcCommand("Links_Update"))
             {
                 cmd.Parameters.Add(new SqlParameter("@LocationID", data.LocationID));
                 cmd.Parameters.Add(new SqlParameter("@xcoor", data.xcoor));
@@ -174,7 +174,7 @@ namespace RealEstate.DataAccess
         #region[LocationInfo_Delete]
         public bool LocationInfo_Delete(string Id)
         {
-            DbCommand cmd = db.GetStoredProcCommand("Group_Delete", Id);
+            DbCommand cmd = db.GetStoredProcCommand("Links_Delete", Id);
             try
             {
                 db.ExecuteNonQuery(cmd);

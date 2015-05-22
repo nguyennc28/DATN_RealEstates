@@ -10,7 +10,7 @@ using Microsoft.Practices.EnterpriseLibrary.Data;namespace RealEstate.DataAcce
         {
             List<DataAccess.Link> list = new List<DataAccess.Link>();
             DataAccess.Link obj = new DataAccess.Link();
-            DbCommand cmd = db.GetStoredProcCommand("sp_Link_GetById", Id);
+            DbCommand cmd = db.GetStoredProcCommand("Links_SelectByID", Id);
             using (IDataReader dr = db.ExecuteReader(cmd))
             {
                 while (dr.Read())
@@ -28,7 +28,7 @@ using Microsoft.Practices.EnterpriseLibrary.Data;namespace RealEstate.DataAcce
         {
             List<DataAccess.Link> list = new List<DataAccess.Link>();
             DataAccess.Link obj = new DataAccess.Link();
-            DbCommand cmd = db.GetStoredProcCommand("sp_Link_GetByTop", Top, Where, Order);
+            DbCommand cmd = db.GetStoredProcCommand("Links_SelectTop", Top, Where, Order);
             using (IDataReader dr = db.ExecuteReader(cmd))
             {
                 while (dr.Read())
@@ -46,7 +46,7 @@ using Microsoft.Practices.EnterpriseLibrary.Data;namespace RealEstate.DataAcce
         {
             List<DataAccess.Link> list = new List<DataAccess.Link>();
             DataAccess.Link obj = new DataAccess.Link();
-            DbCommand cmd = db.GetStoredProcCommand("sp_Link_GetByAll", Lang);
+            DbCommand cmd = db.GetStoredProcCommand("Links_SelectAll", Lang);
             using (IDataReader dr = db.ExecuteReader(cmd))
             {
                 while (dr.Read())
@@ -64,7 +64,7 @@ using Microsoft.Practices.EnterpriseLibrary.Data;namespace RealEstate.DataAcce
         {
             List<DataAccess.Link> list = new List<DataAccess.Link>();
             DataAccess.Link obj = new DataAccess.Link();
-            DbCommand cmd = db.GetStoredProcCommand("sp_Link_Paging", CurentPage, PageSize, Lang);
+            DbCommand cmd = db.GetStoredProcCommand("Links_SelectPage", CurentPage, PageSize, Lang);
             using (IDataReader dr = db.ExecuteReader(cmd))
             {
                 while (dr.Read())
@@ -80,7 +80,7 @@ using Microsoft.Practices.EnterpriseLibrary.Data;namespace RealEstate.DataAcce
         #region[Link_Insert]
         public bool Link_Insert(Link data)
         {
-            using (DbCommand cmd = db.GetStoredProcCommand("sp_Link_Insert"))
+            using (DbCommand cmd = db.GetStoredProcCommand("Links_Insert"))
             {
                 cmd.Parameters.Add(new SqlParameter("@Name", data.Name));
                 cmd.Parameters.Add(new SqlParameter("@Line1", data.Line1));
@@ -111,9 +111,9 @@ using Microsoft.Practices.EnterpriseLibrary.Data;namespace RealEstate.DataAcce
         #region[Link_Update]
         public bool Link_Update(Link data)
         {
-            using (DbCommand cmd = db.GetStoredProcCommand("sp_Link_Update"))
+            using (DbCommand cmd = db.GetStoredProcCommand("Links_Update"))
             {
-                cmd.Parameters.Add(new SqlParameter("@Id", data.Id));
+                cmd.Parameters.Add(new SqlParameter("@Id", data.ID));
                 cmd.Parameters.Add(new SqlParameter("@Name", data.Name));
                 cmd.Parameters.Add(new SqlParameter("@Line1", data.Line1));
                 cmd.Parameters.Add(new SqlParameter("@Line2", data.Line2));
@@ -143,7 +143,7 @@ using Microsoft.Practices.EnterpriseLibrary.Data;namespace RealEstate.DataAcce
         #region[Link_Delete]
         public bool Link_Delete(string Id)
         {
-            DbCommand cmd = db.GetStoredProcCommand("sp_Link_Delete", Id);
+            DbCommand cmd = db.GetStoredProcCommand("Links_Delete", Id);
             try
             {
                 db.ExecuteNonQuery(cmd);

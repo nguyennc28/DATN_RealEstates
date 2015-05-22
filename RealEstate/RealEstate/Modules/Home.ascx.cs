@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace RealEstate.Modules
 {
-    public partial class Test : System.Web.UI.UserControl
+    public partial class Home : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -502,8 +502,11 @@
     <Content Include="js\jquery-ui-1.8.18.custom.min.js" />
     <Content Include="js\jquery.smooth-scroll.min.js" />
     <Content Include="js\lightbox.js" />
+    <Content Include="js\jquery-1.11.2.min.js" />
+    <Content Include="js\modules\jquery.featureList-1.0.0.js" />
     <Content Include="js\modules\SearchBoxMain.js" />
     <Content Include="Login.aspx" />
+    <Content Include="Modules\Home.ascx" />
     <Content Include="Modules\ModulesHome\SaleAdjacentVilla.ascx" />
     <Content Include="Modules\ModulesHome\SaleHousePavement.ascx" />
     <Content Include="Modules\ModulesHome\SaleApartments.ascx" />
@@ -627,7 +630,6 @@
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Modules\PageManager.ascx" />
-    <Content Include="Modules\Test.ascx" />
     <Content Include="Scripts\jquery-1.4.2.min.js" />
     <Content Include="Tintuc.aspx" />
   </ItemGroup>
@@ -845,6 +847,13 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Home.ascx.cs">
+      <DependentUpon>Home.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Home.ascx.designer.cs">
+      <DependentUpon>Home.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Modules\ModulesHome\SaleAdjacentVilla.ascx.cs">
       <DependentUpon>SaleAdjacentVilla.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -914,13 +923,6 @@
     </Compile>
     <Compile Include="Modules\SearchBoxMain.ascx.designer.cs">
       <DependentUpon>SearchBoxMain.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Modules\Test.ascx.cs">
-      <DependentUpon>Test.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Modules\Test.ascx.designer.cs">
-      <DependentUpon>Test.ascx</DependentUpon>
     </Compile>
     <Compile Include="Modules\UserManager.ascx.cs">
       <DependentUpon>UserManager.ascx</DependentUpon>
