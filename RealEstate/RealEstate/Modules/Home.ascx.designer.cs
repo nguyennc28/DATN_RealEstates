@@ -11,5 +11,14 @@ namespace RealEstate.Modules {
     
     
     public partial class Home {
+        
+        /// <summary>
+        /// SearchLeft control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::RealEstate.Modules.SearchLeft SearchLeft;
     }
 }

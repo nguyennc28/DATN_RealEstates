@@ -38,16 +38,14 @@
 <div id="footer-bottom">
     <div class="row">
         <div class="span10">
-            <a href="">Trang chủ</a> | 
-            <a href="">Trang chủ</a> | 
-            <a href="">Trang chủ</a> | 
-            <a href="">Trang chủ</a> | 
-            <a href="">Trang chủ</a> | 
-            <a href="">Trang chủ</a> | 
-            <a href="">Trang chủ</a> | 
-            <a href="">Trang chủ</a> | 
-            <a href="">Trang chủ</a> | 
-            <a href="">Trang chủ</a> | 
+            <a href="Default2.aspx">Trang chủ</a> | 
+            <a href="">Giới thiệu</a> | 
+            <a href="">Điều khoản thỏa thuận</a> | 
+            <a href="">Hướng dẫn sử dụng</a> | 
+            <a href="">Hướng dẫn đăng tin</a> | 
+            <a href="">Góp ý</a> | 
+            <a href="">Hỗ trợ</a> | 
+            <a href="">Liên hệ</a> 
         </div>
     </div>
 

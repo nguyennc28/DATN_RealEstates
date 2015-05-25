@@ -1,5 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Home.ascx.cs" Inherits="RealEstate.Modules.Home" %>
 <%@ Register Src="~/Modules/SearchBoxMain.ascx" TagPrefix="uc1" TagName="SearchBoxMain" %>
+<%@ Register Src="~/Modules/SearchLeft.ascx" TagPrefix="uc1" TagName="SearchLeft" %>
+
 <script src="../js/jquery-1.11.2.min.js"></script>
 <script src="../js/modules/jquery.featureList-1.0.0.js"></script>
 <script type="text/javascript">
@@ -57,67 +59,11 @@
         border: 1px solid rgb(64,69,51);
         background: #EEEEEE;
     }
-    /*ul {
-        position: absolute;
-        overflow: hidden;
-    }
-
-        ul#tabs {
-            top: 29px;
-            right: 0;
-            z-index: 2;
-            width: 285px;
-            border-right: 1px solid #ccc;
-            border-left: 1px solid #ccc;
-        }
-
-            ul#tabs li a {
-                display: block;
-                overflow: hidden;
-                height: 67px;
-                padding: 5px;
-                text-align: justify;
-                border-bottom: 1px solid #ccc;
-            }
-
-                ul#tabs li a:hover {
-                    color: #003399;
-                }
-
-                ul#tabs li a.current {
-                    color: #003399;
-                    font-weight: bold;
-                }
-
-        ul#output {
-            position: relative;
-            left: 0;
-            width: 734px;
-            height: 297px;
-        }
-
-            ul#output li img {
-                width: 450px;
-                height: 297px;
-            }
-
-    .feature-news h1 {
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: 9;
-        width: 285px;
-        padding: 6px 0;
-        color: #fff;
-        text-align: center;
-        font-weight: bold;
-        text-transform: uppercase;
-    }*/
-     
+    
 </style>
 <div class="row">
     <div class="span3">
-        <p>Giám đốc điều hành Công ty Savills Việt Nam Nell MacGregor nhận định, thị trường bất động sản (BĐS) hiện đang ở mức đáy nhưng đang trên đà hồi phục, giá cả tương đối hợp lý và ổn định.</p>
+        <uc1:SearchLeft runat="server" id="SearchLeft" />
     </div>
     <div class="span4">
         <ul id="output">

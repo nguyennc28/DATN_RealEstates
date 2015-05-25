@@ -75,6 +75,7 @@
     <Content Include="Admins\Modules\HomeTypeManager.ascx" />
     <Content Include="Admins\Modules\Login.ascx" />
     <Content Include="Admins\Modules\UserManager.ascx" />
+    <Content Include="Admins\PagesManager.aspx" />
     <Content Include="Admins\Testaspx.aspx" />
     <Content Include="Admins\UserManager.aspx" />
     <Content Include="App_Themes\Admin\images\object_10.ico" />
@@ -433,6 +434,7 @@
     <Content Include="Controls\FeNavbar.ascx" />
     <Content Include="Controls\FeFooter.ascx" />
     <Content Include="Controls\Menu.ascx" />
+    <Content Include="Controls\TabMenu.ascx" />
     <Content Include="css\bootstrap-responsive.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\Controls\FeFooter.css" />
@@ -458,6 +460,7 @@
     <Content Include="Icons\Lock.png" />
     <Content Include="Icons\Lock_off.png" />
     <Content Include="Icons\Logo.png" />
+    <Content Include="Icons\logo_nav.png" />
     <Content Include="Icons\Register.png" />
     <Content Include="img\arrow.png" />
     <Content Include="img\arrow2.png" />
@@ -515,7 +518,11 @@
     <Content Include="Modules\ModulesHome\SaleHousing.ascx" />
     <Content Include="Modules\ModulesHome\SaleIndividualVilla.ascx" />
     <Content Include="Modules\ModulesHome\SaleWareHouse.ascx" />
+    <Content Include="Modules\ModulesLand\SaleLand.ascx" />
+    <Content Include="Modules\ModulesLand\SaleProjectLand.ascx" />
+    <Content Include="Modules\ModulesLand\SaleSurfaceLand.ascx" />
     <Content Include="Modules\SearchBoxMain.ascx" />
+    <Content Include="Modules\SearchLeft.ascx" />
     <Content Include="Modules\UserManager.ascx" />
     <Content Include="Pages\Demo.aspx" />
     <Content Include="Pages\Icons\Create.png" />
@@ -718,6 +725,13 @@
     <Compile Include="Admins\Modules\UserManager.ascx.designer.cs">
       <DependentUpon>UserManager.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Admins\PagesManager.aspx.cs">
+      <DependentUpon>PagesManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admins\PagesManager.aspx.designer.cs">
+      <DependentUpon>PagesManager.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admins\Testaspx.aspx.cs">
       <DependentUpon>Testaspx.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -801,6 +815,13 @@
     </Compile>
     <Compile Include="Controls\Menu.ascx.designer.cs">
       <DependentUpon>Menu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TabMenu.ascx.cs">
+      <DependentUpon>TabMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TabMenu.ascx.designer.cs">
+      <DependentUpon>TabMenu.ascx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -910,6 +931,27 @@
     <Compile Include="Modules\ModulesHome\SaleWareHouse.ascx.designer.cs">
       <DependentUpon>SaleWareHouse.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Modules\ModulesLand\SaleLand.ascx.cs">
+      <DependentUpon>SaleLand.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\ModulesLand\SaleLand.ascx.designer.cs">
+      <DependentUpon>SaleLand.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ModulesLand\SaleProjectLand.ascx.cs">
+      <DependentUpon>SaleProjectLand.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\ModulesLand\SaleProjectLand.ascx.designer.cs">
+      <DependentUpon>SaleProjectLand.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ModulesLand\SaleSurfaceLand.ascx.cs">
+      <DependentUpon>SaleSurfaceLand.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\ModulesLand\SaleSurfaceLand.ascx.designer.cs">
+      <DependentUpon>SaleSurfaceLand.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Modules\PageManager.ascx.cs">
       <DependentUpon>PageManager.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -923,6 +965,13 @@
     </Compile>
     <Compile Include="Modules\SearchBoxMain.ascx.designer.cs">
       <DependentUpon>SearchBoxMain.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SearchLeft.ascx.cs">
+      <DependentUpon>SearchLeft.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\SearchLeft.ascx.designer.cs">
+      <DependentUpon>SearchLeft.ascx</DependentUpon>
     </Compile>
     <Compile Include="Modules\UserManager.ascx.cs">
       <DependentUpon>UserManager.ascx</DependentUpon>
@@ -992,7 +1041,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Modules\ModulesLand\" />
+    <Folder Include="Modules\ModulesDetail\" />
     <Folder Include="Modules\ModulesMotel\" />
   </ItemGroup>
   <ItemGroup>
