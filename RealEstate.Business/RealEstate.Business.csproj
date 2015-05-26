@@ -67,6 +67,7 @@
     <Compile Include="MotelTypeService.cs" />
     <Compile Include="PageService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RealEstateNewService.cs" />
     <Compile Include="RealEstateOwnersService.cs" />
     <Compile Include="RealEstateOwnersTypeService.cs" />
     <Compile Include="RealEstateService.cs" />

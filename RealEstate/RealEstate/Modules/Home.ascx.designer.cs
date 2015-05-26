@@ -20,5 +20,23 @@ namespace RealEstate.Modules {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::RealEstate.Modules.SearchLeft SearchLeft;
+        
+        /// <summary>
+        /// ltrImagesLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltrImagesLink;
+        
+        /// <summary>
+        /// ltrTextLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltrTextLink;
     }
 }

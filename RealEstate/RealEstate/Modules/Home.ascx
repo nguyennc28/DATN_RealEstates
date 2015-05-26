@@ -15,10 +15,13 @@
     });
 	</script>
 <style type="text/css">
-    .tabList {
-        width: 100%;
-        margin-bottom: 5px;
-    }
+    #output {
+        border: 5px solid rgb(214, 219, 233);
+    }                
+     .tabList {
+         width: 100%;
+         margin-bottom: 5px;
+     }
     .tabHeader {
         -ms-border-radius: 5px 5px 0 0;
         border-radius: 5px 5px 0 0;
@@ -59,41 +62,56 @@
         border: 1px solid rgb(64,69,51);
         background: #EEEEEE;
     }
-    
+    .feature-news {
+        background: #EEEEEE;
+        line-height: 25px;
+        font-size: 15px;
+    }
+    .span2 h1 {
+          background: #404533;
+          border-radius: 5px 5px 0 0;
+          color: #fff;
+          font-size: 18px;
+          height: 10px;
+          line-height: 8px;
+    }
 </style>
-<div class="row">
-    <div class="span3">
+<div class="row" style="margin-top: -30px;">
+    <div class="span2">
         <uc1:SearchLeft runat="server" id="SearchLeft" />
     </div>
-    <div class="span4">
-        <ul id="output">
-            <li>
+    <div class="span5">
+        <ul id="output">            
+            <asp:Literal ID="ltrImagesLink" runat="server"></asp:Literal>
+            <%--<li>
                 <a href="#" target="_blank">
-                    <img src="../Upload/Images/anh1.jpg" alt="">
+                    <img src="../Upload/SlideNewsImages/ImgSlideNew1.jpg" alt="">
                 </a>
             </li>
             <li>
                 <a href="#" target="_blank">
-                    <img src="../Upload/Images/anh2.jpg" alt="">
+                    <img src="../Upload/SlideNewsImages/ImgSlideNew2.jpg" alt="">
                 </a>
             </li>
             <li>
                 <a href="#" target="_blank">
-                    <img src="../Upload/Images/anh3.jpg" alt="">
+                    <img src="../Upload/SlideNewsImages/ImgSlideNew3.jpg" alt="">
                 </a>
             </li>
             <li>
                 <a href="#" target="_blank">
-                    <img src="../Upload/Images/anh4.jpg" alt="">
+                    <img src="../Upload/SlideNewsImages/ImgSlideNew4.jpg" alt="">
                 </a>
-            </li>
+            </li>--%>
         </ul>
     </div>
-    <div class="span3">
+    <div class="span2">
         <div class="feature-news">
             <h1>Tin nổi bật</h1>
             <ul id="tabs">
-                <li>
+                <asp:Literal ID="ltrTextLink" runat="server"></asp:Literal>
+
+                <%--<li>
                     <a href="#" target="_blank">Nội dung tin 1</a>
                 </li>
                 <li>
@@ -104,10 +122,11 @@
                 </li>
                 <li>
                     <a href="#" target="_blank">Nội dung tin 4</a>
-                </li>
+                </li>--%>
             </ul>
         </div>
     </div>
+    
 </div>
 <div class="row">
     <div class="span7">

@@ -564,6 +564,10 @@
     <Content Include="Upload\Images\anh4.jpg" />
     <Content Include="Upload\Images\anh5.jpg" />
     <Content Include="Pages\Home.aspx" />
+    <Content Include="Upload\SlideNewsImages\ImgSlideNew1.jpg" />
+    <Content Include="Upload\SlideNewsImages\ImgSlideNew2.jpg" />
+    <Content Include="Upload\SlideNewsImages\ImgSlideNew3.jpg" />
+    <Content Include="Upload\SlideNewsImages\ImgSlideNew4.jpg" />
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>

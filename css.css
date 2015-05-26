@@ -467,31 +467,31 @@
     width: 980px;
   }
   .span9 {
-    width: 877px;
+    width: 870px;
   }
   .span8 {
-    width: 779px;
+    width: 770px;
   }
   .span7 {
-    width: 652px;
+    width: 670px;
   }
   .span6 {
-    width: 593px;
+    width: 487px;
   }
   .span5 {
-    width: 490px;
+    width: 470px;
   }
   .span4 {
-    width: 387px;
-  }
-  .span3 {
     width: 323px;
   }
-  .span2 {
+  .span3 {
     width: 240px;
   }
+  .span2 {
+    width: 170px;
+  }
   .span1 {
-    width: 98px;
+    width: 70px;
   }
   .offset12 {
     margin-left: 1230px;
@@ -678,11 +678,7 @@
   .row-fluid .thumbnails {
     margin-left: 0;
   }
-  footer .span10 {
-      color: #fff;
-      line-height: 20px;
-  }
-  footer .span3 {
+  footer .span4 {
 	background: #404533;
 	min-height: 300px;
 	margin-bottom: 10px;

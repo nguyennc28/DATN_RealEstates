@@ -82,6 +82,14 @@ namespace RealEstate.DataAccess
 				_CategoryID = value;
 			}
 		}
+
+        private string _Position;
+
+        public string Position
+        {
+            get { return _Position; }
+            set { _Position = value; }
+        }
 		private string _Images;
 		public string Images
 		{ 
@@ -176,6 +184,7 @@ namespace RealEstate.DataAccess
             obj.RealEstateID = (dr["RealEstateID"] is DBNull) ? string.Empty : dr["RealEstateID"].ToString();
             obj.Title = (dr["Title"] is DBNull) ? string.Empty : dr["Title"].ToString();
             obj.Content = (dr["Content"] is DBNull) ? string.Empty : dr["Content"].ToString();
+            obj.Position = (dr["Position"] is DBNull) ? string.Empty : dr["Position"].ToString();
             obj.Description = (dr["Description"] is DBNull) ? string.Empty : dr["Description"].ToString();
             obj.CategoryID = (dr["CategoryID"] is DBNull) ? string.Empty : dr["CategoryID"].ToString();
             obj.Images = (dr["Images"] is DBNull) ? string.Empty : dr["Images"].ToString();

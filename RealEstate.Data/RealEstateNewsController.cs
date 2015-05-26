@@ -18,7 +18,7 @@ namespace RealEstate.DataAccess
         {
             List<RealEstateNewsInfo> list = new List<RealEstateNewsInfo>();
             DataAccess.RealEstateNewsInfo obj = new DataAccess.RealEstateNewsInfo();
-            DbCommand cmd = db.GetStoredProcCommand("Group_SelectByID", Id);
+            DbCommand cmd = db.GetStoredProcCommand("RealEstateNews_SelectByID", Id);
             using (IDataReader dr = db.ExecuteReader(cmd))
             {
                 while (dr.Read())
@@ -54,7 +54,7 @@ namespace RealEstate.DataAccess
         {
             List<DataAccess.RealEstateNewsInfo> list = new List<DataAccess.RealEstateNewsInfo>();
             DataAccess.RealEstateNewsInfo obj = new DataAccess.RealEstateNewsInfo();
-            DbCommand cmd = db.GetStoredProcCommand("Group_SelectTop", Top, Where, Order);
+            DbCommand cmd = db.GetStoredProcCommand("RealEstateNews_SelectTop", Top, Where, Order);
             using (IDataReader dr = db.ExecuteReader(cmd))
             {
                 while (dr.Read())
@@ -72,7 +72,7 @@ namespace RealEstate.DataAccess
         {
             List<DataAccess.RealEstateNewsInfo> list = new List<DataAccess.RealEstateNewsInfo>();
             DataAccess.RealEstateNewsInfo obj = new DataAccess.RealEstateNewsInfo();
-            DbCommand cmd = db.GetStoredProcCommand("Group_SelectAll");
+            DbCommand cmd = db.GetStoredProcCommand("RealEstateNews_SelectAll");
             using (IDataReader dr = db.ExecuteReader(cmd))
             {
                 while (dr.Read())
@@ -90,7 +90,7 @@ namespace RealEstate.DataAccess
         {
             List<DataAccess.RealEstateNewsInfo> list = new List<DataAccess.RealEstateNewsInfo>();
             DataAccess.RealEstateNewsInfo obj = new DataAccess.RealEstateNewsInfo();
-            DbCommand cmd = db.GetStoredProcCommand("Group_SelectPage", CurentRealEstateNewsInfo, RealEstateNewsInfoSize);
+            DbCommand cmd = db.GetStoredProcCommand("RealEstateNews_SelectPage", CurentRealEstateNewsInfo, RealEstateNewsInfoSize);
             using (IDataReader dr = db.ExecuteReader(cmd))
             {
                 while (dr.Read())
@@ -124,13 +124,14 @@ namespace RealEstate.DataAccess
         #region[RealEstateNewsInfo_Insert]
         public bool RealEstateNewsInfo_Insert(RealEstateNewsInfo data)
         {
-            using (DbCommand cmd = db.GetStoredProcCommand("Group_Insert"))
+            using (DbCommand cmd = db.GetStoredProcCommand("RealEstateNews_Insert"))
             {
                 //cmd.Parameters.Add(new SqlParameter("@RealEstateNewsID", data.RealEstateNewsID));
                 cmd.Parameters.Add(new SqlParameter("@RealEstateID", data.RealEstateID));
                 cmd.Parameters.Add(new SqlParameter("@Title", data.Title));
                 cmd.Parameters.Add(new SqlParameter("@Description", data.Description));
                 cmd.Parameters.Add(new SqlParameter("@Content", data.Content));
+                cmd.Parameters.Add(new SqlParameter("@Position", data.Position));
                 cmd.Parameters.Add(new SqlParameter("@CategoryID", data.CategoryID));
                 cmd.Parameters.Add(new SqlParameter("@Images", data.Images));
                 cmd.Parameters.Add(new SqlParameter("@CreateDate", data.CreateDate));
@@ -157,12 +158,13 @@ namespace RealEstate.DataAccess
         #region[RealEstateNewsInfo_Update]
         public bool RealEstateNewsInfo_Update(RealEstateNewsInfo data)
         {
-            using (DbCommand cmd = db.GetStoredProcCommand("Group_Update"))
+            using (DbCommand cmd = db.GetStoredProcCommand("RealEstateNews_Update"))
             {
                 cmd.Parameters.Add(new SqlParameter("@RealEstateNewsID", data.RealEstateNewsID));
                 cmd.Parameters.Add(new SqlParameter("@RealEstateID", data.RealEstateID));
                 cmd.Parameters.Add(new SqlParameter("@Title", data.Title));
                 cmd.Parameters.Add(new SqlParameter("@Description", data.Description));
+                cmd.Parameters.Add(new SqlParameter("@Position", data.Position));
                 cmd.Parameters.Add(new SqlParameter("@Content", data.Content));
                 cmd.Parameters.Add(new SqlParameter("@CategoryID", data.CategoryID));
                 cmd.Parameters.Add(new SqlParameter("@Images", data.Images));
@@ -190,7 +192,7 @@ namespace RealEstate.DataAccess
         #region[RealEstateNewsInfo_Delete]
         public bool RealEstateNewsInfo_Delete(string Id)
         {
-            DbCommand cmd = db.GetStoredProcCommand("Group_Delete", Id);
+            DbCommand cmd = db.GetStoredProcCommand("RealEstateNews_Delete", Id);
             try
             {
                 db.ExecuteNonQuery(cmd);

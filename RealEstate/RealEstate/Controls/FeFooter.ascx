@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="FeFooter.ascx.cs" Inherits="RealEstate.Controls.Footer" %>
 <link href="../css/Controls/FeFooter.css" rel="stylesheet" />
 <div class="row">
-    <div class="span4">
+    <div class="span3">
         <div class="is-padded">
             <nav>
                 <h2>Liên kết website:</h2>
@@ -21,14 +21,14 @@
             </nav>
         </div>
     </div>
-    <div class="span4">
+    <div class="span3">
         <div class="is-padded">
             <h2>Liên kết với các nhà môi giới</h2>
             <hr>
             
         </div>
     </div>
-    <div class="span4">
+    <div class="span3">
         <div class="is-padded">
             <h2>Liên kết với các doanh nghiệp</h2>
             <hr/>
