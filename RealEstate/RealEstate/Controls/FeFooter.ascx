@@ -15,7 +15,7 @@
                    {%>
                 <% foreach (var lstLinks in listLinks)
                    {%>
-                       <ul><li><a href="<%=lstLinks.Link1 %>"> <%=lstLinks.Name %></a></li></ul>
+                       <ul><li><img src="../Icons/icon_adv.png" /><a href="<%=lstLinks.Link1 %>"> <%=lstLinks.Name %></a></li></ul>
                    <%} %>                      
                    <%} %>                
             </nav>

@@ -791,12 +791,13 @@ input[type="tel"],
 input[type="color"],
 .uneditable-input {
     display: inline-block;
-    height: 32px;
+    height: 15px;
     padding: 6px;
     margin-bottom: 9px;
-    font-size: 16px;
+    font-size: 12px;
     line-height: 18px;
     color: #555555;
+    width: 186px;
 }
 
 input,
@@ -896,7 +897,7 @@ input[type="file"] {
 }
 
 select {
-    width: 220px;
+    width: 200px;
     border: 1px solid #bbb;
 }
 
@@ -5014,12 +5015,15 @@ footer .span4 {
 
 footer ul li {
     list-style: none;
-    margin-left: -23px;
+    margin-left: 5px;
+    margin-top: 15px;
     margin-bottom: 15px;
+    line-height: 25px;
+    font-family: tahoma;
 }
 
 footer a {
-    font-size: 13px;
+    font-size: 14px;
 }
 
 footer hr {

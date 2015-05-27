@@ -71,6 +71,8 @@
     <Compile Include="ApartmentInfo.cs" />
     <Compile Include="BannerController.cs" />
     <Compile Include="BannerInfo.cs" />
+    <Compile Include="BrokerController.cs" />
+    <Compile Include="BrokerInfo.cs" />
     <Compile Include="CategorysController.cs" />
     <Compile Include="CategorysInfo.cs" />
     <Compile Include="CityController.cs" />

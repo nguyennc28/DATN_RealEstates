@@ -447,6 +447,7 @@
     <Content Include="Default2.aspx" />
     <Content Include="Icons\Create.png" />
     <Content Include="Icons\facebook_login4.png" />
+    <Content Include="Icons\icon_adv.jpg" />
     <Content Include="Icons\Login.png" />
     <Content Include="Icons\Dial.png" />
     <Content Include="Icons\Fb.png" />
@@ -464,6 +465,9 @@
     <Content Include="Icons\Register.png" />
     <Content Include="img\arrow.png" />
     <Content Include="img\arrow2.png" />
+    <Content Include="img\BannerMoving\A8A-DR_960x90.gif" />
+    <Content Include="img\BannerMoving\BNN.gif" />
+    <Content Include="img\Button\btTimkiem.png" />
     <Content Include="img\color.jpg" />
     <Content Include="img\cross-pattern.png" />
     <Content Include="img\featured\1.jpg" />

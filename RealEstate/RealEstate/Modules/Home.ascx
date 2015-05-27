@@ -15,13 +15,16 @@
     });
 	</script>
 <style type="text/css">
-    #output {
-        border: 5px solid rgb(214, 219, 233);
-    }                
-     .tabList {
-         width: 100%;
-         margin-bottom: 5px;
-     }
+    .row {
+        margin-top: 5px;
+    }
+     #output {
+         border: 5px solid rgb(214, 219, 233);
+     }                
+    .tabList {
+        width: 99.8%;
+        margin-bottom: 5px;
+    }
     .tabHeader {
         -ms-border-radius: 5px 5px 0 0;
         border-radius: 5px 5px 0 0;
@@ -37,7 +40,7 @@
     }
 
     .tabbody {
-        width: 100%;
+        width: 650px;
         border: 1px solid rgb(64,69,51);
         background: #EEEEEE;
     }
@@ -49,7 +52,7 @@
         -ms-border-radius: 5px 5px 0 0;
         border-radius: 5px 5px 0 0;
         background: #404533;
-        width: 101%;
+        width: 99.5%;
     }
     .ListNewsHeader h4 {
         font-family: tahoma;
@@ -58,7 +61,7 @@
         line-height: 25px;
     }
     .ListNewsBody {
-        width: 100%;
+        width: 99%;
         border: 1px solid rgb(64,69,51);
         background: #EEEEEE;
     }
@@ -68,12 +71,15 @@
         font-size: 15px;
     }
     .span2 h1 {
-          background: #404533;
-          border-radius: 5px 5px 0 0;
-          color: #fff;
-          font-size: 18px;
-          height: 10px;
-          line-height: 8px;
+        background: #404533;
+        border-radius: 5px 5px 0 0;
+        color: #fff;
+        font-size: 18px;
+        height: 10px;
+        line-height: 8px;
+    }
+    .span2 #tabs {
+        margin: 10px;
     }
 </style>
 <div class="row" style="margin-top: -30px;">
@@ -83,51 +89,27 @@
     <div class="span5">
         <ul id="output">            
             <asp:Literal ID="ltrImagesLink" runat="server"></asp:Literal>
-            <%--<li>
-                <a href="#" target="_blank">
-                    <img src="../Upload/SlideNewsImages/ImgSlideNew1.jpg" alt="">
-                </a>
-            </li>
-            <li>
-                <a href="#" target="_blank">
-                    <img src="../Upload/SlideNewsImages/ImgSlideNew2.jpg" alt="">
-                </a>
-            </li>
-            <li>
-                <a href="#" target="_blank">
-                    <img src="../Upload/SlideNewsImages/ImgSlideNew3.jpg" alt="">
-                </a>
-            </li>
-            <li>
-                <a href="#" target="_blank">
-                    <img src="../Upload/SlideNewsImages/ImgSlideNew4.jpg" alt="">
-                </a>
-            </li>--%>
         </ul>
+        <div> </div>
     </div>
     <div class="span2">
         <div class="feature-news">
             <h1>Tin nổi bật</h1>
+            <marquee scrollamount="2" scrolldelay="98" direction="up" onmouseover="this.stop()" onmouseout="this.start()">
             <ul id="tabs">
                 <asp:Literal ID="ltrTextLink" runat="server"></asp:Literal>
-
-                <%--<li>
-                    <a href="#" target="_blank">Nội dung tin 1</a>
-                </li>
-                <li>
-                    <a href="#" target="_blank">Nội dung tin 2</a>
-                </li>
-                <li>
-                    <a href="#" target="_blank">Nội dung tin 3</a>
-                </li>
-                <li>
-                    <a href="#" target="_blank">Nội dung tin 4</a>
-                </li>--%>
             </ul>
+            </marquee>
         </div>
     </div>
     
 </div>
+<div class="row" style="   margin-left: -7px;">
+    <div class="span10">
+        <a href="#"> <img src="../img/BannerMoving/BNN.gif"/></a>
+    </div>
+</div>
+
 <div class="row">
     <div class="span7">
         <div class="tabList">
@@ -147,6 +129,18 @@
             </div>
             <div class="ListNewsBody">
                 <ul>
+                    <li>
+                        <a href="#"> Tin tức 1</a>
+                    </li>
+                    <li>
+                        <a href="#"> Tin tức 1</a>
+                    </li>
+                    <li>
+                        <a href="#"> Tin tức 1</a>
+                    </li>
+                    <li>
+                        <a href="#"> Tin tức 1</a>
+                    </li>
                     <li>
                         <a href="#"> Tin tức 1</a>
                     </li>

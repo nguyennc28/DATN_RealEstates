@@ -47,6 +47,7 @@
     <Compile Include="AdvertiseService.cs" />
     <Compile Include="ApartmentService.cs" />
     <Compile Include="BannerService.cs" />
+    <Compile Include="BrokerService.cs" />
     <Compile Include="CategoryService.cs" />
     <Compile Include="CityService.cs" />
     <Compile Include="CompanyService.cs" />

@@ -35,8 +35,9 @@
 
     .tabbed .tabcont {
         background: #eee;
-        padding: 20px;
-        margin-top: 32px;
+        padding: 18px;
+        margin-top: 50px;
+        height: 300px;
     }
 
     .tabbed .tabcont .tabcontent {
@@ -107,19 +108,176 @@
     </div>
     <div class="tabcont">
         <div id="tab1" class="tabcontent" align="justify">
-            <p>Masagni dolores eoquie voluptate msequciuo quisquam estqui dolorem ipsumquia dolor sitamnetase adipisci unumquam eius. Basmodi temporant, ut laboreas dolore magnam aliquam quaerat pnim ad minim eniamagse quis nostrum exerm ullam. Вorporis quis autem vel eum iure reprehenderit. Masagni dolores eoquie voluptate msequciuo quisquam estqui dolorem ipsumquia dolor sitamnetase adipisci unumquam eius. Basmodi temporant, ut laboreas dolore magnam aliquam quaerat pnim ad minim eniamagse quis nostrum exerm ullam. Вorporis quis autem vel eum iure reprehenderit</p>
+
+                                <span class="searchTb"><asp:TextBox ID="TextBox1" runat="server"></asp:TextBox> </span>
+
+                                <span class="searchDdl"><asp:DropDownList ID="ddlRealEstateType" runat="server">
+                                </asp:DropDownList></span>
+
+                                <span class="searchDdl"><asp:DropDownList ID="ddlCity" runat="server">
+                                </asp:DropDownList></span>
+
+                                <span class="searchDdl"><asp:DropDownList ID="ddlDistrict" runat="server">
+                                </asp:DropDownList></span>
+
+                                <span class="searchDdl"><asp:DropDownList ID="ddlArea" runat="server">
+                                </asp:DropDownList></span>
+
+                                <span class="searchDdl"><asp:DropDownList ID="ddlPrice" runat="server">
+                                </asp:DropDownList></span>
+
+                                <span class="searchDdl"><asp:DropDownList ID="ddlRegion" runat="server">
+                                </asp:DropDownList></span>
+                
+                                <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="../img/Button/btTimkiem.png"/>
+
         </div>
 
         <div id="tab2" class="tabcontent" align="justify">
-            <p>Masagni dolores eoquie voluptate msequciuo quisquam estqui dolorem ipsumquia dolor sitamnetase adipisci unumquam eius. Basmodi temporant, ut laboreas dolore magnam aliquam quaerat pnim ad minim eniamagse quis nostrum exerm ullam. Вorporis quis autem vel eum iure reprehenderit</p>
+            <table style="width: 100%;">
+                        <tr>
+                            <td>
+                                <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:DropDownList ID="DropDownList1" runat="server">
+                                </asp:DropDownList>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:DropDownList ID="DropDownList2" runat="server">
+                                </asp:DropDownList>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:DropDownList ID="DropDownList3" runat="server">
+                                </asp:DropDownList>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:DropDownList ID="DropDownList4" runat="server">
+                                </asp:DropDownList>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:DropDownList ID="DropDownList5" runat="server">
+                                </asp:DropDownList>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:DropDownList ID="DropDownList6" runat="server">
+                                </asp:DropDownList>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="../img/Button/btTimkiem.png"/></td>
+                        </tr>
+                    </table>
         </div>
 
         <div id="tab3" class="tabcontent" align="justify">
-            <p>Masagni dolores eoquie voluptate msequciuo quisquam estqui dolorem ipsumquia dolor sitamnetase adipisci unumquam eius. Basmodi temporant, ut laboreas dolore magnam aliquam quaerat pnim ad minim eniamagse quis nostrum exerm ullam. Вorporis quis autem vel eum iure reprehenderit.Masagni dolores eoquie voluptate msequciuo quisquam estqui dolorem ipsumquia dolor sitamnetase adipisci unumquam eius. Basmodi temporant, ut laboreas dolore magnam aliquam quaerat pnim ad minim eniamagse quis nostrum exerm ullam. Вorporis quis autem vel eum iure reprehenderitMasagni dolores eoquie voluptate msequciuo quisquam estqui dolorem ipsumquia dolor sitamnetase adipisci unumquam eius. Basmodi temporant, ut laboreas dolore magnam aliquam quaerat pnim ad minim eniamagse quis nostrum exerm ullam. Вorporis quis autem vel eum iure reprehenderit.</p>
+            <table style="width: 100%;">
+                        <tr>
+                            <td>
+                                <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:DropDownList ID="DropDownList7" runat="server">
+                                </asp:DropDownList>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:DropDownList ID="DropDownList8" runat="server">
+                                </asp:DropDownList>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:DropDownList ID="DropDownList9" runat="server">
+                                </asp:DropDownList>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:DropDownList ID="DropDownList10" runat="server">
+                                </asp:DropDownList>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:DropDownList ID="DropDownList11" runat="server">
+                                </asp:DropDownList>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:DropDownList ID="DropDownList12" runat="server">
+                                </asp:DropDownList>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><asp:ImageButton ID="ImageButton3" runat="server" ImageUrl="../img/Button/btTimkiem.png"/></td>
+                        </tr>
+                    </table>
         </div>
 
         <div id="tab4" class="tabcontent" align="justify">
-            <p>Masagni dolores eoquie voluptate msequciuo quisquam estqui dolorem ipsumquia dolor sitamnetase adipisci unumquam eius. Basmodi temporant, ut laboreas dolore magnam aliquam quaerat pnim ad minim eniamagse quis nostrum exerm ullam. Вorporis quis autem vel eum iure reprehenderit.</p>
+            <table style="width: 100%;">
+                        <tr>
+                            <td>
+                                <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:DropDownList ID="DropDownList13" runat="server">
+                                </asp:DropDownList>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:DropDownList ID="DropDownList14" runat="server">
+                                </asp:DropDownList>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:DropDownList ID="DropDownList15" runat="server">
+                                </asp:DropDownList>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:DropDownList ID="DropDownList16" runat="server">
+                                </asp:DropDownList>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:DropDownList ID="DropDownList17" runat="server">
+                                </asp:DropDownList>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:DropDownList ID="DropDownList18" runat="server">
+                                </asp:DropDownList>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><asp:ImageButton ID="ImageButton4" runat="server" ImageUrl="../img/Button/btTimkiem.png"/></td>
+                        </tr>
+                    </table>
         </div>
     </div>
 </div>
