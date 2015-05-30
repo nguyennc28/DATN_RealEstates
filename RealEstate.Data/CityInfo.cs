@@ -21,6 +21,19 @@ namespace RealEstate.DataAccess
 				_CityID = value;
 			}
 		}
+
+        private string _CityCode;
+        public string CityCode
+        {
+            get
+            {
+                return _CityCode;
+            }
+            set
+            {
+                _CityCode = value;
+            }
+        }
 		private string _CityName;
 		public string CityName
 		{ 
@@ -55,6 +68,7 @@ namespace RealEstate.DataAccess
         {
             CityInfo obj = new CityInfo();
             obj.CityID = (dr["CityID"] is DBNull) ? string.Empty : dr["CityID"].ToString();
+            obj.CityCode = (dr["CityCode"] is DBNull) ? string.Empty : dr["CityCode"].ToString();
             obj.CityName = (dr["CityName"] is DBNull) ? string.Empty : dr["CityName"].ToString();
             return obj;
         }

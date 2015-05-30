@@ -22,18 +22,31 @@ namespace RealEstate.DataAccess
 				_DistrictID = value;
 			}
 		}
-		private string _CityID;
-		public string CityID
+		private string _CityCode;
+		public string CityCode
 		{ 
 			get 
-			{ 
-				return _CityID;
+			{
+                return _CityCode;
 			}
 			set 
-			{ 
-				_CityID = value;
+			{
+                _CityCode = value;
 			}
 		}
+
+        private string _DistrictCode;
+        public string DistrictCode
+        {
+            get
+            {
+                return _DistrictCode;
+            }
+            set
+            {
+                _DistrictCode = value;
+            }
+        }
 		private string _DistrictName;
 		public string DistrictName
 		{ 
@@ -59,7 +72,7 @@ namespace RealEstate.DataAccess
         public DistrictInfo(string districtid, string cityid, string districtname)
 		{
 			this.DistrictID = districtid;
-			this.CityID = cityid;
+			this.CityCode = cityid;
 			this.DistrictName = districtname;
 		}
 		#endregion
@@ -68,7 +81,8 @@ namespace RealEstate.DataAccess
         {
             DistrictInfo obj = new DataAccess.DistrictInfo();
             obj.DistrictID = (dr["DistrictID"] is DBNull) ? string.Empty : dr["DistrictID"].ToString();
-            obj.CityID = (dr["CityID"] is DBNull) ? string.Empty : dr["CityID"].ToString();
+            obj.CityCode = (dr["CityCode"] is DBNull) ? string.Empty : dr["CityCode"].ToString();
+            obj.DistrictCode = (dr["DistrictCode"] is DBNull) ? string.Empty : dr["DistrictCode"].ToString();
             obj.DistrictName = (dr["DistrictName"] is DBNull) ? string.Empty : dr["DistrictName"].ToString();
             return obj;
         }

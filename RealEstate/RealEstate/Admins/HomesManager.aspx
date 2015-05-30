@@ -59,8 +59,8 @@
                         </ItemTemplate>
                         <ItemStyle CssClass="tdCenter"></ItemStyle>
                     </asp:TemplateColumn>
-                    <%--<asp:BoundColumn DataField="HomeID" HeaderText="HomeID" Visible="False" />
-                    <asp:BoundColumn DataField="RealEstateID" HeaderText="Mã BĐS" ItemStyle-CssClass="Text" Visible="true">
+                    <asp:BoundColumn DataField="HomeID" HeaderText="HomeID" Visible="False" />
+                    <%--<asp:BoundColumn DataField="RealEstateID" HeaderText="Mã BĐS" ItemStyle-CssClass="Text" Visible="true">
                         <ItemStyle CssClass="Text" />
                     </asp:BoundColumn>--%>
                     <asp:BoundColumn DataField="HomeTypeName" HeaderText="Loại nhà" ItemStyle-CssClass="Text" Visible="true">
@@ -294,17 +294,20 @@
             </tr>
             <tr>
                 <th>
-                    <asp:Label ID="lblImage0" runat="server" Text="Image1:"></asp:Label>
+                    <asp:Label ID="lblImage0" runat="server" Text="Ảnh 1:"></asp:Label>
                 </th>
                 <td>
-                    <asp:TextBox ID="txtImage0" runat="server" CssClass="text image"></asp:TextBox>
-                    &nbsp;<input id="btnImage0" type="button" onclick="BrowseServer('<% =txtImage0.ClientID %>    ','Images');" value="Browse Server" />&nbsp;
-                    <asp:Image ID="imgImage0" runat="server" ImageAlign="Middle" Width="100px" />
+                    <input id="oFile" type="file" runat="server" NAME="oFile"/>
+                    <asp:button ID="btnUpload" type="submit" text="Upload" runat="server"></asp:button>
+                    <asp:Label ID="lblImages" runat="server" Text="Label" Visible="False"></asp:Label>
+                    <div style="width: 500px;">
+                        <asp:Literal ID="ltrUploadResult" runat="server"></asp:Literal>
+                    </div>
                 </td>
             </tr>
             <tr>
                 <th>
-                    <asp:Label ID="lblImage1" runat="server" Text="Image2:"></asp:Label>
+                    <asp:Label ID="lblImage1" runat="server" Text="Ảnh 2:"></asp:Label>
                 </th>
                 <td>
                     <asp:TextBox ID="txtImage1" runat="server" CssClass="text image"></asp:TextBox>
@@ -314,7 +317,7 @@
             </tr>
             <tr>
                 <th>
-                    <asp:Label ID="lblImage2" runat="server" Text="Image3:"></asp:Label>
+                    <asp:Label ID="lblImage2" runat="server" Text="Ảnh 3:"></asp:Label>
                 </th>
                 <td>
                     <asp:TextBox ID="txtImage2" runat="server" CssClass="text image"></asp:TextBox>
@@ -324,7 +327,7 @@
             </tr>
              <tr>
                 <th>
-                    <asp:Label ID="lblImage3" runat="server" Text="Image4:"></asp:Label>
+                    <asp:Label ID="lblImage3" runat="server" Text="Ảnh 4:"></asp:Label>
                 </th>
                 <td>
                     <asp:TextBox ID="txtImage3" runat="server" CssClass="text image"></asp:TextBox>
@@ -334,7 +337,7 @@
             </tr>
             <tr>
                 <th>
-                    <asp:Label ID="lblImage4" runat="server" Text="Image5:"></asp:Label>
+                    <asp:Label ID="lblImage4" runat="server" Text="Ảnh 5:"></asp:Label>
                 </th>
                 <td>
                     <asp:TextBox ID="txtImage4" runat="server" CssClass="text image"></asp:TextBox>
@@ -344,7 +347,7 @@
             </tr>
             <tr>
                 <th>
-                    <asp:Label ID="lblImage5" runat="server" Text="Image6:"></asp:Label>
+                    <asp:Label ID="lblImage5" runat="server" Text="Ảnh 6:"></asp:Label>
                 </th>
                 <td>
                     <asp:TextBox ID="txtImage5" runat="server" CssClass="text image"></asp:TextBox>

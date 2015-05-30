@@ -126,6 +126,7 @@ namespace RealEstate.DataAccess
             using (DbCommand cmd = db.GetStoredProcCommand("City_Insert"))
             {
                 cmd.Parameters.Add(new SqlParameter("@CityID", data.CityID));
+                cmd.Parameters.Add(new SqlParameter("@CityCode", data.CityCode));
                 cmd.Parameters.Add(new SqlParameter("@CityName", data.CityName));
                 try
                 {
@@ -150,6 +151,7 @@ namespace RealEstate.DataAccess
             using (DbCommand cmd = db.GetStoredProcCommand("City_Update"))
             {
                 cmd.Parameters.Add(new SqlParameter("@CityID", data.CityID));
+                cmd.Parameters.Add(new SqlParameter("@CityCode", data.CityCode));
                 cmd.Parameters.Add(new SqlParameter("@CityName", data.CityName));
                 try
                 {

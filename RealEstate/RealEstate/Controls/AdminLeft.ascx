@@ -41,7 +41,9 @@
         <li>
             <img alt="" src="/App_Themes/admin/images/icon_adv.jpg" /><asp:LinkButton
                 ID="lbtAdverties" CausesValidation="false" runat="server" OnClick="LinkButton_Click">Liên kết, quảng cáo</asp:LinkButton></li>
-
+        <li>
+            <img alt="" src="/App_Themes/admin/images/icon_adv.jpg" /><asp:LinkButton
+                ID="lbtTestUploadFile" CausesValidation="false" runat="server" OnClick="LinkButton_Click">Upload Iamge</asp:LinkButton></li>
     </ul>
 </asp:Panel>
 <table class="table" cellspacing="0" cellpadding="0">

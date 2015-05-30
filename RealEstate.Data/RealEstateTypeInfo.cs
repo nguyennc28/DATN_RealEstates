@@ -69,7 +69,7 @@ namespace RealEstate.DataAccess
         {
             DataAccess.RealEstateTypeInfo obj = new DataAccess.RealEstateTypeInfo();
             obj.RealEstateTypeID = (dr["RealEstateTypeID"] is DBNull) ? string.Empty : dr["RealEstateTypeID"].ToString();
-            obj.NameRealEstateType = (dr["NameRealEstateType"] is DBNull) ? string.Empty : dr["RealEstateName"].ToString();
+            obj.NameRealEstateType = (dr["NameRealEstateType"] is DBNull) ? string.Empty : dr["NameRealEstateType"].ToString();
             obj.Description = (dr["Description"] is DBNull) ? string.Empty : dr["Description"].ToString();
           
 

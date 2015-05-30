@@ -118,7 +118,7 @@
 
             </div>
             <div class="tabbody" style="height: 100px; background: #EEEEEE;">
-                <p> Khi đó, Messi đã cầm bóng từ giữa sân chếch bên cánh phải, vượt qua 5 cầu thủ đối phương ở phía trước mặt rồi ghi bàn một cách hết sức dễ dàng. Cũng nhờ pha lập công được liệt vào hàng siêu phẩm này, Messi đã được xem là truyền nhân của huyền thoại đồng hương Diego Maradona khi “Cậu bé Vàng” của bóng đá xứ sở Tango từng có pha lập công tương tự vào lưới ĐT Anh tại tứ kết World Cup 1986.</p>
+
             </div>
         </div>
     </div>

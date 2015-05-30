@@ -94,6 +94,15 @@ namespace RealEstate.Controls {
         protected global::System.Web.UI.WebControls.LinkButton lbtAdverties;
         
         /// <summary>
+        /// lbtTestUploadFile control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbtTestUploadFile;
+        
+        /// <summary>
         /// div10 control.
         /// </summary>
         /// <remarks>

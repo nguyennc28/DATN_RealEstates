@@ -26,6 +26,7 @@ namespace RealEstate
                     case "Home":
                         ct = Page.LoadControl("/Modules/Home.ascx");
                         break;
+                    // Load các control cho modules Home
                     case "SaleHomeAll":
                         ct = Page.LoadControl("/Modules/ModulesHome/SaleHomeAll.ascx");
                         break;
@@ -50,6 +51,15 @@ namespace RealEstate
                     case "SaleHousing":
                         ct = Page.LoadControl("/Modules/ModulesHome/SaleHousing.ascx");
                         break;
+                    // Load Control Đăng tin rao bất động sản
+                    case "PostNewRE":
+                        ct = Page.LoadControl("/Modules/PostNewRE.ascx");
+                        break;
+                    //Load Control view tin bất động sản đã đăng
+                    case "ViewPostNewRE":
+                        ct = Page.LoadControl("/Modules/ViewPostNewRE.ascx");
+                        break;
+                    // Default trang chủ
                     default:
                         ct = Page.LoadControl("/Modules/Home.ascx");
                         break;

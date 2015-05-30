@@ -126,8 +126,9 @@ namespace RealEstate.DataAccess
         {
             using (DbCommand cmd = db.GetStoredProcCommand("District_Insert"))
             {
-                cmd.Parameters.Add(new SqlParameter("@DistrictID", data.DistrictID));
-                cmd.Parameters.Add(new SqlParameter("@CityID", data.CityID));
+                //cmd.Parameters.Add(new SqlParameter("@DistrictID", data.DistrictID));
+                cmd.Parameters.Add(new SqlParameter("@CityCode", data.CityCode));
+                cmd.Parameters.Add(new SqlParameter("@DistrictCode", data.DistrictCode));
                 cmd.Parameters.Add(new SqlParameter("@DistrictName", data.DistrictName));
                 try
                 {
@@ -152,7 +153,8 @@ namespace RealEstate.DataAccess
             using (DbCommand cmd = db.GetStoredProcCommand("District_Update"))
             {
                 cmd.Parameters.Add(new SqlParameter("@DistrictID", data.DistrictID));
-                cmd.Parameters.Add(new SqlParameter("@CityID", data.CityID));
+                cmd.Parameters.Add(new SqlParameter("@CityCode", data.CityCode));
+                cmd.Parameters.Add(new SqlParameter("@DistrictCode", data.DistrictCode));
                 cmd.Parameters.Add(new SqlParameter("@DistrictName", data.DistrictName));
                 try
                 {

@@ -147,15 +147,19 @@ namespace RealEstate.DataAccess
         {
             using (DbCommand cmd = db.GetStoredProcCommand("Home_Insert"))
             {
-                cmd.Parameters.Add(new SqlParameter("@HomeID", data.HomeID));
+                //cmd.Parameters.Add(new SqlParameter("@HomeID", data.HomeID));
                 cmd.Parameters.Add(new SqlParameter("@HomeTypeID", data.HomeTypeID));
                 cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersID", data.RealEstateOwnersID));
-                //cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersTypeID", data.RealEstateOwnersTypeID));
+                cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersName", data.RealEstateOwnersName));
                 cmd.Parameters.Add(new SqlParameter("@RealEstateID", data.RealEstateID));
+                cmd.Parameters.Add(new SqlParameter("@CityID", data.CityID));
+                cmd.Parameters.Add(new SqlParameter("@DistrictID", data.DistrictID));
+                cmd.Parameters.Add(new SqlParameter("@LocationID", data.LocationID));
                 cmd.Parameters.Add(new SqlParameter("@Name", data.Name));
-                cmd.Parameters.Add(new SqlParameter("@Name", data.Title));
-                cmd.Parameters.Add(new SqlParameter("@Name", data.CreateDate));
-                cmd.Parameters.Add(new SqlParameter("@Title", data.TransactionType));
+                cmd.Parameters.Add(new SqlParameter("@Title", data.Title));
+                cmd.Parameters.Add(new SqlParameter("@CreateDate", data.CreateDate));
+                cmd.Parameters.Add(new SqlParameter("@CreateBy", data.CreateBy));
+                cmd.Parameters.Add(new SqlParameter("@TransactionType", data.TransactionType));
                 cmd.Parameters.Add(new SqlParameter("@Tag", data.Tag));
                 cmd.Parameters.Add(new SqlParameter("@Description", data.Description));
                 cmd.Parameters.Add(new SqlParameter("@Address", data.Address));
@@ -180,7 +184,7 @@ namespace RealEstate.DataAccess
                 catch (Exception ex)
                 {
                     return false;
-                    //throw ex;
+                    throw ex;
                 }
                 finally
                 {
@@ -197,8 +201,11 @@ namespace RealEstate.DataAccess
                 cmd.Parameters.Add(new SqlParameter("@HomeID", data.HomeID));
                 cmd.Parameters.Add(new SqlParameter("@HomeTypeID", data.HomeTypeID));
                 cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersID", data.RealEstateOwnersID));
-                //cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersTypeID", data.RealEstateOwnersTypeID));
+                cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersName", data.RealEstateOwnersName));
                 cmd.Parameters.Add(new SqlParameter("@RealEstateID", data.RealEstateID));
+                cmd.Parameters.Add(new SqlParameter("@CityID", data.CityID));
+                cmd.Parameters.Add(new SqlParameter("@DistrictID", data.DistrictID));
+                cmd.Parameters.Add(new SqlParameter("@LocationID", data.LocationID));
                 cmd.Parameters.Add(new SqlParameter("@Name", data.Name));
                 cmd.Parameters.Add(new SqlParameter("@Name", data.Title));
                 cmd.Parameters.Add(new SqlParameter("@Name", data.CreateDate));

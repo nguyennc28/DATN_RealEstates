@@ -82,7 +82,7 @@ namespace RealEstate.Admins
                     List<CityInfo> Listcity = CityService.CityInfo_GetById(Id);
                     //List<DataAccess.User> listE = UserService.User_GetById(Id);
                     //Level = listE[0].Level.Substring(0, listE[0].Level.Length - 5);
-                    txtCityID.Text = Listcity[0].CityID;
+                    txtCityID.Text = Listcity[0].CityCode;
                     txtCityName.Text = Listcity[0].CityName;
                     //txtName.Text = listE[0].Name;
                     //txtUsername.Text = listE[0].Username;
@@ -136,7 +136,7 @@ namespace RealEstate.Admins
         {
             if (Page.IsValid)
             {
-                var obj = new CityInfo {CityID = txtCityID.Text, CityName = txtCityName.Text};
+                var obj = new CityInfo {CityCode = txtCityID.Text, CityName = txtCityName.Text};
                 if (Insert == true)
                 {
                     CityService.CityInfo_Insert(obj);

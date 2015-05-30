@@ -442,9 +442,13 @@
     <Content Include="css\Modules\ModuleHome\StyleModuleHome.css" />
     <Content Include="css\Modules\SearchBoxMain.css" />
     <Content Include="css\Modules\StyleMastercss.css" />
+    <Content Include="css\uploadify.css" />
     <Content Include="css\StyleFrontEnd1Master.css" />
     <Content Include="css\styleMainMaster.css" />
     <Content Include="Default2.aspx" />
+    <Content Include="Icons\btnCencelPostNewRE.png" />
+    <Content Include="Icons\btnPostNewRE.png" />
+    <Content Include="Icons\btnThemTinBDS.jpg" />
     <Content Include="Icons\Create.png" />
     <Content Include="Icons\facebook_login4.png" />
     <Content Include="Icons\icon_adv.jpg" />
@@ -468,6 +472,7 @@
     <Content Include="img\BannerMoving\A8A-DR_960x90.gif" />
     <Content Include="img\BannerMoving\BNN.gif" />
     <Content Include="img\Button\btTimkiem.png" />
+    <Content Include="img\cancel.png" />
     <Content Include="img\color.jpg" />
     <Content Include="img\cross-pattern.png" />
     <Content Include="img\featured\1.jpg" />
@@ -510,8 +515,11 @@
     <Content Include="js\jquery.smooth-scroll.min.js" />
     <Content Include="js\lightbox.js" />
     <Content Include="js\jquery-1.11.2.min.js" />
+    <Content Include="js\modules\jquery-1.3.2.min.js" />
     <Content Include="js\modules\jquery.featureList-1.0.0.js" />
+    <Content Include="js\modules\jquery.uploadify.js" />
     <Content Include="js\modules\SearchBoxMain.js" />
+    <Content Include="js\modules\uploader.swf" />
     <Content Include="Login.aspx" />
     <Content Include="Modules\Home.ascx" />
     <Content Include="Modules\ModulesHome\SaleAdjacentVilla.ascx" />
@@ -525,9 +533,12 @@
     <Content Include="Modules\ModulesLand\SaleLand.ascx" />
     <Content Include="Modules\ModulesLand\SaleProjectLand.ascx" />
     <Content Include="Modules\ModulesLand\SaleSurfaceLand.ascx" />
+    <Content Include="Modules\PostNewRE.ascx" />
+    <Content Include="Modules\Register.ascx" />
     <Content Include="Modules\SearchBoxMain.ascx" />
     <Content Include="Modules\SearchLeft.ascx" />
     <Content Include="Modules\UserManager.ascx" />
+    <Content Include="Modules\ViewPostNewRE.ascx" />
     <Content Include="Pages\Demo.aspx" />
     <Content Include="Pages\Icons\Create.png" />
     <Content Include="Pages\Icons\Dial.png" />
@@ -547,10 +558,14 @@
     <Content Include="Pages\img\arrow2.png" />
     <Content Include="Pages\Login.aspx" />
     <Content Include="Pages\WebForm1.aspx" />
+    <Content Include="Scripts\jquery-1.3.2.min.js" />
     <Content Include="Scripts\jquery.min.js" />
     <Content Include="Scripts\jquery.shockwave.effects.js" />
     <Content Include="Scripts\jquery.shockwave.js" />
+    <Content Include="Scripts\jquery.uploadify.js" />
+    <Content Include="Scripts\uploader.swf" />
     <Content Include="Test.aspx" />
+    <Content Include="PostNewRE.aspx" />
     <Content Include="Upload\Banner\banner_1_03.jpg" />
     <Content Include="Upload\Banner\banner_1_05.jpg" />
     <Content Include="Upload\Banner\banner_1_07.jpg" />
@@ -967,6 +982,20 @@
     <Compile Include="Modules\PageManager.ascx.designer.cs">
       <DependentUpon>PageManager.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Modules\PostNewRE.ascx.cs">
+      <DependentUpon>PostNewRE.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\PostNewRE.ascx.designer.cs">
+      <DependentUpon>PostNewRE.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Register.ascx.cs">
+      <DependentUpon>Register.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Register.ascx.designer.cs">
+      <DependentUpon>Register.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Modules\SearchBoxMain.ascx.cs">
       <DependentUpon>SearchBoxMain.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -987,6 +1016,13 @@
     </Compile>
     <Compile Include="Modules\UserManager.ascx.designer.cs">
       <DependentUpon>UserManager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ViewPostNewRE.ascx.cs">
+      <DependentUpon>ViewPostNewRE.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\ViewPostNewRE.ascx.designer.cs">
+      <DependentUpon>ViewPostNewRE.ascx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Demo.aspx.cs">
       <DependentUpon>Demo.aspx</DependentUpon>
@@ -1031,6 +1067,13 @@
     <Compile Include="Test.aspx.designer.cs">
       <DependentUpon>Test.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PostNewRE.aspx.cs">
+      <DependentUpon>PostNewRE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PostNewRE.aspx.designer.cs">
+      <DependentUpon>PostNewRE.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Tintuc.aspx.cs">
       <DependentUpon>Tintuc.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1051,6 +1094,7 @@
     <Folder Include="Models\" />
     <Folder Include="Modules\ModulesDetail\" />
     <Folder Include="Modules\ModulesMotel\" />
+    <Folder Include="Upload\ImageHouse\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config">
@@ -1071,6 +1115,9 @@
     <Content Include="ckeditor\samples\plugins\htmlwriter\assets\outputforflash\outputforflash.fla" />
     <Content Include="ckeditor\samples\sample_posteddata.php" />
     <Content Include="ckeditor\skins\moono\readme.md" />
+    <Content Include="js\modules\uploader.fla" />
+    <Content Include="Upload.ashx" />
+    <Content Include="Scripts\uploader.fla" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

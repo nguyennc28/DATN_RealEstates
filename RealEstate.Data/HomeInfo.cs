@@ -70,6 +70,13 @@ namespace RealEstate.DataAccess
 				_RealEstateID = value;
 			}
 		}
+        private string _RealEstateOwnersName;
+
+        public string RealEstateOwnersName
+        {
+            get { return _RealEstateOwnersName; }
+            set { _RealEstateOwnersName = value; }
+        }
         private string _Title;
 
         public string Title
@@ -406,6 +413,7 @@ namespace RealEstate.DataAccess
             //obj.RealEstateOwnersTypeID = (dr["RealEstateOwnersTypeID"] is DBNull) ? string.Empty : dr["RealEstateOwnersTypeID"].ToString();
             obj.RealEstateID = (dr["RealEstateID"] is DBNull) ? string.Empty : dr["RealEstateID"].ToString();
             obj.Name = (dr["Name"] is DBNull) ? string.Empty : dr["Name"].ToString();
+            obj.RealEstateOwnersName = (dr["RealEstateOwnersName"] is DBNull) ? string.Empty : dr["RealEstateOwnersName"].ToString();
             obj.Title = (dr["Title"] is DBNull) ? string.Empty : dr["Title"].ToString();
             obj.CreateDate = (dr["CreateDate"] is DBNull) ? string.Empty : dr["CreateDate"].ToString();
             obj.TransactionType = (dr["TransactionType"] is DBNull) ? string.Empty : dr["TransactionType"].ToString();

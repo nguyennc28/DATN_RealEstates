@@ -35,7 +35,7 @@ namespace RealEstate.Modules.ModulesHome
             ddlCity.Items.Add(new ListItem("-Chọn Tỉnh(Thành phố)-", "0"));
             for (int i = 0; i < list.Count; i++)
             {
-                ddlCity.Items.Add(new ListItem(list[i].CityName, list[i].CityID));
+                ddlCity.Items.Add(new ListItem(list[i].CityName, list[i].CityCode));
             }
             list.Clear();
             list = null;

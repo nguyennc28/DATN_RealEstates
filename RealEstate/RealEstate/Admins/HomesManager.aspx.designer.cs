@@ -364,22 +364,40 @@ namespace RealEstate.Admins {
         protected global::System.Web.UI.WebControls.Label lblImage0;
         
         /// <summary>
-        /// txtImage0 control.
+        /// oFile control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtImage0;
+        protected global::System.Web.UI.HtmlControls.HtmlInputFile oFile;
         
         /// <summary>
-        /// imgImage0 control.
+        /// btnUpload control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgImage0;
+        protected global::System.Web.UI.WebControls.Button btnUpload;
+        
+        /// <summary>
+        /// lblImages control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblImages;
+        
+        /// <summary>
+        /// ltrUploadResult control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltrUploadResult;
         
         /// <summary>
         /// lblImage1 control.

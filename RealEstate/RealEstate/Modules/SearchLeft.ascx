@@ -114,7 +114,7 @@
                                 <span class="searchDdl"><asp:DropDownList ID="ddlRealEstateType" runat="server">
                                 </asp:DropDownList></span>
 
-                                <span class="searchDdl"><asp:DropDownList ID="ddlCity" runat="server">
+                                <span class="searchDdl"><asp:DropDownList ID="ddlCity" runat="server" OnSelectedIndexChanged="ddlCity_SelectedIndexChanged">
                                 </asp:DropDownList></span>
 
                                 <span class="searchDdl"><asp:DropDownList ID="ddlDistrict" runat="server">

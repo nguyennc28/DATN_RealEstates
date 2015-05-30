@@ -18,7 +18,7 @@ namespace RealEstate.DataAccess
         {
             List<RealEstateInfo> list = new List<RealEstateInfo>();
             DataAccess.RealEstateInfo obj = new DataAccess.RealEstateInfo();
-            DbCommand cmd = db.GetStoredProcCommand("Group_SelectByID", Id);
+            DbCommand cmd = db.GetStoredProcCommand("RealEstates_SelectByID", Id);
             using (IDataReader dr = db.ExecuteReader(cmd))
             {
                 while (dr.Read())
@@ -54,7 +54,7 @@ namespace RealEstate.DataAccess
         {
             List<DataAccess.RealEstateInfo> list = new List<DataAccess.RealEstateInfo>();
             DataAccess.RealEstateInfo obj = new DataAccess.RealEstateInfo();
-            DbCommand cmd = db.GetStoredProcCommand("Group_SelectTop", Top, Where, Order);
+            DbCommand cmd = db.GetStoredProcCommand("RealEstates_SelectTop", Top, Where, Order);
             using (IDataReader dr = db.ExecuteReader(cmd))
             {
                 while (dr.Read())
@@ -72,7 +72,7 @@ namespace RealEstate.DataAccess
         {
             List<DataAccess.RealEstateInfo> list = new List<DataAccess.RealEstateInfo>();
             DataAccess.RealEstateInfo obj = new DataAccess.RealEstateInfo();
-            DbCommand cmd = db.GetStoredProcCommand("Group_SelectAll");
+            DbCommand cmd = db.GetStoredProcCommand("RealEstates_SelectAll");
             using (IDataReader dr = db.ExecuteReader(cmd))
             {
                 while (dr.Read())
@@ -90,7 +90,7 @@ namespace RealEstate.DataAccess
         {
             List<DataAccess.RealEstateInfo> list = new List<DataAccess.RealEstateInfo>();
             DataAccess.RealEstateInfo obj = new DataAccess.RealEstateInfo();
-            DbCommand cmd = db.GetStoredProcCommand("Group_SelectPage", CurentRealEstateInfo, RealEstateInfoSize);
+            DbCommand cmd = db.GetStoredProcCommand("RealEstates_SelectPage", CurentRealEstateInfo, RealEstateInfoSize);
             using (IDataReader dr = db.ExecuteReader(cmd))
             {
                 while (dr.Read())
@@ -124,7 +124,7 @@ namespace RealEstate.DataAccess
         #region[RealEstateInfo_Insert]
         public bool RealEstateInfo_Insert(RealEstateInfo data)
         {
-            using (DbCommand cmd = db.GetStoredProcCommand("Group_Insert"))
+            using (DbCommand cmd = db.GetStoredProcCommand("RealEstates_Insert"))
             {
                 //cmd.Parameters.Add(new SqlParameter("@RealEstateID", data.RealEstateID));
                 cmd.Parameters.Add(new SqlParameter("@RealEstateName", data.RealEstateName));
@@ -167,7 +167,7 @@ namespace RealEstate.DataAccess
         #region[RealEstateInfo_Update]
         public bool RealEstateInfo_Update(RealEstateInfo data)
         {
-            using (DbCommand cmd = db.GetStoredProcCommand("Group_Update"))
+            using (DbCommand cmd = db.GetStoredProcCommand("RealEstates_Update"))
             {
                 cmd.Parameters.Add(new SqlParameter("@RealEstateID", data.RealEstateID));
                 cmd.Parameters.Add(new SqlParameter("@RealEstateName", data.RealEstateName));
@@ -210,7 +210,7 @@ namespace RealEstate.DataAccess
         #region[RealEstateInfo_Delete]
         public bool RealEstateInfo_Delete(string Id)
         {
-            DbCommand cmd = db.GetStoredProcCommand("Group_Delete", Id);
+            DbCommand cmd = db.GetStoredProcCommand("RealEstates_Delete", Id);
             try
             {
                 db.ExecuteNonQuery(cmd);

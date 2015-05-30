@@ -127,7 +127,7 @@ namespace RealEstate.Admins.Modules
         {
             if (Page.IsValid)
             {
-                var obj = new CityInfo { CityID = txtDistrictID.Text, CityName = txtDistrictName.Text };
+                var obj = new CityInfo { CityCode = txtDistrictID.Text, CityName = txtDistrictName.Text };
                 if (Insert == true)
                 {
                     CityService.CityInfo_Update(obj);

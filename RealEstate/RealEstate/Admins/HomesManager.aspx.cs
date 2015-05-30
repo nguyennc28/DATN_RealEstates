@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -29,6 +30,69 @@ namespace RealEstate.Admins
             }
             LoadDropdownList();
 
+        }
+        #region Web Form Designer generated code
+        override protected void OnInit(EventArgs e)
+        {
+            //
+            // CODEGEN: This call is required by the ASP.NET Web Form Designer.
+            //
+            InitializeComponent();
+            base.OnInit(e);
+        }
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
+            this.Load += new System.EventHandler(this.Page_Load);
+
+        }
+        #endregion
+        private void btnUpload_Click(object sender, System.EventArgs e)
+        {
+            string strFileName;
+            string strFilePath;
+            string strFolder = "~/Upload/ImageHouse/";
+            strFolder = Server.MapPath(strFolder);
+
+            // Get the name of the file that is posted.
+
+
+            strFileName = oFile.PostedFile.FileName;
+            strFileName = Path.GetFileName(strFileName);
+            if (oFile.Value != "")
+            {
+                // Create the directory if it does not exist.
+                if (!Directory.Exists(strFolder))
+                {
+                    Directory.CreateDirectory(strFolder);
+                }
+
+                // Save the uploaded file to the server.
+                strFilePath = strFolder + strFileName;
+
+                if (File.Exists(strFilePath))
+                {
+                    lblImages.Text = strFileName + "đã tồn tại trên máy chủ!";
+                    lblImages.Visible = true;
+                    ltrUploadResult.Text = "<img src=\"../Upload/ImageHouse/" + strFileName + " \" width=\"500px\"/>";
+                }
+                else
+                {
+                    oFile.PostedFile.SaveAs(strFilePath);
+                    lblImages.Text = strFileName + " has been successfully uploaded.";
+                    ltrUploadResult.Text = "<img src=\"../Upload/ImageHouse/" + strFileName + " \" width=\"500px\" />";
+                }
+
+            }
+            else
+            {
+                ltrUploadResult.Text = "Click 'Browse' to select the file to upload.";
+            }
         }
         private void BindGrid()
         {
@@ -100,7 +164,7 @@ namespace RealEstate.Admins
                     txtGargenArea.Text = listE[0].GargenArea;
                     ddlBedroomNumber.Text = listE[0].BedroomNumber;
                     ddlTierNumber.Text = listE[0].TierNumber;
-                    txtImage0.Text = listE[0].Image1;
+                    //txtImage0.Text = listE[0].Image1;
                     txtImage1.Text = listE[0].Image2;
                     txtImage2.Text = listE[0].Image3;
                     txtImage3.Text = listE[0].Image4;
