@@ -1,12 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/FrontEnd2.Master" AutoEventWireup="true" CodeBehind="PostNewRE.aspx.cs" Inherits="RealEstate.PostNewRE" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 <%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<%@ Register Src="~/Modules/PostNewsRE/PostNewsRentHome.ascx" TagPrefix="uc1" TagName="PostNewsRentHome" %>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
 <link href="http://zkiwi.com/demobox/css/style-demo.css" rel="stylesheet" media="all" />
-<link href="../../css/Modules/ModuleHome/StyleModuleHome.css" rel="stylesheet" />
-<link href="../css/uploadify.css" rel="stylesheet" />
-<script src="../Scripts/jquery-1.3.2.min.js"></script>
-<script src="../Scripts/jquery.uploadify.js"></script>
+<link href="css/Modules/ModuleHome/StyleModuleHome.css" rel="stylesheet" />
+
 <script type="text/javascript">
     $(function () {
 
@@ -44,7 +44,7 @@
           color: #fff;
           text-align: center;
     }
-    #tab1 {
+    #tab1,#tab2,#tab3,#tab4,#tab5{
             margin-top: -10px;
             border: 1px solid olive;
             background: lavender;
@@ -74,7 +74,7 @@
     <div class="tabcont">
 
         <div id="tab1" class="tabcontent" align="justify">
-            <asp:ValidationSummary ID="vsSaleHome" runat="server" />
+            <asp:ValidationSummary ID="vsSaleHome" runat="server" ShowMessageBox="True" ShowSummary="False"/>
             <div>
                 <h2> Đăng thông tin bán nhà của bạn </h2>
             </div>
@@ -83,7 +83,7 @@
                     <p><span class="lbNameCol">Loại nhà:</span></p>
                 </div>
                 <div class="span6">
-                    <span class="searchDdl"><asp:DropDownList ID="ddlHomeType" runat="server">
+                    <span class="searchDdl"><asp:DropDownList ID="ddlHomeType" runat="server" >
                                             </asp:DropDownList></span>
                 </div>
             </div>
@@ -102,7 +102,7 @@
 
                 </div>
                 <div class="span6">
-                    <asp:TextBox ID="txtTenChuSoHuu" runat="server"></asp:TextBox><span class="err"> <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtTenChuSoHuu" ErrorMessage="Bạn phải nhập vào họ tên!">*(yêu cầu)</asp:RequiredFieldValidator></span>
+                    <asp:TextBox ID="txtTenChuSoHuu" runat="server"></asp:TextBox><span class="err"> <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtTenChuSoHuu" ErrorMessage="Bạn phải nhập vào họ tên!">*(bắt buộc)</asp:RequiredFieldValidator></span>
                 </div>
             </div>
             <div class="row">
@@ -119,11 +119,11 @@
                 </div>
                 <div class="span6">
                     <div class="row">
-                         <p><span>Tỉnh(Thành phố): </span><span class="searchDdl"><asp:DropDownList ID="ddlCity" runat="server">
+                         <p><span>Tỉnh(Thành phố): </span><span class="searchDdl"><asp:DropDownList ID="ddlCity" runat="server" OnSelectedIndexChanged="ddlCity_SelectedIndexChanged" AutoPostBack="True">
                                             </asp:DropDownList></span></p>
                     </div>
                     <div class="row">
-                        <p><span>Huyện(Quận): </span><span class="searchDdl"><asp:DropDownList ID="ddlDistrict" runat="server">
+                        <p><span>Huyện(Quận): </span><span class="searchDdl"><asp:DropDownList ID="ddlDistrict" runat="server" AutoPostBack="True">
                                             </asp:DropDownList></span></p>
                     </div>
                     <div class="row">
@@ -147,7 +147,7 @@
                     <p><span class="lbNameCol">Tổng diện tích:</span></p>
                 </div>
                 <div class="span6">
-                    <asp:TextBox ID="txtArea" runat="server"></asp:TextBox><span class="err"> <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtArea" ErrorMessage="Bạn phải nhập vào tổng diện tích">*(băt buộc)</asp:RequiredFieldValidator></span>
+                    <asp:TextBox ID="txtArea" runat="server"></asp:TextBox><span> m2</span><span class="err"> <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtArea" ErrorMessage="Bạn phải nhập vào tổng diện tích">*(băt buộc)</asp:RequiredFieldValidator></span>
                 </div>
             </div>
             <div class="row">
@@ -184,7 +184,7 @@
             </div>
             <div class="row">
                 <div class="span3">
-                    <p><span class="lbNameCol">Số tầng:</span></p>
+                    <p><span class="lbNameCol">Số tầng:</span></p><span class="err"> <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtBetroomNum" ErrorMessage="Bạn phải nhập vào số tầng của nhà">*(băt buộc)</asp:RequiredFieldValidator></span>
                 </div>
                 <div class="span6">
                     <asp:TextBox ID="txtTierNumber" runat="server"></asp:TextBox>
@@ -198,6 +198,8 @@
                     <input id="oFile" type="file" runat="server" NAME="oFile"/>
                     <asp:button ID="btnUploadImage" type="submit" text="Upload" runat="server"></asp:button>
                     <asp:Label ID="lblImages" runat="server" Text="Label" Visible="False"></asp:Label>
+                    <%--<span class="err">
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="oFile" ErrorMessage="Chỉ cho phép tải lên các file có định dạng như sau: jpeg|.JPEG|.gif|.GIF|.png|.PNG|.JPG|.jpg|.bitmap|.BITMAP" ValidationExpression="/^(([a-zA-Z]:)|(\\{2}\w+)\$?)(\\(\w[\w].*))+(.jpeg|.JPEG|.gif|.GIF|.png|.PNG|.JPG|.jpg|.bitmap|.BITMAP)$/"></asp:RegularExpressionValidator></span>--%>
                     <div style="width: 100%;">
                         <asp:Literal ID="ltrUploadResultImage" runat="server"></asp:Literal>
                         <asp:Label ID="lbImages1" runat="server" Text="Label" Visible="False"></asp:Label>
@@ -286,8 +288,8 @@
         </div>
 
         <div id="tab2" class="tabcontent" align="justify">
+            <%--<uc1:PostNewsRentHome runat="server" id="PostNewsRentHome" />--%>
 
-            <asp:Literal ID="ltrTab2" runat="server"></asp:Literal>
         </div>
         <div id="tab3" class="tabcontent" align="justify">
             <asp:Literal ID="ltrTab3" runat="server"></asp:Literal>

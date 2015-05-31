@@ -534,6 +534,7 @@
     <Content Include="Modules\ModulesLand\SaleProjectLand.ascx" />
     <Content Include="Modules\ModulesLand\SaleSurfaceLand.ascx" />
     <Content Include="Modules\PostNewRE.ascx" />
+    <Content Include="Modules\PostNewsRE\PostNewsRentHome.ascx" />
     <Content Include="Modules\Register.ascx" />
     <Content Include="Modules\SearchBoxMain.ascx" />
     <Content Include="Modules\SearchLeft.ascx" />
@@ -988,6 +989,13 @@
     </Compile>
     <Compile Include="Modules\PostNewRE.ascx.designer.cs">
       <DependentUpon>PostNewRE.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\PostNewsRE\PostNewsRentHome.ascx.cs">
+      <DependentUpon>PostNewsRentHome.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\PostNewsRE\PostNewsRentHome.ascx.designer.cs">
+      <DependentUpon>PostNewsRentHome.ascx</DependentUpon>
     </Compile>
     <Compile Include="Modules\Register.ascx.cs">
       <DependentUpon>Register.ascx</DependentUpon>

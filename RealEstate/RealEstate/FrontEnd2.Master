@@ -1,11 +1,11 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="FrontEnd2.master.cs" Inherits="RealEstate.FrontEnd2" %>
 <%@ Register Src="~/Controls/FeNavbar.ascx" TagPrefix="uc1" TagName="FeNavbar" %>
-<%@ Register Src="~/Controls/FeBannerSlide.ascx" TagPrefix="uc1" TagName="FeBannerSlide" %>
+<%--<%@ Register Src="~/Controls/FeBannerSlide.ascx" TagPrefix="uc1" TagName="FeBannerSlide" %>--%>
 <%@ Register Src="~/Controls/Menu.ascx" TagPrefix="uc1" TagName="Menu" %>
 <%@ Register Src="~/Controls/BannerNgang.ascx" TagPrefix="uc1" TagName="BannerNgang" %>
 <%@ Register Src="~/Modules/SearchBoxMain.ascx" TagPrefix="uc1" TagName="SearchBoxMain" %>
 <%@ Register Src="~/Controls/FeFooter.ascx" TagPrefix="uc1" TagName="FeFooter" %>
-<%--<%@ Register Src="~/Controls/FeBannerSlide1.ascx" TagPrefix="uc1" TagName="FeBannerSlide1" %>--%>
+<%@ Register Src="~/Controls/FeBannerSlide1.ascx" TagPrefix="uc1" TagName="FeBannerSlide1" %>
 
 
 <!DOCTYPE html>
@@ -34,8 +34,8 @@
         <div class="container">
             <!--Start Carousel-->
             <div id="myCarousel" class="carousel slide">
-                <uc1:FeBannerSlide runat="server" ID="FeBannerSlide" />
-                <%--<uc1:FeBannerSlide1 runat="server" ID="FeBannerSlide1" />--%>
+                <%--<uc1:FeBannerSlide runat="server" ID="FeBannerSlide" />--%>
+                <uc1:FeBannerSlide1 runat="server" ID="FeBannerSlide1" />
             </div>
             <!--End Carousel-->
             <div class="navbar navbar-fixed-top">

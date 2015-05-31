@@ -40,13 +40,13 @@ namespace RealEstate {
         protected global::RealEstate.Controls.FeNavbar FeNavbar;
         
         /// <summary>
-        /// FeBannerSlide control.
+        /// FeBannerSlide1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::RealEstate.Controls.FeBannerSlide FeBannerSlide;
+        protected global::RealEstate.Controls.FeBannerSlide1 FeBannerSlide1;
         
         /// <summary>
         /// Menu control.

@@ -60,7 +60,7 @@
                $ArrowKeyNavigation: true,   			            //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
                $SlideDuration: 500,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
                $MinDragOffsetToSlide: 20,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
-               //$SlideWidth: 600,                                 //[Optional] Width of every slide in pixels, default value is width of 'slides' container
+               //$SlideWidth: 980,                                 //[Optional] Width of every slide in pixels, default value is width of 'slides' container
                //$SlideHeight: 300,                                //[Optional] Height of every slide in pixels, default value is height of 'slides' container
                $SlideSpacing: 0, 					                //[Optional] Space between each slide in pixels, default value is 0
                $DisplayPieces: 1,                                  //[Optional] Number of pieces to display (the slideshow would be disabled if the value is set to greater than 1), the default value is 1
@@ -104,7 +104,7 @@
            function ScaleSlider() {
                var parentWidth = jssor_sliderb.$Elmt.parentNode.clientWidth;
                if (parentWidth)
-                   jssor_sliderb.$ScaleWidth(Math.min(parentWidth, 600));
+                   jssor_sliderb.$ScaleWidth(Math.min(parentWidth, 980));
                else
                    window.setTimeout(ScaleSlider, 30);
            }
@@ -119,7 +119,7 @@
 <div class="carousel-inner">
     <%--<asp:Literal ID="ltrBannerSilde" runat="server"></asp:Literal>--%>
     
-    <div id="sliderb_container" style="position: relative; top: 0px; left: 0px; width: 600px;
+    <div id="sliderb_container" style="position: relative; top: 0px; left: 0px; width: 980px;
         height: 300px; overflow: hidden;">
 
         <!-- Loading Screen -->
@@ -133,7 +133,7 @@
         </div>
 
         <!-- Slides Container -->
-        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 600px; height: 300px;
+        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 980px; height: 300px;
             overflow: hidden;">
             <div>
                 <img u=image src="../img/landscape/banner_1_01.jpg" />
@@ -144,7 +144,7 @@
                 <div u="thumb">Did you drag by either horizontal or vertical?</div>
             </div>
             <div>
-                <img u=image src="../img/landscape/0banner_1_03.jpg" />
+                <img u=image src="../img/landscape/banner_1_03.jpg" />
                 <div u="thumb">Do you notice navigator responses when drag?</div>
             </div>
             <div>
@@ -157,13 +157,13 @@
         <!-- Help: http://www.jssor.com/development/slider-with-thumbnail-navigator-jquery.html -->
         <!-- thumbnail navigator container -->
         <!-- Help: http://www.jssor.com/development/slider-with-thumbnail-navigator-jquery.html -->
-        <div u="thumbnavigator" style="position: absolute; bottom: 0px; left: 0px; height:45px; width:600px;">
+        <div u="thumbnavigator" style="position: absolute; bottom: 0px; left: 0px; height:45px; width:980px;">
             <div style="filter: alpha(opacity=40); opacity:0.4; position: absolute; display: block;
                 background-color: #000000; top: 0px; left: 0px; width: 100%; height: 100%;">
             </div>
             <!-- Thumbnail Item Skin Begin -->
             <div u="slides">
-                <div u="prototype" style="POSITION: absolute; WIDTH: 600px; HEIGHT: 45px; TOP: 0; LEFT: 0;">
+                <div u="prototype" style="POSITION: absolute; WIDTH: 980px; HEIGHT: 45px; TOP: 0; LEFT: 0;">
                     <div u="thumbnailtemplate" style="font-family: verdana; font-weight: normal; POSITION: absolute; WIDTH: 100%; HEIGHT: 100%; TOP: 0; LEFT: 0; color:#fff; line-height: 45px; font-size:20px; padding-left:10px;"></div>
                 </div>
             </div>

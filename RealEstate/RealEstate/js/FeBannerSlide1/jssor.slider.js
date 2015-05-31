@@ -2468,7 +2468,7 @@ var $JssorSlider$ = window.$JssorSlider$ = function (elmt, options) {
                 var originalHeight = $Jssor$.$CssP(elmt, "height");
 
                 if (!originalWidthStr || originalWidthStr.indexOf("px") == -1) {
-                    $JssorDebug$.$Fail("Cannot scale jssor slider, 'width' of 'outer container' not specified. Please specify 'width' in pixel. e.g. 'width: 600px;'");
+                    $JssorDebug$.$Fail("Cannot scale jssor slider, 'width' of 'outer container' not specified. Please specify 'width' in pixel. e.g. 'width: 980px;'");
                 }
 
                 if (!originalHeightStr || originalHeightStr.indexOf("px") == -1) {
@@ -2476,7 +2476,7 @@ var $JssorSlider$ = window.$JssorSlider$ = function (elmt, options) {
                 }
 
                 if (originalWidthStr.indexOf('%') != -1) {
-                    $JssorDebug$.$Fail("Cannot scale jssor slider, 'width' of 'outer container' not valid. Please specify 'width' in pixel. e.g. 'width: 600px;'");
+                    $JssorDebug$.$Fail("Cannot scale jssor slider, 'width' of 'outer container' not valid. Please specify 'width' in pixel. e.g. 'width: 980px;'");
                 }
 
                 if (originalHeightStr.indexOf('%') != -1) {
@@ -2484,7 +2484,7 @@ var $JssorSlider$ = window.$JssorSlider$ = function (elmt, options) {
                 }
 
                 if (!originalWidth) {
-                    $JssorDebug$.$Fail("Cannot scale jssor slider, 'width' of 'outer container' not valid. 'width' of 'outer container' should be positive number. e.g. 'width: 600px;'");
+                    $JssorDebug$.$Fail("Cannot scale jssor slider, 'width' of 'outer container' not valid. 'width' of 'outer container' should be positive number. e.g. 'width: 980px;'");
                 }
 
                 if (!originalHeight) {
@@ -2742,10 +2742,10 @@ var $JssorSlider$ = window.$JssorSlider$ = function (elmt, options) {
 
     $JssorDebug$.$Execute(function () {
         if (isNaN(_SlidesContainerWidth))
-            $JssorDebug$.$Fail("Width of slides container wrong specification, it should be specified in pixel (like style='width: 600px;').");
+            $JssorDebug$.$Fail("Width of slides container wrong specification, it should be specified in pixel (like style='width: 980px;').");
 
         if (_SlidesContainerWidth == undefined)
-            $JssorDebug$.$Fail("Width of slides container not specified, it should be specified in pixel (like style='width: 600px;').");
+            $JssorDebug$.$Fail("Width of slides container not specified, it should be specified in pixel (like style='width: 980px;').");
 
         if (isNaN(_SlidesContainerHeight))
             $JssorDebug$.$Fail("Height of slides container wrong specification, it should be specified in pixel (like style='height: 300px;').");

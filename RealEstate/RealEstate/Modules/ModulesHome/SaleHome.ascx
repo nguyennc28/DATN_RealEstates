@@ -4,7 +4,6 @@
 <link href="../../css/Modules/ModuleHome/StyleModuleHome.css" rel="stylesheet" />
 <script type="text/javascript">
     $(function () {
-
         if (localStorage.getItem('active')) {
             $('.tabbed').find('#' + localStorage.getItem('active')).addClass('active');
             $('.tabbed').find('a[href=' + localStorage.getItem('active') + ']').parent().addClass('active');
@@ -26,6 +25,49 @@
         });
     })
 </script>
+
+<style type="text/css">
+    #bigPic{
+	width:300px;
+    height: 225px;
+	padding:1px;
+	border:1px solid #CCC;
+	background-color:#FFF;
+	margin-bottom:10px;
+}
+#bigPic img{
+	position:absolute;
+	display:none;
+}
+ul#smallPic li.active{
+	border:2px solid #000;	
+	background:#fff;
+	padding:2px;
+}
+ul#smallPic, ul#smallPic li{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+	
+ul#smallPic li{
+	float:left;
+	margin-right:7px;
+	margin-bottom:5px;
+	border:1px solid #CCC;	
+	padding:3px;
+	cursor:pointer;
+}
+ul#smallPic img{
+	float:left;
+	width:88px;
+	/*height:80px;*/
+	line-height:80px;
+	overflow:hidden;
+	position:relative;
+	z-index:1;		
+}
+</style>
 
 <div class="row">
     <div class="span10">
@@ -69,6 +111,50 @@
     <div class="tabcont">
 
         <div id="tab1" class="tabcontent" align="justify">
+            <div class="row" style="margin-left: -15px;">
+                <% if (listHome.Count == 0)
+                   {%>
+                       <p> Dữ liệu đang được cập nhật </p>
+                   <%} %>
+                <%
+                   else
+                   {%>
+                       <% for (int i = 0; i < listHome.Count; i++)
+                          {%>
+                            <div class="span3">
+                                <div id="bigPic">
+                                    <img src="<% =listHome[i].Image1 %>" alt=""/>
+                                    <img src="<% =listHome[i].Image2 %>" alt=""/>
+                                    <img src="<% =listHome[i].Image3 %>" alt=""/>
+                                </div>
+                                <ul id="smallPic">
+                                    <li class="active" rel="1"><img src="<% =listHome[i].Image1 %>" alt=""/> </li>
+                                    <li rel="2"><img src="<% =listHome[i].Image2 %>" alt=""/></li>
+                                    <li rel="3"><img src="<% =listHome[i].Image3 %>" alt=""/></li>
+                                </ul>
+                            </div>
+                          <%} %>
+                   <%} %>
+                <div class="span3">
+                    <div id="bigPic">
+                        <img src="/Upload/Images/anh1.jpg" alt=""/>
+                        <img src="/Upload/Images/anh2.jpg" alt=""/>
+                        <img src="/Upload/Images/anh3.jpg" alt=""/>
+                    </div>
+                    <ul id="smallPic">
+                        <li class="active" rel="4"><img src="/Upload/Images/anh1.jpg" alt=""/> </li>
+                        <li rel="5"><img src="/Upload/Images/anh2.jpg" alt=""/></li>
+                        <li rel="6"><img src="/Upload/Images/anh3.jpg" alt=""/></li>
+                    </ul>
+                </div>
+                <div class="span3">
+                    
+                </div>
+                <div class="span3">
+                    
+                </div>
+            </div>
+
             <asp:Literal ID="ltrTab1" runat="server"></asp:Literal>
 
         </div>
@@ -89,3 +175,47 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
+<script type="text/javascript">
+    var currentImage;
+    var currentIndex = -1;
+    var interval;
+
+    function showImage(index) {
+        if (index < $('#bigPic img').length) {
+            var indexImage = $('#bigPic img')[index];
+            if (currentImage) {
+                if (currentImage != indexImage) {
+                    $(currentImage).css('z-index', 2);
+                    clearTimeout(myTimer);
+                    $(currentImage).fadeOut(250, function() {
+                        myTimer = setTimeout("showNext()", 3000);
+                        $(this).css({ 'display': 'none', 'z-index': 1 });
+                    });
+                }
+            }
+            $(indexImage).css({ 'display': 'block', 'opacity': 1 });
+            currentImage = indexImage;
+            currentIndex = index;
+            $('#smallPic li').removeClass('active');
+            $($('#smallPic li')[index]).addClass('active');
+        }        
+    }
+
+    function showNext() {
+        var len = $('#bigPic img').length;
+        var next = currentIndex < (len - 1) ? currentIndex + 1 : 0;
+        showImage(next);
+    }
+
+    var myTimer;
+    $(document).ready(function() {
+        myTimer = setTimeout("showNext()", 3000);
+        showNext();
+        $('#smallPic li').bind('click', function(e) {
+            var count = $(this).attr('rel');
+            showImage(parseInt(count) - 1);
+        });
+    });
+</script>

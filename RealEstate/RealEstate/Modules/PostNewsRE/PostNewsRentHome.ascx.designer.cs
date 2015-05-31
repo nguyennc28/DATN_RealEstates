@@ -7,19 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RealEstate {
+namespace RealEstate.Modules.PostNewsRE {
     
     
-    public partial class PostNewRE {
-        
-        /// <summary>
-        /// vsSaleHome control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary vsSaleHome;
+    public partial class PostNewsRentHome {
         
         /// <summary>
         /// ddlHomeType control.
@@ -488,41 +479,5 @@ namespace RealEstate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton btnCencelPostNewRE;
-        
-        /// <summary>
-        /// ltrTab1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ltrTab1;
-        
-        /// <summary>
-        /// ltrTab3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ltrTab3;
-        
-        /// <summary>
-        /// ltrTab4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ltrTab4;
-        
-        /// <summary>
-        /// ltrTab5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ltrTab5;
     }
 }

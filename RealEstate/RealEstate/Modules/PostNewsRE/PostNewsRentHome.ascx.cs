@@ -8,11 +8,10 @@ using System.Web.UI.WebControls;
 using RealEstate.Business;
 using RealEstate.DataAccess;
 
-namespace RealEstate
+namespace RealEstate.Modules.PostNewsRE
 {
-    public partial class PostNewRE : System.Web.UI.Page
+    public partial class PostNewsRentHome : System.Web.UI.UserControl
     {
-        private string _cityCode;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -20,7 +19,7 @@ namespace RealEstate
                 ViewRealEstateType();
                 ViewRealEstate();
                 ViewCity();
-                //ViewDistrict();                
+                ViewDistrict();
             }
         }
 
@@ -92,27 +91,20 @@ namespace RealEstate
                 listCityInfos.Clear();
                 listCityInfos = null;
             }
-            _cityCode = ddlCity.SelectedValue;
-            ViewDistrict();
+            //_cityCode = ddlCity.SelectedValue;
         }
         private void ViewDistrict()
         {
             ddlDistrict.Items.Clear();
-            if (_cityCode == "0")
+            ddlDistrict.Items.Add(new ListItem("-Chọn Quận (huyện)-", "0"));
+            List<DistrictInfo> listDistrictInfos = DistrictService.DistrictInfo_GetByTop("100", "CityCode = 1", "DistrictID");
+            for (int i = 0; i < listDistrictInfos.Count; i++)
             {
-                ddlDistrict.Items.Add(new ListItem("-Chọn Quận (huyện)-", "0"));
+                ListItem lsListItem = new ListItem(listDistrictInfos[i].DistrictName, listDistrictInfos[i].DistrictID);
+                ddlDistrict.Items.Add(lsListItem);
             }
-            else
-            {
-                List<DistrictInfo> listDistrictInfos = DistrictService.DistrictInfo_GetByTop("100", "CityCode =" + _cityCode, "DistrictID");
-                for (int i = 0; i < listDistrictInfos.Count; i++)
-                {
-                    ListItem lsListItem = new ListItem(listDistrictInfos[i].DistrictName, listDistrictInfos[i].DistrictID);
-                    ddlDistrict.Items.Add(lsListItem);
-                }
-                listDistrictInfos.Clear();
-                listDistrictInfos = null;
-            }            
+            listDistrictInfos.Clear();
+            listDistrictInfos = null;
         }
         private void ViewRealEstateType()
         {
@@ -130,7 +122,7 @@ namespace RealEstate
             listddlHomeTypeInfos = null;
         }
 
-       
+
         #region Web Form Designer generated code
         override protected void OnInit(EventArgs e)
         {
@@ -423,11 +415,5 @@ namespace RealEstate
                 ltrUploadResultImage6.Text = "Bấm 'Browse' để chọn file cần tải lên!";
             }
         }
-
-        protected void ddlCity_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            _cityCode = ddlCity.SelectedValue;
-            ViewDistrict();
-        }           
     }
 }

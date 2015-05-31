@@ -11,11 +11,14 @@ namespace RealEstate.Modules.ModulesHome
 {
     public partial class SaleHome : System.Web.UI.UserControl
     {
-        private HomeService homeService;
-        List<HomeInfo> listHome = new List<HomeInfo>();
+        public List<HomeInfo> listHome = new List<HomeInfo>();
         protected void Page_Load(object sender, EventArgs e)
         {
-            Load_Home();
+            if (!IsPostBack)
+            {
+                listHome = HomeService.HomeInfo_GetByTop("3", "", "");
+                //Load_Home();
+            }            
         }
         private void Load_Home()
         {
