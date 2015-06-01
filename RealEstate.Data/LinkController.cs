@@ -113,7 +113,7 @@ using Microsoft.Practices.EnterpriseLibrary.Data;namespace RealEstate.DataAcce
         {
             using (DbCommand cmd = db.GetStoredProcCommand("Links_Update"))
             {
-                cmd.Parameters.Add(new SqlParameter("@Id", data.ID));
+                cmd.Parameters.Add(new SqlParameter("@ID", data.ID));
                 cmd.Parameters.Add(new SqlParameter("@Name", data.Name));
                 cmd.Parameters.Add(new SqlParameter("@Line1", data.Line1));
                 cmd.Parameters.Add(new SqlParameter("@Line2", data.Line2));

@@ -85,13 +85,13 @@ namespace RealEstate.Controls {
         protected global::System.Web.UI.WebControls.LinkButton LinkButton4;
         
         /// <summary>
-        /// lbtAdverties control.
+        /// lbtLinksManager control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbtAdverties;
+        protected global::System.Web.UI.WebControls.LinkButton lbtLinksManager;
         
         /// <summary>
         /// lbtTestUploadFile control.

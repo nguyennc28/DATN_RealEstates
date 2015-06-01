@@ -203,31 +203,41 @@ namespace RealEstate.Admins
 
         }
 
-        private void LoatLevelMenu()
-        {
-            rdLevelMenu.Items.Clear();
-            List<RealEstate.DataAccess.Page> listPages = PageService.Page_GetByTop("20", "Active = 1 and LEN(Level) =5", "Ord");
-            if (listPages.Count > 0)
-            {
-                for (int i = 0; i < listPages.Count; i++)
-                {
-                    List<RealEstate.DataAccess.Page> listSubPage = new List<RealEstate.DataAccess.Page>();
-                    listSubPage = PageService.Page_GetBySub(listPages[i].Level);
-                    if (listSubPage.Count > 0)
-                    {
-                        rdLevelMenu.Items.Add(new ListItem("Cấp 1", "0000"+listPages[i].Ord));
-                        for (int j = 0; j < listSubPage.Count; j++)
-                        {
-                            rdLevelMenu.Items.Add(new ListItem("Cấp 2", "0000" + listPages[i].Ord + "0000" + listSubPage[i].Ord ));
-                        }
-                    }
+        //private void LoatLevelMenu()
+        //{
+        //    rdLevelMenu.Items.Clear();
+        //    List<RealEstate.DataAccess.Page> listPages = PageService.Page_GetByTop("20", "Active = 1 and LEN(Level) =5", "Ord");
+        //    if (listPages.Count > 0)
+        //    {
+        //        for (int i = 0; i < listPages.Count; i++)
+        //        {
+        //            List<RealEstate.DataAccess.Page> listSubPage = new List<RealEstate.DataAccess.Page>();
+        //            listSubPage = PageService.Page_GetBySub(listPages[i].Level);
+        //            if (listSubPage.Count > 0)
+        //            {
+        //                rdLevelMenu.Items.Add(new ListItem("Cấp 1", "0000"+listPages[i].Ord));
+        //                for (int j = 0; j < listSubPage.Count; j++)
+        //                {
+        //                    rdLevelMenu.Items.Add(new ListItem("Cấp 2", "0000" + listPages[i].Ord + "0000" + listSubPage[i].Ord ));
+        //                }
+        //            }
 
-                }
-            }
-            else
+        //        }
+        //    }
+        //    else
+        //    {
+                
+        //    }
+        //}
+
+
+        protected void ddlPageLevel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ddlPageLevel.SelectedValue == "cap1")
             {
                 
             }
         }
+
     }
 }

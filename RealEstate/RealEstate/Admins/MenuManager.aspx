@@ -1,8 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="LinksManager.aspx.cs" Inherits="RealEstate.Admins.LinksManager" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="MenuManager.aspx.cs" Inherits="RealEstate.Admins.MenuManager" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="PageName">Quản lý danh mục Link</div>
+    <div class="PageName">Quản lý Tỉnh(Thành phố)</div>
     <asp:Panel ID="pnView" runat="server">
         <div class="Control">
             <ul>
@@ -18,10 +18,10 @@
                 <li><a class="vback" href="javascript:void(0);" onclick="window.history.go(-1);">Trở lại</a> </li>
             </ul>
         </div>
-        <asp:DataGrid ID="grdLinks" runat="server" Width="100%" CssClass="TableView"
+        <asp:DataGrid ID="grdUser" runat="server" Width="100%" CssClass="TableView"
             AutoGenerateColumns="False"
-            OnItemCommand="grdLinks_ItemCommand" OnItemDataBound="grdLinks_ItemDataBound"
-            OnPageIndexChanged="grdLinks_PageIndexChanged" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" CellPadding="2" ForeColor="Black" GridLines="None">
+            OnItemCommand="grdUser_ItemCommand" OnItemDataBound="grdUser_ItemDataBound"
+            OnPageIndexChanged="grdUser_PageIndexChanged" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" CellPadding="2" ForeColor="Black" GridLines="None">
             <FooterStyle BackColor="Tan" />
             <HeaderStyle CssClass="trHeader" BackColor="Tan" Font-Bold="True"></HeaderStyle>
             <ItemStyle CssClass="trOdd"></ItemStyle>
@@ -36,7 +36,7 @@
                     </ItemTemplate>
                     <ItemStyle CssClass="tdCenter"></ItemStyle>
                 </asp:TemplateColumn>
-                <asp:BoundColumn DataField="ID" HeaderText="ID" Visible="False" />
+                <asp:BoundColumn DataField="CityID" HeaderText="CityID" Visible="True" />
                 <%--<asp:BoundColumn DataField="Active" HeaderText="Active" Visible="False" />--%>
                 <%--<asp:TemplateColumn ItemStyle-CssClass="Text">
                     <HeaderTemplate>Họ tên</HeaderTemplate>
@@ -44,22 +44,7 @@
                         <asp:Label ID="Label1" runat="server" Text='<%# RealEstate.Common.StringClass.ShowNameLevel(DataBinder.Eval(Container.DataItem, "Name").ToString(), DataBinder.Eval(Container.DataItem, "Level").ToString()) %>'></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateColumn>--%>
-                <asp:BoundColumn DataField="Name" HeaderText="Tên trang liên kết" ItemStyle-CssClass="Text" Visible="true" >
-                    <ItemStyle CssClass="Text" />
-                </asp:BoundColumn>
-                <asp:BoundColumn DataField="Link1" HeaderText="Link liên kết 1" ItemStyle-CssClass="Text" Visible="true" >
-                    <ItemStyle CssClass="Text" />
-                </asp:BoundColumn>
-                <asp:BoundColumn DataField="Link2" HeaderText="Link liên kết 2" ItemStyle-CssClass="Text" Visible="true" >
-                    <ItemStyle CssClass="Text" />
-                </asp:BoundColumn>
-                <asp:BoundColumn DataField="Position" HeaderText="Vị trí" ItemStyle-CssClass="Text" Visible="true" >
-                    <ItemStyle CssClass="Text" />
-                </asp:BoundColumn>
-                <asp:BoundColumn DataField="Ord" HeaderText="Thứ tự" ItemStyle-CssClass="Text" Visible="true" >
-                    <ItemStyle CssClass="Text" />
-                </asp:BoundColumn>
-                <asp:BoundColumn DataField="Active" HeaderText="Trạng thái" ItemStyle-CssClass="Text" Visible="true" >
+                <asp:BoundColumn DataField="CityName" HeaderText="Tên Tỉnh(Thành phố)" ItemStyle-CssClass="Text" Visible="true" >
                     <ItemStyle CssClass="Text" />
                 </asp:BoundColumn>
                 <%--<asp:BoundColumn DataField="Admin" HeaderText="Quản trị?" ItemStyle-CssClass="CheckBox" Visible="true" />--%>
@@ -73,8 +58,8 @@
                 <asp:TemplateColumn ItemStyle-CssClass="Function">
                     <HeaderTemplate>Chức năng</HeaderTemplate>
                     <ItemTemplate>
-                        <asp:ImageButton ID="cmdEdit" runat="server" AlternateText="Sửa" CommandName="Edit" CssClass="Edit" ToolTip="Sửa" ImageUrl="/App_Themes/Admin/images/edit.png" CommandArgument='<%#DataBinder.Eval(Container.DataItem,"ID")%>' />
-                        <asp:ImageButton ID="cmdDelete" runat="server" AlternateText="Xóa" CommandName="Delete" CssClass="Delete" ToolTip="Xóa" ImageUrl="/App_Themes/Admin/images/delete.png" CommandArgument='<%#DataBinder.Eval(Container.DataItem,"ID")%>' OnClientClick="javascript:return confirm('Bạn có muốn xóa?');" />
+                        <asp:ImageButton ID="cmdEdit" runat="server" AlternateText="Sửa" CommandName="Edit" CssClass="Edit" ToolTip="Sửa" ImageUrl="/App_Themes/Admin/images/edit.png" CommandArgument='<%#DataBinder.Eval(Container.DataItem,"CityID")%>' />
+                        <asp:ImageButton ID="cmdDelete" runat="server" AlternateText="Xóa" CommandName="Delete" CssClass="Delete" ToolTip="Xóa" ImageUrl="/App_Themes/Admin/images/delete.png" CommandArgument='<%#DataBinder.Eval(Container.DataItem,"CityID")%>' OnClientClick="javascript:return confirm('Bạn có muốn xóa?');" />
                     </ItemTemplate>
                     <ItemStyle CssClass="Function" />
                 </asp:TemplateColumn>
@@ -110,50 +95,49 @@
                                 CausesValidation="False" OnClick="Back_Click">Trở về</asp:LinkButton></li>
                     </ul>
                 </td>
-            </tr>   
+            </tr>
+            <%-- <tr>
+                <th>
+                    <asp:Label ID="lblCityID" runat="server" Text="Mã tỉnh(TP):"></asp:Label></th>
+                <td>
+                    <asp:TextBox ID="txtCityID" runat="server" CssClass="text"></asp:TextBox><asp:RequiredFieldValidator ID="rfvName" runat="server" ControlToValidate="txtName" Display="Dynamic" ErrorMessage="*" SetFocusOnError="True"></asp:RequiredFieldValidator></td>
+            </tr>--%>
             <%--<tr>
                 <th>
-                    <asp:Label ID="Label5" runat="server" Text="ID"></asp:Label></th>
+                    <asp:Label ID="lblUsername" runat="server" Text="Tên đăng nhập:"></asp:Label></th>
                 <td>
-                    <asp:TextBox ID="txtID" runat="server" CssClass="text"></asp:TextBox></td>
-            </tr>   --%>     
+                    <asp:TextBox ID="txtUsername" runat="server" CssClass="text"></asp:TextBox><asp:RequiredFieldValidator ID="rfvUsername" runat="server" ControlToValidate="txtUsername" Display="Dynamic" ErrorMessage="*" SetFocusOnError="True"></asp:RequiredFieldValidator></td>
+            </tr>--%>
             <tr>
                 <th>
-                    <asp:Label ID="lblName" runat="server" Text="Tên trang liên kết:"></asp:Label></th>
+                    <asp:Label ID="lblCityID" runat="server" Text="Mã tỉnh(TP):"></asp:Label></th>
                 <td>
-                    <asp:TextBox ID="txtName" runat="server" CssClass="text"></asp:TextBox></td>
-            </tr>
-             <tr>
-                <th>
-                    <asp:Label ID="Label1" runat="server" Text="Link liên kết 1: "></asp:Label></th>
-                <td>
-                    <asp:TextBox ID="txtLink1" runat="server" CssClass="text"></asp:TextBox></td>
+                    <asp:TextBox ID="txtCityID" runat="server" CssClass="text"></asp:TextBox></td>
             </tr>
             <tr>
                 <th>
-                    <asp:Label ID="Label4" runat="server" Text="Link liên kết 2: "></asp:Label></th>
+                    <asp:Label ID="lblCityName" runat="server" Text="Tên tỉnh(TP):"></asp:Label></th>
                 <td>
-                    <asp:TextBox ID="txtLink2" runat="server" CssClass="text"></asp:TextBox></td>
+                    <asp:TextBox ID="txtCityName" runat="server" CssClass="text"></asp:TextBox></td>
             </tr>
-             <tr>
+            <%--<tr style="display: none">
                 <th>
-                    <asp:Label ID="Label2" runat="server" Text="Vị trí:"></asp:Label></th>
+                    <asp:Label ID="lblAdmin" runat="server" Text="Quản trị?:"></asp:Label></th>
                 <td>
-                    <asp:TextBox ID="txtPosition" runat="server" CssClass="text"></asp:TextBox></td>
+                    <asp:TextBox ID="txtAdmin" runat="server" CssClass="date"></asp:TextBox></td>
+            </tr>--%>
+            <%--<tr>
+                <th>
+                    <asp:Label ID="lblOrd" runat="server" Text="Thứ tự:"></asp:Label></th>
+                <td>
+                    <asp:TextBox ID="txtOrd" runat="server" CssClass="text number" /><asp:RequiredFieldValidator ID="rfvOrd" runat="server" ControlToValidate="txtOrd" Display="Dynamic" ErrorMessage="*" SetFocusOnError="True"></asp:RequiredFieldValidator></td>
             </tr>
             <tr>
                 <th>
-                    <asp:Label ID="Label3" runat="server" Text="Thứ tự:"></asp:Label></th>
+                    <asp:Label ID="lblActive" runat="server" Text="Kích hoạt:"></asp:Label></th>
                 <td>
-                    <asp:TextBox ID="txtOrd" runat="server" CssClass="text"></asp:TextBox></td>
-            </tr>
-            <tr>
-                <th>
-                    <asp:Label ID="Label6" runat="server" Text="Trạng thái:"></asp:Label></th>
-                <td>
-                    <asp:TextBox ID="txtActive" runat="server" CssClass="text"></asp:TextBox></td>
-            </tr>
-
+                    <asp:CheckBox ID="chkActive" runat="server" /></td>
+            </tr>--%>
             <tr>
                 <td class="Control" colspan="2">
                     <ul>

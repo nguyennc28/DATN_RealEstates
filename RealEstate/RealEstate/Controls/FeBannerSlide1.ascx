@@ -133,26 +133,19 @@
         </div>
 
         <!-- Slides Container -->
+        <% if (lstAdvertises.Count > 0)
+           {%>
         <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 980px; height: 300px;
             overflow: hidden;">
-            <div>
-                <img u=image src="../img/landscape/banner_1_01.jpg" />
-                <div u="thumb">Do you notice it is draggable by mouse/finger?</div>
+            <% for (int i = 0; i < lstAdvertises.Count; i++)
+               {%>
+                   <div>
+                <a href="<%=lstAdvertises[i].Link %>" alt="<%=lstAdvertises[i].AdvName %>"><img u=image src="<% =lstAdvertises[i].Image %>" /></a>
+                <div u="thumb"><span><%=lstAdvertises[i].AdvName %></span></div>
             </div>
-            <div>
-                <img u=image src="../img/landscape/banner_1_02.jpg" />
-                <div u="thumb">Did you drag by either horizontal or vertical?</div>
-            </div>
-            <div>
-                <img u=image src="../img/landscape/banner_1_03.jpg" />
-                <div u="thumb">Do you notice navigator responses when drag?</div>
-            </div>
-            <div>
-                <img u=image src="../img/landscape/banner_1_04.jpg" />
-                <div u="thumb">Do you notice arrow responses when click?</div>
-            </div>
+               <%} %>
         </div>
-        
+        <%} %>
         <!--#region Thumbnail Navigator Skin Begin -->
         <!-- Help: http://www.jssor.com/development/slider-with-thumbnail-navigator-jquery.html -->
         <!-- thumbnail navigator container -->

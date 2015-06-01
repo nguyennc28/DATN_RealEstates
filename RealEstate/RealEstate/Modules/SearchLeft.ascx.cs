@@ -18,8 +18,6 @@ namespace RealEstate.Modules
             if (!IsPostBack)
             {
                 ViewCity();
-                //_cityCode = ddlCity.SelectedValue;
-                ViewDistrict();
                 ViewRealEstateType();
             }
         }
@@ -42,88 +40,46 @@ namespace RealEstate.Modules
 
         private void ViewCity()
         {
-            ddlCity.Items.Clear();
-            ddlCity.Items.Add(new ListItem("-Chọn Tỉnh(TP)-", "0"));
+            ddlCitySl.Items.Clear();
+            ddlCitySl.Items.Add(new ListItem("-Chọn Tỉnh(TP)-", "0"));
             List<CityInfo> listCityInfos = CityService.CityInfo_GetByAll();
             if (listCityInfos.Count > 0)
             {
                 for (int i = 0; i < listCityInfos.Count; i++)
                 {
                     ListItem lsListItem = new ListItem(listCityInfos[i].CityName, listCityInfos[i].CityCode);
-                    ddlCity.Items.Add(lsListItem);
+                    ddlCitySl.Items.Add(lsListItem);
                 }
                 listCityInfos.Clear();
                 listCityInfos = null;
             }
-            _cityCode = ddlCity.SelectedValue;
+            _cityCode = ddlCitySl.SelectedValue;
+            ViewDistrict();
         }
-
-        //_cityCode = ddlCity.SelectedValue;
-            //if (_cityCode != null)
-            //{
-            //    ddlDistrict.Items.Clear();
-            //    ddlDistrict.Items.Add(new ListItem("-Chọn Quận (huyện)-", "0"));
-
-            //    List<DistrictInfo> listDistrictInfos = DistrictService.DistrictInfo_GetByTop("100",
-            //        "CityCode =" + _cityCode, "DistrictID");
-            //    for (int i = 0; i < listDistrictInfos.Count; i++)
-            //    {
-            //        ListItem lsListItem = new ListItem(listDistrictInfos[i].DistrictName,
-            //            listDistrictInfos[i].DistrictID);
-            //        ddlDistrict.Items.Add(lsListItem);
-            //    }
-            //    listDistrictInfos.Clear();
-            //    listDistrictInfos = null;
-            //}
         private void ViewDistrict()
         {
-            ddlDistrict.Items.Clear();
-            ddlDistrict.Items.Add(new ListItem("-Chọn Quận (huyện)-", "0"));
-            List<DistrictInfo> listDistrictInfos = DistrictService.DistrictInfo_GetByTop("100", "CityCode = 1", "DistrictID");
-            for (int i = 0; i < listDistrictInfos.Count; i++)
+            ddlDistrictSl.Items.Clear();
+            if (_cityCode == "0")
             {
-                ListItem lsListItem = new ListItem(listDistrictInfos[i].DistrictName, listDistrictInfos[i].DistrictID);
-                ddlDistrict.Items.Add(lsListItem);
-            }
-            listDistrictInfos.Clear();
-            listDistrictInfos = null;
-        }
-
-        protected void ddlCity_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            _cityCode = ddlCity.SelectedValue;
-            if (_cityCode == null)
-            {
-                ddlDistrict.Items.Clear();
-                ddlDistrict.Items.Add(new ListItem("-Chọn Quận (huyện)-", "0"));
-
-                List<DistrictInfo> listDistrictInfos = DistrictService.DistrictInfo_GetByTop("100",
-                    "CityCode = 0", "DistrictID");
-                for (int i = 0; i < listDistrictInfos.Count; i++)
-                {
-                    ListItem lsListItem = new ListItem(listDistrictInfos[i].DistrictName,
-                        listDistrictInfos[i].DistrictID);
-                    ddlDistrict.Items.Add(lsListItem);
-                }
-                listDistrictInfos.Clear();
-                listDistrictInfos = null;
+                ddlDistrictSl.Items.Add(new ListItem("-Chọn Quận (huyện)-", "0"));
             }
             else
             {
-                ddlDistrict.Items.Clear();
-                ddlDistrict.Items.Add(new ListItem("-Chọn Quận (huyện)-", "0"));
-
-                List<DistrictInfo> listDistrictInfos = DistrictService.DistrictInfo_GetByTop("100",
-                    "CityCode =" + _cityCode, "DistrictID");
+                List<DistrictInfo> listDistrictInfos = DistrictService.DistrictInfo_GetByTop("100", "CityCode =" + _cityCode, "DistrictID");
                 for (int i = 0; i < listDistrictInfos.Count; i++)
                 {
-                    ListItem lsListItem = new ListItem(listDistrictInfos[i].DistrictName,
-                        listDistrictInfos[i].DistrictID);
-                    ddlDistrict.Items.Add(lsListItem);
+                    ListItem lsListItem = new ListItem(listDistrictInfos[i].DistrictName, listDistrictInfos[i].DistrictID);
+                    ddlDistrictSl.Items.Add(lsListItem);
                 }
                 listDistrictInfos.Clear();
                 listDistrictInfos = null;
             }
         }
+        protected void ddlCitySl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _cityCode = ddlCitySl.SelectedValue;
+            ViewDistrict();
+        }         
+        
     }
 }

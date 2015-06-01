@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="Admin.Master" />
     <Content Include="Admins\HomesManager.aspx" />
+    <Content Include="Admins\MenuManager.aspx" />
     <Content Include="Admins\Modules\ApartmentManager.ascx" />
     <Content Include="Admins\Modules\DistrictManager.ascx" />
     <Content Include="Admins\Modules\HomeManager.ascx" />
@@ -467,6 +468,7 @@
     <Content Include="Icons\Logo.png" />
     <Content Include="Icons\logo_nav.png" />
     <Content Include="Icons\Register.png" />
+    <Content Include="img\a17.png" />
     <Content Include="img\arrow.png" />
     <Content Include="img\arrow2.png" />
     <Content Include="img\BannerMoving\A8A-DR_960x90.gif" />
@@ -706,6 +708,13 @@
     </Compile>
     <Compile Include="Admins\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admins\MenuManager.aspx.cs">
+      <DependentUpon>MenuManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admins\MenuManager.aspx.designer.cs">
+      <DependentUpon>MenuManager.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admins\Modules\ApartmentManager.ascx.cs">
       <DependentUpon>ApartmentManager.ascx</DependentUpon>

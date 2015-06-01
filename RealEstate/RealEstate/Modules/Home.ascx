@@ -1,5 +1,4 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Home.ascx.cs" Inherits="RealEstate.Modules.Home" %>
-<%@ Register Src="~/Modules/SearchBoxMain.ascx" TagPrefix="uc1" TagName="SearchBoxMain" %>
 <%@ Register Src="~/Modules/SearchLeft.ascx" TagPrefix="uc1" TagName="SearchLeft" %>
 
 <script src="../js/jquery-1.11.2.min.js"></script>

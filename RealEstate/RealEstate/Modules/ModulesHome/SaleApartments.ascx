@@ -36,17 +36,20 @@
         </div>
         <div class="tabcont" style="height: 100px; background: #EEEEEE;">
             <div id="tab1" class="tabcontent" align="justify">
-                <div class="span3" style="margin-top: 10px;">
+                <div class="span2" style="margin-top: 10px;">
                     <asp:DropDownList ID="ddlCategory" runat="server"></asp:DropDownList>
                 </div>
-                <div class="span3" style="margin-top: 10px;">
+                <div class="span2" style="margin-top: 10px;">
                     <asp:DropDownList ID="ddlPrice" runat="server"></asp:DropDownList>
                 </div>
-                <div class="span3" style="margin-top: 10px;">
+                <div class="span2" style="margin-top: 10px;">
                     <asp:DropDownList ID="ddlArea" runat="server"></asp:DropDownList>
                 </div>
-                <div class="span3" style="margin-top: 10px;">
-                    <asp:DropDownList ID="ddlCity" runat="server"></asp:DropDownList>
+                <div class="span2" style="margin-top: 10px;">
+                    <asp:DropDownList ID="ddlCity" runat="server" OnSelectedIndexChanged="ddlCity_SelectedIndexChanged" AutoPostBack="True"></asp:DropDownList>
+                </div>
+                <div class="span2" style="margin-top: 10px;">
+                    <asp:DropDownList ID="ddlDistrict" runat="server" AutoPostBack="True"></asp:DropDownList>
                 </div>
             </div>
         </div>

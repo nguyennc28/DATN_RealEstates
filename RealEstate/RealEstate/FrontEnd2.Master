@@ -3,7 +3,7 @@
 <%--<%@ Register Src="~/Controls/FeBannerSlide.ascx" TagPrefix="uc1" TagName="FeBannerSlide" %>--%>
 <%@ Register Src="~/Controls/Menu.ascx" TagPrefix="uc1" TagName="Menu" %>
 <%@ Register Src="~/Controls/BannerNgang.ascx" TagPrefix="uc1" TagName="BannerNgang" %>
-<%@ Register Src="~/Modules/SearchBoxMain.ascx" TagPrefix="uc1" TagName="SearchBoxMain" %>
+<%--<%@ Register Src="~/Modules/SearchBoxMain.ascx" TagPrefix="uc1" TagName="SearchBoxMain" %>--%>
 <%@ Register Src="~/Controls/FeFooter.ascx" TagPrefix="uc1" TagName="FeFooter" %>
 <%@ Register Src="~/Controls/FeBannerSlide1.ascx" TagPrefix="uc1" TagName="FeBannerSlide1" %>
 
@@ -18,7 +18,7 @@
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/bootstrap-responsive.css" rel="stylesheet" />
     <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css' />
-    <link href="css/SearchBoxMain.css" rel="stylesheet" />
+    <%--<link href="css/SearchBoxMain.css" rel="stylesheet" />--%>
     <link href="css/styleMainMaster.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -52,7 +52,7 @@
         <!-- /container -->
         <script src="js/jquery-1.7.1.min.js"></script>
         <script src="js/bootstrap-transition.js"></script>
-        <script src="js/bootstrap-carousel.js"></script>
+        <%--<script src="js/bootstrap-carousel.js"></script>--%>
         <script src="js/bootstrap-alert.js"></script>
         <script src="js/bootstrap-modal.js"></script>
         <script src="js/bootstrap-dropdown.js"></script>

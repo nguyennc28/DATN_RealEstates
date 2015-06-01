@@ -10,10 +10,12 @@ using RealEstate.DataAccess;
 
 namespace RealEstate.Admins
 {
-    public partial class LinksManager : System.Web.UI.Page
+    public partial class MenuManager : System.Web.UI.Page
     {
         static string Id = "";
         static bool Insert = false;
+        static string Password = "";
+        //static string Level = "";
         private string Lang = "";
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -27,15 +29,15 @@ namespace RealEstate.Admins
         }
         private void BindGrid()
         {
-            grdLinks.DataSource = LinkService.Link_GetByAll(Lang);
-            grdLinks.DataBind();
-            if (grdLinks.PageCount <= 1)
+            grdUser.DataSource = CityService.CityInfo_GetByAll();
+            grdUser.DataBind();
+            if (grdUser.PageCount <= 1)
             {
-                grdLinks.PagerStyle.Visible = false;
+                grdUser.PagerStyle.Visible = false;
             }
         }
 
-        protected void grdLinks_ItemDataBound(object sender, DataGridItemEventArgs e)
+        protected void grdUser_ItemDataBound(object sender, DataGridItemEventArgs e)
         {
             ListItemType itemType = e.Item.ItemType;
             if ((itemType != ListItemType.Footer) && (itemType != ListItemType.Separator))
@@ -50,7 +52,7 @@ namespace RealEstate.Admins
                 }
                 else
                 {
-                    string tableRowId = grdLinks.ClientID + "_row" + e.Item.ItemIndex.ToString();
+                    string tableRowId = grdUser.ClientID + "_row" + e.Item.ItemIndex.ToString();
                     e.Item.Attributes.Add("id", tableRowId);
                     object checkBox = e.Item.FindControl("chkSelect");
                     if ((checkBox != null))
@@ -63,13 +65,13 @@ namespace RealEstate.Admins
             }
         }
 
-        protected void grdLinks_PageIndexChanged(object source, DataGridPageChangedEventArgs e)
+        protected void grdUser_PageIndexChanged(object source, DataGridPageChangedEventArgs e)
         {
-            grdLinks.CurrentPageIndex = e.NewPageIndex;
+            grdUser.CurrentPageIndex = e.NewPageIndex;
             BindGrid();
         }
 
-        protected void grdLinks_ItemCommand(object source, DataGridCommandEventArgs e)
+        protected void grdUser_ItemCommand(object source, DataGridCommandEventArgs e)
         {
             string strCA = e.CommandArgument.ToString();
             switch (e.CommandName)
@@ -77,17 +79,23 @@ namespace RealEstate.Admins
                 case "Edit":
                     Insert = false;
                     Id = strCA;
-                    List<Link> ListLinks = LinkService.Link_GetById(Id);
-                    txtName.Text = ListLinks[0].Name;
-                    txtLink1.Text = ListLinks[0].Link1;
-                    txtLink2.Text = ListLinks[0].Link2;
-                    txtPosition.Text = ListLinks[0].Position;
-                    txtOrd.Text = ListLinks[0].Ord;
+                    List<CityInfo> Listcity = CityService.CityInfo_GetById(Id);
+                    //List<DataAccess.User> listE = UserService.User_GetById(Id);
+                    //Level = listE[0].Level.Substring(0, listE[0].Level.Length - 5);
+                    txtCityID.Text = Listcity[0].CityCode;
+                    txtCityName.Text = Listcity[0].CityName;
+                    //txtName.Text = listE[0].Name;
+                    //txtUsername.Text = listE[0].Username;
+                    //txtPassword.Text = "";
+                    //Password = listE[0].Password;
+                    //txtAdmin.Text = listE[0].Admin;
+                    //txtOrd.Text = listE[0].Ord;
+                    //chkActive.Checked = listE[0].Active == "1" || listE[0].Active == "True";
                     pnView.Visible = false;
                     pnUpdate.Visible = true;
                     break;
                 case "Delete":
-                    LinkService.Link_Delete(strCA);
+                    CityService.CityInfo_Delete(strCA);
                     BindGrid();
                     break;
             }
@@ -103,19 +111,19 @@ namespace RealEstate.Admins
         protected void DeleteButton_Click(object sender, EventArgs e)
         {
             DataGridItem item = default(DataGridItem);
-            for (int i = 0; i < grdLinks.Items.Count; i++)
+            for (int i = 0; i < grdUser.Items.Count; i++)
             {
-                item = grdLinks.Items[i];
+                item = grdUser.Items[i];
                 if (item.ItemType == ListItemType.AlternatingItem | item.ItemType == ListItemType.Item)
                 {
                     if (((CheckBox)item.FindControl("ChkSelect")).Checked)
                     {
                         string strId = item.Cells[1].Text;
-                        LinkService.Link_Delete(strId);
+                        CityService.CityInfo_Delete(strId);
                     }
                 }
             }
-            grdLinks.CurrentPageIndex = 0;
+            grdUser.CurrentPageIndex = 0;
             BindGrid();
         }
 
@@ -128,26 +136,15 @@ namespace RealEstate.Admins
         {
             if (Page.IsValid)
             {
-                Link obj = new Link();
-                obj.ID = Id;
-                obj.Name = txtName.Text;
-                obj.Line1 = "";
-                obj.Line2 = "";
-                obj.Link1 = txtLink1.Text;
-                obj.Link2 = txtLink2.Text;
-                obj.Position = txtPosition.Text;
-                obj.Ord = txtOrd.Text;
-                obj.Lang = Lang;
-                obj.Active = txtActive.Text;
-                
+                var obj = new CityInfo { CityCode = txtCityID.Text, CityName = txtCityName.Text };
                 if (Insert == true)
                 {
-                    LinkService.Link_Insert(obj);
+                    CityService.CityInfo_Insert(obj);
                 }
                 else
-                {  
-                    LinkService.Link_Update(obj);
-                }                
+                {
+                    CityService.CityInfo_Update(obj);
+                }
                 BindGrid();
                 pnView.Visible = true;
                 pnUpdate.Visible = false;

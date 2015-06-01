@@ -1,0 +1,3 @@
+- Khi dùng Uc: thì xử lý DDL lỗi.
+- Truyền ID của một tin mới đăng sang trang mới.
+- 

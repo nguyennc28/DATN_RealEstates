@@ -40,7 +40,7 @@
                 ID="LinkButton4" CausesValidation="false" runat="server" OnClick="LinkButton_Click">Bất động sản cho thuê</asp:LinkButton></li>
         <li>
             <img alt="" src="/App_Themes/admin/images/icon_adv.jpg" /><asp:LinkButton
-                ID="lbtAdverties" CausesValidation="false" runat="server" OnClick="LinkButton_Click">Liên kết, quảng cáo</asp:LinkButton></li>
+                ID="lbtLinksManager" CausesValidation="false" runat="server" OnClick="LinkButton_Click">Liên kết</asp:LinkButton></li>
         <li>
             <img alt="" src="/App_Themes/admin/images/icon_adv.jpg" /><asp:LinkButton
                 ID="lbtTestUploadFile" CausesValidation="false" runat="server" OnClick="LinkButton_Click">Upload Iamge</asp:LinkButton></li>

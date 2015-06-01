@@ -20,8 +20,7 @@ namespace RealEstate
                 ViewRealEstateType();
                 ViewRealEstate();
                 ViewCity();
-                //ViewDistrict();                
-            }
+            }                
         }
 
         protected void btnPostNewRE_Click(object sender, ImageClickEventArgs e)

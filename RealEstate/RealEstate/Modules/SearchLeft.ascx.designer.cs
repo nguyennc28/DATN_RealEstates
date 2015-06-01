@@ -31,49 +31,49 @@ namespace RealEstate.Modules {
         protected global::System.Web.UI.WebControls.DropDownList ddlRealEstateType;
         
         /// <summary>
-        /// ddlCity control.
+        /// ddlCitySl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCity;
+        protected global::System.Web.UI.WebControls.DropDownList ddlCitySl;
         
         /// <summary>
-        /// ddlDistrict control.
+        /// ddlDistrictSl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlDistrict;
+        protected global::System.Web.UI.WebControls.DropDownList ddlDistrictSl;
         
         /// <summary>
-        /// ddlArea control.
+        /// ddlAreaSl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlArea;
+        protected global::System.Web.UI.WebControls.DropDownList ddlAreaSl;
         
         /// <summary>
-        /// ddlPrice control.
+        /// ddlPriceSl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlPrice;
+        protected global::System.Web.UI.WebControls.DropDownList ddlPriceSl;
         
         /// <summary>
-        /// ddlRegion control.
+        /// ddlRegionSl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlRegion;
+        protected global::System.Web.UI.WebControls.DropDownList ddlRegionSl;
         
         /// <summary>
         /// ImageButton1 control.

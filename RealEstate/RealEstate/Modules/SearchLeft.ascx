@@ -114,19 +114,19 @@
                                 <span class="searchDdl"><asp:DropDownList ID="ddlRealEstateType" runat="server">
                                 </asp:DropDownList></span>
 
-                                <span class="searchDdl"><asp:DropDownList ID="ddlCity" runat="server" OnSelectedIndexChanged="ddlCity_SelectedIndexChanged">
+                                <span class="searchDdl"><asp:DropDownList ID="ddlCitySl" runat="server" OnSelectedIndexChanged="ddlCitySl_SelectedIndexChanged" AutoPostBack="True">
                                 </asp:DropDownList></span>
 
-                                <span class="searchDdl"><asp:DropDownList ID="ddlDistrict" runat="server">
+                                <span class="searchDdl"><asp:DropDownList ID="ddlDistrictSl" runat="server" AutoPostBack="True">
                                 </asp:DropDownList></span>
 
-                                <span class="searchDdl"><asp:DropDownList ID="ddlArea" runat="server">
+                                <span class="searchDdl"><asp:DropDownList ID="ddlAreaSl" runat="server">
                                 </asp:DropDownList></span>
 
-                                <span class="searchDdl"><asp:DropDownList ID="ddlPrice" runat="server">
+                                <span class="searchDdl"><asp:DropDownList ID="ddlPriceSl" runat="server">
                                 </asp:DropDownList></span>
 
-                                <span class="searchDdl"><asp:DropDownList ID="ddlRegion" runat="server">
+                                <span class="searchDdl"><asp:DropDownList ID="ddlRegionSl" runat="server">
                                 </asp:DropDownList></span>
                 
                                 <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="../img/Button/btTimkiem.png"/>

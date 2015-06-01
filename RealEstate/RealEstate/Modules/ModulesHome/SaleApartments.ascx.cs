@@ -11,14 +11,16 @@ namespace RealEstate.Modules.ModulesHome
 {
     public partial class SaleApartments : System.Web.UI.UserControl
     {
+        private string _cityCode;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 LoadSaleApartments();
                 GetPrice();
-                GetCity();
+                //GetCity();
                 GetArea();
+                ViewCity();
             }
         }
 
@@ -40,7 +42,49 @@ namespace RealEstate.Modules.ModulesHome
             list.Clear();
             list = null;
         }
+        private void ViewCity()
+        {
+            ddlCity.Items.Clear();
+            ddlCity.Items.Add(new ListItem("-Chọn Tỉnh(TP)-", "0"));
+            List<CityInfo> listCityInfos = CityService.CityInfo_GetByAll();
+            if (listCityInfos.Count > 0)
+            {
+                for (int i = 0; i < listCityInfos.Count; i++)
+                {
+                    ListItem lsListItem = new ListItem(listCityInfos[i].CityName, listCityInfos[i].CityCode);
+                    ddlCity.Items.Add(lsListItem);
+                }
+                listCityInfos.Clear();
+                listCityInfos = null;
+            }
+            _cityCode = ddlCity.SelectedValue;
+            ViewDistrict();
+        }
 
+        protected void ddlCity_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _cityCode = ddlCity.SelectedValue;
+            ViewDistrict();
+        }  
+        private void ViewDistrict()
+        {
+            ddlDistrict.Items.Clear();
+            if (_cityCode == "0")
+            {
+                ddlDistrict.Items.Add(new ListItem("-Chọn Quận (huyện)-", "0"));
+            }
+            else
+            {
+                List<DistrictInfo> listDistrictInfos = DistrictService.DistrictInfo_GetByTop("100", "CityCode =" + _cityCode, "DistrictID");
+                for (int i = 0; i < listDistrictInfos.Count; i++)
+                {
+                    ListItem lsListItem = new ListItem(listDistrictInfos[i].DistrictName, listDistrictInfos[i].DistrictID);
+                    ddlDistrict.Items.Add(lsListItem);
+                }
+                listDistrictInfos.Clear();
+                listDistrictInfos = null;
+            }
+        }
         private void GetArea()
         {
             ddlArea.Items.Clear();

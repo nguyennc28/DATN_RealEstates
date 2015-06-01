@@ -185,93 +185,95 @@
                 </td>
             </tr>
             
-            <tr>
-                <th>
-                    <asp:Label ID="Label12" runat="server" Text="Chọn cấp Menu:"></asp:Label></th>
-                <td>
-                    <asp:RadioButtonList ID="rdLevelMenu" runat="server"></asp:RadioButtonList>
-                </td>
-            </tr>
-
-            <tr>
-                <th>
-                    <asp:Label ID="Label11" runat="server" Text="Tiêu đề:"></asp:Label></th>
-                <td>
-                    <asp:TextBox ID="txtTitle" runat="server" Height="17px" Width="257px"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <th>
-                    <asp:Label ID="Label10" runat="server" Text="Mô tả:"></asp:Label></th>
-                <td>
-                    <ckeditor:ckeditorcontrol id="EdtDescription" runat="server"></ckeditor:ckeditorcontrol>
-                </td>
-            </tr>
-            <tr>
-                <th>
-                    <asp:Label ID="Label13" runat="server" Text="Loại trang:"></asp:Label></th>
-                <td>
-                    <asp:RadioButtonList ID="RadioButtonList1" runat="server" RepeatDirection="Horizontal">
-                        <asp:ListItem>Cha</asp:ListItem>
-                        <asp:ListItem>Con</asp:ListItem>
-                    </asp:RadioButtonList>
-                </td>
-            </tr>
-            <tr>
-                <th>
-                    <asp:Label ID="Label14" runat="server" Text="Link liên kết:"></asp:Label></th>
-                <td>
-                    <asp:TextBox ID="txtLink" runat="server" Height="17px" Width="257px"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <th>
-                    <asp:Label ID="Label15" runat="server" Text="Vị trí hiển thị:"></asp:Label></th>
-                <td>
-                    <asp:DropDownList ID="ddlPosition" runat="server">
-                        <asp:ListItem Value="1">Menu ngang chính</asp:ListItem>
-                        <asp:ListItem Value="2">Menu Ngang Chân trang</asp:ListItem>
-                        <asp:ListItem Value="3">Menu dọc trái</asp:ListItem>
-                        <asp:ListItem Value="4">Menu dọc phải</asp:ListItem>
-                    </asp:DropDownList>
-                </td>
-            </tr>
-            <tr>
-                <th>
-                    <asp:Label ID="Label16" runat="server" Text="Thứ tự:"></asp:Label></th>
-                <td>
-                    <asp:DropDownList ID="ddlOrd" runat="server">
-                        <asp:ListItem>1</asp:ListItem>
-                        <asp:ListItem>2</asp:ListItem>
-                        <asp:ListItem>3</asp:ListItem>
-                        <asp:ListItem>4</asp:ListItem>
-                        <asp:ListItem>5</asp:ListItem>
-                        <asp:ListItem>6</asp:ListItem>
-                        <asp:ListItem>7</asp:ListItem>
-                        <asp:ListItem>8</asp:ListItem>
-                        <asp:ListItem>9</asp:ListItem>
-                        <asp:ListItem>10</asp:ListItem>
-                    </asp:DropDownList>
-                </td>
-            </tr>
-            <tr>
-                <th>
-                    <asp:Label ID="lblActive" runat="server" Text="Kích hoạt:"></asp:Label></th>
-                <td>
-                    <asp:CheckBox ID="chkActive" runat="server" /></td>
-            </tr>
-            <tr>
-                <td class="Control" colspan="2">
-                    <ul>
-                        <li>
-                            <asp:LinkButton CssClass="uupdate" ID="lbtUpdateB" runat="server"
-                                OnClick="Update_Click">Ghi lại</asp:LinkButton></li>
-                        <li>
-                            <asp:LinkButton CssClass="uback" ID="lbtBackB" runat="server"
-                                CausesValidation="False" OnClick="Back_Click">Trở về</asp:LinkButton></li>
-                    </ul>
-                </td>
-            </tr>
+            <caption>
+                &lt;<tr>
+                    <th>
+                        <asp:Label ID="Label2" runat="server" Text="Loại trang:"></asp:Label>
+                    </th>
+                    <td>
+                        <asp:DropDownList ID="ddlPageLevel" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlPageLevel_SelectedIndexChanged">
+                            <asp:ListItem Value="Cap1">Cấp 1</asp:ListItem>
+                            <asp:ListItem Value="Cap2">Cấp 2</asp:ListItem>
+                        </asp:DropDownList>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <asp:Label ID="Label11" runat="server" Text="Tiêu đề:"></asp:Label>
+                    </th>
+                    <td>
+                        <asp:TextBox ID="txtTitle" runat="server" Height="17px" Width="257px"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <asp:Label ID="Label10" runat="server" Text="Mô tả:"></asp:Label>
+                    </th>
+                    <td>
+                        <CKEditor:CKEditorControl ID="EdtDescription" runat="server"></CKEditor:CKEditorControl>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <asp:Label ID="Label14" runat="server" Text="Link liên kết:"></asp:Label>
+                    </th>
+                    <td>
+                        <asp:TextBox ID="txtLink" runat="server" Height="17px" Width="257px"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <asp:Label ID="Label15" runat="server" Text="Vị trí hiển thị:"></asp:Label>
+                    </th>
+                    <td>
+                        <asp:DropDownList ID="ddlPosition" runat="server">
+                            <asp:ListItem Value="1">Menu ngang chính</asp:ListItem>
+                            <asp:ListItem Value="2">Menu Ngang Chân trang</asp:ListItem>
+                            <asp:ListItem Value="3">Menu dọc trái</asp:ListItem>
+                            <asp:ListItem Value="4">Menu dọc phải</asp:ListItem>
+                        </asp:DropDownList>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <asp:Label ID="Label16" runat="server" Text="Thứ tự:"></asp:Label>
+                    </th>
+                    <td>
+                        <asp:DropDownList ID="ddlOrd" runat="server">
+                            <asp:ListItem>1</asp:ListItem>
+                            <asp:ListItem>2</asp:ListItem>
+                            <asp:ListItem>3</asp:ListItem>
+                            <asp:ListItem>4</asp:ListItem>
+                            <asp:ListItem>5</asp:ListItem>
+                            <asp:ListItem>6</asp:ListItem>
+                            <asp:ListItem>7</asp:ListItem>
+                            <asp:ListItem>8</asp:ListItem>
+                            <asp:ListItem>9</asp:ListItem>
+                            <asp:ListItem>10</asp:ListItem>
+                        </asp:DropDownList>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <asp:Label ID="lblActive" runat="server" Text="Kích hoạt:"></asp:Label>
+                    </th>
+                    <td>
+                        <asp:CheckBox ID="chkActive" runat="server" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="Control" colspan="2">
+                        <ul>
+                            <li>
+                                <asp:LinkButton ID="lbtUpdateB" runat="server" CssClass="uupdate" OnClick="Update_Click">Ghi lại</asp:LinkButton>
+                            </li>
+                            <li>
+                                <asp:LinkButton ID="lbtBackB" runat="server" CausesValidation="False" CssClass="uback" OnClick="Back_Click">Trở về</asp:LinkButton>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </caption>
         </table>
     </asp:Panel>
 </asp:Content>
