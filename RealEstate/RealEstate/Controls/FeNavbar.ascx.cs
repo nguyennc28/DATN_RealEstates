@@ -11,7 +11,17 @@ namespace RealEstate.Controls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                if (Session["UserName"].ToString().Equals(""))
+                {
+                    lblUserName.Text = "Đăng nhập";
+                }
+                else
+                {
+                    lblUserName.Text = "Xin chào " + Session["UserName"].ToString();
+                }
+            }
         }
     }
 }

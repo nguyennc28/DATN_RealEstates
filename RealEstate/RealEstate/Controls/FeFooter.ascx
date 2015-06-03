@@ -1,5 +1,12 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="FeFooter.ascx.cs" Inherits="RealEstate.Controls.Footer" %>
 <link href="../css/Controls/FeFooter.css" rel="stylesheet" />
+<style type="text/css">
+    .connectwithme {
+        color: blue;
+        font-size: 14px;
+        font-weight: bold;
+    }
+</style>
 <div class="row">
     <div class="span3">
         <div class="is-padded">
@@ -23,15 +30,19 @@
     </div>
     <div class="span3">
         <div class="is-padded">
-            <h2>Liên kết với các nhà môi giới</h2>
+            <h2>Giới thiệu về chúng tôi</h2>
             <hr>
-            
+            <p> http://batdongsanvn.vn là website đăng tin, trao đổi thông tin mua bán các sản phẩm về bất động sản. Chúng tôi hi vọng mang đến cho bạn sự tiện lợi nhất đinh khi muốn tìm ngôi nhà của ban!</p>
         </div>
     </div>
     <div class="span3">
         <div class="is-padded">
-            <h2>Liên kết với các doanh nghiệp</h2>
+            <h2>Hãy kết nối với chúng tôi qua:</h2>
             <hr/>
+            <p><span class="connectwithme">Facebook</span><a href="https://facebook.com" target="" rel="" title="Kết nối với Facebook">
+                        <img src="Icons/Fb.png" style="width: 25px; height: 25px;" /></a></p>
+            <p><span class="connectwithme">Google+</span><a href="https://plus.google.com/" target="" rel="" title="Kết nối với Google+">
+                            <img src="Icons/Gg.png" style="width: 40px; height: 23px;" /></a></p>
         </div>
     </div>
 </div>

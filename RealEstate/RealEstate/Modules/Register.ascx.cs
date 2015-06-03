@@ -13,5 +13,10 @@ namespace RealEstate.Modules
         {
 
         }
+
+        protected void btnDangKy_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

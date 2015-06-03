@@ -22,8 +22,18 @@ namespace RealEstate
             int qh = UsersService.UsersInfo_CheckLogin(txtUsername.Text, txtPassword.Text);
             if (qh > 0)
             {
-                Session["UserName"] = txtUsername.Text.Trim();
-                Response.Redirect("~/Admins/Default.aspx");
+                switch (qh)
+                {
+                    case 1:
+                        Session["UserName"] = txtUsername.Text.Trim();
+                        Response.Redirect("~/Admins/Default.aspx");
+                        break;
+                    case 2:
+                        Session["UserName"] = txtUsername.Text.Trim();
+                        Response.Redirect("Default2.aspx");
+                        break;
+                }
+                
             }
             else
             {

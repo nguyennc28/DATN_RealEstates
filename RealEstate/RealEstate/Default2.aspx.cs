@@ -23,6 +23,9 @@ namespace RealEstate
                     case "login":
                         ct = Page.LoadControl("login");
                         break;
+                    case "Register":
+                        ct = Page.LoadControl("/Modules/Register.ascx");
+                        break;
                     case "Home":
                         ct = Page.LoadControl("/Modules/Home.ascx");
                         break;
