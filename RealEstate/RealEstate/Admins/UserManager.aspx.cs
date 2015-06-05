@@ -85,7 +85,7 @@ namespace RealEstate.Admins
                     Insert = false;
                     Id = strCA;
                     List<DataAccess.UsersInfo> listE = UsersService.UsersInfo_GetById(Id);
-                    Level = listE[0].Level.Substring(0, listE[0].Level.Length - 5);
+                    Level = listE[0].Level;
                     txtName.Text = listE[0].FullName;
                     txtUsername.Text = listE[0].UserName;
                     txtPassword.Text = "";
@@ -159,12 +159,13 @@ namespace RealEstate.Admins
                 obj.UserName = txtUsername.Text;
                 obj.Gender = rdGender.SelectedValue;
                 obj.Avatar = txtAvatar.Text;
+                obj.Birthday = cldBirthday.SelectedDate.ToString().Trim();
                 //obj.Birthday = cldBirthday.SelectedDate;
                 obj.Email = txtEmail.Text;
                 obj.Address = txtAddress.Text;
                 obj.MobilePhone = txtPhoneNumber.Text;
                 obj.GroupID = ddlGroupUser.SelectedValue;
-                obj.Level = Level + "00000";
+                obj.Level = ddlGroupUser.SelectedValue;
                 obj.Admin = txtAdmin.Text != "" ? txtAdmin.Text : "1";
                 obj.Ord = txtOrd.Text != "" ? txtOrd.Text : "1";
                 obj.Active = chkActive.Checked ? "1" : "0";

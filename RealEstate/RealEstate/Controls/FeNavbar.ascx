@@ -50,7 +50,7 @@
                      <tr>
                          <td>
                              <img src="Icons/Register.png" style="width: 16px; height: 16px;" />
-                            <a href="Default2.aspx?mod=Register"><span>Đăng ký </span></a>
+                            <a href="../Register.aspx"><span>Đăng ký </span></a>
                          </td>
                          <td>
                              <img src="Icons/Key.png" style="width: 16px; height: 16px;" />

@@ -105,6 +105,8 @@ namespace RealEstate.DataAccess
                 cmd.Parameters.Add(new SqlParameter("@GroupID", data.GroupID));
                 cmd.Parameters.Add(new SqlParameter("@Active", data.Active));
                 cmd.Parameters.Add(new SqlParameter("@Ord", data.Ord));
+                cmd.Parameters.Add(new SqlParameter("@Level", data.Level));
+                cmd.Parameters.Add(new SqlParameter("@Admin", data.Admin));
                 try
                 {
                     db.ExecuteNonQuery(cmd);

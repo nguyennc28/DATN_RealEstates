@@ -3,6 +3,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:Panel ID="Panel1" runat="server">
-        <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
+        <asp:PlaceHolder ID="PlaceHolder1" runat="server">
+           
+        </asp:PlaceHolder>
     </asp:Panel>
 </asp:Content>

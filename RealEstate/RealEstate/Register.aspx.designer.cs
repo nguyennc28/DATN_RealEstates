@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RealEstate.Modules {
+namespace RealEstate {
     
     
     public partial class Register {
@@ -157,31 +157,13 @@ namespace RealEstate.Modules {
         protected global::System.Web.UI.WebControls.RadioButtonList rdGender;
         
         /// <summary>
-        /// ddlNgay control.
+        /// cldBirthday control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlNgay;
-        
-        /// <summary>
-        /// ddlThang control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlThang;
-        
-        /// <summary>
-        /// txtYear control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtYear;
+        protected global::System.Web.UI.WebControls.Calendar cldBirthday;
         
         /// <summary>
         /// txtAddress control.

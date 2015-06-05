@@ -1,3 +1,4 @@
-- Khi dùng Uc: thì xử lý DDL lỗi.
+- Khi dùng Uc động: xử lý sự kiện trên nó, thì xử lý DDL lỗi.
 - Truyền ID của một tin mới đăng sang trang mới.
-- 
+- Hiện thị danh mục ảnh
+- Lấy vị trí tọa độ bản đồ

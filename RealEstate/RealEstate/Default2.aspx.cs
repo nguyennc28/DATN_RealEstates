@@ -13,9 +13,28 @@ namespace RealEstate
         protected void Page_Load(object sender, EventArgs e)
         {
             string module = null;
+            string userControl = null;
             Control ct = null;
             if (!IsPostBack)
             {
+                //if (userControl == null)
+                //{
+                    
+                //}
+                //userControl = Session["UserControl"].ToString();
+                //HtmlGenericControl gel0 = new HtmlGenericControl("div");
+                //switch (userControl)
+                //{
+                //    case "~/Default2.aspx?mod=Register":
+                //        ct = Page.LoadControl("/Modules/Register.ascx");
+                //        break;
+                //}
+                //gel0.Controls.Add(ct);
+                //PlaceHolder1.Controls.Add(gel0);
+
+
+
+
                 module = Server.HtmlEncode(Request.QueryString["mod"]);
                 HtmlGenericControl gel = new HtmlGenericControl("div");
                 switch (module)

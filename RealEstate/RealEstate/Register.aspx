@@ -1,5 +1,6 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Register.ascx.cs" Inherits="RealEstate.Modules.Register" %>
-<link href="../css/Modules/ModuleHome/StyleModuleHome.css" rel="stylesheet" />
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/FrontEnd2.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="RealEstate.Register" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link href="../css/Modules/ModuleHome/StyleModuleHome.css" rel="stylesheet" />
 <style type="text/css">
     .lbNameCol {
         font-size: 15px;
@@ -35,9 +36,9 @@
     }
     .span9{ text-align: center; margin-left: 50px; padding-bottom: 30px;}
 </style>
-
-
-<div class="tabcont">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="tabcont">
     <div id="tab1" class="tabcontent" align="justify">
     <asp:ValidationSummary ID="vsSaleHome" runat="server" ShowMessageBox="True" ShowSummary="False"/>
     <div class="tittab">
@@ -126,7 +127,8 @@
             <p><span class="lbNameCol">Ngày Sinh</span></p>
         </div>
         <div class="span6">
-            <p><span>Ngày: </span><asp:DropDownList ID="ddlNgay" runat="server" Width="10%">
+            <asp:Calendar ID="cldBirthday" runat="server"></asp:Calendar>
+            <%--<p><span>Ngày: </span><asp:DropDownList ID="ddlNgay" runat="server" Width="10%">
                 <asp:ListItem>1</asp:ListItem>
                 <asp:ListItem>2</asp:ListItem>
                 <asp:ListItem>3</asp:ListItem>
@@ -174,7 +176,7 @@
                 </asp:DropDownList><span>Năm: 
                 <asp:TextBox ID="txtYear" runat="server" Width="20%"></asp:TextBox>
                 </span>
-                </p>
+                </p>--%>
         </div>
     </div>
     
@@ -211,3 +213,4 @@
   
 </div>
 </div>
+</asp:Content>

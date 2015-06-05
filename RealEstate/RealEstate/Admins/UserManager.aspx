@@ -145,7 +145,8 @@
                 <th>
                     <asp:Label ID="lblPassword" runat="server" Text="Mật khẩu:"></asp:Label></th>
                 <td>
-                    <asp:TextBox ID="txtPassword" runat="server" CssClass="datetime" Height="19px" Width="245px"></asp:TextBox></td>
+                    <asp:TextBox ID="txtPassword" TextMode="Password" runat="server" Width="60%"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="*" ControlToValidate="txtPassword"></asp:RequiredFieldValidator>
             </tr>
             <tr style="display: none">
                 <th>
@@ -158,8 +159,8 @@
                     <asp:Label ID="Label2" runat="server" Text="Giới tính:"></asp:Label></th>
                 <td>
                     <asp:RadioButtonList ID="rdGender" runat="server" RepeatDirection="Horizontal">
-                        <asp:ListItem Value="true">Nam</asp:ListItem>
-                        <asp:ListItem Value="false">Nữ</asp:ListItem>
+                        <asp:ListItem Value="1">Nam</asp:ListItem>
+                        <asp:ListItem Value="0">Nữ</asp:ListItem>
                     </asp:RadioButtonList></td>
             </tr>
             <tr>
@@ -180,6 +181,12 @@
                     <asp:Label ID="Label5" runat="server" Text="Email:"></asp:Label></th>
                 <td>
                     <asp:TextBox ID="txtEmail" runat="server" Height="17px" Width="257px"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" 
+                    ControlToValidate="txtEmail" ErrorMessage="*"></asp:RequiredFieldValidator>
+                     <asp:RegularExpressionValidator ID="RegularExpressionValidator1" 
+                        ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"  runat="server" 
+                        ErrorMessage="Email không hợp lệ" ControlToValidate="txtEmail" 
+                        Display="Dynamic"></asp:RegularExpressionValidator>
                 </td>
             </tr>
             <tr>
@@ -202,6 +209,8 @@
                     <asp:Label ID="Label8" runat="server" Text="Nhóm người dùng:"></asp:Label></th>
                 <td>
                     <asp:DropDownList ID="ddlGroupUser" runat="server" Height="16px" Width="263px">
+                        <asp:ListItem Value="1">Quản trị</asp:ListItem>
+                        <asp:ListItem Value="2">Thành viên</asp:ListItem>
                     </asp:DropDownList>
                 </td>
             </tr>            

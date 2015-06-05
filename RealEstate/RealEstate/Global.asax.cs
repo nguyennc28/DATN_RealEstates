@@ -151,6 +151,7 @@ namespace RealEstate
 
         void Session_Start(object sender, EventArgs e)
         {
+            Session["UserControl"] = "";
             Session["UserName"] = "";
             // Code that runs when a new session is started
             if (Session["Lang"] == null)
