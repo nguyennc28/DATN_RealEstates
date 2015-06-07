@@ -15,13 +15,44 @@ namespace RealEstate.Controls
             {
                 if (Session["UserName"].ToString().Equals(""))
                 {
-                    lblUserName.Text = "Đăng nhập";
+                    linkLogin.Visible = true;
+                    linkDangKy.Visible = true;
+                    linkXinChao.Visible = false;
+                    LinkDangXuat.Visible = false;
                 }
                 else
                 {
                     lblUserName.Text = "Xin chào " + Session["UserName"].ToString();
+                    linkLogin.Visible = false;
+                    linkXinChao.Visible = true;
+                    linkDangKy.Visible = false;
+                    LinkDangXuat.Visible = true;
                 }
             }
+        }
+        protected void linkLogin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Login2.aspx");
+        }
+
+        protected void linkXinChao_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/EditInfoUser.aspx");
+        }
+
+        protected void linkDangKy_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Register.aspx");
+        }
+
+        protected void LinkDangXuat_Click(object sender, EventArgs e)
+        {
+            Session["UserName"] = "";
+            linkDangKy.Visible = true;
+            LinkDangXuat.Visible = false;
+            linkLogin.Visible = true;
+            linkXinChao.Visible = false;
+            Response.Redirect("/Default2.aspx?mod=Home");
         }
     }
 }

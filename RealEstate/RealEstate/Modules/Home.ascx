@@ -100,6 +100,9 @@
             </ul>
             </marquee>
         </div>
+        <div class="banner_main_left">
+            <a><img src="/Upload/Banner/banner_2.gif" style="width: 100%" alt="Đăng tin rao bất động sản của bạn"/></a>
+        </div>
     </div>
     
 </div>

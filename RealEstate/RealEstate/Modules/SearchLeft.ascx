@@ -27,12 +27,17 @@
 </script>
 <style type="text/css">
     .tabbed {
-        width: 235px;
+        width: 240px;
         position: relative;
         width: 70%;
         margin: 0 auto;
     }
-
+    .tabbed  input[type="text"] {
+        width: 191px;
+    }
+    .tabbed  select {
+        width: 205px;
+    }
     .tabbed .tabcont {
         background: #eee;
         padding: 18px;
@@ -94,16 +99,16 @@
         color: #fff;
     }
 </style>
-<div class="tabbed" style="width: 235px; margin-left: -1px;">
+<div class="tabbed" style="width: 240px; margin-left: -1px;">
     <div class="tabhead">
         <h2 class="tabtit">
-            <img src="searchnha.png" style="width: 45px; float: left; margin-top: 2px; margin-left: 8px;" />
+            <img src="/Icons/searchnha.png" style="width: 45px; float: left; margin-top: 2px; margin-left: 8px;" />
             Công cụ tìm kiếm </h2>
         <ul class="tabnav">
             <li style="width: 50px;"><a href="#tab1">BĐS bán </a></li>
             <li style="width: 85px;"><a href="#tab2">BĐS cho thuê</a></li>
             <li style="width: 50px;"><a href="#tab3">Nhà trọ</a></li>
-            <li style="width: 50px;"><a href="#tab4">Môi giới</a></li>
+            <li style="width: 55px;"><a href="#tab4">Môi giới</a></li>
         </ul>
     </div>
     <div class="tabcont">

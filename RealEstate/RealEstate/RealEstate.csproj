@@ -447,7 +447,9 @@
     <Content Include="css\StyleFrontEnd1Master.css" />
     <Content Include="css\styleMainMaster.css" />
     <Content Include="Default2.aspx" />
+    <Content Include="EditInfoUser.aspx" />
     <Content Include="GetPassword.aspx" />
+    <Content Include="Icons\avatar-default.png" />
     <Content Include="Icons\btnCencelPostNewRE.png" />
     <Content Include="Icons\btnPostNewRE.png" />
     <Content Include="Icons\btnThemTinBDS.jpg" />
@@ -586,6 +588,7 @@
     <Content Include="Upload\Banner\banner_1_08%29.jpg" />
     <Content Include="Upload\Banner\banner_1_10.jpg" />
     <Content Include="Upload\Banner\banner_1_02.jpg" />
+    <Content Include="Upload\Banner\banner_top_batdongsan.gif" />
     <Content Include="Upload\Footer\Footer.png" />
     <Content Include="Upload\Images\anh1.jpg" />
     <Content Include="Upload\Images\anh2.jpg" />
@@ -876,6 +879,13 @@
     </Compile>
     <Compile Include="Default2.aspx.designer.cs">
       <DependentUpon>Default2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditInfoUser.aspx.cs">
+      <DependentUpon>EditInfoUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditInfoUser.aspx.designer.cs">
+      <DependentUpon>EditInfoUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd.Master.cs">
       <DependentUpon>FrontEnd.Master</DependentUpon>
