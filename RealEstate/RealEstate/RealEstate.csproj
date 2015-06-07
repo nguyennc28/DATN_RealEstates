@@ -447,6 +447,7 @@
     <Content Include="css\StyleFrontEnd1Master.css" />
     <Content Include="css\styleMainMaster.css" />
     <Content Include="Default2.aspx" />
+    <Content Include="GetPassword.aspx" />
     <Content Include="Icons\btnCencelPostNewRE.png" />
     <Content Include="Icons\btnPostNewRE.png" />
     <Content Include="Icons\btnThemTinBDS.jpg" />
@@ -474,6 +475,7 @@
     <Content Include="img\BannerMoving\A8A-DR_960x90.gif" />
     <Content Include="img\BannerMoving\BNN.gif" />
     <Content Include="img\Button\btTimkiem.png" />
+    <Content Include="img\Button\login-button.png" />
     <Content Include="img\Button\Re-Type.png" />
     <Content Include="img\Button\register-button.png" />
     <Content Include="img\cancel.png" />
@@ -525,6 +527,7 @@
     <Content Include="js\modules\SearchBoxMain.js" />
     <Content Include="js\modules\uploader.swf" />
     <Content Include="Login.aspx" />
+    <Content Include="Login2.aspx" />
     <Content Include="Modules\Home.ascx" />
     <Content Include="Modules\ModulesHome\SaleAdjacentVilla.ascx" />
     <Content Include="Modules\ModulesHome\SaleHousePavement.ascx" />
@@ -895,6 +898,13 @@
     <Compile Include="FrontEnd2.Master.designer.cs">
       <DependentUpon>FrontEnd2.Master</DependentUpon>
     </Compile>
+    <Compile Include="GetPassword.aspx.cs">
+      <DependentUpon>GetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GetPassword.aspx.designer.cs">
+      <DependentUpon>GetPassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -904,6 +914,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login2.aspx.cs">
+      <DependentUpon>Login2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login2.aspx.designer.cs">
+      <DependentUpon>Login2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Modules\Home.ascx.cs">
       <DependentUpon>Home.ascx</DependentUpon>

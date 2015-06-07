@@ -109,7 +109,7 @@
     <div class="tabcont">
         <div id="tab1" class="tabcontent" align="justify">
 
-                                <span class="searchTb"><asp:TextBox ID="TextBox1" runat="server"></asp:TextBox> </span>
+                                <span class="searchTb"><asp:TextBox ID="txtSearchKeyword1" runat="server"></asp:TextBox> </span>
 
                                 <span class="searchDdl"><asp:DropDownList ID="ddlRealEstateType" runat="server">
                                 </asp:DropDownList></span>
@@ -129,7 +129,7 @@
                                 <span class="searchDdl"><asp:DropDownList ID="ddlRegionSl" runat="server">
                                 </asp:DropDownList></span>
                 
-                                <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="../img/Button/btTimkiem.png"/>
+                                <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="../img/Button/btTimkiem.png" OnClick="ImageButton1_OnClick"/>
 
         </div>
 

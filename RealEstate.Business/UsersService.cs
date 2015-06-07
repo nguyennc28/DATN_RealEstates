@@ -85,5 +85,11 @@ namespace RealEstate.Business
             return db.UsersInfo_CheckLogin(UsersInfoName, Password);
         }
         #endregion
+        #region [UserInfo_UpdatePass]
+        public static bool UsersInfo_UpdatePassword(UsersInfo data)
+        {
+            return db.UserInfo_UpdatePassword(data);
+        }
+        #endregion
     }
 }

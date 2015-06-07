@@ -87,7 +87,7 @@ namespace RealEstate.DataAccess
         #endregion
         #region[UsersInfo_Insert]
         public bool UsersInfo_Insert(UsersInfo data)
-        {
+        {            
             using (DbCommand cmd = db.GetStoredProcCommand("Users_Insert"))
             {
                 cmd.Parameters.Add(new SqlParameter("@UserName", data.UserName));
@@ -107,10 +107,13 @@ namespace RealEstate.DataAccess
                 cmd.Parameters.Add(new SqlParameter("@Ord", data.Ord));
                 cmd.Parameters.Add(new SqlParameter("@Level", data.Level));
                 cmd.Parameters.Add(new SqlParameter("@Admin", data.Admin));
+                
                 try
                 {
                     db.ExecuteNonQuery(cmd);
+                    //ID = (int) cmd.ExecuteScalar();
                     return true;
+
                 }
                 catch (Exception ex)
                 {
@@ -230,5 +233,29 @@ namespace RealEstate.DataAccess
             }
         }
         #endregion
+
+
+        public bool UserInfo_UpdatePassword(UsersInfo data)
+        {
+            using (DbCommand cmd = db.GetStoredProcCommand("Users_UpdatePassword"))
+            {
+                cmd.Parameters.Add(new SqlParameter("@UserName", data.UserName));
+                cmd.Parameters.Add(new SqlParameter("@Password", data.Password));
+                try
+                {
+                    db.ExecuteNonQuery(cmd);
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    return false;
+                    //throw ex;
+                }
+                finally
+                {
+                    if (cmd != null) cmd.Dispose();
+                }
+            }
+        }
     }
 }

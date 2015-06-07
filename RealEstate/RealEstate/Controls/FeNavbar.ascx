@@ -54,7 +54,7 @@
                          </td>
                          <td>
                              <img src="Icons/Key.png" style="width: 16px; height: 16px;" />
-                            <a href="/Login.aspx"><span><asp:Label ID="lblUserName" runat="server" Text="Label"></asp:Label></span></a>
+                            <a href="/Login2.aspx"><span><asp:Label ID="lblUserName" runat="server" Text="Label"></asp:Label></span></a>
                          </td>
                      </tr>
                      <tr>
