@@ -14,16 +14,16 @@ namespace RealEstate.Controls
         private string Lang = "";
         protected void Page_Load(object sender, EventArgs e)
         {
-            Lang = Global.GetLang();
-            if (!IsPostBack){
-                string strLanguage = "";
-                if (Lang == "en"){
-                    strLanguage = "Tiếng Anh";
-                }else{
-                    strLanguage = "Tiếng Việt";
-                }
-                ltrLanguage.Text = string.Format("| &nbsp; Ngôn ngữ đang dùng: <b>{0}</b> &nbsp;", strLanguage);
-            }
+            //Lang = Global.GetLang();
+            //if (!IsPostBack){
+            //    string strLanguage = "";
+            //    if (Lang == "en"){
+            //        strLanguage = "Tiếng Anh";
+            //    }else{
+            //        strLanguage = "Tiếng Việt";
+            //    }
+            //    ltrLanguage.Text = string.Format("| &nbsp; Ngôn ngữ đang dùng: <b>{0}</b> &nbsp;", strLanguage);
+            //}
         }
 
         protected void ibtEn_Click(object sender, ImageClickEventArgs e)
@@ -36,6 +36,17 @@ namespace RealEstate.Controls
         {
             Cookie.SetCookie("Lang", "vi");
             Response.Redirect("/admin/");
+        }
+
+        protected void linkDefault_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Default2.aspx");
+        }
+
+        protected void linkLogout_Click(object sender, EventArgs e)
+        {
+            Session["Username"] ="";
+            Response.Redirect("/Default2.aspx");
         }
     }
 }

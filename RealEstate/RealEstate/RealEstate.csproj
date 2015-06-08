@@ -471,6 +471,7 @@
     <Content Include="Icons\Logo.png" />
     <Content Include="Icons\logo_nav.png" />
     <Content Include="Icons\Register.png" />
+    <Content Include="Icons\searchnha.png" />
     <Content Include="img\a17.png" />
     <Content Include="img\arrow.png" />
     <Content Include="img\arrow2.png" />
@@ -528,7 +529,6 @@
     <Content Include="js\modules\jquery.uploadify.js" />
     <Content Include="js\modules\SearchBoxMain.js" />
     <Content Include="js\modules\uploader.swf" />
-    <Content Include="Login.aspx" />
     <Content Include="Login2.aspx" />
     <Content Include="Modules\Home.ascx" />
     <Content Include="Modules\ModulesHome\SaleAdjacentVilla.ascx" />
@@ -588,8 +588,12 @@
     <Content Include="Upload\Banner\banner_1_08%29.jpg" />
     <Content Include="Upload\Banner\banner_1_10.jpg" />
     <Content Include="Upload\Banner\banner_1_02.jpg" />
+    <Content Include="Upload\Banner\banner_2.gif" />
     <Content Include="Upload\Banner\banner_top_batdongsan.gif" />
     <Content Include="Upload\Footer\Footer.png" />
+    <Content Include="Upload\ImageHouse\20150413100555-0fe4.jpg" />
+    <Content Include="Upload\ImageHouse\20150424094256-389e.jpg" />
+    <Content Include="Upload\ImageHouse\nha-dep-12.jpg" />
     <Content Include="Upload\Images\anh1.jpg" />
     <Content Include="Upload\Images\anh2.jpg" />
     <Content Include="Upload\Images\anh3.jpg" />
@@ -918,13 +922,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Login2.aspx.cs">
       <DependentUpon>Login2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1156,7 +1153,6 @@
     <Folder Include="Models\" />
     <Folder Include="Modules\ModulesDetail\" />
     <Folder Include="Modules\ModulesMotel\" />
-    <Folder Include="Upload\ImageHouse\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config">

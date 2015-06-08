@@ -3,5 +3,7 @@
 </asp:Content>
 <asp:Content ID="Body" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <%--<asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>--%>
-    <asp:PlaceHolder ID="PlaceHolderAdmin" runat="server"></asp:PlaceHolder>
+    <asp:PlaceHolder ID="PlaceHolderAdmin" runat="server">
+        <img alt="" src="/Upload/ImageHouse/nha-dep-12.jpg" style="width: 1144px"/>
+    </asp:PlaceHolder>
 </asp:Content>

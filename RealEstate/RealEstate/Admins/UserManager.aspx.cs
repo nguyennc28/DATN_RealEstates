@@ -148,7 +148,18 @@ namespace RealEstate.Admins
         {
             BindGrid();
         }
-
+        public static byte[] encryptData(string data)
+        {
+            System.Security.Cryptography.MD5CryptoServiceProvider md5Hasher = new System.Security.Cryptography.MD5CryptoServiceProvider();
+            byte[] hashedBytes;
+            System.Text.UTF8Encoding encoder = new System.Text.UTF8Encoding();
+            hashedBytes = md5Hasher.ComputeHash(encoder.GetBytes(data));
+            return hashedBytes;
+        }
+        public static string md5(string data)
+        {
+            return BitConverter.ToString(encryptData(data)).Replace("-", "").ToLower();
+        }
         protected void Update_Click(object sender, EventArgs e)
         {
             if (Page.IsValid)
@@ -171,12 +182,12 @@ namespace RealEstate.Admins
                 obj.Active = chkActive.Checked ? "1" : "0";
                 if (Insert == true)
                 {
-                    obj.Password = txtPassword.Text;
+                    obj.Password = md5(txtPassword.Text);
                     UsersService.UsersInfo_Insert(obj);
                 }
                 else
                 {
-                    obj.Password = txtPassword.Text != "" ? StringClass.Encrypt(txtPassword.Text) : Password;
+                    obj.Password = md5(txtPassword.Text != "" ? StringClass.Encrypt(txtPassword.Text) : Password);
                     UsersService.UsersInfo_Update(obj);
                 }
                 BindGrid();

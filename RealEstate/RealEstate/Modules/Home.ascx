@@ -101,7 +101,7 @@
             </marquee>
         </div>
         <div class="banner_main_left">
-            <a><img src="/Upload/Banner/banner_2.gif" style="width: 100%" alt="Đăng tin rao bất động sản của bạn"/></a>
+            <a href="PostNewRE.aspx" alt="Đăng tin rao bất động sản của bạn"><img src="/Upload/Banner/banner_2.gif" style="width: 100%" /></a>
         </div>
     </div>
     
@@ -119,8 +119,8 @@
                 <h4>Tin rao danh cho bạn</h4>
 
             </div>
-            <div class="tabbody" style="height: 100px; background: #EEEEEE;">
-
+            <div class="tabbody" style="height: 100%; background: #EEEEEE;">
+                <asp:Literal ID="ltrTab1" runat="server"></asp:Literal>
             </div>
         </div>
     </div>
