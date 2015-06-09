@@ -531,6 +531,7 @@
     <Content Include="js\modules\uploader.swf" />
     <Content Include="Login2.aspx" />
     <Content Include="Modules\Home.ascx" />
+    <Content Include="Modules\ModulesDetail\ApartmentsDetail.ascx" />
     <Content Include="Modules\ModulesHome\SaleAdjacentVilla.ascx" />
     <Content Include="Modules\ModulesHome\SaleHousePavement.ascx" />
     <Content Include="Modules\ModulesHome\SaleApartments.ascx" />
@@ -604,6 +605,8 @@
     <Content Include="Upload\SlideNewsImages\ImgSlideNew2.jpg" />
     <Content Include="Upload\SlideNewsImages\ImgSlideNew3.jpg" />
     <Content Include="Upload\SlideNewsImages\ImgSlideNew4.jpg" />
+    <Content Include="ViewPostNewRE.aspx" />
+    <Content Include="ViewRegister.aspx" />
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -936,6 +939,13 @@
     <Compile Include="Modules\Home.ascx.designer.cs">
       <DependentUpon>Home.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Modules\ModulesDetail\ApartmentsDetail.ascx.cs">
+      <DependentUpon>ApartmentsDetail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\ModulesDetail\ApartmentsDetail.ascx.designer.cs">
+      <DependentUpon>ApartmentsDetail.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Modules\ModulesHome\SaleAdjacentVilla.ascx.cs">
       <DependentUpon>SaleAdjacentVilla.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1140,6 +1150,20 @@
     <Compile Include="Tintuc.aspx.designer.cs">
       <DependentUpon>Tintuc.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ViewPostNewRE.aspx.cs">
+      <DependentUpon>ViewPostNewRE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewPostNewRE.aspx.designer.cs">
+      <DependentUpon>ViewPostNewRE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewRegister.aspx.cs">
+      <DependentUpon>ViewRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewRegister.aspx.designer.cs">
+      <DependentUpon>ViewRegister.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1151,7 +1175,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Modules\ModulesDetail\" />
     <Folder Include="Modules\ModulesMotel\" />
   </ItemGroup>
   <ItemGroup>

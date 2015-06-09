@@ -41,9 +41,9 @@ namespace RealEstate.Business
         }
         #endregion
         #region[RealEstateOwnersInfo_Insert]
-        public static bool RealEstateOwnersInfo_Insert(RealEstateOwnersInfo data)
+        public static int RealEstateOwnersInfo_Insert(RealEstateOwnersInfo data, int ID)
         {
-            return db.RealEstateOwnersInfo_Insert(data);
+            return db.RealEstateOwnersInfo_Insert(data, ID);
         }
         #endregion
         #region[RealEstateOwnersInfo_Update]

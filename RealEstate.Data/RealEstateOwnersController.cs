@@ -10,7 +10,7 @@ using Microsoft.Practices.EnterpriseLibrary.Data;
 
 namespace RealEstate.DataAccess
 {
-    public class RealEstateOwnersController
+    public class RealEstateOwnersController : SqlDataProvider
     {
         Database db = DatabaseFactory.CreateDatabase();
         #region[RealEstateOwnersInfo_GetById]
@@ -122,12 +122,12 @@ namespace RealEstate.DataAccess
         }
         #endregion
         #region[RealEstateOwnersInfo_Insert]
-        public bool RealEstateOwnersInfo_Insert(RealEstateOwnersInfo data)
+        public int RealEstateOwnersInfo_Insert(RealEstateOwnersInfo data, int ID)
         {
-            using (DbCommand cmd = db.GetStoredProcCommand("RealEstateOwners_Insert"))
+            using (SqlCommand cmd = new SqlCommand("Users_Insert", GetConnection()))
             {
                 //cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersID", data.RealEstateOwnersID));
-                cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersTypeID", data.RealEstateOwnersTypeID));
+                cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersType", data.RealEstateOwnersType));
                 cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersName", data.RealEstateOwnersName));
                 cmd.Parameters.Add(new SqlParameter("@CLUR", data.CLUR));
                 cmd.Parameters.Add(new SqlParameter("@Address", data.Address));
@@ -138,18 +138,27 @@ namespace RealEstate.DataAccess
                 //cmd.Parameters.Add(new SqlParameter("@Lang", data.Lang));
                 try
                 {
-                    db.ExecuteNonQuery(cmd);
-                    return true;
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            ID = int.Parse(reader[0].ToString());
+                        }
+                    }
+                    reader.Close();
+
                 }
                 catch (Exception ex)
                 {
-                    return false;
                     //throw ex;
+                    return -1;
                 }
                 finally
                 {
                     if (cmd != null) cmd.Dispose();
                 }
+                return ID;
             }
         }
         #endregion
@@ -159,7 +168,7 @@ namespace RealEstate.DataAccess
             using (DbCommand cmd = db.GetStoredProcCommand("RealEstateOwners_Update"))
             {
                 cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersID", data.RealEstateOwnersID));
-                cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersTypeID", data.RealEstateOwnersTypeID));
+                cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersType", data.RealEstateOwnersType));
                 cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersName", data.RealEstateOwnersName));
                 cmd.Parameters.Add(new SqlParameter("@CLUR", data.CLUR));
                 cmd.Parameters.Add(new SqlParameter("@Address", data.Address));

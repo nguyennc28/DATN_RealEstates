@@ -11,6 +11,7 @@ namespace RealEstate
 {
     public partial class Register : System.Web.UI.Page
     {
+        private int UserID;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -39,9 +40,9 @@ namespace RealEstate
                 Ord = "",
                 Admin = "",
             };
-            UsersService.UsersInfo_Insert(obj);
+            int userId = UsersService.UsersInfo_Insert(obj, UserID);
             Session["UserControl"] = "~/Default2.aspx?mod=Register";
-            Response.Redirect("~/Default2.aspx?mod=RegisterSuccess");
+            Response.Redirect("~/ViewRegister.aspx?id=" + userId);
         }
 
         protected void ImageButton2_Click(object sender, ImageClickEventArgs e)

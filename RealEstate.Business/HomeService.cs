@@ -52,6 +52,12 @@ namespace RealEstate.Business
             return db.HomeInfo_Insert(data);
         }
         #endregion
+        #region[HomeInfo_InsertGetID]
+        public static int HomeInfo_InsertGetID(HomeInfo data, int ID)
+        {
+            return db.HomeInfo_InsertGetID(data, ID);
+        }
+        #endregion
         #region[HomeInfo_Update]
         public static bool HomeInfo_Update(HomeInfo data)
         {

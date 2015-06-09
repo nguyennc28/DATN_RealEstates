@@ -10,7 +10,7 @@ using Microsoft.Practices.EnterpriseLibrary.Data;
 
 namespace RealEstate.DataAccess
 {
-    public class HomeController
+    public class HomeController : SqlDataProvider
     {
         Database db = DatabaseFactory.CreateDatabase();
         #region[HomeInfo_GetById]
@@ -190,6 +190,66 @@ namespace RealEstate.DataAccess
                 {
                     if (cmd != null) cmd.Dispose();
                 }
+            }
+        }
+        #endregion
+        #region[HomeInfo_InsertGetID]
+        public int HomeInfo_InsertGetID(HomeInfo data, int ID)
+        {
+            using (SqlCommand cmd = new SqlCommand("Users_Insert", GetConnection()))
+            {
+                //cmd.Parameters.Add(new SqlParameter("@HomeID", data.HomeID));
+                cmd.Parameters.Add(new SqlParameter("@HomeTypeID", data.HomeTypeID));
+                cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersID", data.RealEstateOwnersID));
+                cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersName", data.RealEstateOwnersName));
+                cmd.Parameters.Add(new SqlParameter("@RealEstateID", data.RealEstateID));
+                cmd.Parameters.Add(new SqlParameter("@CityID", data.CityID));
+                cmd.Parameters.Add(new SqlParameter("@DistrictID", data.DistrictID));
+                cmd.Parameters.Add(new SqlParameter("@LocationID", data.LocationID));
+                cmd.Parameters.Add(new SqlParameter("@Name", data.Name));
+                cmd.Parameters.Add(new SqlParameter("@Title", data.Title));
+                cmd.Parameters.Add(new SqlParameter("@CreateDate", data.CreateDate));
+                cmd.Parameters.Add(new SqlParameter("@CreateBy", data.CreateBy));
+                cmd.Parameters.Add(new SqlParameter("@TransactionType", data.TransactionType));
+                cmd.Parameters.Add(new SqlParameter("@Tag", data.Tag));
+                cmd.Parameters.Add(new SqlParameter("@Description", data.Description));
+                cmd.Parameters.Add(new SqlParameter("@Address", data.Address));
+                cmd.Parameters.Add(new SqlParameter("@Price", data.Price));
+                cmd.Parameters.Add(new SqlParameter("@TotalArea", data.TotalArea));
+                cmd.Parameters.Add(new SqlParameter("@FloorArea", data.FloorArea));
+                cmd.Parameters.Add(new SqlParameter("@GargenArea", data.GargenArea));
+                cmd.Parameters.Add(new SqlParameter("@HomeArea", data.HomeArea));
+                cmd.Parameters.Add(new SqlParameter("@BedroomNumber", data.BedroomNumber));
+                cmd.Parameters.Add(new SqlParameter("@TierNumber", data.TierNumber));
+                cmd.Parameters.Add(new SqlParameter("@Image1", data.Image1));
+                cmd.Parameters.Add(new SqlParameter("@Image2", data.Image2));
+                cmd.Parameters.Add(new SqlParameter("@Image3", data.Image3));
+                cmd.Parameters.Add(new SqlParameter("@Image4", data.Image4));
+                cmd.Parameters.Add(new SqlParameter("@Image5", data.Image5));
+                cmd.Parameters.Add(new SqlParameter("@Image6", data.Image6));
+                try
+                {
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            ID = int.Parse(reader[0].ToString());
+                        }
+                    }
+                    reader.Close();
+
+                }
+                catch (Exception ex)
+                {
+                    //throw ex;
+                    return -1;
+                }
+                finally
+                {
+                    if (cmd != null) cmd.Dispose();
+                }
+                return ID;
             }
         }
         #endregion

@@ -173,7 +173,7 @@ namespace RealEstate.Admins.Modules
                 if (Insert == true)
                 {
                     obj.Password = txtPassword.Text;
-                    UsersService.UsersInfo_Insert(obj);
+                    //UsersService.UsersInfo_Insert(obj);
                 }
                 else
                 {

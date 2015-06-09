@@ -5,17 +5,18 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace RealEstate.Modules
+namespace RealEstate
 {
-    public partial class RegisterSuccess : System.Web.UI.UserControl
+    public partial class ViewRegister : System.Web.UI.Page
     {
         public int UserID;
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (!IsPostBack)
-            //{
-            //    UserID = int.Parse(Request.QueryString["id"].ToString());
-            //}
+            if (!IsPostBack)
+            {
+                UserID = int.Parse(Request.QueryString["id"]);
+                Label1.Text = UserID.ToString();
+            }
         }
     }
 }

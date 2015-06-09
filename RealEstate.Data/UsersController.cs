@@ -85,48 +85,48 @@ namespace RealEstate.DataAccess
             return list;
         }
         #endregion
-        #region[UsersInfo_Insert]
-        public bool UsersInfo_Insert(UsersInfo data)
-        {            
-            using (DbCommand cmd = db.GetStoredProcCommand("Users_Insert"))
-            {
-                cmd.Parameters.Add(new SqlParameter("@UserName", data.UserName));
-                cmd.Parameters.Add(new SqlParameter("@Password", data.Password));
-                cmd.Parameters.Add(new SqlParameter("@FullName", data.FullName));
-                cmd.Parameters.Add(new SqlParameter("@Gender", data.Gender));
-                cmd.Parameters.Add(new SqlParameter("@Avatar", data.Avatar));
-                cmd.Parameters.Add(new SqlParameter("@Birthday", data.Birthday));
-                cmd.Parameters.Add(new SqlParameter("@Email", data.Email));
-                cmd.Parameters.Add(new SqlParameter("@Address", data.Address));
-                cmd.Parameters.Add(new SqlParameter("@MobilePhone", data.MobilePhone));
-                cmd.Parameters.Add(new SqlParameter("@IdentityCard", data.IdentityCard));
-                cmd.Parameters.Add(new SqlParameter("@LastLoggedOn", data.LastLoggedOn));
-                cmd.Parameters.Add(new SqlParameter("@CreatedDate", data.CreatedDate));
-                cmd.Parameters.Add(new SqlParameter("@GroupID", data.GroupID));
-                cmd.Parameters.Add(new SqlParameter("@Active", data.Active));
-                cmd.Parameters.Add(new SqlParameter("@Ord", data.Ord));
-                cmd.Parameters.Add(new SqlParameter("@Level", data.Level));
-                cmd.Parameters.Add(new SqlParameter("@Admin", data.Admin));
+        //#region[UsersInfo_Insert]
+        //public bool UsersInfo_Insert(UsersInfo data)
+        //{            
+        //    using (DbCommand cmd = db.GetStoredProcCommand("Users_Insert"))
+        //    {
+        //        cmd.Parameters.Add(new SqlParameter("@UserName", data.UserName));
+        //        cmd.Parameters.Add(new SqlParameter("@Password", data.Password));
+        //        cmd.Parameters.Add(new SqlParameter("@FullName", data.FullName));
+        //        cmd.Parameters.Add(new SqlParameter("@Gender", data.Gender));
+        //        cmd.Parameters.Add(new SqlParameter("@Avatar", data.Avatar));
+        //        cmd.Parameters.Add(new SqlParameter("@Birthday", data.Birthday));
+        //        cmd.Parameters.Add(new SqlParameter("@Email", data.Email));
+        //        cmd.Parameters.Add(new SqlParameter("@Address", data.Address));
+        //        cmd.Parameters.Add(new SqlParameter("@MobilePhone", data.MobilePhone));
+        //        cmd.Parameters.Add(new SqlParameter("@IdentityCard", data.IdentityCard));
+        //        cmd.Parameters.Add(new SqlParameter("@LastLoggedOn", data.LastLoggedOn));
+        //        cmd.Parameters.Add(new SqlParameter("@CreatedDate", data.CreatedDate));
+        //        cmd.Parameters.Add(new SqlParameter("@GroupID", data.GroupID));
+        //        cmd.Parameters.Add(new SqlParameter("@Active", data.Active));
+        //        cmd.Parameters.Add(new SqlParameter("@Ord", data.Ord));
+        //        cmd.Parameters.Add(new SqlParameter("@Level", data.Level));
+        //        cmd.Parameters.Add(new SqlParameter("@Admin", data.Admin));
                 
-                try
-                {
-                    db.ExecuteNonQuery(cmd);
-                    //ID = (int) cmd.ExecuteScalar();
-                    return true;
+        //        try
+        //        {
+        //            db.ExecuteNonQuery(cmd);
+        //            //ID = (int) cmd.ExecuteScalar();
+        //            return true;
 
-                }
-                catch (Exception ex)
-                {
-                    return false;
-                    //throw ex;
-                }
-                finally
-                {
-                    if (cmd != null) cmd.Dispose();
-                }
-            }
-        }
-        #endregion
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            return false;
+        //            //throw ex;
+        //        }
+        //        finally
+        //        {
+        //            if (cmd != null) cmd.Dispose();
+        //        }
+        //    }
+        //}
+        //#endregion
         #region[UsersInfo_Update]
         public bool UsersInfo_Update(UsersInfo data)
         {
@@ -210,10 +210,6 @@ namespace RealEstate.DataAccess
 
         public int UsersInfo_CheckLogin(string UserName, string Password)
         {
-            //using (DbCommand cmd = db.GetStoredProcCommand("UsersInfo_CheckLogin"))
-            //{
-            //    cmd.Parameters.Add()
-            //}
             using (SqlCommand cmd = new SqlCommand("Users_CheckLogin", GetConnection()))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -233,7 +229,56 @@ namespace RealEstate.DataAccess
             }
         }
         #endregion
-
+        #region[UsersInfo_Insert]
+        public int UsersInfo_Insert(UsersInfo data, int UserID)
+        {
+            using (SqlCommand cmd = new SqlCommand("Users_Insert", GetConnection()))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                //cmd.Parameters.Add(new SqlParameter("@UserID", data.UserID));
+                cmd.Parameters.Add(new SqlParameter("@UserName", data.UserName));
+                cmd.Parameters.Add(new SqlParameter("@Password", data.Password));
+                cmd.Parameters.Add(new SqlParameter("@FullName", data.FullName));
+                cmd.Parameters.Add(new SqlParameter("@Gender", data.Gender));
+                cmd.Parameters.Add(new SqlParameter("@Avatar", data.Avatar));
+                cmd.Parameters.Add(new SqlParameter("@Birthday", data.Birthday));
+                cmd.Parameters.Add(new SqlParameter("@Email", data.Email));
+                cmd.Parameters.Add(new SqlParameter("@Address", data.Address));
+                cmd.Parameters.Add(new SqlParameter("@MobilePhone", data.MobilePhone));
+                cmd.Parameters.Add(new SqlParameter("@IdentityCard", data.IdentityCard));
+                cmd.Parameters.Add(new SqlParameter("@LastLoggedOn", data.LastLoggedOn));
+                cmd.Parameters.Add(new SqlParameter("@CreatedDate", data.CreatedDate));
+                cmd.Parameters.Add(new SqlParameter("@GroupID", data.GroupID));
+                cmd.Parameters.Add(new SqlParameter("@Active", data.Active));
+                cmd.Parameters.Add(new SqlParameter("@Ord", data.Ord));
+                cmd.Parameters.Add(new SqlParameter("@Level", data.Level));
+                cmd.Parameters.Add(new SqlParameter("@Admin", data.Admin));                            
+                try
+                {
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            UserID = int.Parse(reader[0].ToString());
+                        }
+                    }
+                    reader.Close();
+                      
+                }
+                catch (Exception ex)
+                {
+                    //throw ex;
+                    return -1;  
+                }
+                finally
+                {
+                    if (cmd != null) cmd.Dispose();
+                }
+                return UserID;
+            }
+        }
+        #endregion
 
         public bool UserInfo_UpdatePassword(UsersInfo data)
         {

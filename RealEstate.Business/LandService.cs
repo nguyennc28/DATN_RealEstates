@@ -46,6 +46,12 @@ namespace RealEstate.Business
             return db.LandInfo_Insert(data);
         }
         #endregion
+        #region[LandInfo_InsertGetID]
+        public static int LandInfo_InsertGetID(LandInfo data, int ID)
+        {
+            return db.LandInfo_InsertGetID(data, ID);
+        }
+        #endregion
         #region[LandInfo_Update]
         public static bool LandInfo_Update(LandInfo data)
         {

@@ -46,7 +46,7 @@ namespace RealEstate.Modules
                     Ord = "",
                     Admin = "",
                 };
-                UsersService.UsersInfo_Insert(obj);
+                //UsersService.UsersInfo_Insert(obj);
                 Session["UserControl"] = "~/Default2.aspx?mod=Register";
                 Response.Redirect("~/Default2.aspx?mod=RegisterSuccess");
 

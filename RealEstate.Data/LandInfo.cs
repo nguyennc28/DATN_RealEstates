@@ -71,6 +71,104 @@ namespace RealEstate.DataAccess
 			}
 		}
 		private string _Description;
+        private string _TransactionType;
+        public string TransactionType
+        {
+            get { return _TransactionType; }
+            set { _TransactionType = value; }
+        }
+        private string _Title;
+        public string Title
+        {
+            get { return _Title; }
+            set { _Title = value; }
+        }
+        private string _Name;
+        public string Name
+        {
+            get { return _Name; }
+            set { _Name = value; }
+        }
+        private string _RealEstateOwnersName;
+
+        public string RealEstateOwnersName
+        {
+            get { return _RealEstateOwnersName; }
+            set { _RealEstateOwnersName = value; }
+        }
+        private string _Tag;
+        public string Tag
+        {
+            get { return _Tag; }
+            set { _Tag = value; }
+        }
+        private string _CreateDate;
+        public string CreateDate
+        {
+            get { return _CreateDate; }
+            set { _CreateDate = value; }
+        }
+        private string _CreateBy;
+        public string CreateBy
+        {
+            get
+            {
+                return _CreateBy;
+            }
+            set
+            {
+                _CreateBy = value;
+            }
+        }
+        private string _LocationID;
+        public string LocationID
+        {
+            get
+            {
+                return _LocationID;
+            }
+            set
+            {
+                _LocationID = value;
+            }
+        }
+        private string _CityID;
+        public string CityID
+        {
+            get
+            {
+                return _CityID;
+            }
+            set
+            {
+                _CityID = value;
+            }
+        }
+        private string _RegionID;
+        public string RegionID
+        {
+            get
+            {
+                return _RegionID;
+            }
+            set
+            {
+                _RegionID = value;
+            }
+        }
+        private string _DistrictID;
+        public string DistrictID
+        {
+            get
+            {
+                return _DistrictID;
+            }
+            set
+            {
+                _DistrictID = value;
+            }
+        }
+        private string _CategoryID;
 		public string Description
 		{ 
 			get 
@@ -230,7 +328,17 @@ namespace RealEstate.DataAccess
             obj.RealEstateOwnersTypeID = (dr["RealEstateOwnersTypeID"] is DBNull) ? string.Empty : dr["RealEstateOwnersTypeID"].ToString();
             obj.RealEstateID = (dr["RealEstateID"] is DBNull) ? string.Empty : dr["RealEstateID"].ToString();
             obj.Description = (dr["Description"] is DBNull) ? string.Empty : dr["Description"].ToString();
+            obj.Title = (dr["Title"] is DBNull) ? string.Empty : dr["Title"].ToString();
+            obj.Name = (dr["Name"] is DBNull) ? string.Empty : dr["Name"].ToString();
+            obj.RealEstateOwnersName = (dr["RealEstateOwnersName"] is DBNull) ? string.Empty : dr["RealEstateOwnersName"].ToString();
+            obj.TransactionType = (dr["TransactionType"] is DBNull) ? string.Empty : dr["TransactionType"].ToString();
+            obj.Tag = (dr["Tag"] is DBNull) ? string.Empty : dr["Tag"].ToString();
             obj.Address = (dr["Address"] is DBNull) ? string.Empty : dr["Address"].ToString();
+            obj.CreateDate = (dr["CreateDate"] is DBNull) ? string.Empty : dr["CreateDate"].ToString();
+            obj.CreateBy = (dr["CreateBy"] is DBNull) ? string.Empty : dr["CreateBy"].ToString();
+            obj.CityID = (dr["CityID"] is DBNull) ? string.Empty : dr["CityID"].ToString();
+            obj.DistrictID = (dr["DistrictID"] is DBNull) ? string.Empty : dr["DistrictID"].ToString();
+            obj.LocationID = (dr["LocationID"] is DBNull) ? string.Empty : dr["LocationID"].ToString();
             obj.Price = (dr["Price"] is DBNull) ? string.Empty : dr["Price"].ToString();
             obj.TotalArea = (dr["TotalArea"] is DBNull) ? string.Empty : dr["TotalArea"].ToString();
             obj.Image1 = (dr["Image1"] is DBNull) ? string.Empty : dr["Image1"].ToString();

@@ -183,7 +183,7 @@ namespace RealEstate.Admins
                 if (Insert == true)
                 {
                     obj.Password = md5(txtPassword.Text);
-                    UsersService.UsersInfo_Insert(obj);
+                    //UsersService.UsersInfo_Insert(obj);
                 }
                 else
                 {

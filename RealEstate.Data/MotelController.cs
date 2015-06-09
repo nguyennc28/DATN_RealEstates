@@ -10,7 +10,7 @@ using Microsoft.Practices.EnterpriseLibrary.Data;
 
 namespace RealEstate.DataAccess
 {
-    public class MotelController
+    public class MotelController : SqlDataProvider
     {
         Database db = DatabaseFactory.CreateDatabase();
         #region[MotelInfo_GetById]
@@ -18,7 +18,7 @@ namespace RealEstate.DataAccess
         {
             List<MotelInfo> list = new List<MotelInfo>();
             DataAccess.MotelInfo obj = new DataAccess.MotelInfo();
-            DbCommand cmd = db.GetStoredProcCommand("Group_SelectByID", Id);
+            DbCommand cmd = db.GetStoredProcCommand("Motel_SelectByID", Id);
             using (IDataReader dr = db.ExecuteReader(cmd))
             {
                 while (dr.Read())
@@ -54,7 +54,7 @@ namespace RealEstate.DataAccess
         {
             List<DataAccess.MotelInfo> list = new List<DataAccess.MotelInfo>();
             DataAccess.MotelInfo obj = new DataAccess.MotelInfo();
-            DbCommand cmd = db.GetStoredProcCommand("Group_SelectTop", Top, Where, Order);
+            DbCommand cmd = db.GetStoredProcCommand("Motel_SelectTop", Top, Where, Order);
             using (IDataReader dr = db.ExecuteReader(cmd))
             {
                 while (dr.Read())
@@ -72,7 +72,7 @@ namespace RealEstate.DataAccess
         {
             List<DataAccess.MotelInfo> list = new List<DataAccess.MotelInfo>();
             DataAccess.MotelInfo obj = new DataAccess.MotelInfo();
-            DbCommand cmd = db.GetStoredProcCommand("Group_SelectAll");
+            DbCommand cmd = db.GetStoredProcCommand("Motel_SelectAll");
             using (IDataReader dr = db.ExecuteReader(cmd))
             {
                 while (dr.Read())
@@ -90,7 +90,7 @@ namespace RealEstate.DataAccess
         {
             List<DataAccess.MotelInfo> list = new List<DataAccess.MotelInfo>();
             DataAccess.MotelInfo obj = new DataAccess.MotelInfo();
-            DbCommand cmd = db.GetStoredProcCommand("Group_SelectPage", CurentMotelInfo, MotelInfoSize);
+            DbCommand cmd = db.GetStoredProcCommand("Motel_SelectPage", CurentMotelInfo, MotelInfoSize);
             using (IDataReader dr = db.ExecuteReader(cmd))
             {
                 while (dr.Read())
@@ -124,13 +124,22 @@ namespace RealEstate.DataAccess
         #region[MotelInfo_Insert]
         public bool MotelInfo_Insert(MotelInfo data)
         {
-            using (DbCommand cmd = db.GetStoredProcCommand("Group_Insert"))
+            using (DbCommand cmd = db.GetStoredProcCommand("Motel_Insert"))
             {
                 //cmd.Parameters.Add(new SqlParameter("@MotelID", data.MotelID));
                 cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersID", data.RealEstateOwnersID));
-                cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersTypeID", data.RealEstateOwnersTypeID));
                 cmd.Parameters.Add(new SqlParameter("@RealEstateID", data.RealEstateID));
                 cmd.Parameters.Add(new SqlParameter("@MotelTypeID", data.MotelTypeID));
+                cmd.Parameters.Add(new SqlParameter("@CityID", data.CityID));
+                cmd.Parameters.Add(new SqlParameter("@DistrictID", data.DistrictID));
+                cmd.Parameters.Add(new SqlParameter("@LocationID", data.LocationID));
+                cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersName", data.RealEstateOwnersName));
+                cmd.Parameters.Add(new SqlParameter("@Name", data.Name));
+                cmd.Parameters.Add(new SqlParameter("@Title", data.Title));
+                cmd.Parameters.Add(new SqlParameter("@CreateDate", data.CreateDate));
+                cmd.Parameters.Add(new SqlParameter("@CreateBy", data.CreateBy));
+                cmd.Parameters.Add(new SqlParameter("@Tag", data.Tag));
+
                 cmd.Parameters.Add(new SqlParameter("@Description", data.Description));
                 cmd.Parameters.Add(new SqlParameter("@Address", data.Address));
                 cmd.Parameters.Add(new SqlParameter("@Price", data.Price));
@@ -162,16 +171,87 @@ namespace RealEstate.DataAccess
             }
         }
         #endregion
+
+        #region[MotelInfo_InsertGetID]
+        public int MotelInfo_InsertGetID(MotelInfo data, int ID)
+        {
+            using (SqlCommand cmd = new SqlCommand("Users_Insert", GetConnection()))
+            {
+                //cmd.Parameters.Add(new SqlParameter("@MotelID", data.MotelID));
+                cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersID", data.RealEstateOwnersID));
+                cmd.Parameters.Add(new SqlParameter("@RealEstateID", data.RealEstateID));
+                cmd.Parameters.Add(new SqlParameter("@MotelTypeID", data.MotelTypeID));
+                cmd.Parameters.Add(new SqlParameter("@CityID", data.CityID));
+                cmd.Parameters.Add(new SqlParameter("@DistrictID", data.DistrictID));
+                cmd.Parameters.Add(new SqlParameter("@LocationID", data.LocationID));
+                cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersName", data.RealEstateOwnersName));
+                cmd.Parameters.Add(new SqlParameter("@Name", data.Name));
+                cmd.Parameters.Add(new SqlParameter("@Title", data.Title));
+                cmd.Parameters.Add(new SqlParameter("@CreateDate", data.CreateDate));
+                cmd.Parameters.Add(new SqlParameter("@CreateBy", data.CreateBy));
+                cmd.Parameters.Add(new SqlParameter("@Tag", data.Tag));
+
+                cmd.Parameters.Add(new SqlParameter("@Description", data.Description));
+                cmd.Parameters.Add(new SqlParameter("@Address", data.Address));
+                cmd.Parameters.Add(new SqlParameter("@Price", data.Price));
+                cmd.Parameters.Add(new SqlParameter("@TotalArea", data.TotalArea));
+                cmd.Parameters.Add(new SqlParameter("@IsClosed", data.IsClosed));
+                cmd.Parameters.Add(new SqlParameter("@IsCooker", data.IsCooker));
+                cmd.Parameters.Add(new SqlParameter("@Furniture", data.Furniture));
+                cmd.Parameters.Add(new SqlParameter("@TierNumber", data.TierNumber));
+                cmd.Parameters.Add(new SqlParameter("@Image1", data.Image1));
+                cmd.Parameters.Add(new SqlParameter("@Image2", data.Image2));
+                cmd.Parameters.Add(new SqlParameter("@Image3", data.Image3));
+                cmd.Parameters.Add(new SqlParameter("@Image4", data.Image4));
+                cmd.Parameters.Add(new SqlParameter("@Image5", data.Image5));
+                cmd.Parameters.Add(new SqlParameter("@Image6", data.Image6));
+                try
+                {
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            ID = int.Parse(reader[0].ToString());
+                        }
+                    }
+                    reader.Close();
+
+                }
+                catch (Exception ex)
+                {
+                    //throw ex;
+                    return -1;
+                }
+                finally
+                {
+                    if (cmd != null) cmd.Dispose();
+                }
+                return ID;
+            }
+        }
+        #endregion
+
+
         #region[MotelInfo_Update]
         public bool MotelInfo_Update(MotelInfo data)
         {
-            using (DbCommand cmd = db.GetStoredProcCommand("Group_Update"))
+            using (DbCommand cmd = db.GetStoredProcCommand("Motel_Update"))
             {
                 cmd.Parameters.Add(new SqlParameter("@MotelID", data.MotelID));
                 cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersID", data.RealEstateOwnersID));
-                cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersTypeID", data.RealEstateOwnersTypeID));
                 cmd.Parameters.Add(new SqlParameter("@RealEstateID", data.RealEstateID));
                 cmd.Parameters.Add(new SqlParameter("@MotelTypeID", data.MotelTypeID));
+                cmd.Parameters.Add(new SqlParameter("@CityID", data.CityID));
+                cmd.Parameters.Add(new SqlParameter("@DistrictID", data.DistrictID));
+                cmd.Parameters.Add(new SqlParameter("@LocationID", data.LocationID));
+                cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersName", data.RealEstateOwnersName));
+                cmd.Parameters.Add(new SqlParameter("@Name", data.Name));
+                cmd.Parameters.Add(new SqlParameter("@Title", data.Title));
+                cmd.Parameters.Add(new SqlParameter("@CreateDate", data.CreateDate));
+                cmd.Parameters.Add(new SqlParameter("@CreateBy", data.CreateBy));
+                cmd.Parameters.Add(new SqlParameter("@Tag", data.Tag));
+
                 cmd.Parameters.Add(new SqlParameter("@Description", data.Description));
                 cmd.Parameters.Add(new SqlParameter("@Address", data.Address));
                 cmd.Parameters.Add(new SqlParameter("@Price", data.Price));
@@ -206,7 +286,7 @@ namespace RealEstate.DataAccess
         #region[MotelInfo_Delete]
         public bool MotelInfo_Delete(string Id)
         {
-            DbCommand cmd = db.GetStoredProcCommand("Group_Delete", Id);
+            DbCommand cmd = db.GetStoredProcCommand("Motel_Delete", Id);
             try
             {
                 db.ExecuteNonQuery(cmd);

@@ -22,16 +22,16 @@ namespace RealEstate.DataAccess
 				_RealEstateOwnersID = value;
 			}
 		}
-		private string _RealEstateOwnersTypeID;
-		public string RealEstateOwnersTypeID
+		private string _RealEstateOwnersType;
+		public string RealEstateOwnersType
 		{ 
 			get 
 			{ 
-				return _RealEstateOwnersTypeID;
+				return _RealEstateOwnersType;
 			}
 			set 
 			{ 
-				_RealEstateOwnersTypeID = value;
+				_RealEstateOwnersType = value;
 			}
 		}
 		private string _RealEstateOwnersName;
@@ -131,7 +131,7 @@ namespace RealEstate.DataAccess
 		public RealEstateOwnersInfo(string realestateownersid, string realestateownerstypeid, string realestateownersname, string clur, string address, string mobilenumber, string email, string gender, string identitycard)
 		{
 			this.RealEstateOwnersID = realestateownersid;
-			this.RealEstateOwnersTypeID = realestateownerstypeid;
+			this.RealEstateOwnersType = realestateownerstypeid;
 			this.RealEstateOwnersName = realestateownersname;
 			this.CLUR = clur;
 			this.Address = address;
@@ -147,7 +147,7 @@ namespace RealEstate.DataAccess
         {
             RealEstateOwnersInfo obj = new RealEstateOwnersInfo();
             obj.RealEstateOwnersID = (dr["RealEstateOwnersID"] is DBNull) ? string.Empty : dr["RealEstateOwnersID"].ToString();
-            obj.RealEstateOwnersTypeID = (dr["RealEstateOwnersTypeID"] is DBNull) ? string.Empty : dr["RealEstateOwnersTypeID"].ToString();
+            obj.RealEstateOwnersType = (dr["RealEstateOwnersType"] is DBNull) ? string.Empty : dr["RealEstateOwnersType"].ToString();
             obj.RealEstateOwnersName = (dr["RealEstateOwnersName"] is DBNull) ? string.Empty : dr["RealEstateOwnersName"].ToString();
             obj.CLUR = (dr["CLUR"] is DBNull) ? string.Empty : dr["CLUR"].ToString();
             obj.Address = (dr["Address"] is DBNull) ? string.Empty : dr["Address"].ToString();

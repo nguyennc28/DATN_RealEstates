@@ -46,6 +46,13 @@ namespace RealEstate.Business
             return db.MotelInfo_Insert(data);
         }
         #endregion
+        #region[MotelInfo_InsertGetID]
+        public static int MotelInfo_InsertGetID(MotelInfo data, int ID)
+        {
+            return db.MotelInfo_InsertGetID(data, ID);
+        }
+        #endregion
+
         #region[MotelInfo_Update]
         public static bool MotelInfo_Update(MotelInfo data)
         {
