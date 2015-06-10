@@ -1,153 +1,24 @@
-﻿using System;
+﻿using RealEstate.Business;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using RealEstate.Business;
 using RealEstate.DataAccess;
 
 namespace RealEstate
 {
-    public partial class PostNewRE : System.Web.UI.Page
+    public partial class PostSaleLand : System.Web.UI.Page
     {
         private string _cityCode;
         private int _reOwnerId;
         private int _homeId;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                ViewRealEstateType();
-                ViewRealEstate();
-                ViewCity();
-            }                
+
         }
-
-        protected void btnPostNewRE_Click(object sender, ImageClickEventArgs e)
-        {
-            //var objRealEstateOwner = new RealEstateOwnersInfo
-            //{
-            //    RealEstateOwnersName = txtRealEstateOwner1.Text,
-            //    CLUR = rdCLUR1.SelectedValue,
-            //    RealEstateOwnersType = rdRealEstateOwnerType1.SelectedItem.ToString(),
-            //    Gender = rdGender1.SelectedValue,
-            //    Address = txtAddress2.Text,
-            //    IdentityCard = txtIdentyCard1.Text,
-            //    MobilePhone = txtMobilePhone1.Text,
-            //    Email = txtEmail1.Text,
-
-            //};
-            //int realEstateOwnerID = RealEstateOwnersService.RealEstateOwnersInfo_Insert(objRealEstateOwner, _reOwnerId);
-
-            var obj = new HomeInfo
-            {
-                HomeTypeID = ddlHomeType1.SelectedValue,
-                Name = txtTenNha1.Text,
-                RealEstateOwnersID = "1",
-                RealEstateID = ddlRealEstate1.SelectedValue,
-                Title = "",
-                TransactionType = "sale",
-                Tag = "",
-                CreateBy = txtTenChuSoHuu1.Text,
-                CreateDate = DateTime.Now.ToShortDateString(),
-                RealEstateOwnersName = txtTenChuSoHuu1.Text,
-                CityID = ddlCity1.SelectedValue,
-                LocationID = "",
-                DistrictID = ddlDistrict1.SelectedValue,
-                Address = txtAddress1.Text + ddlDistrict1.SelectedItem + ddlCity1.SelectedItem,
-                Description = "N" + txtDescription1.Text,
-                BedroomNumber = txtBetroomNum1.Text,
-                TotalArea = txtArea1.Text,
-                FloorArea = txtFloorArea1.Text,
-                GargenArea = "",
-                HomeArea = txtFloorArea1.Text,
-                Price = txtPrice1.Text,
-                TierNumber = txtTierNumber1.Text,
-                Image1 = lbImages1.Text,
-                Image2 = lbImages2.Text,
-                Image3 = lbImages3.Text,
-                Image4 = lbImages4.Text,
-                Image5 = lbImages5.Text,
-                Image6 = lbImages6.Text
-            };
-            int homeID = HomeService.HomeInfo_InsertGetID(obj, _homeId);
-            Response.Redirect("~/ViewPostNewRE.aspx?homeID=" + homeID + "&PageView=1");
-        }       
-        private void ViewRealEstate()
-        {
-            ddlRealEstate1.Items.Clear();
-            ddlRealEstate1.Items.Add(new ListItem("-Chọn BĐS-", "0"));
-            List<RealEstateInfo> list = RealEstateService.RealEstateInfo_GetByAll();
-            if (list.Count > 0)
-            {
-                for (int i = 0; i < list.Count; i++)
-                {
-                    ListItem lsListItem = new ListItem(list[i].RealEstateName, list[i].RealEstateID);
-                    ddlRealEstate1.Items.Add(lsListItem);
-                }
-                list.Clear();
-                list = null;
-            }
-            //_cityCode = ddlCity.SelectedValue;
-        }       
-        
-        private void ViewCity()
-        {
-            ddlCity1.Items.Clear();
-            ddlCity1.Items.Add(new ListItem("-Chọn Tỉnh(TP)-", "0"));
-            List<CityInfo> listCityInfos = CityService.CityInfo_GetByAll();
-            if (listCityInfos.Count > 0)
-            {
-                for (int i = 0; i < listCityInfos.Count; i++)
-                {
-                    ListItem lsListItem = new ListItem(listCityInfos[i].CityName, listCityInfos[i].CityCode);
-                    ddlCity1.Items.Add(lsListItem);
-                }
-                listCityInfos.Clear();
-                listCityInfos = null;
-            }
-            _cityCode = ddlCity1.SelectedValue;
-            ViewDistrict();
-        }        
-        private void ViewDistrict()
-        {
-            ddlDistrict1.Items.Clear();
-            if (_cityCode == "0")
-            {
-                ddlDistrict1.Items.Add(new ListItem("-Chọn Quận (huyện)-", "0"));
-            }
-            else
-            {
-                List<DistrictInfo> listDistrictInfos = DistrictService.DistrictInfo_GetByTop("100", "CityCode =" + _cityCode, "DistrictID");
-                for (int i = 0; i < listDistrictInfos.Count; i++)
-                {
-                    ListItem lsListItem = new ListItem(listDistrictInfos[i].DistrictName, listDistrictInfos[i].DistrictID);
-                    ddlDistrict1.Items.Add(lsListItem);
-                }
-                listDistrictInfos.Clear();
-                listDistrictInfos = null;
-            }            
-        }
-       
-        private void ViewRealEstateType()
-        {
-            ddlHomeType1.Items.Clear();
-            ddlHomeType1.Items.Add(new ListItem("-Chọn loại Nhà-", "0"));
-            List<HomeTypeInfo> listddlHomeTypeInfos = HomeTypeService.HomeTypeInfo_GetByAll();
-            for (int i = 0; i < listddlHomeTypeInfos.Count; i++)
-            {
-                ListItem lsListItem = new ListItem(listddlHomeTypeInfos[i].HomeTypeName,
-                    listddlHomeTypeInfos[i].HomeTypeID);
-                ddlHomeType1.Items.Add(lsListItem);
-
-            }
-            listddlHomeTypeInfos.Clear();
-            listddlHomeTypeInfos = null;
-        }
-        
-       
         #region Web Form Designer generated code
         override protected void OnInit(EventArgs e)
         {
@@ -440,15 +311,109 @@ namespace RealEstate
                 ltrUploadResultImage6.Text = "Bấm 'Browse' để chọn file cần tải lên!";
             }
         }
-
-        protected void ddlCity1_SelectedIndexChanged(object sender, EventArgs e)
+        protected void btnSaleLand_Click(object sender, ImageClickEventArgs e)
         {
-            _cityCode = ddlCity1.SelectedValue;
-            ViewDistrict();
+            var objRealEstateOwner = new RealEstateOwnersInfo
+            {
+                RealEstateOwnersName = txtRealEstateOwner3.Text,
+                CLUR = rdCLUR3.SelectedValue,
+                RealEstateOwnersType = rdRealEstateOwnerType3.SelectedItem.ToString(),
+                Gender = rdGender3.SelectedValue,
+                Address = txtAddress32.Text,
+                IdentityCard = txtIdentyCard3.Text,
+                MobilePhone = txtMobilePhone3.Text,
+                Email = txtEmail3.Text,
+
+            };
+            int realEstateOwnerID = RealEstateOwnersService.RealEstateOwnersInfo_Insert(objRealEstateOwner, _reOwnerId);
+
+            var obj2 = new LandInfo
+            {
+                LandTypeID = ddlLandType3.SelectedValue,
+                Name = txtTenNha3.Text,
+                RealEstateOwnersID = "1",
+                RealEstateID = ddlRealEstate3.SelectedValue,
+                Title = "",
+                TransactionType = "sale",
+                Tag = "",
+                CreateBy = txtTenChuSoHuu3.Text,
+                CreateDate = DateTime.Now.ToShortDateString(),
+                RealEstateOwnersName = txtTenChuSoHuu3.Text,
+                CityID = ddlCity3.SelectedValue,
+                LocationID = "",
+                DistrictID = ddlDistrict3.SelectedValue,
+                Address = txtAddress3.Text + ddlDistrict3.SelectedItem + ddlCity3.SelectedItem,
+                Description = "N" + txtDescription3.Text,
+                TotalArea = txtArea3.Text,
+                Price = txtPrice3.Text,
+                Image1 = lbImages1.Text,
+                Image2 = lbImages2.Text,
+                Image3 = lbImages3.Text,
+                Image4 = lbImages4.Text,
+                Image5 = lbImages5.Text,
+                Image6 = lbImages6.Text
+            };
+            int homeID2 = LandService.LandInfo_InsertGetID(obj2, _homeId);
+            Response.Redirect("~/ViewPostNewRE.aspx?reOwnerID=" + realEstateOwnerID + "&homeID=" + homeID2);
         }
-       
-        
-        
-        
+        private void ViewDistrict3()
+        {
+            ddlDistrict3.Items.Clear();
+            if (_cityCode == "0")
+            {
+                ddlDistrict3.Items.Add(new ListItem("-Chọn Quận (huyện)-", "0"));
+            }
+            else
+            {
+                List<DistrictInfo> listDistrictInfos = DistrictService.DistrictInfo_GetByTop("100", "CityCode =" + _cityCode, "DistrictID");
+                for (int i = 0; i < listDistrictInfos.Count; i++)
+                {
+                    ListItem lsListItem = new ListItem(listDistrictInfos[i].DistrictName, listDistrictInfos[i].DistrictID);
+                    ddlDistrict3.Items.Add(lsListItem);
+                }
+                listDistrictInfos.Clear();
+                listDistrictInfos = null;
+            }
+        }
+        private void ViewCity3()
+        {
+            ddlCity3.Items.Clear();
+            ddlCity3.Items.Add(new ListItem("-Chọn Tỉnh(TP)-", "0"));
+            List<CityInfo> listCityInfos = CityService.CityInfo_GetByAll();
+            if (listCityInfos.Count > 0)
+            {
+                for (int i = 0; i < listCityInfos.Count; i++)
+                {
+                    ListItem lsListItem = new ListItem(listCityInfos[i].CityName, listCityInfos[i].CityCode);
+                    ddlCity3.Items.Add(lsListItem);
+                }
+                listCityInfos.Clear();
+                listCityInfos = null;
+            }
+            _cityCode = ddlCity3.SelectedValue;
+            ViewDistrict3();
+        }
+        private void ViewRealEstate3()
+        {
+            ddlRealEstate3.Items.Clear();
+            ddlRealEstate3.Items.Add(new ListItem("-Chọn BĐS-", "0"));
+            List<RealEstateInfo> list = RealEstateService.RealEstateInfo_GetByAll();
+            if (list.Count > 0)
+            {
+                for (int i = 0; i < list.Count; i++)
+                {
+                    ListItem lsListItem = new ListItem(list[i].RealEstateName, list[i].RealEstateID);
+                    ddlRealEstate3.Items.Add(lsListItem);
+                }
+                list.Clear();
+                list = null;
+            }
+            //_cityCode = ddlCity.SelectedValue;
+        }
+        protected void ddlCity3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _cityCode = ddlCity3.SelectedValue;
+            ViewDistrict3();
+        }
     }
 }

@@ -124,7 +124,7 @@ namespace RealEstate.DataAccess
         #region[RealEstateOwnersInfo_Insert]
         public int RealEstateOwnersInfo_Insert(RealEstateOwnersInfo data, int ID)
         {
-            using (SqlCommand cmd = new SqlCommand("Users_Insert", GetConnection()))
+            using (SqlCommand cmd = new SqlCommand("RealEstateOwners_Insert", GetConnection()))
             {
                 //cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersID", data.RealEstateOwnersID));
                 cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersType", data.RealEstateOwnersType));

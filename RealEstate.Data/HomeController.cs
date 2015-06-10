@@ -196,7 +196,7 @@ namespace RealEstate.DataAccess
         #region[HomeInfo_InsertGetID]
         public int HomeInfo_InsertGetID(HomeInfo data, int ID)
         {
-            using (SqlCommand cmd = new SqlCommand("Users_Insert", GetConnection()))
+            using (SqlCommand cmd = new SqlCommand("Home_Insert", GetConnection()))
             {
                 //cmd.Parameters.Add(new SqlParameter("@HomeID", data.HomeID));
                 cmd.Parameters.Add(new SqlParameter("@HomeTypeID", data.HomeTypeID));

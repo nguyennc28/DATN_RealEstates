@@ -35,7 +35,7 @@ namespace RealEstate.DataAccess
 			}
 		}
 		private string _RealEstateOwnersName;
-		public string RealEstateOwnersName
+        public string RealEstateOwnersName
 		{ 
 			get 
 			{ 

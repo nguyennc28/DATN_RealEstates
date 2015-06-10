@@ -10,7 +10,7 @@
 namespace RealEstate {
     
     
-    public partial class PostNewRE {
+    public partial class PostRentMotel {
         
         /// <summary>
         /// vsSaleHome control.
@@ -22,184 +22,292 @@ namespace RealEstate {
         protected global::System.Web.UI.WebControls.ValidationSummary vsSaleHome;
         
         /// <summary>
-        /// ddlHomeType1 control.
+        /// txtRealEstateOwner5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlHomeType1;
+        protected global::System.Web.UI.WebControls.TextBox txtRealEstateOwner5;
         
         /// <summary>
-        /// ddlRealEstate1 control.
+        /// RequiredFieldValidator43 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlRealEstate1;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator43;
         
         /// <summary>
-        /// txtTenChuSoHuu1 control.
+        /// rdCLUR5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTenChuSoHuu1;
+        protected global::System.Web.UI.WebControls.RadioButtonList rdCLUR5;
         
         /// <summary>
-        /// RequiredFieldValidator1 control.
+        /// rdRealEstateOwnerType5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        protected global::System.Web.UI.WebControls.RadioButtonList rdRealEstateOwnerType5;
         
         /// <summary>
-        /// txtTenNha1 control.
+        /// rdGender5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTenNha1;
+        protected global::System.Web.UI.WebControls.RadioButtonList rdGender5;
         
         /// <summary>
-        /// ddlCity1 control.
+        /// txtAddress52 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCity1;
+        protected global::System.Web.UI.WebControls.TextBox txtAddress52;
         
         /// <summary>
-        /// ddlDistrict1 control.
+        /// RequiredFieldValidator44 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlDistrict1;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator44;
         
         /// <summary>
-        /// txtAddress1 control.
+        /// txtIdentyCard5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAddress1;
+        protected global::System.Web.UI.WebControls.TextBox txtIdentyCard5;
         
         /// <summary>
-        /// RequiredFieldValidator8 control.
+        /// RequiredFieldValidator45 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator8;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator45;
         
         /// <summary>
-        /// txtDescription1 control.
+        /// txtMobilePhone5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::CKEditor.NET.CKEditorControl txtDescription1;
+        protected global::System.Web.UI.WebControls.TextBox txtMobilePhone5;
         
         /// <summary>
-        /// txtArea1 control.
+        /// RequiredFieldValidator46 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtArea1;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator46;
         
         /// <summary>
-        /// RequiredFieldValidator2 control.
+        /// txtEmail5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+        protected global::System.Web.UI.WebControls.TextBox txtEmail5;
         
         /// <summary>
-        /// txtFloorArea1 control.
+        /// RequiredFieldValidator47 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFloorArea1;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator47;
         
         /// <summary>
-        /// RequiredFieldValidator3 control.
+        /// RegularExpressionValidator5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator5;
         
         /// <summary>
-        /// txtPrice1 control.
+        /// ddlMotelType5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPrice1;
+        protected global::System.Web.UI.WebControls.DropDownList ddlMotelType5;
         
         /// <summary>
-        /// RequiredFieldValidator4 control.
+        /// ddlRealEstate5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
+        protected global::System.Web.UI.WebControls.DropDownList ddlRealEstate5;
         
         /// <summary>
-        /// txtBetroomNum1 control.
+        /// txtTenChuSoHuu5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBetroomNum1;
+        protected global::System.Web.UI.WebControls.TextBox txtTenChuSoHuu5;
         
         /// <summary>
-        /// RequiredFieldValidator5 control.
+        /// RequiredFieldValidator48 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator5;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator48;
         
         /// <summary>
-        /// txtTierNumber1 control.
+        /// txtTenNha5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTierNumber1;
+        protected global::System.Web.UI.WebControls.TextBox txtTenNha5;
         
         /// <summary>
-        /// RequiredFieldValidator6 control.
+        /// rdIsClose control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator6;
+        protected global::System.Web.UI.WebControls.RadioButtonList rdIsClose;
+        
+        /// <summary>
+        /// rdIsCooker control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList rdIsCooker;
+        
+        /// <summary>
+        /// rdFurniture control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList rdFurniture;
+        
+        /// <summary>
+        /// ddlCity5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlCity5;
+        
+        /// <summary>
+        /// ddlDistrict5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlDistrict5;
+        
+        /// <summary>
+        /// txtAddress5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtAddress5;
+        
+        /// <summary>
+        /// RequiredFieldValidator49 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator49;
+        
+        /// <summary>
+        /// txtDescription5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::CKEditor.NET.CKEditorControl txtDescription5;
+        
+        /// <summary>
+        /// txtArea5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtArea5;
+        
+        /// <summary>
+        /// RequiredFieldValidator50 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator50;
+        
+        /// <summary>
+        /// txtPrice5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPrice5;
+        
+        /// <summary>
+        /// RequiredFieldValidator51 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator51;
+        
+        /// <summary>
+        /// txtTierNum control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtTierNum;
         
         /// <summary>
         /// oFile control.
@@ -472,21 +580,21 @@ namespace RealEstate {
         protected global::System.Web.UI.WebControls.Label lbImages6;
         
         /// <summary>
-        /// btnPostNewRE control.
+        /// btnRentMotel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton btnPostNewRE;
+        protected global::System.Web.UI.WebControls.ImageButton btnRentMotel;
         
         /// <summary>
-        /// btnCencelPostNewRE control.
+        /// ImageButton1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton btnCencelPostNewRE;
+        protected global::System.Web.UI.WebControls.ImageButton ImageButton1;
     }
 }

@@ -570,6 +570,10 @@
     <Content Include="Pages\img\arrow2.png" />
     <Content Include="Pages\Login.aspx" />
     <Content Include="Pages\WebForm1.aspx" />
+    <Content Include="PostRentHouse.aspx" />
+    <Content Include="PostRentLand.aspx" />
+    <Content Include="PostRentMotel.aspx" />
+    <Content Include="PostSaleLand.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Scripts\jquery-1.3.2.min.js" />
     <Content Include="Scripts\jquery.min.js" />
@@ -1113,6 +1117,34 @@
     </Compile>
     <Compile Include="Pages\WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PostRentHouse.aspx.cs">
+      <DependentUpon>PostRentHouse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PostRentHouse.aspx.designer.cs">
+      <DependentUpon>PostRentHouse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PostRentLand.aspx.cs">
+      <DependentUpon>PostRentLand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PostRentLand.aspx.designer.cs">
+      <DependentUpon>PostRentLand.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PostRentMotel.aspx.cs">
+      <DependentUpon>PostRentMotel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PostRentMotel.aspx.designer.cs">
+      <DependentUpon>PostRentMotel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PostSaleLand.aspx.cs">
+      <DependentUpon>PostSaleLand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PostSaleLand.aspx.designer.cs">
+      <DependentUpon>PostSaleLand.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">
