@@ -100,6 +100,19 @@
                         Display="Dynamic"></asp:RegularExpressionValidator>
         </div>
     </div>
+        
+    <div class="row" style="margin-top: 20px;">
+        <div class="span3">
+            <p><span class="lbNameCol">Bạn là:</span></p>
+        </div>
+        <div class="span6">
+            <asp:DropDownList ID="ddlNhomNguoiDung" runat="server">
+                <asp:ListItem Value="2">Khách hàng</asp:ListItem>
+                <asp:ListItem Value="3">Chủ bất động sản</asp:ListItem>
+                <asp:ListItem Value="4">Nhà môi giới</asp:ListItem>
+            </asp:DropDownList>
+        </div>
+    </div>
     
     <h2>Thông tin bổ sung:</h2>
     <div class="row" style="margin-top: 20px;">

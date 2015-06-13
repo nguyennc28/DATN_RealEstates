@@ -32,7 +32,7 @@
         <div class="is-padded">
             <h2>Giới thiệu về chúng tôi</h2>
             <hr>
-            <p> http://batdongsanvn.vn là website đăng tin, trao đổi thông tin mua bán các sản phẩm về bất động sản. Chúng tôi hi vọng mang đến cho bạn sự tiện lợi nhất đinh khi muốn tìm ngôi nhà của ban!</p>
+            <p style="text-align: justify; color: #A8BF75; font-size: 13px;"> http://batdongsanvn.vn là website đăng tin, trao đổi thông tin mua bán các sản phẩm về bất động sản. Chúng tôi hi vọng mang đến cho bạn sự tiện lợi nhất đinh khi muốn tìm ngôi nhà của ban!</p>
         </div>
     </div>
     <div class="span3">

@@ -7,9 +7,9 @@ using System.Web.UI.WebControls;
 using RealEstate.Business;
 using RealEstate.DataAccess;
 
-namespace RealEstate.Modules.ModulesHome
+namespace RealEstate.Modules.ModulesMotel
 {
-    public partial class SaleApartments : System.Web.UI.UserControl
+    public partial class RentMotel : System.Web.UI.UserControl
     {
         private string _cityCode;
         protected void Page_Load(object sender, EventArgs e)
@@ -65,7 +65,7 @@ namespace RealEstate.Modules.ModulesHome
         {
             _cityCode = ddlCity.SelectedValue;
             ViewDistrict();
-        }  
+        }
         private void ViewDistrict()
         {
             ddlDistrict.Items.Clear();
@@ -122,21 +122,21 @@ namespace RealEstate.Modules.ModulesHome
                 for (int i = 0; i < listApartmentInfos.Count; i++)
                 {
                     chuoi += "<div class=\" row \">";
-                        chuoi += "<h3> <a href = \" Default2.aspx?mod=" + listApartmentInfos[i].Tag + "\">" + listApartmentInfos[i].Title +
-                                 "</a> </h3>";
+                    chuoi += "<h3> <a href = \" Default2.aspx?mod=" + listApartmentInfos[i].Tag + "\">" + listApartmentInfos[i].Title +
+                             "</a> </h3>";
 
-                        //cột trái
-                        chuoi += "<div class=\"span3\">";
-                            chuoi += "<img src=\"" + listApartmentInfos[i].Image1 + "\" />";
-                        chuoi += "</div>";
-                        //cột phải
-                        chuoi += "<div class=\"span6\">";
-                            chuoi += "<p>" + listApartmentInfos[i].Description + "</p>";
-                            chuoi += "<p>" + "Giá: " + "<span style=\"color: red; font-weight:bold;\">" + listApartmentInfos[0].Price + "</span>" + " VND" + " | " + "Tổng diện tích: " + "<span style=\"color: red; font-weight:bold;\">" + listApartmentInfos[0].TotalArea + "</span>" + " | " +
-                                     "Diện tích nhà: " + "<span style=\"color: red; font-weight:bold;\">" + listApartmentInfos[0].FloorArea + "</span>" + " | " + "Số phòng ngủ: " + "<span style=\"color: red; font-weight:bold;\">" +
-                                     listApartmentInfos[0].BedroomNumber + "</span>" + "</p>";
-                            chuoi += "<p>" + "<table><tr><td width=\"60%\">Địa chỉ: " + "<span style=\"color: blue; font-weight:bold;\">" + listApartmentInfos[i].Address + "</span>" + "</td><td width=\"40%\">Người đăng: " + "<span style=\"color: blue; font-weight:bold;\">" + listApartmentInfos[i].CreateBy + "</span>" + "</td></tr></table></p>";
-                        chuoi += "</div>";                      
+                    //cột trái
+                    chuoi += "<div class=\"span3\">";
+                    chuoi += "<img src=\"" + listApartmentInfos[i].Image1 + "\" />";
+                    chuoi += "</div>";
+                    //cột phải
+                    chuoi += "<div class=\"span6\">";
+                    chuoi += "<p>" + listApartmentInfos[i].Description + "</p>";
+                    chuoi += "<p>" + "Giá: " + "<span style=\"color: red; font-weight:bold;\">" + listApartmentInfos[0].Price + "</span>" + " VND" + " | " + "Tổng diện tích: " + "<span style=\"color: red; font-weight:bold;\">" + listApartmentInfos[0].TotalArea + "</span>" + " | " +
+                             "Diện tích nhà: " + "<span style=\"color: red; font-weight:bold;\">" + listApartmentInfos[0].FloorArea + "</span>" + " | " + "Số phòng ngủ: " + "<span style=\"color: red; font-weight:bold;\">" +
+                             listApartmentInfos[0].BedroomNumber + "</span>" + "</p>";
+                    chuoi += "<p>" + "<table><tr><td width=\"70%\">Địa chỉ: " + "<span style=\"color: blue; font-weight:bold;\">" + listApartmentInfos[i].Address + "</span>" + "</td><td width=\"30%\">Người đăng: " + "<span style=\"color: blue; font-weight:bold;\">" + listApartmentInfos[i].CreateBy + "</span>" + "</td></tr></table></p>";
+                    chuoi += "</div>";
                     chuoi += "</div>";
                     chuoi += "<hr style=\" border: 1px solid blue;\">";
                 }
@@ -146,8 +146,13 @@ namespace RealEstate.Modules.ModulesHome
                 chuoi += "<p>" + "Không có dữ liều nào để hiển thị </p>";
             }
             ltrTab1.Text = chuoi;
-            ltrTab2.Text = chuoi;
             listApartmentInfos.Clear();
+        }
+
+        private void LoadBroker()
+        {
+            string chuôi = "";
+
         }
     }
 }

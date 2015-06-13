@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SaleApartments.ascx.cs" Inherits="RealEstate.Modules.ModulesHome.SaleApartments" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="RentMotel.ascx.cs" Inherits="RealEstate.Modules.ModulesMotel.RentMotel" %>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
 <link href="http://zkiwi.com/demobox/css/style-demo.css" rel="stylesheet" media="all" />
 <link href="../../css/Modules/ModuleHome/StyleModuleHome.css" rel="stylesheet" />
@@ -35,7 +35,7 @@
         margin-left: 10px;
     }
 </style>
-<div class="row" style="margin-top: -30px;">
+<div class="row">
     <div class="span10">
         <div class="tabbed">
             <ul class="tabnav">

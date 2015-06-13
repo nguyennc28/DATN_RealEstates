@@ -199,7 +199,7 @@ namespace RealEstate.DataAccess
             using (SqlCommand cmd = new SqlCommand("Home_Insert", GetConnection()))
             {
                 //cmd.Parameters.Add(new SqlParameter("@HomeID", data.HomeID));
-                cmd.Parameters.Add(new SqlParameter("@HomeTypeID", data.HomeTypeID));
+                //cmd.Parameters.Add(new SqlParameter("@HomeTypeID", data.HomeTypeID));
                 cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersID", data.RealEstateOwnersID));
                 cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersName", data.RealEstateOwnersName));
                 cmd.Parameters.Add(new SqlParameter("@RealEstateID", data.RealEstateID));
@@ -229,15 +229,18 @@ namespace RealEstate.DataAccess
                 cmd.Parameters.Add(new SqlParameter("@Image6", data.Image6));
                 try
                 {
-                    SqlDataReader reader = cmd.ExecuteReader();
-                    if (reader.HasRows)
-                    {
-                        while (reader.Read())
-                        {
-                            ID = int.Parse(reader[0].ToString());
-                        }
-                    }
-                    reader.Close();
+
+                    ID = (int)cmd.ExecuteScalar();
+                    //cmd.ExecuteNonQuery();
+                    //SqlDataReader reader = cmd.ExecuteReader();
+                    //if (reader.HasRows)
+                    //{
+                    //    while (reader.Read())
+                    //    {
+                    //        ID = int.Parse(reader[0].ToString());
+                    //    }
+                    //}
+                    //reader.Close();
 
                 }
                 catch (Exception ex)

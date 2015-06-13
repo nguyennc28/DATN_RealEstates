@@ -158,5 +158,13 @@
                 </ul>
             </div>
         </div>
+         <div class="ListNews">
+            <div class="ListNewsHeader">
+                <h4>Thông tin</h4>
+            </div>
+            <div class="ListNewsBody">
+                <asp:Literal ID="ltrBroker" runat="server"></asp:Literal>
+            </div>
+        </div>
     </div>
 </div>

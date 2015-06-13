@@ -543,6 +543,7 @@
     <Content Include="Modules\ModulesLand\SaleLand.ascx" />
     <Content Include="Modules\ModulesLand\SaleProjectLand.ascx" />
     <Content Include="Modules\ModulesLand\SaleSurfaceLand.ascx" />
+    <Content Include="Modules\ModulesMotel\RentMotel.ascx" />
     <Content Include="Modules\PostNewRE.ascx" />
     <Content Include="Modules\PostNewsRE\PostNewsRentHome.ascx" />
     <Content Include="Modules\Register.ascx" />
@@ -1027,6 +1028,13 @@
     <Compile Include="Modules\ModulesLand\SaleSurfaceLand.ascx.designer.cs">
       <DependentUpon>SaleSurfaceLand.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Modules\ModulesMotel\RentMotel.ascx.cs">
+      <DependentUpon>RentMotel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\ModulesMotel\RentMotel.ascx.designer.cs">
+      <DependentUpon>RentMotel.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Modules\PageManager.ascx.cs">
       <DependentUpon>PageManager.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1207,7 +1215,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Modules\ModulesMotel\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config">

@@ -72,8 +72,9 @@ namespace RealEstate
                 Image5 = lbImages5.Text,
                 Image6 = lbImages6.Text
             };
+            //HomeService.HomeInfo_Insert(obj);
             int homeID = HomeService.HomeInfo_InsertGetID(obj, _homeId);
-            Response.Redirect("~/ViewPostNewRE.aspx?homeID=" + homeID + "&PageView=1");
+            Response.Redirect("~/ViewPostNewRE.aspx?PageView=1" + "&homeID=" + homeID);
         }       
         private void ViewRealEstate()
         {

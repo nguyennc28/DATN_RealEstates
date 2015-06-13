@@ -7,108 +7,99 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RealEstate {
+namespace RealEstate.Modules.ModulesMotel {
     
     
-    public partial class ViewRegister {
+    public partial class RentMotel {
         
         /// <summary>
-        /// vsSaleHome control.
+        /// ddlCategory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary vsSaleHome;
+        protected global::System.Web.UI.WebControls.DropDownList ddlCategory;
         
         /// <summary>
-        /// txtUser control.
+        /// ddlPrice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtUser;
+        protected global::System.Web.UI.WebControls.DropDownList ddlPrice;
         
         /// <summary>
-        /// txtPass control.
+        /// ddlArea control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtPass;
+        protected global::System.Web.UI.WebControls.DropDownList ddlArea;
         
         /// <summary>
-        /// txtEmail control.
+        /// ddlCity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtEmail;
+        protected global::System.Web.UI.WebControls.DropDownList ddlCity;
         
         /// <summary>
-        /// txtFullName control.
+        /// ddlDistrict control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtFullName;
+        protected global::System.Web.UI.WebControls.DropDownList ddlDistrict;
         
         /// <summary>
-        /// txtGender control.
+        /// ltrTab1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtGender;
+        protected global::System.Web.UI.WebControls.Literal ltrTab1;
         
         /// <summary>
-        /// txtBirthday control.
+        /// ltrTab2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtBirthday;
+        protected global::System.Web.UI.WebControls.Literal ltrTab2;
         
         /// <summary>
-        /// txtAddress control.
+        /// ltrTab3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtAddress;
+        protected global::System.Web.UI.WebControls.Literal ltrTab3;
         
         /// <summary>
-        /// txtNumberPhone control.
+        /// ltrTab4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtNumberPhone;
+        protected global::System.Web.UI.WebControls.Literal ltrTab4;
         
         /// <summary>
-        /// txtIdentyCard control.
+        /// ltrTab5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtIdentyCard;
-        
-        /// <summary>
-        /// Label1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Literal ltrTab5;
     }
 }
