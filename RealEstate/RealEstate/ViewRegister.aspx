@@ -68,14 +68,14 @@
                     <asp:Label ID="txtUser" runat="server" Text="Label" CssClass="lblInfo"></asp:Label>
                 </div>
             </div>
-            <div class="row" style="margin-top: 20px;">
+            <%--<div class="row" style="margin-top: 20px;">
                 <div class="span3">
                     <p><span class="lbNameCol">Mật khẩu</span></p>
                 </div>
                 <div class="span6">
                     <asp:Label ID="txtPass" runat="server" Text="Label" CssClass="lblInfo"></asp:Label>
                 </div>
-            </div>
+            </div>--%>
             <div class="row" style="margin-top: 20px;">
                 <div class="span3">
                     <p><span class="lbNameCol">Địa chỉ Email:</span></p>
@@ -90,6 +90,14 @@
                 </div>
                 <div class="span6">
                     <asp:Label ID="txtFullName" runat="server" Text="Label" CssClass="lblInfo"></asp:Label>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 20px;">
+                <div class="span3">
+                    <p><span class="lbNameCol">Ảnh đại diện: </span></p>
+                </div>
+                <div class="span6">
+                    <asp:Literal ID="ltrAvatar" runat="server"></asp:Literal>
                 </div>
             </div>
             <div class="row" style="margin-top: 20px;">
@@ -133,8 +141,7 @@
                     <asp:Label ID="txtIdentyCard" runat="server" Text="Label" CssClass="lblInfo"></asp:Label>
                 </div>
             </div>
-
-
+            
         </div>
     </div>
 </asp:Content>

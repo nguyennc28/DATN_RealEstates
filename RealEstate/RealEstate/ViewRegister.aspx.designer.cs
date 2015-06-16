@@ -31,15 +31,6 @@ namespace RealEstate {
         protected global::System.Web.UI.WebControls.Label txtUser;
         
         /// <summary>
-        /// txtPass control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtPass;
-        
-        /// <summary>
         /// txtEmail control.
         /// </summary>
         /// <remarks>
@@ -56,6 +47,15 @@ namespace RealEstate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label txtFullName;
+        
+        /// <summary>
+        /// ltrAvatar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltrAvatar;
         
         /// <summary>
         /// txtGender control.
@@ -101,14 +101,5 @@ namespace RealEstate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label txtIdentyCard;
-        
-        /// <summary>
-        /// Label1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
     }
 }

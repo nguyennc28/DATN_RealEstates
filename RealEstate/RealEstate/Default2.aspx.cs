@@ -48,6 +48,10 @@ namespace RealEstate
                     case "Home":
                         ct = Page.LoadControl("/Modules/Home.ascx");
                         break;
+                    // Load các control cho module nhà trọ
+                    case "RentMotel":
+                        ct = Page.LoadControl("/Modules/ModulesMotel/RentMotel.ascx");
+                        break;
                     // Load các control cho modules Home
                     case "SaleHomeAll":
                         ct = Page.LoadControl("/Modules/ModulesHome/SaleHomeAll.ascx");

@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 <%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
 <link href="http://zkiwi.com/demobox/css/style-demo.css" rel="stylesheet" media="all" />
 <link href="css/Modules/ModuleHome/StyleModuleHome.css" rel="stylesheet" />
 
@@ -58,16 +58,16 @@
     
     <div class="tabbed" style="margin-top: -30px;">
     <ul class="tabnav">
-
+        
         <li><a href="#tab1">Đăng tin bán nhà</a></li>
 
-        <li><a href="#tab2">Đăng tin cho thuê nhà</a></li>
+        <li><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/PostRentHouse.aspx">Đăng tin cho thuê nhà</asp:HyperLink></li>
 
-        <li><a href="#tab3">Đăng tin bán đất</a></li>
+        <li><a href="/PostSaleLand.aspx">Đăng tin bán đất</a></li>
 
-        <li><a href="#tab4">Đăng tin cho thuê đất</a></li>
+        <li><a href="/PostRentLand.aspx">Đăng tin cho thuê đất</a></li>
 
-        <li><a href="#tab5">Đăng tin cho thuê trọ</a></li>
+        <li><a href="/PostRentMotel.aspx">Đăng tin cho thuê trọ</a></li>
 
     </ul>
     <div class="tabcont">
@@ -75,7 +75,7 @@
         <div id="tab1" class="tabcontent" align="justify">
             <asp:ValidationSummary ID="vsSaleHome" runat="server" ShowMessageBox="True" ShowSummary="False"/>
             <%-- Đăng thông tin của chủ sở hữu nhà bán --%>
-           <%-- <div>
+            <div>
                 <h2> Đăng thông tin chủ sở hữu </h2>
             </div>
             <div class="row" style="margin-top: 20px;">
@@ -157,7 +157,7 @@
                     ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" runat="server"
                     ErrorMessage="Email không hợp lệ" ControlToValidate="txtEmail1"
                     Display="Dynamic"></asp:RegularExpressionValidator>
-            </div> --%>
+            </div> 
             
             <%-- Đăng thông tin bán nhà của bạn --%>
             <div style="margin-top: 50px;">

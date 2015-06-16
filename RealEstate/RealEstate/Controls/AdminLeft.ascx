@@ -13,10 +13,10 @@
 </table>
 <asp:Panel ID="div1" CssClass="content" ClientIDMode="Static" runat="server">
     <ul>
-        <li>
+        <%--<li>
             <img alt="" src="/App_Themes/admin/images/icon_system.jpg" /><asp:LinkButton
                 ID="lbtConfig" CausesValidation="false" runat="server" OnClick="LinkButton_Click">Cấu hình</asp:LinkButton></li>
-        <li>
+        <li>--%>
             <img alt="" src="/App_Themes/admin/images/icon_user.jpg" /><asp:LinkButton
                 ID="lbtUserManager" CausesValidation="false" runat="server" OnClick="LinkButton_Click">Người dùng</asp:LinkButton></li>
         <li>
@@ -30,7 +30,7 @@
             <img alt="" src="/App_Themes/admin/images/icon_page.jpg" />
             <asp:LinkButton
                 ID="LinkButton1" CausesValidation="false" runat="server" OnClick="LinkButton_Click">Menu</asp:LinkButton></li>
-        <li>
+        <%--<li>
             <img alt="" src="/App_Themes/admin/images/icon_page.jpg" />
             <asp:LinkButton
                 ID="LinkButton3" CausesValidation="false" runat="server" OnClick="LinkButton_Click">Bất động sản bán</asp:LinkButton></li>
@@ -38,12 +38,20 @@
             <img alt="" src="/App_Themes/admin/images/icon_page.jpg" />
             <asp:LinkButton
                 ID="LinkButton4" CausesValidation="false" runat="server" OnClick="LinkButton_Click">Bất động sản cho thuê</asp:LinkButton></li>
-        <li>
+        <li>--%>
             <img alt="" src="/App_Themes/admin/images/icon_adv.jpg" /><asp:LinkButton
                 ID="lbtLinksManager" CausesValidation="false" runat="server" OnClick="LinkButton_Click">Liên kết</asp:LinkButton></li>
         <li>
             <img alt="" src="/App_Themes/admin/images/icon_adv.jpg" /><asp:LinkButton
                 ID="lbtTestUploadFile" CausesValidation="false" runat="server" OnClick="LinkButton_Click">Upload Iamge</asp:LinkButton></li>
+        <li>
+            <img alt="" src="/App_Themes/admin/images/icon_gpro.jpg" />
+            <a href="Default.aspx?mod=DistrictManager">Quản lý quận huyện </a>
+        </li>
+        <li>
+            <img alt="" src="/App_Themes/admin/images/icon_gpro.jpg" />
+            <a href="Default.aspx?mod=DistrictManager">Quản lý Tỉnh(Thành phố) </a>
+        </li>
     </ul>
 </asp:Panel>
 <table class="table" cellspacing="0" cellpadding="0">
@@ -82,13 +90,18 @@
 <asp:Panel ID="div9" CssClass="content" ClientIDMode="Static" runat="server">
     <ul>
         <li>
-            <img alt="" src="/App_Themes/admin/images/icon_user.jpg" /><asp:LinkButton
+            <img alt="" src="/App_Themes/admin/images/icon_gpro.jpg" /><asp:LinkButton
                 ID="lbtHomesManager" CausesValidation="false" runat="server" OnClick="LinkButton_Click">Quản lý Nhà</asp:LinkButton></li>
         <li>
-            <img alt="" src="/App_Themes/admin/images/icon_gpro.jpg" />
-            <a href="Default.aspx?mod=DistrictManager">Quản lý quận huyện </a>
-        </li>
+            <img alt="" src="/App_Themes/admin/images/icon_gpro.jpg" /><asp:LinkButton
+                ID="LinkButton3" CausesValidation="false" runat="server" OnClick="LinkButton_Click">Quản lý căn hộ</asp:LinkButton></li>
         <li>
+            <img alt="" src="/App_Themes/admin/images/icon_gpro.jpg" /><asp:LinkButton
+                ID="LinkButton4" CausesValidation="false" runat="server" OnClick="LinkButton_Click">Quản lý nhà trọ</asp:LinkButton></li>
+        <li>
+            <img alt="" src="/App_Themes/admin/images/icon_gpro.jpg" /><asp:LinkButton
+                ID="LinkButton5" CausesValidation="false" runat="server" OnClick="LinkButton_Click">Quản lý đất</asp:LinkButton></li>
+        <%--<li>
             <img alt="" src="/App_Themes/admin/images/icon_gpro.jpg" />
             <a href="Default.aspx?mod=HomeManager">Quản lý Nhà </a>
         </li>
@@ -103,7 +116,7 @@
         <li>
             <img alt="" src="/App_Themes/admin/images/icon_gpro.jpg" />
             <a href="Default.aspx?mod=DistrictManager">Quản lý quận huyện </a>
-        </li>
+        </li>--%>
     </ul>
 
 </asp:Panel>

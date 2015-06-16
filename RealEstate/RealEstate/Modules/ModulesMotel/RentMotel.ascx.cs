@@ -152,6 +152,7 @@ namespace RealEstate.Modules.ModulesMotel
         private void LoadBroker()
         {
             string chuôi = "";
+            //List<>
 
         }
     }

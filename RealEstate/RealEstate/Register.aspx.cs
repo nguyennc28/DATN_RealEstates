@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -37,15 +38,15 @@ namespace RealEstate
                 Password = md5(txtPassword.Text),
                 FullName = txtFullName.Text,
                 Gender = rdGender.SelectedValue,
-                Avatar = "",
-                Birthday = "",//cldBirthday.SelectedDate.ToShortDateString(),
+                Avatar = lbImages1.Text,
+                Birthday = "",
                 Email = txtEmail.Text,
                 Address = txtAddress.Text,
                 MobilePhone = txtNumberPhone.Text,
                 IdentityCard = txtIdentyCard.Text,
                 LastLoggedOn = "",
-                CreatedDate = DateTime.Now.ToShortDateString(),
-                GroupID = "",
+                CreatedDate = "",
+                GroupID = ddlNhomNguoiDung.SelectedValue,
                 Active = "0",
                 Level = "2",
                 Ord = "",
@@ -68,6 +69,70 @@ namespace RealEstate
             txtRePassword.Text = "";
             txtUserName.Text = "";
             //txtYear.Text = "";
+        }
+        #region Web Form Designer generated code
+        override protected void OnInit(EventArgs e)
+        {
+            //
+            // CODEGEN: This call is required by the ASP.NET Web Form Designer.
+            //
+            InitializeComponent();
+            base.OnInit(e);
+        }
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.btnUploadImage.Click += new System.EventHandler(this.btnUploadImage_Click);
+            this.Load += new System.EventHandler(this.Page_Load);
+       
+        }
+        #endregion
+        private void btnUploadImage_Click(object sender, System.EventArgs e)
+        {
+            string strFileName;
+            string strFilePath;
+            string strFolder = "~/Upload/Avartar/";
+            strFolder = Server.MapPath(strFolder);
+
+            // Get the name of the file that is posted.
+
+
+            strFileName = oFile.PostedFile.FileName;
+            strFileName = Path.GetFileName(strFileName);
+            if (oFile.Value != "")
+            {
+                // Create the directory if it does not exist.
+                if (!Directory.Exists(strFolder))
+                {
+                    Directory.CreateDirectory(strFolder);
+                }
+
+                // Save the uploaded file to the server.
+                strFilePath = strFolder + strFileName;
+
+                if (File.Exists(strFilePath))
+                {
+                    lblImages.Text = strFileName + " đã tồn tại trên máy chủ!";
+                    lblImages.Visible = true;
+                    ltrUploadResultImage.Text = "<img src=\"../Upload/Avartar/" + strFileName + " \" width=\"50%\"/>";
+                    lbImages1.Text = "../Upload/Avartar/" + strFileName;
+                }
+                else
+                {
+                    oFile.PostedFile.SaveAs(strFilePath);
+                    lblImages.Text = strFileName + " đã tải lên thành công!";
+                    lbImages1.Text = "../Upload/Avartar/" + strFileName;
+                    ltrUploadResultImage.Text = "<img src=\"../Upload/Avartar/" + strFileName + " \" width=\"50%\" />";
+                }
+            }
+            else
+            {
+                ltrUploadResultImage.Text = "Bấm 'Browse' để chọn file cần tải lên!";
+            }
         }
     }
 }

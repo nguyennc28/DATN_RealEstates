@@ -217,13 +217,30 @@
             <asp:TextBox ID="txtIdentyCard" runat="server" Width="60%"></asp:TextBox>
         </div>
     </div>
+    
+    <h2>Thêm ảnh đại diện của bạn</h2>
+    <div class="row" style="margin-top: 20px;">
+        <div class="span3">
+            <p><span class="lbNameCol">Thêm mới ảnh: </span></p>
+        </div>
+        <div class="span6">
+            <input id="oFile" type="file" runat="server" name="oFile" />
+            <asp:Button ID="btnUploadImage" type="submit" Text="Upload" runat="server"></asp:Button>
+            <asp:Label ID="lblImages" runat="server" Text="Label" Visible="False"></asp:Label>
+            <%--<span class="err">
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="oFile" ErrorMessage="Chỉ cho phép tải lên các file có định dạng như sau: jpeg|.JPEG|.gif|.GIF|.png|.PNG|.JPG|.jpg|.bitmap|.BITMAP" ValidationExpression="/^(([a-zA-Z]:)|(\\{2}\w+)\$?)(\\(\w[\w].*))+(.jpeg|.JPEG|.gif|.GIF|.png|.PNG|.JPG|.jpg|.bitmap|.BITMAP)$/"></asp:RegularExpressionValidator></span>--%>
+            <div style="width: 100%;">
+                <asp:Literal ID="ltrUploadResultImage" runat="server"></asp:Literal>
+                <asp:Label ID="lbImages1" runat="server" Text="Label" Visible="False"></asp:Label>
+            </div>
+        </div>
+    </div>
     <div class="row">
         <div class="span10" style="text-align: center; padding-top: 15px; padding-bottom: 15px;">
             <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/img/Button/register-button.png" Width="12%" OnClick="ImageButton1_Click"/>
             <asp:ImageButton ID="ImageButton2" runat="server" Width="12%" ImageUrl="~/img/Button/Re-Type.png" OnClick="ImageButton2_Click"/>
         </div>
     </div>
-  
 </div>
 </div>
 </asp:Content>

@@ -446,6 +446,7 @@
     <Content Include="css\uploadify.css" />
     <Content Include="css\StyleFrontEnd1Master.css" />
     <Content Include="css\styleMainMaster.css" />
+    <Content Include="Default.aspx" />
     <Content Include="Default2.aspx" />
     <Content Include="EditInfoUser.aspx" />
     <Content Include="GetPassword.aspx" />
@@ -571,6 +572,7 @@
     <Content Include="Pages\img\arrow2.png" />
     <Content Include="Pages\Login.aspx" />
     <Content Include="Pages\WebForm1.aspx" />
+    <Content Include="PostNewSaleHome.aspx" />
     <Content Include="PostRentHouse.aspx" />
     <Content Include="PostRentLand.aspx" />
     <Content Include="PostRentMotel.aspx" />
@@ -682,7 +684,6 @@
     <Content Include="App_Themes\Admin\layout.css" />
     <Content Include="Controls\AdminLeft.ascx" />
     <Content Include="Controls\AdminTop.ascx" />
-    <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Modules\PageManager.ascx" />
     <Content Include="Scripts\jquery-1.4.2.min.js" />
@@ -1126,6 +1127,13 @@
     <Compile Include="Pages\WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PostNewSaleHome.aspx.cs">
+      <DependentUpon>PostNewSaleHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PostNewSaleHome.aspx.designer.cs">
+      <DependentUpon>PostNewSaleHome.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PostRentHouse.aspx.cs">
       <DependentUpon>PostRentHouse.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1215,6 +1223,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Upload\Avartar\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config">

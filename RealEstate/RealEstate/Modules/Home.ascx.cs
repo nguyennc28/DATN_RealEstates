@@ -18,6 +18,7 @@ namespace RealEstate.Modules
             {
                 LoadNewsImageSlide();
                 LoadHome();
+                LoadBroker();
             }
         }
 
@@ -43,6 +44,27 @@ namespace RealEstate.Modules
             }
         }
 
+        private void LoadBroker()
+        {
+            string chuoi = "";
+            List<UsersInfo> listBroker = new List<UsersInfo>();
+            listBroker = UsersService.UsersInfo_GetByTop("5", "GroupID = 4", "");
+            if (listBroker.Count > 0)
+            {
+                for (int i = 0; i < listBroker.Count; i++)
+                {
+                    chuoi += "<div style=\" width: 40%; float: left;\">";
+                    chuoi += "<a href=\" \" alt=\" Xem chi tiết \"><img src=\"" + listBroker[i].Avatar + "\" style=\"  \"/></a>";
+                    chuoi += "</div>";
+
+                    chuoi += "<div style=\" width:55%; float: right; line-height: 10px;\">";
+                    chuoi += "<p><span style=\" font-size: 14px; color: #535699;\">" + listBroker[i].FullName + "</span></p>";
+                    chuoi += "<p><span style=\" font-size: 12px; color: red;\">" + listBroker[i].MobilePhone + "</span></p>";
+                    chuoi += "<p><span style=\" font-size: 12px; color: #535699;\">" + listBroker[i].Address + "</span></p>";
+                    chuoi += "</div>";
+                }
+            }
+        }
         private void LoadHome()
         {
             string chuoi = "";
@@ -58,7 +80,7 @@ namespace RealEstate.Modules
 
                     //cột trái
                     chuoi += "<div class=\"span1\" style=\" width: 135px;\">";
-                    chuoi += "<a href=\" " + listApartmentInfos[i].Tag + " \" alt=\" Xem chi tiết \"><img src=\"" + listApartmentInfos[i].Image1 + "\"/>";
+                    chuoi += "<a href=\" " + listApartmentInfos[i].Tag + " \" alt=\" Xem chi tiết \"><img src=\"" + listApartmentInfos[i].Image1 + "\"/></a>";
                     chuoi += "</div>";
                     //cột phải
                     chuoi += "<div class=\"span5\">";

@@ -155,6 +155,8 @@ namespace RealEstate.DataAccess
                 cmd.Parameters.Add(new SqlParameter("@CityID", data.CityID));
                 cmd.Parameters.Add(new SqlParameter("@DistrictID", data.DistrictID));
                 cmd.Parameters.Add(new SqlParameter("@LocationID", data.LocationID));
+
+
                 cmd.Parameters.Add(new SqlParameter("@Name", data.Name));
                 cmd.Parameters.Add(new SqlParameter("@Title", data.Title));
                 cmd.Parameters.Add(new SqlParameter("@CreateDate", data.CreateDate));
@@ -198,8 +200,10 @@ namespace RealEstate.DataAccess
         {
             using (SqlCommand cmd = new SqlCommand("Home_Insert", GetConnection()))
             {
+                cmd.CommandType = CommandType.StoredProcedure;
+                
                 //cmd.Parameters.Add(new SqlParameter("@HomeID", data.HomeID));
-                //cmd.Parameters.Add(new SqlParameter("@HomeTypeID", data.HomeTypeID));
+                cmd.Parameters.Add(new SqlParameter("@HomeTypeID", data.HomeTypeID));
                 cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersID", data.RealEstateOwnersID));
                 cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersName", data.RealEstateOwnersName));
                 cmd.Parameters.Add(new SqlParameter("@RealEstateID", data.RealEstateID));
@@ -245,7 +249,7 @@ namespace RealEstate.DataAccess
                 }
                 catch (Exception ex)
                 {
-                    //throw ex;
+                    throw ex;
                     return -1;
                 }
                 finally
