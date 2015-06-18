@@ -126,6 +126,7 @@ namespace RealEstate.DataAccess
         {
             using (SqlCommand cmd = new SqlCommand("RealEstateOwners_Insert", GetConnection()))
             {
+                cmd.CommandType = CommandType.StoredProcedure;
                 //cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersID", data.RealEstateOwnersID));
                 cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersType", data.RealEstateOwnersType));
                 cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersName", data.RealEstateOwnersName));

@@ -7,21 +7,21 @@
         $(function () {
 
             if (localStorage.getItem('active')) {
-                $('.tabbed').find('#' + localStorage.getItem('active')).addClass('active');
-                $('.tabbed').find('a[href=' + localStorage.getItem('active') + ']').parent().addClass('active');
+                $('.tabbed').find('#' + localStorage.getItem('active')).addClass('Active');
+                $('.tabbed').find('a[href=' + localStorage.getItem('active') + ']').parent().addClass('Active');
 
             }
             else {
-                $('.tabbed').find('.tabcontent:first').addClass('active');
-                $('.tabbed').find('.tabnav li:first').addClass('active');
+                $('.tabbed').find('.tabcontent:first').addClass('Active');
+                $('.tabbed').find('.tabnav li:first').addClass('Active');
             }
             $('.tabbed').find('.tabnav li').each(function () {
                 $(this).click(function () {
                     ntab = $(this).find('> a').attr('href');
                     localStorage.setItem('active', ntab);
-                    $(this).parents('.tabbed').find('.active').removeClass('active');
-                    $(this).addClass('active');
-                    $(this).parents('.tabbed').find(ntab).addClass('active');
+                    $(this).parents('.tabbed').find('.Active').removeClass('Active');
+                    $(this).addClass('Active');
+                    $(this).parents('.tabbed').find(ntab).addClass('Active');
                     return false;
                 });
             });
@@ -135,7 +135,7 @@
         max-width: 100%;
     }
 
-    .tabbed .tabcont .tabcontent.active {
+    .tabbed .tabcont .tabcontent.Active {
         display: block;
     }
 
@@ -164,7 +164,7 @@
         display: block;
         color: #fff;
     }
-    .tabnav li.active a {
+    .tabnav li.Active a {
         background: #eee;
         color: #376405;
     }

@@ -35,7 +35,7 @@
                 });
             </script>--%>
             <div class="tab-content">
-                <div id="tab1" class="tab active">
+                <div id="tab1" class="tab Active">
                     <p>Tab #1 content goes here!</p>
                     <table style="width: 100%;">
                         <tr>

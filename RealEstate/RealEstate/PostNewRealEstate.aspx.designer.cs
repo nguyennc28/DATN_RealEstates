@@ -7,54 +7,54 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RealEstate.Modules.ModulesHome {
+namespace RealEstate {
     
     
-    public partial class AdjacentVilla {
+    public partial class PostNewRealEstate {
         
         /// <summary>
-        /// ddlCategory control.
+        /// HyperLink1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCategory;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
         
         /// <summary>
-        /// ddlPrice control.
+        /// HyperLink2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlPrice;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink2;
         
         /// <summary>
-        /// ddlArea control.
+        /// HyperLink3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlArea;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink3;
         
         /// <summary>
-        /// ddlCity control.
+        /// HyperLink4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCity;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink4;
         
         /// <summary>
-        /// ltrTab1 control.
+        /// HyperLink5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ltrTab1;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink5;
     }
 }

@@ -121,9 +121,9 @@ namespace RealEstate.Modules.ModulesHome
             {
                 for (int i = 0; i < listApartmentInfos.Count; i++)
                 {
-                    chuoi += "<div class=\" row \">";
-                        chuoi += "<h3> <a href = \" Default2.aspx?mod=" + listApartmentInfos[i].Tag + "\">" + listApartmentInfos[i].Title +
-                                 "</a> </h3>";
+                    chuoi += "<div class=\" row \" style=\"line-height: 25px;\">";
+                        chuoi += "<h3><span style=\" color: blue;\"> <a href = \" Default2.aspx?mod=" + listApartmentInfos[i].Tag + "\">" + listApartmentInfos[i].Title +
+                                 "</a> </span></h3>";
 
                         //cột trái
                         chuoi += "<div class=\"span3\">";
@@ -138,7 +138,7 @@ namespace RealEstate.Modules.ModulesHome
                             chuoi += "<p>" + "<table><tr><td width=\"60%\">Địa chỉ: " + "<span style=\"color: blue; font-weight:bold;\">" + listApartmentInfos[i].Address + "</span>" + "</td><td width=\"40%\">Người đăng: " + "<span style=\"color: blue; font-weight:bold;\">" + listApartmentInfos[i].CreateBy + "</span>" + "</td></tr></table></p>";
                         chuoi += "</div>";                      
                     chuoi += "</div>";
-                    chuoi += "<hr style=\" border: 1px solid blue;\">";
+                    //chuoi += "<hr style=\" border: 1px solid grey;\">";
                 }
             }
             else
@@ -146,7 +146,7 @@ namespace RealEstate.Modules.ModulesHome
                 chuoi += "<p>" + "Không có dữ liều nào để hiển thị </p>";
             }
             ltrTab1.Text = chuoi;
-            ltrTab2.Text = chuoi;
+            //ltrTab2.Text = chuoi;
             listApartmentInfos.Clear();
         }
     }

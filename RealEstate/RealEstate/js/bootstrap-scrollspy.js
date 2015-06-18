@@ -97,8 +97,8 @@
         this.activeTarget = target
 
         $(this.selector)
-          .parent('.active')
-          .removeClass('active')
+          .parent('.Active')
+          .removeClass('Active')
 
         selector = this.selector
           + '[data-target="' + target + '"],'
@@ -106,10 +106,10 @@
 
         active = $(selector)
           .parent('li')
-          .addClass('active')
+          .addClass('Active')
 
         if (active.parent('.dropdown-menu'))  {
-          active = active.closest('li.dropdown').addClass('active')
+          active = active.closest('li.dropdown').addClass('Active')
         }
 
         active.trigger('activate')

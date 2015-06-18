@@ -545,6 +545,7 @@
     <Content Include="Modules\ModulesLand\SaleProjectLand.ascx" />
     <Content Include="Modules\ModulesLand\SaleSurfaceLand.ascx" />
     <Content Include="Modules\ModulesMotel\RentMotel.ascx" />
+    <Content Include="Modules\ModulesMotel\RentMotels.ascx" />
     <Content Include="Modules\PostNewRE.ascx" />
     <Content Include="Modules\PostNewsRE\PostNewsRentHome.ascx" />
     <Content Include="Modules\Register.ascx" />
@@ -572,6 +573,7 @@
     <Content Include="Pages\img\arrow2.png" />
     <Content Include="Pages\Login.aspx" />
     <Content Include="Pages\WebForm1.aspx" />
+    <Content Include="PostNewRealEstate.aspx" />
     <Content Include="PostNewSaleHome.aspx" />
     <Content Include="PostRentHouse.aspx" />
     <Content Include="PostRentLand.aspx" />
@@ -613,6 +615,7 @@
     <Content Include="Upload\SlideNewsImages\ImgSlideNew3.jpg" />
     <Content Include="Upload\SlideNewsImages\ImgSlideNew4.jpg" />
     <Content Include="ViewPostNewRE.aspx" />
+    <Content Include="ViewPostRentMotel.aspx" />
     <Content Include="ViewRegister.aspx" />
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
@@ -1036,6 +1039,13 @@
     <Compile Include="Modules\ModulesMotel\RentMotel.ascx.designer.cs">
       <DependentUpon>RentMotel.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Modules\ModulesMotel\RentMotels.ascx.cs">
+      <DependentUpon>RentMotels.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\ModulesMotel\RentMotels.ascx.designer.cs">
+      <DependentUpon>RentMotels.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Modules\PageManager.ascx.cs">
       <DependentUpon>PageManager.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1127,6 +1137,13 @@
     <Compile Include="Pages\WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PostNewRealEstate.aspx.cs">
+      <DependentUpon>PostNewRealEstate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PostNewRealEstate.aspx.designer.cs">
+      <DependentUpon>PostNewRealEstate.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PostNewSaleHome.aspx.cs">
       <DependentUpon>PostNewSaleHome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1205,6 +1222,13 @@
     <Compile Include="ViewPostNewRE.aspx.designer.cs">
       <DependentUpon>ViewPostNewRE.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ViewPostRentMotel.aspx.cs">
+      <DependentUpon>ViewPostRentMotel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewPostRentMotel.aspx.designer.cs">
+      <DependentUpon>ViewPostRentMotel.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewRegister.aspx.cs">
       <DependentUpon>ViewRegister.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1224,6 +1248,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
     <Folder Include="Upload\Avartar\" />
+    <Folder Include="Upload\ImageMotel\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config">

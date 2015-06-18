@@ -160,7 +160,7 @@
         </div>
          <div class="ListNews">
             <div class="ListNewsHeader">
-                <h4>Thông tin</h4>
+                <h4>Các nhà môi giới tiêu biểu!</h4>
             </div>
             <div class="ListNewsBody">
                 <asp:Literal ID="ltrBroker" runat="server"></asp:Literal>

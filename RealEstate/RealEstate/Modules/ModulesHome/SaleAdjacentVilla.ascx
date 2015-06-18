@@ -6,21 +6,21 @@
     $(function () {
 
         if (localStorage.getItem('active')) {
-            $('.tabbed').find('#' + localStorage.getItem('active')).addClass('active');
-            $('.tabbed').find('a[href=' + localStorage.getItem('active') + ']').parent().addClass('active');
+            $('.tabbed').find('#' + localStorage.getItem('active')).addClass('Active');
+            $('.tabbed').find('a[href=' + localStorage.getItem('active') + ']').parent().addClass('Active');
 
         }
         else {
-            $('.tabbed').find('.tabcontent:first').addClass('active');
-            $('.tabbed').find('.tabnav li:first').addClass('active');
+            $('.tabbed').find('.tabcontent:first').addClass('Active');
+            $('.tabbed').find('.tabnav li:first').addClass('Active');
         }
         $('.tabbed').find('.tabnav li').each(function () {
             $(this).click(function () {
                 ntab = $(this).find('> a').attr('href');
                 localStorage.setItem('active', ntab);
-                $(this).parents('.tabbed').find('.active').removeClass('active');
-                $(this).addClass('active');
-                $(this).parents('.tabbed').find(ntab).addClass('active');
+                $(this).parents('.tabbed').find('.Active').removeClass('Active');
+                $(this).addClass('Active');
+                $(this).parents('.tabbed').find(ntab).addClass('Active');
                 return false;
             });
         });
@@ -52,7 +52,7 @@
         </div>
     </div>
 </div>
-<div class="tabbed" style="margin-top: 5px;">
+<%--<div class="tabbed" style="margin-top: 5px;">
     <ul class="tabnav">
 
         <li><a href="#tab1">Tất cả Tin rao</a></li>
@@ -68,10 +68,10 @@
     </ul>
     <div class="tabcont">
 
-        <div id="tab1" class="tabcontent" align="justify">
+        <div id="tab1" class="tabcontent" align="justify">--%>
             <asp:Literal ID="ltrTab1" runat="server"></asp:Literal>
 
-        </div>
+  <%--      </div>
 
         <div id="tab2" class="tabcontent" align="justify">
             <asp:Literal ID="ltrTab2" runat="server"></asp:Literal>
@@ -88,4 +88,4 @@
             <asp:Literal ID="ltrTab5" runat="server"></asp:Literal>
         </div>
     </div>
-</div>
+</div>--%>

@@ -175,8 +175,9 @@ namespace RealEstate.DataAccess
         #region[MotelInfo_InsertGetID]
         public int MotelInfo_InsertGetID(MotelInfo data, int ID)
         {
-            using (SqlCommand cmd = new SqlCommand("Users_Insert", GetConnection()))
+            using (SqlCommand cmd = new SqlCommand("Motel_Insert", GetConnection()))
             {
+                cmd.CommandType = CommandType.StoredProcedure;
                 //cmd.Parameters.Add(new SqlParameter("@MotelID", data.MotelID));
                 cmd.Parameters.Add(new SqlParameter("@RealEstateOwnersID", data.RealEstateOwnersID));
                 cmd.Parameters.Add(new SqlParameter("@RealEstateID", data.RealEstateID));

@@ -20,6 +20,7 @@ namespace RealEstate
             if (!IsPostBack)
             {
                 ViewCity5();
+                ViewRealEstate();
             }
         }
         #region Web Form Designer generated code
@@ -61,7 +62,7 @@ namespace RealEstate
         {
             string strFileName;
             string strFilePath;
-            string strFolder = "~/Upload/ImageHouse/";
+            string strFolder = "~/Upload/ImageMotel/";
             strFolder = Server.MapPath(strFolder);
 
             // Get the name of the file that is posted.
@@ -84,20 +85,21 @@ namespace RealEstate
                 {
                     lblImages.Text = strFileName + " đã tồn tại trên máy chủ!";
                     lblImages.Visible = true;
-                    ltrUploadResultImage.Text = "<img src=\"../Upload/ImageHouse/" + strFileName + " \" width=\"100%\"/>";
-                    lbImages1.Text = "../Upload/ImageHouse/" + strFileName;
+                    ltrUploadResultImage.Text = "<img src=\"../Upload/ImageMotel/" + strFileName + " \" width=\"100%\"/>";
+                    lbImages1.Text = "../Upload/ImageMotel/" + strFileName;
                 }
                 else
                 {
                     oFile.PostedFile.SaveAs(strFilePath);
                     lblImages.Text = strFileName + " đã tải lên thành công!";
-                    lbImages1.Text = "../Upload/ImageHouse/" + strFileName;
-                    ltrUploadResultImage.Text = "<img src=\"../Upload/ImageHouse/" + strFileName + " \" width=\"100%\" />";
+                    lbImages1.Text = "../Upload/ImageMotel/" + strFileName;
+                    ltrUploadResultImage.Text = "<img src=\"../Upload/ImageMotel/" + strFileName + " \" width=\"100%\" />";
                 }
             }
             else
             {
                 ltrUploadResultImage.Text = "Bấm 'Browse' để chọn file cần tải lên!";
+                lbImages1.Text = " NULL";
             }
         }
 
@@ -105,7 +107,7 @@ namespace RealEstate
         {
             string strFileName;
             string strFilePath;
-            string strFolder = "~/Upload/ImageHouse/";
+            string strFolder = "~/Upload/ImageMotel/";
             strFolder = Server.MapPath(strFolder);
 
             // Get the name of the file that is posted.
@@ -126,27 +128,28 @@ namespace RealEstate
                 {
                     lblImages2.Text = strFileName + " đã tồn tại trên máy chủ!";
                     lblImages2.Visible = true;
-                    lbImages2.Text = "../Upload/ImageHouse/" + strFileName;
-                    ltrUploadResultImage2.Text = "<img src=\"../Upload/ImageHouse/" + strFileName + " \" width=\"100%\"/>";
+                    lbImages2.Text = "../Upload/ImageMotel/" + strFileName;
+                    ltrUploadResultImage2.Text = "<img src=\"../Upload/ImageMotel/" + strFileName + " \" width=\"100%\"/>";
                 }
                 else
                 {
                     oFile2.PostedFile.SaveAs(strFilePath);
-                    lbImages2.Text = "../Upload/ImageHouse/" + strFileName;
+                    lbImages2.Text = "../Upload/ImageMotel/" + strFileName;
                     lblImages2.Text = strFileName + " đã tải lên thành công!";
-                    ltrUploadResultImage2.Text = "<img src=\"../Upload/ImageHouse/" + strFileName + " \" width=\"100%\" />";
+                    ltrUploadResultImage2.Text = "<img src=\"../Upload/ImageMotel/" + strFileName + " \" width=\"100%\" />";
                 }
             }
             else
             {
                 ltrUploadResultImage2.Text = "Bấm 'Browse' để chọn file cần tải lên!";
+                lbImages1.Text = " NULL";
             }
         }
         private void btnUploadImage3_Click(object sender, System.EventArgs e)
         {
             string strFileName;
             string strFilePath;
-            string strFolder = "~/Upload/ImageHouse/";
+            string strFolder = "~/Upload/ImageMotel/";
             strFolder = Server.MapPath(strFolder);
 
             // Get the name of the file that is posted.
@@ -167,20 +170,21 @@ namespace RealEstate
                 {
                     lblImages3.Text = strFileName + " đã tồn tại trên máy chủ!";
                     lblImages3.Visible = true;
-                    lbImages3.Text = "../Upload/ImageHouse/" + strFileName;
-                    ltrUploadResultImage3.Text = "<img src=\"../Upload/ImageHouse/" + strFileName + " \" width=\"100%\"/>";
+                    lbImages3.Text = "../Upload/ImageMotel/" + strFileName;
+                    ltrUploadResultImage3.Text = "<img src=\"../Upload/ImageMotel/" + strFileName + " \" width=\"100%\"/>";
                 }
                 else
                 {
                     oFile3.PostedFile.SaveAs(strFilePath);
                     lblImages3.Text = strFileName + " đã tải lên thành công!";
-                    lbImages3.Text = "../Upload/ImageHouse/" + strFileName;
-                    ltrUploadResultImage3.Text = "<img src=\"../Upload/ImageHouse/" + strFileName + " \" width=\"100%\" />";
+                    lbImages3.Text = "../Upload/ImageMotel/" + strFileName;
+                    ltrUploadResultImage3.Text = "<img src=\"../Upload/ImageMotel/" + strFileName + " \" width=\"100%\" />";
                 }
             }
             else
             {
                 ltrUploadResultImage3.Text = "Bấm 'Browse' để chọn file cần tải lên!";
+                lbImages1.Text = " NULL";
             }
         }
 
@@ -189,7 +193,7 @@ namespace RealEstate
         {
             string strFileName;
             string strFilePath;
-            string strFolder = "~/Upload/ImageHouse/";
+            string strFolder = "~/Upload/ImageMotel/";
             strFolder = Server.MapPath(strFolder);
 
             // Get the name of the file that is posted.
@@ -212,20 +216,21 @@ namespace RealEstate
                 {
                     lblImages4.Text = strFileName + " đã tồn tại trên máy chủ!";
                     lblImages4.Visible = true;
-                    lbImages4.Text = "../Upload/ImageHouse/" + strFileName;
-                    ltrUploadResultImage4.Text = "<img src=\"../Upload/ImageHouse/" + strFileName + " \" width=\"100%\"/>";
+                    lbImages4.Text = "../Upload/ImageMotel/" + strFileName;
+                    ltrUploadResultImage4.Text = "<img src=\"../Upload/ImageMotel/" + strFileName + " \" width=\"100%\"/>";
                 }
                 else
                 {
                     oFile4.PostedFile.SaveAs(strFilePath);
                     lblImages4.Text = strFileName + " đã tải lên thành công!";
-                    lbImages4.Text = "../Upload/ImageHouse/" + strFileName;
-                    ltrUploadResultImage4.Text = "<img src=\"../Upload/ImageHouse/" + strFileName + " \" width=\"100%\" />";
+                    lbImages4.Text = "../Upload/ImageMotel/" + strFileName;
+                    ltrUploadResultImage4.Text = "<img src=\"../Upload/ImageMotel/" + strFileName + " \" width=\"100%\" />";
                 }
             }
             else
             {
                 ltrUploadResultImage4.Text = "Bấm 'Browse' để chọn file cần tải lên!";
+                lbImages1.Text = " NULL";
             }
         }
 
@@ -233,7 +238,7 @@ namespace RealEstate
         {
             string strFileName;
             string strFilePath;
-            string strFolder = "~/Upload/ImageHouse/";
+            string strFolder = "~/Upload/ImageMotel/";
             strFolder = Server.MapPath(strFolder);
 
             // Get the name of the file that is posted.
@@ -256,21 +261,22 @@ namespace RealEstate
                 {
                     lblImages5.Text = strFileName + " đã tồn tại trên máy chủ!";
                     lblImages5.Visible = true;
-                    lbImages5.Text = "../Upload/ImageHouse/" + strFileName;
-                    ltrUploadResultImage5.Text = "<img src=\"../Upload/ImageHouse/" + strFileName + " \" width=\"100%\"/>";
+                    lbImages5.Text = "../Upload/ImageMotel/" + strFileName;
+                    ltrUploadResultImage5.Text = "<img src=\"../Upload/ImageMotel/" + strFileName + " \" width=\"100%\"/>";
                 }
                 else
                 {
                     oFile5.PostedFile.SaveAs(strFilePath);
                     lblImages5.Text = strFileName + " đã tải lên thành công!";
-                    lbImages5.Text = "../Upload/ImageHouse/" + strFileName;
-                    ltrUploadResultImage5.Text = "<img src=\"../Upload/ImageHouse/" + strFileName + " \" width=\"100%\" />";
+                    lbImages5.Text = "../Upload/ImageMotel/" + strFileName;
+                    ltrUploadResultImage5.Text = "<img src=\"../Upload/ImageMotel/" + strFileName + " \" width=\"100%\" />";
                 }
 
             }
             else
             {
                 ltrUploadResultImage5.Text = "CBấm 'Browse' để chọn file cần tải lên!";
+                lbImages1.Text = " NULL";
             }
         }
 
@@ -278,7 +284,7 @@ namespace RealEstate
         {
             string strFileName;
             string strFilePath;
-            string strFolder = "~/Upload/ImageHouse/";
+            string strFolder = "~/Upload/ImageMotel/";
             strFolder = Server.MapPath(strFolder);
 
             // Get the name of the file that is posted.
@@ -298,20 +304,21 @@ namespace RealEstate
                 {
                     lblImages6.Text = strFileName + " đã tồn tại trên máy chủ!";
                     lblImages6.Visible = true;
-                    lbImages6.Text = "../Upload/ImageHouse/" + strFileName;
-                    ltrUploadResultImage6.Text = "<img src=\"../Upload/ImageHouse/" + strFileName + " \" width=\"100%\"/>";
+                    lbImages6.Text = "../Upload/ImageMotel/" + strFileName;
+                    ltrUploadResultImage6.Text = "<img src=\"../Upload/ImageMotel/" + strFileName + " \" width=\"100%\"/>";
                 }
                 else
                 {
                     oFile6.PostedFile.SaveAs(strFilePath);
                     lblImages6.Text = strFileName + " đã tải lên thành công!";
-                    lbImages6.Text = "../Upload/ImageHouse/" + strFileName;
-                    ltrUploadResultImage6.Text = "<img src=\"../Upload/ImageHouse/" + strFileName + " \" width=\"100%\" />";
+                    lbImages6.Text = "../Upload/ImageMotel/" + strFileName;
+                    ltrUploadResultImage6.Text = "<img src=\"../Upload/ImageMotel/" + strFileName + " \" width=\"100%\" />";
                 }
             }
             else
             {
                 ltrUploadResultImage6.Text = "Bấm 'Browse' để chọn file cần tải lên!";
+                lbImages1.Text = " NULL";
             }
         }
         protected void btnRentMotel_Click(object sender, ImageClickEventArgs e)
@@ -349,7 +356,7 @@ namespace RealEstate
                 TierNumber = txtTierNum.Text,
                 DistrictID = ddlDistrict5.SelectedValue,
                 Address = txtAddress5.Text + ddlDistrict5.SelectedItem + ddlCity5.SelectedItem,
-                Description = "N" + txtDescription5.Text,
+                Description = txtDescription5.Text,
                 TotalArea = txtArea5.Text,
                 Price = txtPrice5.Text,
                 Image1 = lbImages1.Text,
@@ -360,7 +367,7 @@ namespace RealEstate
                 Image6 = lbImages6.Text
             };
             int homeID2 = MotelService.MotelInfo_InsertGetID(obj2, _homeId);
-            Response.Redirect("~/ViewPostNewRE.aspx?reOwnerID=" + realEstateOwnerID + "&homeID=" + homeID2);
+            Response.Redirect("~/ViewPostRentMotel.aspx?reOwnerID=" + realEstateOwnerID + "&homeID=" + homeID2);
         }
         private void ViewCity5()
         {

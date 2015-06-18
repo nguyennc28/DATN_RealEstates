@@ -44,7 +44,7 @@
     constructor: Typeahead
 
   , select: function () {
-      var val = this.$menu.find('.active').attr('data-value')
+      var val = this.$menu.find('.Active').attr('data-value')
       this.$element
         .val(this.updater(val))
         .change()
@@ -135,31 +135,31 @@
         return i[0]
       })
 
-      items.first().addClass('active')
+      items.first().addClass('Active')
       this.$menu.html(items)
       return this
     }
 
   , next: function (event) {
-      var active = this.$menu.find('.active').removeClass('active')
+      var active = this.$menu.find('.Active').removeClass('Active')
         , next = active.next()
 
       if (!next.length) {
         next = $(this.$menu.find('li')[0])
       }
 
-      next.addClass('active')
+      next.addClass('Active')
     }
 
   , prev: function (event) {
-      var active = this.$menu.find('.active').removeClass('active')
+      var active = this.$menu.find('.Active').removeClass('Active')
         , prev = active.prev()
 
       if (!prev.length) {
         prev = this.$menu.find('li').last()
       }
 
-      prev.addClass('active')
+      prev.addClass('Active')
     }
 
   , listen: function () {
@@ -240,8 +240,8 @@
     }
 
   , mouseenter: function (e) {
-      this.$menu.find('.active').removeClass('active')
-      $(e.currentTarget).addClass('active')
+      this.$menu.find('.Active').removeClass('Active')
+      $(e.currentTarget).addClass('Active')
     }
 
   }

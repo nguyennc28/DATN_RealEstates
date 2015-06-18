@@ -5,21 +5,21 @@
 <script type="text/javascript">
     $(function () {
         if (localStorage.getItem('active')) {
-            $('.tabbed').find('#' + localStorage.getItem('active')).addClass('active');
-            $('.tabbed').find('a[href=' + localStorage.getItem('active') + ']').parent().addClass('active');
+            $('.tabbed').find('#' + localStorage.getItem('active')).addClass('Active');
+            $('.tabbed').find('a[href=' + localStorage.getItem('active') + ']').parent().addClass('Active');
 
         }
         else {
-            $('.tabbed').find('.tabcontent:first').addClass('active');
-            $('.tabbed').find('.tabnav li:first').addClass('active');
+            $('.tabbed').find('.tabcontent:first').addClass('Active');
+            $('.tabbed').find('.tabnav li:first').addClass('Active');
         }
         $('.tabbed').find('.tabnav li').each(function () {
             $(this).click(function () {
                 ntab = $(this).find('> a').attr('href');
                 localStorage.setItem('active', ntab);
-                $(this).parents('.tabbed').find('.active').removeClass('active');
-                $(this).addClass('active');
-                $(this).parents('.tabbed').find(ntab).addClass('active');
+                $(this).parents('.tabbed').find('.Active').removeClass('Active');
+                $(this).addClass('Active');
+                $(this).parents('.tabbed').find(ntab).addClass('Active');
                 return false;
             });
         });
@@ -27,49 +27,79 @@
 </script>
 
 <style type="text/css">
-    #bigPic{
-	width:300px;
-    height: 225px;
-	padding:1px;
-	border:1px solid #CCC;
-	background-color:#FFF;
-	margin-bottom:10px;
-}
-#bigPic img{
-	position:absolute;
-	display:none;
-}
-ul#smallPic li.active{
-	border:2px solid #000;	
-	background:#fff;
-	padding:2px;
-}
-ul#smallPic, ul#smallPic li{
-	margin:0;
-	padding:0;
-	list-style:none;
-}
-	
-ul#smallPic li{
-	float:left;
-	margin-right:7px;
-	margin-bottom:5px;
-	border:1px solid #CCC;	
-	padding:3px;
-	cursor:pointer;
-}
-ul#smallPic img{
-	float:left;
-	width:88px;
-	/*height:80px;*/
-	line-height:80px;
-	overflow:hidden;
-	position:relative;
-	z-index:1;		
-}
+    #bigPic {
+        width: 300px;
+        height: 225px;
+        padding: 1px;
+        border: 1px solid #CCC;
+        background-color: #FFF;
+        margin-bottom: 10px;
+    }
+
+        #bigPic img {
+            position: absolute;
+            display: none;
+        }
+
+    ul#smallPic li.Active {
+        border: 2px solid #000;
+        background: #fff;
+        padding: 2px;
+    }
+
+    ul#smallPic, ul#smallPic li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+        ul#smallPic li {
+            float: left;
+            margin-right: 7px;
+            margin-bottom: 5px;
+            border: 1px solid #CCC;
+            padding: 3px;
+            cursor: pointer;
+        }
+
+        ul#smallPic img {
+            float: left;
+            width: 88px;
+            /*height:80px;*/
+            line-height: 80px;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+        }
+        h3 {
+          margin-left: 5px;
+          /* margin: 5px; */
+          font-size: 15px;
+          background: #D0D9F3;
+          /* color: blue; */
+          width: 99.5%;
+          height: 25px;
+          line-height: 25px;
+          border-top: 1px solid grey;
+       }
+        .span6 {
+        margin-left: 10px;
+         }
+    h2 {
+        text-align: center;
+        color: #ffffff;
+        background: #808000;
+        font-size: 16px;
+        font-weight: bold;
+     }
+        .row .row {
+        line-height: 25px;
+    }
 </style>
 
-<div class="row">
+<div class="row" style="
+    margin-top: -30px;
+">
     <div class="span10">
         <div class="tabbed">
             <ul class="tabnav">
@@ -94,7 +124,7 @@ ul#smallPic img{
         </div>
     </div>
 </div>
-<div class="tabbed" style="margin-top: 5px;">
+<%--<div class="tabbed" style="margin-top: 5px;">
     <ul class="tabnav">
 
         <li><a href="#tab1">Tất cả Tin rao</a></li>
@@ -110,56 +140,49 @@ ul#smallPic img{
     </ul>
     <div class="tabcont">
 
-        <div id="tab1" class="tabcontent" align="justify">
-            <div class="row" style="margin-left: -15px;">
-                <% if (listHome.Count == 0)
-                   {%>
-                       <p> Dữ liệu đang được cập nhật </p>
-                   <%} %>
-                <%
-                   else
-                   {%>
-                       <% for (int i = 0; i < listHome.Count; i++)
-                          {%>
-                            <div class="span3">
-                                <div id="bigPic">
-                                    <img src="<% =listHome[i].Image1 %>" alt=""/>
-                                    <img src="<% =listHome[i].Image2 %>" alt=""/>
-                                    <img src="<% =listHome[i].Image3 %>" alt=""/>
-                                </div>
-                                <ul id="smallPic">
-                                    <li class="active" rel="1"><img src="<% =listHome[i].Image1 %>" alt=""/> </li>
-                                    <li rel="2"><img src="<% =listHome[i].Image2 %>" alt=""/></li>
-                                    <li rel="3"><img src="<% =listHome[i].Image3 %>" alt=""/></li>
-                                </ul>
-                            </div>
-                          <%} %>
-                   <%} %>
-                <div class="span3">
-                    <div id="bigPic">
-                        <img src="/Upload/Images/anh1.jpg" alt=""/>
-                        <img src="/Upload/Images/anh2.jpg" alt=""/>
-                        <img src="/Upload/Images/anh3.jpg" alt=""/>
-                    </div>
-                    <ul id="smallPic">
-                        <li class="active" rel="4"><img src="/Upload/Images/anh1.jpg" alt=""/> </li>
-                        <li rel="5"><img src="/Upload/Images/anh2.jpg" alt=""/></li>
-                        <li rel="6"><img src="/Upload/Images/anh3.jpg" alt=""/></li>
-                    </ul>
-                </div>
-                <div class="span3">
-                    
-                </div>
-                <div class="span3">
-                    
-                </div>
-            </div>
+        <div id="tab1" class="tabcontent" align="justify">--%>
+<div class="row" style=" margin-left: 0px; border: 1px solid grey;">
+    <h2> Tin rao bán nhà </h2>
+    
+    <asp:Literal ID="ltrHome" runat="server"></asp:Literal>
+</div>
 
-            <asp:Literal ID="ltrTab1" runat="server"></asp:Literal>
-
+<div class="row" style="margin-left: -5px;">
+    <% if (listHome.Count == 0)
+        {%>
+    <p>Dữ liệu đang được cập nhật </p>
+    <%} %>
+    <%
+        else
+        {%>
+    <% for (int i = 0; i < listHome.Count; i++)
+        {%>
+    <div class="span3">
+        <div id="bigPic">
+            <img src="<% =listHome[i].Image1 %>" alt="" />
+            <img src="<% =listHome[i].Image2 %>" alt="" />
+            <img src="<% =listHome[i].Image3 %>" alt="" />
         </div>
+        <ul id="smallPic">
+            <li class="Active" rel="1">
+                <img src="<% =listHome[i].Image1 %>" alt="" />
+            </li>
+            <li rel="2">
+                <img src="<% =listHome[i].Image2 %>" alt="" /></li>
+            <li rel="3">
+                <img src="<% =listHome[i].Image3 %>" alt="" /></li>
+        </ul>
+    </div>
+    <%} %>
+    <%} %>
+        
+</div>
+<div class="row" style="margin-left: 10px; margin-top: 5px;">
+    <asp:Literal ID="ltrTab1" runat="server"></asp:Literal>
 
-        <div id="tab2" class="tabcontent" align="justify">
+</div>
+
+<%--<div id="tab2" class="tabcontent" align="justify">
             <asp:Literal ID="ltrTab2" runat="server"></asp:Literal>
         </div>
         <div id="tab3" class="tabcontent" align="justify">
@@ -174,7 +197,7 @@ ul#smallPic img{
             <asp:Literal ID="ltrTab5" runat="server"></asp:Literal>
         </div>
     </div>
-</div>
+</div>--%>
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
 <script type="text/javascript">
@@ -189,7 +212,7 @@ ul#smallPic img{
                 if (currentImage != indexImage) {
                     $(currentImage).css('z-index', 2);
                     clearTimeout(myTimer);
-                    $(currentImage).fadeOut(250, function() {
+                    $(currentImage).fadeOut(250, function () {
                         myTimer = setTimeout("showNext()", 3000);
                         $(this).css({ 'display': 'none', 'z-index': 1 });
                     });
@@ -198,9 +221,9 @@ ul#smallPic img{
             $(indexImage).css({ 'display': 'block', 'opacity': 1 });
             currentImage = indexImage;
             currentIndex = index;
-            $('#smallPic li').removeClass('active');
-            $($('#smallPic li')[index]).addClass('active');
-        }        
+            $('#smallPic li').removeClass('Active');
+            $($('#smallPic li')[index]).addClass('Active');
+        }
     }
 
     function showNext() {
@@ -210,10 +233,10 @@ ul#smallPic img{
     }
 
     var myTimer;
-    $(document).ready(function() {
+    $(document).ready(function () {
         myTimer = setTimeout("showNext()", 3000);
         showNext();
-        $('#smallPic li').bind('click', function(e) {
+        $('#smallPic li').bind('click', function (e) {
             var count = $(this).attr('rel');
             showImage(parseInt(count) - 1);
         });

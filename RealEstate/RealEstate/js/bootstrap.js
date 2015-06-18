@@ -203,10 +203,10 @@
     var $parent = this.$element.parent('[data-toggle="buttons-radio"]')
 
     $parent && $parent
-      .find('.active')
-      .removeClass('active')
+      .find('.Active')
+      .removeClass('Active')
 
-    this.$element.toggleClass('active')
+    this.$element.toggleClass('Active')
   }
 
 
@@ -290,7 +290,7 @@
     }
 
   , to: function (pos) {
-      var $active = this.$element.find('.active')
+      var $active = this.$element.find('.Active')
         , children = $active.parent().children()
         , activePos = children.index($active)
         , that = this
@@ -328,7 +328,7 @@
     }
 
   , slide: function (type, next) {
-      var $active = this.$element.find('.active')
+      var $active = this.$element.find('.Active')
         , $next = next || $active[type]()
         , isCycling = this.interval
         , direction = type == 'next' ? 'left' : 'right'
@@ -342,7 +342,7 @@
 
       $next = $next.length ? $next : this.$element.find('.item')[fallback]()
 
-      if ($next.hasClass('active')) return
+      if ($next.hasClass('Active')) return
 
       if ($.support.transition && this.$element.hasClass('slide')) {
         this.$element.trigger(e)
@@ -352,7 +352,7 @@
         $active.addClass(direction)
         $next.addClass(direction)
         this.$element.one($.support.transition.end, function () {
-          $next.removeClass([type, direction].join(' ')).addClass('active')
+          $next.removeClass([type, direction].join(' ')).addClass('Active')
           $active.removeClass(['active', direction].join(' '))
           that.sliding = false
           setTimeout(function () { that.$element.trigger('slid') }, 0)
@@ -360,8 +360,8 @@
       } else {
         this.$element.trigger(e)
         if (e.isDefaultPrevented()) return
-        $active.removeClass('active')
-        $next.addClass('active')
+        $active.removeClass('Active')
+        $next.addClass('Active')
         this.sliding = false
         this.$element.trigger('slid')
       }
@@ -1353,8 +1353,8 @@
         this.activeTarget = target
 
         $(this.selector)
-          .parent('.active')
-          .removeClass('active')
+          .parent('.Active')
+          .removeClass('Active')
 
         selector = this.selector
           + '[data-target="' + target + '"],'
@@ -1362,10 +1362,10 @@
 
         active = $(selector)
           .parent('li')
-          .addClass('active')
+          .addClass('Active')
 
         if (active.parent('.dropdown-menu'))  {
-          active = active.closest('li.dropdown').addClass('active')
+          active = active.closest('li.dropdown').addClass('Active')
         }
 
         active.trigger('activate')
@@ -1453,9 +1453,9 @@
         selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '') //strip for ie7
       }
 
-      if ( $this.parent('li').hasClass('active') ) return
+      if ( $this.parent('li').hasClass('Active') ) return
 
-      previous = $ul.find('.active a').last()[0]
+      previous = $ul.find('.Active a').last()[0]
 
       e = $.Event('show', {
         relatedTarget: previous
@@ -1477,18 +1477,18 @@
     }
 
   , activate: function ( element, container, callback) {
-      var $active = container.find('> .active')
+      var $active = container.find('*> .Active')
         , transition = callback
             && $.support.transition
             && $active.hasClass('fade')
 
       function next() {
         $active
-          .removeClass('active')
-          .find('> .dropdown-menu > .active')
-          .removeClass('active')
+          .removeClass('Active')
+          .find('*> .dropdown-menu > .Active')
+          .removeClass('Active')
 
-        element.addClass('active')
+        element.addClass('Active')
 
         if (transition) {
           element[0].offsetWidth // reflow for transition
@@ -1498,7 +1498,7 @@
         }
 
         if ( element.parent('.dropdown-menu') ) {
-          element.closest('li.dropdown').addClass('active')
+          element.closest('li.dropdown').addClass('Active')
         }
 
         callback && callback()
@@ -1584,7 +1584,7 @@
     constructor: Typeahead
 
   , select: function () {
-      var val = this.$menu.find('.active').attr('data-value')
+      var val = this.$menu.find('.Active').attr('data-value')
       this.$element
         .val(this.updater(val))
         .change()
@@ -1675,31 +1675,31 @@
         return i[0]
       })
 
-      items.first().addClass('active')
+      items.first().addClass('Active')
       this.$menu.html(items)
       return this
     }
 
   , next: function (event) {
-      var active = this.$menu.find('.active').removeClass('active')
+      var active = this.$menu.find('.Active').removeClass('Active')
         , next = active.next()
 
       if (!next.length) {
         next = $(this.$menu.find('li')[0])
       }
 
-      next.addClass('active')
+      next.addClass('Active')
     }
 
   , prev: function (event) {
-      var active = this.$menu.find('.active').removeClass('active')
+      var active = this.$menu.find('.Active').removeClass('Active')
         , prev = active.prev()
 
       if (!prev.length) {
         prev = this.$menu.find('li').last()
       }
 
-      prev.addClass('active')
+      prev.addClass('Active')
     }
 
   , listen: function () {
@@ -1780,8 +1780,8 @@
     }
 
   , mouseenter: function (e) {
-      this.$menu.find('.active').removeClass('active')
-      $(e.currentTarget).addClass('active')
+      this.$menu.find('.Active').removeClass('Active')
+      $(e.currentTarget).addClass('Active')
     }
 
   }

@@ -29,7 +29,7 @@
 
                 </p>
                  <p style="margin-top: 5px;">
-                     <a href="/PostNewSaleHome.aspx" title="Đăng bất động sản của bạn">
+                     <a href="/PostNewRealEstate.aspx" title="Đăng bất động sản của bạn">
                                         <img src="Icons/btnThemTinBDS.jpg"/></a>
                  </p>
                  

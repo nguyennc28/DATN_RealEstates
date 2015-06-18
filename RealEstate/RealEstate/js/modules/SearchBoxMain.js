@@ -6,7 +6,7 @@
         jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
 
         // Change/remove current tab to active
-        jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+        jQuery(this).parent('li').addClass('Active').siblings().removeClass('Active');
 
         e.preventDefault();
     });

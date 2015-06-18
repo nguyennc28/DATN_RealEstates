@@ -46,7 +46,7 @@
     }
 
   , to: function (pos) {
-      var $active = this.$element.find('.active')
+      var $active = this.$element.find('.Active')
         , children = $active.parent().children()
         , activePos = children.index($active)
         , that = this
@@ -84,7 +84,7 @@
     }
 
   , slide: function (type, next) {
-      var $active = this.$element.find('.active')
+      var $active = this.$element.find('.Active')
         , $next = next || $active[type]()
         , isCycling = this.interval
         , direction = type == 'next' ? 'left' : 'right'
@@ -98,7 +98,7 @@
 
       $next = $next.length ? $next : this.$element.find('.item')[fallback]()
 
-      if ($next.hasClass('active')) return
+      if ($next.hasClass('Active')) return
 
       if ($.support.transition && this.$element.hasClass('slide')) {
         this.$element.trigger(e)
@@ -108,7 +108,7 @@
         $active.addClass(direction)
         $next.addClass(direction)
         this.$element.one($.support.transition.end, function () {
-          $next.removeClass([type, direction].join(' ')).addClass('active')
+          $next.removeClass([type, direction].join(' ')).addClass('Active')
           $active.removeClass(['active', direction].join(' '))
           that.sliding = false
           setTimeout(function () { that.$element.trigger('slid') }, 0)
@@ -116,8 +116,8 @@
       } else {
         this.$element.trigger(e)
         if (e.isDefaultPrevented()) return
-        $active.removeClass('active')
-        $next.addClass('active')
+        $active.removeClass('Active')
+        $next.addClass('Active')
         this.sliding = false
         this.$element.trigger('slid')
       }

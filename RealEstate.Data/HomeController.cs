@@ -236,15 +236,15 @@ namespace RealEstate.DataAccess
 
                     ID = (int)cmd.ExecuteScalar();
                     //cmd.ExecuteNonQuery();
-                    //SqlDataReader reader = cmd.ExecuteReader();
-                    //if (reader.HasRows)
-                    //{
-                    //    while (reader.Read())
-                    //    {
-                    //        ID = int.Parse(reader[0].ToString());
-                    //    }
-                    //}
-                    //reader.Close();
+                    ////SqlDataReader reader = cmd.ExecuteReader();
+                    ////if (reader.HasRows)
+                    ////{
+                    ////    while (reader.Read())
+                    ////    {
+                    ////        ID = int.Parse(reader[0].ToString());
+                    ////    }
+                    ////}
+                    ////reader.Close();
 
                 }
                 catch (Exception ex)

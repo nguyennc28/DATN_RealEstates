@@ -19,7 +19,7 @@
           text-align: center;
     }
     #tab1,#tab2,#tab3,#tab4,#tab5{
-            margin-top: -10px;
+            margin-top: -30px;
             border: 1px solid olive;
             background: lavender;
     }
@@ -27,12 +27,18 @@
         margin-left: 10px;
     }
     .span9{ text-align: center; margin-left: 50px; padding-bottom: 30px;}
+    .rdListItem label {
+            margin-top: -18px;
+            margin-left: 20px;
+            color: olive;
+        }
 </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:ValidationSummary ID="vsSaleHome" runat="server" ShowMessageBox="True" ShowSummary="False"/>
      <%-- Đăng thông tin của chủ sở hữu nhà bán --%>
-            <div>
+    <div id="tab1" class="tabcontent" align="justify">
+            <div >
                 <h2> Đăng thông tin chủ sở hữu </h2>
             </div>
             <div class="row" style="margin-top: 20px;">
@@ -48,9 +54,9 @@
                     <p><span class="lbNameCol">Giấy chứng nhận quyền sự dụng đất: </span> </p>
                 </div>
                 <div class="span6">
-                    <asp:RadioButtonList ID="rdCLUR5" runat="server" RepeatDirection="Horizontal" Width="20%">
-                        <asp:ListItem Value="Có"><span style="float: right; margin-top: -18px; color: #676563; margin-left: -25px; margin-right: 15px;">Có</span></asp:ListItem>
-                        <asp:ListItem Value="Không"><span style="float: right; margin-top: -18px; color: #676563; margin-left: -15px;">Không</span></asp:ListItem>
+                    <asp:RadioButtonList ID="rdCLUR5" runat="server" RepeatDirection="Horizontal" Width="100%" CssClass="rdListItem">
+                        <asp:ListItem Value="Có">Có</asp:ListItem>
+                        <asp:ListItem Value="Không">Không</asp:ListItem>
                     </asp:RadioButtonList>
                 </div>
             </div>
@@ -59,10 +65,10 @@
                     <p><span class="lbNameCol">Loại chủ sở hữu: </span> </p>
                 </div>
                 <div class="span6">
-                    <asp:RadioButtonList ID="rdRealEstateOwnerType5" runat="server" RepeatDirection="Horizontal" Width="20%">
-                        <asp:ListItem Value="Cá nhân"><span style="float: right; margin-top: -18px; color: #676563; margin-left: -25px; margin-right: 15px;">Cá nhân</span></asp:ListItem>
-                        <asp:ListItem Value="Doanh nghiệp"><span style="float: right; margin-top: -18px; color: #676563; margin-left: -15px;">Doanh nghiệp</span></asp:ListItem>
-                        <asp:ListItem Value="Doanh nghiệp"><span style="float: right; margin-top: -18px; color: #676563; margin-left: -15px;">Dự án nhà nước</span></asp:ListItem>
+                    <asp:RadioButtonList ID="rdRealEstateOwnerType5" runat="server" RepeatDirection="Horizontal" Width="100%" CssClass="rdListItem">
+                        <asp:ListItem Value="Cá nhân">Cá nhân</asp:ListItem>
+                        <asp:ListItem Value="Doanh nghiệp">Doanh nghiệp</asp:ListItem>
+                        <asp:ListItem Value="Doanh nghiệp">Dự án nhà nước</asp:ListItem>
                     </asp:RadioButtonList>
                 </div>
             </div>
@@ -71,9 +77,9 @@
                     <p><span class="lbNameCol">Giới tính: </span> </p>
                 </div>
                 <div class="span6">
-                    <asp:RadioButtonList ID="rdGender5" runat="server" RepeatDirection="Horizontal" Width="20%">
-                        <asp:ListItem Value="Nam"><span style="float: right; margin-top: -18px; color: #676563; margin-left: -25px; margin-right: 15px;">Nam</span></asp:ListItem>
-                        <asp:ListItem Value="Nữ"><span style="float: right; margin-top: -18px; color: #676563; margin-left: -15px;">Nữ</span></asp:ListItem>
+                    <asp:RadioButtonList ID="rdGender5" runat="server" RepeatDirection="Horizontal" Width="100%" CssClass="rdListItem">
+                        <asp:ListItem Value="Nam">Nam</asp:ListItem>
+                        <asp:ListItem Value="Nữ">Nữ</asp:ListItem>
                     </asp:RadioButtonList>
                 </div>
             </div>
@@ -124,6 +130,9 @@
                 </div>
                 <div class="span6">
                     <span class="searchDdl"><asp:DropDownList ID="ddlMotelType5" runat="server" >
+                        <asp:ListItem Value="1">Nhà trọ Sinh viên</asp:ListItem>
+                        <asp:ListItem Value="2">Nhà trọ VIP</asp:ListItem>
+                        <asp:ListItem Value="3">Khách sạn</asp:ListItem>
                                             </asp:DropDownList></span>
                 </div>
             </div>
@@ -158,9 +167,9 @@
                     <p><span class="lbNameCol">Khép kín: </span> </p>
                 </div>
                 <div class="span6">
-                    <asp:RadioButtonList ID="rdIsClose" runat="server" RepeatDirection="Horizontal" Width="20%">
-                        <asp:ListItem Value="1"><span style="float: right; margin-top: -18px; color: #676563; margin-left: -25px; margin-right: 15px;">Có</span></asp:ListItem>
-                        <asp:ListItem Value="0"><span style="float: right; margin-top: -18px; color: #676563; margin-left: -15px;">Không</span></asp:ListItem>
+                    <asp:RadioButtonList ID="rdIsClose" runat="server" RepeatDirection="Horizontal" Width="20%" CssClass="rdListItem">
+                        <asp:ListItem Value="1">Có</asp:ListItem>
+                        <asp:ListItem Value="0">Không</asp:ListItem>
                     </asp:RadioButtonList>
                 </div>
             </div>
@@ -169,9 +178,9 @@
                     <p><span class="lbNameCol">Bếp riêng: </span> </p>
                 </div>
                 <div class="span6">
-                    <asp:RadioButtonList ID="rdIsCooker" runat="server" RepeatDirection="Horizontal" Width="20%">
-                        <asp:ListItem Value="1"><span style="float: right; margin-top: -18px; color: #676563; margin-left: -25px; margin-right: 15px;">Có</span></asp:ListItem>
-                        <asp:ListItem Value="0"><span style="float: right; margin-top: -18px; color: #676563; margin-left: -15px;">Không</span></asp:ListItem>
+                    <asp:RadioButtonList ID="rdIsCooker" runat="server" RepeatDirection="Horizontal" Width="20%" CssClass="rdListItem">
+                        <asp:ListItem Value="1">Có</asp:ListItem>
+                        <asp:ListItem Value="0">Không</asp:ListItem>
                     </asp:RadioButtonList>
                 </div>
             </div>
@@ -180,9 +189,9 @@
                     <p><span class="lbNameCol">Nội thất: </span> </p>
                 </div>
                 <div class="span6">
-                    <asp:RadioButtonList ID="rdFurniture" runat="server" RepeatDirection="Horizontal" Width="20%">
-                        <asp:ListItem Value="1"><span style="float: right; margin-top: -18px; color: #676563; margin-left: -25px; margin-right: 15px;">Có</span></asp:ListItem>
-                        <asp:ListItem Value="0"><span style="float: right; margin-top: -18px; color: #676563; margin-left: -15px;">Không</span></asp:ListItem>
+                    <asp:RadioButtonList ID="rdFurniture" runat="server" RepeatDirection="Horizontal" Width="20%" CssClass="rdListItem">
+                        <asp:ListItem Value="1">Có</asp:ListItem>
+                        <asp:ListItem Value="0">Không</asp:ListItem>
                     </asp:RadioButtonList>
                 </div>
             </div>
@@ -217,7 +226,7 @@
             </div>
             <div class="row" style="margin-top: 10px;">
                 <div class="span3">
-                    <p><span class="lbNameCol">Tổng diện tích:</span></p>
+                    <p><span class="lbNameCol">Tổng diện tích: </span></p>
                 </div>
                 <div class="span6">
                     <asp:TextBox ID="txtArea5" runat="server"></asp:TextBox><span> m2</span><span class="err"> <asp:RequiredFieldValidator ID="RequiredFieldValidator50" runat="server" ControlToValidate="txtArea5" ErrorMessage="Bạn phải nhập vào tổng diện tích">*(băt buộc)</asp:RequiredFieldValidator></span>
@@ -334,4 +343,5 @@
                     <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Icons/btnCencelPostNewRE.png" Width="150px"/>
                 </div>
             </div>
+    </div>
 </asp:Content>

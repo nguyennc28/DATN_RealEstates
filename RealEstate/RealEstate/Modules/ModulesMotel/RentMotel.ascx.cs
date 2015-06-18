@@ -115,15 +115,15 @@ namespace RealEstate.Modules.ModulesMotel
         private void LoadSaleApartments()
         {
             string chuoi = "";
-            List<ApartmentInfo> listApartmentInfos = new List<ApartmentInfo>();
-            listApartmentInfos = ApartmentService.ApartmentInfo_GetByAll("vi");
+            List<MotelInfo> listApartmentInfos = new List<MotelInfo>();
+            listApartmentInfos = MotelService.MotelInfo_GetByAll();
             if (listApartmentInfos.Count > 0)
             {
                 for (int i = 0; i < listApartmentInfos.Count; i++)
                 {
-                    chuoi += "<div class=\" row \">";
-                    chuoi += "<h3> <a href = \" Default2.aspx?mod=" + listApartmentInfos[i].Tag + "\">" + listApartmentInfos[i].Title +
-                             "</a> </h3>";
+                    chuoi += "<div class=\" row \" style=\"line-height: 25px;\">";
+                    chuoi += "<h3><span style=\" color: blue;\"> <a href = \" Default2.aspx?mod=" + listApartmentInfos[i].Tag + "\">" + listApartmentInfos[i].Title +
+                             "</a> </span></h3>";
 
                     //cột trái
                     chuoi += "<div class=\"span3\">";
@@ -132,13 +132,13 @@ namespace RealEstate.Modules.ModulesMotel
                     //cột phải
                     chuoi += "<div class=\"span6\">";
                     chuoi += "<p>" + listApartmentInfos[i].Description + "</p>";
-                    chuoi += "<p>" + "Giá: " + "<span style=\"color: red; font-weight:bold;\">" + listApartmentInfos[0].Price + "</span>" + " VND" + " | " + "Tổng diện tích: " + "<span style=\"color: red; font-weight:bold;\">" + listApartmentInfos[0].TotalArea + "</span>" + " | " +
-                             "Diện tích nhà: " + "<span style=\"color: red; font-weight:bold;\">" + listApartmentInfos[0].FloorArea + "</span>" + " | " + "Số phòng ngủ: " + "<span style=\"color: red; font-weight:bold;\">" +
-                             listApartmentInfos[0].BedroomNumber + "</span>" + "</p>";
-                    chuoi += "<p>" + "<table><tr><td width=\"70%\">Địa chỉ: " + "<span style=\"color: blue; font-weight:bold;\">" + listApartmentInfos[i].Address + "</span>" + "</td><td width=\"30%\">Người đăng: " + "<span style=\"color: blue; font-weight:bold;\">" + listApartmentInfos[i].CreateBy + "</span>" + "</td></tr></table></p>";
+                    chuoi += "<p>" + "Giá cho thuê: " + "<span style=\"color: red; font-weight:bold;\">" + listApartmentInfos[0].Price + "</span>" + " VND" + " | " + "Tổng diện tích: " + "<span style=\"color: red; font-weight:bold;\">" + listApartmentInfos[0].TotalArea + "</span>" + " | " + "Phòng thuộc tầng: " + "<span style=\"color: red; font-weight:bold;\">" + listApartmentInfos[0].TierNumber + "</span>" + " | " +
+                             "Khép kín: " + "<span style=\"color: red; font-weight:bold;\">" + listApartmentInfos[0].IsClosed + "</span>" + " | " + "Có bếp: " + "<span style=\"color: red; font-weight:bold;\">" +
+                             listApartmentInfos[0].IsCooker + "</span>" + "</p>";
+                    chuoi += "<p>" + "<table><tr><td width=\"60%\">Địa chỉ: " + "<span style=\"color: blue; font-weight:bold;\">" + listApartmentInfos[i].Address + "</span>" + "</td><td width=\"40%\">Người đăng: " + "<span style=\"color: blue; font-weight:bold;\">" + listApartmentInfos[i].CreateBy + "</span>" + "</td></tr></table></p>";
                     chuoi += "</div>";
                     chuoi += "</div>";
-                    chuoi += "<hr style=\" border: 1px solid blue;\">";
+                    //chuoi += "<hr style=\" border: 1px solid grey;\">";
                 }
             }
             else
@@ -146,14 +146,8 @@ namespace RealEstate.Modules.ModulesMotel
                 chuoi += "<p>" + "Không có dữ liều nào để hiển thị </p>";
             }
             ltrTab1.Text = chuoi;
+            //ltrTab2.Text = chuoi;
             listApartmentInfos.Clear();
-        }
-
-        private void LoadBroker()
-        {
-            string chuôi = "";
-            //List<>
-
         }
     }
 }

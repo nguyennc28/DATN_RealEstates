@@ -27,6 +27,11 @@
         margin-left: 10px;
     }
     .span9{ text-align: center; margin-left: 50px; padding-bottom: 30px;}
+    .rdListItem label {
+            margin-top: -18px;
+            margin-left: 20px;
+            color: olive;
+        }
 </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -48,9 +53,9 @@
                     <p><span class="lbNameCol">Giấy chứng nhận quyền sự dụng đất: </span> </p>
                 </div>
                 <div class="span6">
-                    <asp:RadioButtonList ID="rdCLUR2" runat="server" RepeatDirection="Horizontal" Width="20%">
-                        <asp:ListItem Value="Có"><span style="float: right; margin-top: -18px; color: #676563; margin-left: -25px; margin-right: 15px;">Có</span></asp:ListItem>
-                        <asp:ListItem Value="Không"><span style="float: right; margin-top: -18px; color: #676563; margin-left: -15px;">Không</span></asp:ListItem>
+                    <asp:RadioButtonList ID="rdCLUR2" runat="server" RepeatDirection="Horizontal" Width="100%">
+                        <asp:ListItem Value="Có">Có</asp:ListItem>
+                        <asp:ListItem Value="Không">Không</asp:ListItem>
                     </asp:RadioButtonList>
                 </div>
             </div>
@@ -59,10 +64,10 @@
                     <p><span class="lbNameCol">Giới tính: </span> </p>
                 </div>
                 <div class="span6">
-                    <asp:RadioButtonList ID="rdRealEstateOwnerType2" runat="server" RepeatDirection="Horizontal" Width="20%">
-                        <asp:ListItem Value="Cá nhân"><span style="float: right; margin-top: -18px; color: #676563; margin-left: -25px; margin-right: 15px;">Cá nhân</span></asp:ListItem>
-                        <asp:ListItem Value="Doanh nghiệp"><span style="float: right; margin-top: -18px; color: #676563; margin-left: -15px;">Doanh nghiệp</span></asp:ListItem>
-                        <asp:ListItem Value="Doanh nghiệp"><span style="float: right; margin-top: -18px; color: #676563; margin-left: -15px;">Dự án nhà nước</span></asp:ListItem>
+                    <asp:RadioButtonList ID="rdRealEstateOwnerType2" runat="server" RepeatDirection="Horizontal" Width="100%">
+                        <asp:ListItem Value="Cá nhân">Cá nhân</asp:ListItem>
+                        <asp:ListItem Value="Doanh nghiệp">Doanh nghiệp</asp:ListItem>
+                        <asp:ListItem Value="Doanh nghiệp">Dự án nhà nước</asp:ListItem>
                     </asp:RadioButtonList>
                 </div>
             </div>
@@ -71,9 +76,9 @@
                     <p><span class="lbNameCol">Giới tính: </span> </p>
                 </div>
                 <div class="span6">
-                    <asp:RadioButtonList ID="rdGender2" runat="server" RepeatDirection="Horizontal" Width="20%">
-                        <asp:ListItem Value="Nam"><span style="float: right; margin-top: -18px; color: #676563; margin-left: -25px; margin-right: 15px;">Nam</span></asp:ListItem>
-                        <asp:ListItem Value="Nữ"><span style="float: right; margin-top: -18px; color: #676563; margin-left: -15px;">Nữ</span></asp:ListItem>
+                    <asp:RadioButtonList ID="rdGender2" runat="server" RepeatDirection="Horizontal" Width="100%">
+                        <asp:ListItem Value="Nam">Nam</asp:ListItem>
+                        <asp:ListItem Value="Nữ">Nữ</asp:ListItem>
                     </asp:RadioButtonList>
                 </div>
             </div>
@@ -114,9 +119,9 @@
                     Display="Dynamic"></asp:RegularExpressionValidator>
             </div>
             
-            <%-- Đăng thông tin bán nhà của bạn --%>
+            <%-- Đăng thông tin cho thuê nhà của bạn --%>
             <div style="margin-top: 50px;">
-                <h2> Đăng thông tin thuê nhà của bạn </h2>
+                <h2> Đăng thông tin cho thuê nhà của bạn </h2>
             </div>
             <div class="row" style="margin-top: 20px;">
                 <div class="span3">

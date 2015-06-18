@@ -12,11 +12,13 @@ namespace RealEstate
     public partial class ViewRegister : System.Web.UI.Page
     {
         public string UserID;
+        public string MotelID;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 UserID = Request.QueryString["id"];
+                MotelID = Request.QueryString["homeID"];
                 List<UsersInfo> listUser = UsersService.UsersInfo_GetById(UserID);
                 //if (listUser[0].Gender == "True")
                 //{
@@ -38,6 +40,9 @@ namespace RealEstate
                 string chuoi = "";
                 chuoi += "<img src=\"" + listUser[0].Avatar + " \" style=\" width: 40% \" />";
                 ltrAvatar.Text = chuoi;
+
+                List<MotelInfo> litMotelInfos = MotelService.MotelInfo_GetById(MotelID);
+
             }
         }
     }

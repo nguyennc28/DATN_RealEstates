@@ -54,10 +54,10 @@
     var $parent = this.$element.parent('[data-toggle="buttons-radio"]')
 
     $parent && $parent
-      .find('.active')
-      .removeClass('active')
+      .find('.Active')
+      .removeClass('Active')
 
-    this.$element.toggleClass('active')
+    this.$element.toggleClass('Active')
   }
 
 

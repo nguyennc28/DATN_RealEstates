@@ -12,6 +12,7 @@ namespace RealEstate
 {
     public partial class PostNewSaleHome : System.Web.UI.Page
     {
+        public string _realEstateType;
         private string _cityCode;
         private int _reOwnerId;
         private int _homeId;
@@ -19,9 +20,15 @@ namespace RealEstate
         {
             if (!IsPostBack)
             {
+                // Đăng nhà bán
                 ViewRealEstateType();
                 ViewRealEstate();
                 ViewCity();
+                // Đăng nhà cho thuê
+                ViewRealEstateType2();
+                ViewRealEstate2();
+                ViewCity2();
+                
             }
         }
 
@@ -47,7 +54,7 @@ namespace RealEstate
                 Name = txtTenNha1.Text,
                 RealEstateOwnersID = "1",
                 RealEstateID = ddlRealEstate1.SelectedValue,
-                Title = "",
+                Title = "chưa có",
                 TransactionType = "sale",
                 Tag = "",
                 CreateBy = txtTenChuSoHuu1.Text,
@@ -447,6 +454,83 @@ namespace RealEstate
             _cityCode = ddlCity1.SelectedValue;
             ViewDistrict();
         }
-       
+
+
+        private void ViewRealEstate2()
+        {
+            ddlRealEstate2.Items.Clear();
+            ddlRealEstate2.Items.Add(new ListItem("-Chọn BĐS-", "0"));
+            List<RealEstateInfo> list = RealEstateService.RealEstateInfo_GetByAll();
+            if (list.Count > 0)
+            {
+                for (int i = 0; i < list.Count; i++)
+                {
+                    ListItem lsListItem = new ListItem(list[i].RealEstateName, list[i].RealEstateID);
+                    ddlRealEstate2.Items.Add(lsListItem);
+                }
+                list.Clear();
+                list = null;
+            }
+            //_cityCode = ddlCity.SelectedValue;
+        }
+
+        private void ViewCity2()
+        {
+            ddlCity2.Items.Clear();
+            ddlCity2.Items.Add(new ListItem("-Chọn Tỉnh(TP)-", "0"));
+            List<CityInfo> listCityInfos = CityService.CityInfo_GetByAll();
+            if (listCityInfos.Count > 0)
+            {
+                for (int i = 0; i < listCityInfos.Count; i++)
+                {
+                    ListItem lsListItem = new ListItem(listCityInfos[i].CityName, listCityInfos[i].CityCode);
+                    ddlCity2.Items.Add(lsListItem);
+                }
+                listCityInfos.Clear();
+                listCityInfos = null;
+            }
+            _cityCode = ddlCity2.SelectedValue;
+            ViewDistrict2();
+        }
+
+        private void ViewDistrict2()
+        {
+            ddlDistrict2.Items.Clear();
+            if (_cityCode == "0")
+            {
+                ddlDistrict2.Items.Add(new ListItem("-Chọn Quận (huyện)-", "0"));
+            }
+            else
+            {
+                List<DistrictInfo> listDistrictInfos = DistrictService.DistrictInfo_GetByTop("100", "CityCode =" + _cityCode, "DistrictID");
+                for (int i = 0; i < listDistrictInfos.Count; i++)
+                {
+                    ListItem lsListItem = new ListItem(listDistrictInfos[i].DistrictName, listDistrictInfos[i].DistrictID);
+                    ddlDistrict2.Items.Add(lsListItem);
+                }
+                listDistrictInfos.Clear();
+                listDistrictInfos = null;
+            }
+        }
+        private void ViewRealEstateType2()
+        {
+            ddlHomeType2.Items.Clear();
+            ddlHomeType2.Items.Add(new ListItem("-Chọn loại Nhà-", "0"));
+            List<HomeTypeInfo> listddlHomeTypeInfos = HomeTypeService.HomeTypeInfo_GetByAll();
+            for (int i = 0; i < listddlHomeTypeInfos.Count; i++)
+            {
+                ListItem lsListItem = new ListItem(listddlHomeTypeInfos[i].HomeTypeName,
+                    listddlHomeTypeInfos[i].HomeTypeID);
+                ddlHomeType2.Items.Add(lsListItem);
+
+            }
+            listddlHomeTypeInfos.Clear();
+            listddlHomeTypeInfos = null;
+        }
+        protected void ddlCity2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _cityCode = ddlCity2.SelectedValue;
+            ViewDistrict2();
+        }     
     }
 }
