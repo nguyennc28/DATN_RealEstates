@@ -153,6 +153,15 @@ namespace RealEstate
         {
             Session["UserControl"] = "";
             Session["UserName"] = "";
+            Session["Key"] = "";
+            Session["cityName"] = "";
+            Session["districtName"] = "";
+            Session["price"] = "";
+            Session["area"] = "";
+            Session["k"] = "";
+            Session["betroom"] = "";
+
+
             // Code that runs when a new session is started
             if (Session["Lang"] == null)
             {

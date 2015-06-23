@@ -33,8 +33,6 @@ namespace RealEstate
                 //PlaceHolder1.Controls.Add(gel0);
 
 
-
-
                 module = Server.HtmlEncode(Request.QueryString["mod"]);
                 HtmlGenericControl gel = new HtmlGenericControl("div");
                 switch (module)
@@ -84,6 +82,13 @@ namespace RealEstate
                     //Load Control view tin bất động sản đã đăng
                     case "ViewPostNewRE":
                         ct = Page.LoadControl("/Modules/ViewPostNewRE.ascx");
+                        break;
+                    // Hiện thị kết quả tìm kiếm
+                    case "KetQuaTimKiem":
+                        ct = Page.LoadControl("/Modules/KetQuaTimKiem.ascx");
+                        break;
+                    case "ViewDetailsHome":
+                        ct = Page.LoadControl("/Modules/ViewDetailsHome.ascx");
                         break;
                     // Default trang chủ
                     default:

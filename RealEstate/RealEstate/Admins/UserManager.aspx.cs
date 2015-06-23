@@ -112,10 +112,34 @@ namespace RealEstate.Admins
                     BindGrid();
                     break;
                 case "Delete":
-                    UsersService.UsersInfo_Delete(strCA);
+                    //UsersService.UsersInfo_Delete(strCA);
+                    //BindGrid();
+                    string isAdmin = "1";
+                    List<UsersInfo> listUsersInfos;
+                    DataGridItem item = default(DataGridItem);
+                    for (int i = 0; i < grdUser.Items.Count; i++)
+                    {
+                        item = grdUser.Items[i];
+                        if (item.ItemType == ListItemType.AlternatingItem | item.ItemType == ListItemType.Item)
+                        {
+                            if (((CheckBox)item.FindControl("ChkSelect")).Checked)
+                            {
+                                listUsersInfos = UsersService.UsersInfo_GetById(strCA);
+                                if (listUsersInfos[0].Level == isAdmin)
+                                {
+                                    Response.Write("<script language='JavaScript'> alert('Bạn không có quyền xóa tài khoản Admin'); </script>");
+                                }
+                                else
+                                {
+                                    UsersService.UsersInfo_Delete(strCA);
+                                }                        
+                            }
+                        }
+                    }
+                    grdUser.CurrentPageIndex = 0;
                     BindGrid();
                     break;
-            }
+                    }            
         }
         protected void AddButton_Click(object sender, EventArgs e)
         {
@@ -127,6 +151,8 @@ namespace RealEstate.Admins
 
         protected void DeleteButton_Click(object sender, EventArgs e)
         {
+            string isAdmin = "1";
+            List<UsersInfo> listUsersInfos;
             DataGridItem item = default(DataGridItem);
             for (int i = 0; i < grdUser.Items.Count; i++)
             {
@@ -136,7 +162,15 @@ namespace RealEstate.Admins
                     if (((CheckBox)item.FindControl("ChkSelect")).Checked)
                     {
                         string strId = item.Cells[1].Text;
-                        UsersService.UsersInfo_Delete(strId);
+                        listUsersInfos = UsersService.UsersInfo_GetById(strId);
+                        if (listUsersInfos[0].Level == isAdmin)
+                        {
+                            Response.Write("<script language='JavaScript'> alert('Bạn không có quyền xóa tài khoản Admin'); </script>");
+                        }
+                        else
+                        {
+                            UsersService.UsersInfo_Delete(strId);
+                        }                        
                     }
                 }
             }

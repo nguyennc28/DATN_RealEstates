@@ -48,7 +48,6 @@ namespace RealEstate
 
             }
         }
-
         private void ViewRealEstateType()
         {
             ddlRealEstateType.Items.Clear();
@@ -64,7 +63,6 @@ namespace RealEstate
             listEstateTypeInfos.Clear();
             listEstateTypeInfos = null;
         }
-
         private void ViewCity()
         {
             ddlCitySl.Items.Clear();
@@ -98,7 +96,6 @@ namespace RealEstate
             ddlPriceSl.Items.Add(new ListItem("4.5 tỷ VNĐ - 5 tỷ VNĐ", "5000000000"));
             ddlPriceSl.Items.Add(new ListItem("trên 5 tỷ VNĐ", "5000001000"));
         }
-
         private void GetBetroomNum()
         {
             ddlBetroomNum.Items.Clear();
@@ -248,7 +245,7 @@ namespace RealEstate
                 Session["area"] = ddlAreaSl.SelectedValue;
                 Session["k"] = txtSearchKeyword1.Text;
                 Session["betroom"] = ddlBetroomNum.SelectedValue;
-                Response.Redirect("/Default2.aspx?mod=");
+                Response.Redirect("/Default2.aspx?mod=KetQuaTimKiem");
             }
         }
 
@@ -299,7 +296,8 @@ namespace RealEstate
                     chuoiImageLinks += " <img src=\"" + listRealEstateNewsInfos[i].Images + " \" alt=\" \"/>";
                     chuoiImageLinks += "</a></li>";
 
-                    chuoiTextLink += "<li> <a href=\"ViewDetails.aspx?ID= "+listRealEstateNewsInfos[i].RealEstateNewsID + "\" target=\"_blank \" >" + listRealEstateNewsInfos[i].Title +
+                    chuoiTextLink += "<li> <a href=\"ViewDetails.aspx?ID= " +
+                                     listRealEstateNewsInfos[i].RealEstateNewsID + "\" target=\"_blank \" >" + "&rsaquo;&rsaquo; " + listRealEstateNewsInfos[i].Title +
                                      "</a> </li>";
                 }
                 ltrImagesLink.Text = chuoiImageLinks;

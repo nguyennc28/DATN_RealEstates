@@ -554,6 +554,7 @@
     <Content Include="Modules\SearchBoxMain.ascx" />
     <Content Include="Modules\SearchLeft.ascx" />
     <Content Include="Modules\UserManager.ascx" />
+    <Content Include="Modules\ViewDetailsHome.ascx" />
     <Content Include="Modules\ViewPostNewRE.ascx" />
     <Content Include="Pages\Demo.aspx" />
     <Content Include="Pages\Icons\Create.png" />
@@ -589,6 +590,9 @@
     <Content Include="Scripts\uploader.swf" />
     <Content Include="Test.aspx" />
     <Content Include="PostNewRE.aspx" />
+    <Content Include="Upload\Banner\20150609114306-5237.gif" />
+    <Content Include="Upload\Banner\20150622091450-119a.gif" />
+    <Content Include="Upload\Banner\20150622094746-f8f5.gif" />
     <Content Include="Upload\Banner\banner_1_03.jpg" />
     <Content Include="Upload\Banner\banner_1_05.jpg" />
     <Content Include="Upload\Banner\banner_1_07.jpg" />
@@ -1110,6 +1114,13 @@
     </Compile>
     <Compile Include="Modules\UserManager.ascx.designer.cs">
       <DependentUpon>UserManager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ViewDetailsHome.ascx.cs">
+      <DependentUpon>ViewDetailsHome.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\ViewDetailsHome.ascx.designer.cs">
+      <DependentUpon>ViewDetailsHome.ascx</DependentUpon>
     </Compile>
     <Compile Include="Modules\ViewPostNewRE.ascx.cs">
       <DependentUpon>ViewPostNewRE.ascx</DependentUpon>

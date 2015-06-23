@@ -196,53 +196,60 @@
     .news_main ul li {
         color: blue;
     }
+    
 </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="row" style="margin-top: -30px;">
     <div class="span2">
-            <div class="tabhead">
-                <h2 class="tabtit">
-                    <img src="/Icons/searchnha.png" style="width: 45px; float: left; margin-top: 2px; margin-left: 8px;" />
-                    Công cụ tìm kiếm </h2>
-                <div class="tabcont">
-                    <div id="tab1" class="tabcontent" align="justify">
-                        <div style="height: 20px;">
-                        </div>
-                        <div style="height: 320px;">
-                            <span class="searchTb">
-                                <asp:TextBox ID="txtSearchKeyword1" runat="server"></asp:TextBox>
-                            </span>
-
-                            <span class="searchDdl">
-                                <asp:DropDownList ID="ddlRealEstateType" runat="server">
-                                </asp:DropDownList></span>
-
-                            <span class="searchDdl">
-                                <asp:DropDownList ID="ddlCitySl" runat="server" OnSelectedIndexChanged="ddlCitySl_SelectedIndexChanged" AutoPostBack="True">
-                                </asp:DropDownList></span>
-
-                            <span class="searchDdl">
-                                <asp:DropDownList ID="ddlDistrictSl" runat="server" AutoPostBack="True">
-                                </asp:DropDownList></span>
-
-                            <span class="searchDdl">
-                                <asp:DropDownList ID="ddlAreaSl" runat="server">
-                                </asp:DropDownList></span>
-
-                            <span class="searchDdl">
-                                <asp:DropDownList ID="ddlPriceSl" runat="server">
-                                </asp:DropDownList></span>
-
-                            <span class="searchDdl">
-                                <asp:DropDownList ID="ddlBetroomNum" runat="server">                           
-                                </asp:DropDownList></span>
-
-                            <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="../img/Button/btTimkiem.png" OnClick="ImageButton1_OnClick" />
-                        </div>                    
+        <div class="tabhead">
+            <h2 class="tabtit">
+                <img src="/Icons/searchnha.png" style="width: 45px; float: left; margin-top: 2px; margin-left: 8px;" />
+                Công cụ tìm kiếm </h2>
+            <div class="tabcont">
+                <div id="tab1" class="tabcontent" align="justify">
+                    <div style="height: 20px;">
                     </div>
+                    <div style="height: 320px;">
+                        <span class="searchTb">
+                            <asp:TextBox ID="txtSearchKeyword1" runat="server"></asp:TextBox>
+                        </span>
+
+                        <span class="searchDdl">
+                            <asp:DropDownList ID="ddlRealEstateType" runat="server">
+                            </asp:DropDownList></span>
+
+                        <span class="searchDdl">
+                            <asp:DropDownList ID="ddlCitySl" runat="server" OnSelectedIndexChanged="ddlCitySl_SelectedIndexChanged" AutoPostBack="True">
+                            </asp:DropDownList></span>
+
+                        <span class="searchDdl">
+                            <asp:DropDownList ID="ddlDistrictSl" runat="server" AutoPostBack="True">
+                            </asp:DropDownList></span>
+
+                        <span class="searchDdl">
+                            <asp:DropDownList ID="ddlAreaSl" runat="server">
+                            </asp:DropDownList></span>
+
+                        <span class="searchDdl">
+                            <asp:DropDownList ID="ddlPriceSl" runat="server">
+                            </asp:DropDownList></span>
+
+                        <span class="searchDdl">
+                            <asp:DropDownList ID="ddlBetroomNum" runat="server">                           
+                            </asp:DropDownList></span>
+
+                        <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="../img/Button/btTimkiem.png" OnClick="ImageButton1_OnClick" />
+                    </div>                    
                 </div>
-            </div>               
+            </div>
+        </div>   
+        <div class="span2" style="margin: 6px 0px;">
+            <a href="#"> <img src="/Upload/Banner/A8A-DR_960x90.gif" /></a>
+        </div>    
+        <div class="span2" style="margin-left: 0px;">
+            <a href="#"> <img src="/Upload/Banner/banner_top_batdongsan.gif" /></a>
+        </div>         
     </div>
     <div class="span5">
         <ul id="output">            
@@ -251,30 +258,7 @@
         <div class="news_main">
             <%--<marquee scrollamount="2" scrolldelay="98" direction="up" onmouseover="this.stop()" onmouseout="this.start()">--%>
             <ul>
-                <li>
-                        <a href="#"> Tin tức 1</a>
-                    </li>
-                    <li>
-                        <a href="#"> Tin tức 1</a>
-                    </li>
-                    <li>
-                        <a href="#"> Tin tức 1</a>
-                    </li>
-                    <li>
-                        <a href="#"> Tin tức 1</a>
-                    </li>
-                    <li>
-                        <a href="#"> Tin tức 1</a>
-                    </li>
-                    <li>
-                        <a href="#"> Tin tức 1</a>
-                    </li>
-                    <li>
-                        <a href="#"> Tin tức 1</a>
-                    </li>
-                    <li>
-                        <a href="#"> Tin tức 1</a>
-                    </li>
+                <asp:Literal ID="ltrTextLink2" runat="server"></asp:Literal>
             </ul>
             <%--</marquee>--%>
         </div>
