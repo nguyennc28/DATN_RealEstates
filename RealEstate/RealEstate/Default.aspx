@@ -27,8 +27,8 @@
             });
         })
     </script>
-    <script src="../js/jquery-1.11.2.min.js"></script>
-    <script src="../js/modules/jquery.featureList-1.0.0.js"></script>
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/modules/jquery.featureList-1.0.0.js"></script>
     <script type="text/javascript">
         jQuery(function ($) {
             $.featureList(
@@ -178,215 +178,106 @@
         line-height: 48px;
         color: #fff;
     }
+    .tabcontent {
+        text-align: center;
+        background: #EEEEEE;
+    }
+    .searchTb {
+        margin-top: 10px;
+    }
+    .banner_main_left {
+        margin-top: 5px;
+    }
+    .news_main {
+        height: 155px;
+        background: #E6EBF9;
+        margin-top: 5px;
+    }
+    .news_main ul li {
+        color: blue;
+    }
 </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="row" style="margin-top: -30px;">
     <div class="span2">
-        <div class="tabbed" style="width: 240px; margin-left: -1px;">
             <div class="tabhead">
                 <h2 class="tabtit">
                     <img src="/Icons/searchnha.png" style="width: 45px; float: left; margin-top: 2px; margin-left: 8px;" />
                     Công cụ tìm kiếm </h2>
-                <ul class="tabnav">
-                    <li style="width: 50px;"><a href="#tab1">BĐS bán </a></li>
-                    <li style="width: 85px;"><a href="#tab2">BĐS cho thuê</a></li>
-                    <li style="width: 50px;"><a href="#tab3">Nhà trọ</a></li>
-                    <li style="width: 55px;"><a href="#tab4">Môi giới</a></li>
-                </ul>
-            </div>
-            <div class="tabcont">
-                <div id="tab1" class="tabcontent" align="justify">
+                <div class="tabcont">
+                    <div id="tab1" class="tabcontent" align="justify">
+                        <div style="height: 20px;">
+                        </div>
+                        <div style="height: 320px;">
+                            <span class="searchTb">
+                                <asp:TextBox ID="txtSearchKeyword1" runat="server"></asp:TextBox>
+                            </span>
 
-                    <span class="searchTb">
-                        <asp:TextBox ID="txtSearchKeyword1" runat="server"></asp:TextBox>
-                    </span>
+                            <span class="searchDdl">
+                                <asp:DropDownList ID="ddlRealEstateType" runat="server">
+                                </asp:DropDownList></span>
 
-                    <span class="searchDdl">
-                        <asp:DropDownList ID="ddlRealEstateType" runat="server">
-                        </asp:DropDownList></span>
+                            <span class="searchDdl">
+                                <asp:DropDownList ID="ddlCitySl" runat="server" OnSelectedIndexChanged="ddlCitySl_SelectedIndexChanged" AutoPostBack="True">
+                                </asp:DropDownList></span>
 
-                    <span class="searchDdl">
-                        <asp:DropDownList ID="ddlCitySl" runat="server" OnSelectedIndexChanged="ddlCitySl_SelectedIndexChanged" AutoPostBack="True">
-                        </asp:DropDownList></span>
+                            <span class="searchDdl">
+                                <asp:DropDownList ID="ddlDistrictSl" runat="server" AutoPostBack="True">
+                                </asp:DropDownList></span>
 
-                    <span class="searchDdl">
-                        <asp:DropDownList ID="ddlDistrictSl" runat="server" AutoPostBack="True">
-                        </asp:DropDownList></span>
+                            <span class="searchDdl">
+                                <asp:DropDownList ID="ddlAreaSl" runat="server">
+                                </asp:DropDownList></span>
 
-                    <span class="searchDdl">
-                        <asp:DropDownList ID="ddlAreaSl" runat="server">
-                        </asp:DropDownList></span>
+                            <span class="searchDdl">
+                                <asp:DropDownList ID="ddlPriceSl" runat="server">
+                                </asp:DropDownList></span>
 
-                    <span class="searchDdl">
-                        <asp:DropDownList ID="ddlPriceSl" runat="server">
-                        </asp:DropDownList></span>
+                            <span class="searchDdl">
+                                <asp:DropDownList ID="ddlBetroomNum" runat="server">                           
+                                </asp:DropDownList></span>
 
-                    <span class="searchDdl">
-                        <asp:DropDownList ID="ddlRegionSl" runat="server">
-                        </asp:DropDownList></span>
-
-                    <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="../img/Button/btTimkiem.png" OnClick="ImageButton1_OnClick" />
-
+                            <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="../img/Button/btTimkiem.png" OnClick="ImageButton1_OnClick" />
+                        </div>                    
+                    </div>
                 </div>
-
-                <div id="tab2" class="tabcontent" align="justify">
-                    <table style="width: 100%;">
-                        <tr>
-                            <td>
-                                <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <asp:DropDownList ID="DropDownList1" runat="server">
-                                </asp:DropDownList>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <asp:DropDownList ID="DropDownList2" runat="server">
-                                </asp:DropDownList>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <asp:DropDownList ID="DropDownList3" runat="server">
-                                </asp:DropDownList>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <asp:DropDownList ID="DropDownList4" runat="server">
-                                </asp:DropDownList>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <asp:DropDownList ID="DropDownList5" runat="server">
-                                </asp:DropDownList>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <asp:DropDownList ID="DropDownList6" runat="server">
-                                </asp:DropDownList>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="../img/Button/btTimkiem.png" /></td>
-                        </tr>
-                    </table>
-                </div>
-
-                <div id="tab3" class="tabcontent" align="justify">
-                    <table style="width: 100%;">
-                        <tr>
-                            <td>
-                                <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <asp:DropDownList ID="DropDownList7" runat="server">
-                                </asp:DropDownList>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <asp:DropDownList ID="DropDownList8" runat="server">
-                                </asp:DropDownList>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <asp:DropDownList ID="DropDownList9" runat="server">
-                                </asp:DropDownList>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <asp:DropDownList ID="DropDownList10" runat="server">
-                                </asp:DropDownList>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <asp:DropDownList ID="DropDownList11" runat="server">
-                                </asp:DropDownList>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <asp:DropDownList ID="DropDownList12" runat="server">
-                                </asp:DropDownList>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <asp:ImageButton ID="ImageButton3" runat="server" ImageUrl="../img/Button/btTimkiem.png" /></td>
-                        </tr>
-                    </table>
-                </div>
-
-                <div id="tab4" class="tabcontent" align="justify">
-                    <table style="width: 100%;">
-                        <tr>
-                            <td>
-                                <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <asp:DropDownList ID="DropDownList13" runat="server">
-                                </asp:DropDownList>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <asp:DropDownList ID="DropDownList14" runat="server">
-                                </asp:DropDownList>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <asp:DropDownList ID="DropDownList15" runat="server">
-                                </asp:DropDownList>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <asp:DropDownList ID="DropDownList16" runat="server">
-                                </asp:DropDownList>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <asp:DropDownList ID="DropDownList17" runat="server">
-                                </asp:DropDownList>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <asp:DropDownList ID="DropDownList18" runat="server">
-                                </asp:DropDownList>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <asp:ImageButton ID="ImageButton4" runat="server" ImageUrl="../img/Button/btTimkiem.png" /></td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        </div>
+            </div>               
     </div>
     <div class="span5">
         <ul id="output">            
             <asp:Literal ID="ltrImagesLink" runat="server"></asp:Literal>
         </ul>
-        <div> </div>
+        <div class="news_main">
+            <%--<marquee scrollamount="2" scrolldelay="98" direction="up" onmouseover="this.stop()" onmouseout="this.start()">--%>
+            <ul>
+                <li>
+                        <a href="#"> Tin tức 1</a>
+                    </li>
+                    <li>
+                        <a href="#"> Tin tức 1</a>
+                    </li>
+                    <li>
+                        <a href="#"> Tin tức 1</a>
+                    </li>
+                    <li>
+                        <a href="#"> Tin tức 1</a>
+                    </li>
+                    <li>
+                        <a href="#"> Tin tức 1</a>
+                    </li>
+                    <li>
+                        <a href="#"> Tin tức 1</a>
+                    </li>
+                    <li>
+                        <a href="#"> Tin tức 1</a>
+                    </li>
+                    <li>
+                        <a href="#"> Tin tức 1</a>
+                    </li>
+            </ul>
+            <%--</marquee>--%>
+        </div>
     </div>
     <div class="span2">
         <div class="feature-news">
@@ -394,8 +285,7 @@
             <marquee scrollamount="2" scrolldelay="98" direction="up" onmouseover="this.stop()" onmouseout="this.start()">
             <ul id="tabs">
                 <asp:Literal ID="ltrTextLink" runat="server"></asp:Literal>
-            </ul>
-            </marquee>
+            </ul></marquee>
         </div>
         <div class="banner_main_left">
             <a href="PostNewRE.aspx" alt="Đăng tin rao bất động sản của bạn"><img src="/Upload/Banner/banner_2.gif" style="width: 100%" /></a>
@@ -403,9 +293,9 @@
     </div>
     
 </div>
-<div class="row" style="   margin-left: -7px;">
+<div class="row" style="   margin-left: -7px; margin-top: 5px; margin-bottom: 5px;">
     <div class="span10">
-        <a href="#"> <img src="../img/BannerMoving/BNN.gif"/></a>
+        <a href="#"> <img src="/img/BannerMoving/BNN.gif"/></a>
     </div>
 </div>
 

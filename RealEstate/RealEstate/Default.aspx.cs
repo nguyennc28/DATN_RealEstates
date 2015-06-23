@@ -20,6 +20,7 @@ namespace RealEstate
                 ViewCity();
                 GetArea();
                 GetPrice();
+                GetBetroomNum();
                 ViewRealEstateType();
                 LoadNewsImageSlide();
                 LoadHome();
@@ -96,6 +97,19 @@ namespace RealEstate
             ddlPriceSl.Items.Add(new ListItem("4 tỷ VNĐ - 4.5 tỷ VNĐ", "4500000000"));
             ddlPriceSl.Items.Add(new ListItem("4.5 tỷ VNĐ - 5 tỷ VNĐ", "5000000000"));
             ddlPriceSl.Items.Add(new ListItem("trên 5 tỷ VNĐ", "5000001000"));
+        }
+
+        private void GetBetroomNum()
+        {
+            ddlBetroomNum.Items.Clear();
+            ddlBetroomNum.Items.Add(new ListItem("-Chọn số phòng ngủ-", "0"));
+            ddlBetroomNum.Items.Add(new ListItem("-1-", "1"));
+            ddlBetroomNum.Items.Add(new ListItem("-2-", "2"));
+            ddlBetroomNum.Items.Add(new ListItem("-3-", "3"));
+            ddlBetroomNum.Items.Add(new ListItem("-4-", "4"));
+            ddlBetroomNum.Items.Add(new ListItem("-5-", "5"));
+            ddlBetroomNum.Items.Add(new ListItem("-6-", "6"));
+            ddlBetroomNum.Items.Add(new ListItem("-7-", "7"));
         }
         private void GetArea()
         {
@@ -233,9 +247,45 @@ namespace RealEstate
                 Session["price"] = ddlPriceSl.SelectedValue;
                 Session["area"] = ddlAreaSl.SelectedValue;
                 Session["k"] = txtSearchKeyword1.Text;
+                Session["betroom"] = ddlBetroomNum.SelectedValue;
                 Response.Redirect("/Default2.aspx?mod=");
             }
         }
+
+        private void LoadBroker()
+        {
+            string chuoi = "";
+            List<UsersInfo> listBroker = new List<UsersInfo>();
+            listBroker = UsersService.UsersInfo_GetByTop("5", "GroupID = 4", "");
+            if (listBroker.Count > 0)
+            {
+                for (int i = 0; i < listBroker.Count; i++)
+                {
+                    chuoi += "<div class=\" row \" style=\"border-bottom: 1px solid grey; width: 99%; margin-left: 1px;\">";
+                    chuoi += "<div style=\" width: 40%; float: left; margin-left: 10px;\">";
+                    chuoi += "<a href=\" \" alt=\" Xem chi tiết \"><img src=\"" + listBroker[i].Avatar +
+                             "\" style=\"margin: 5px 0px;\"/></a>";
+                    chuoi += "</div>";
+
+                    chuoi += "<div style=\" margin: 5px 0px; width:55%; float: right; line-height: 20px;\">";
+                    chuoi += "<p><span style=\" font-size: 14px; color: blue;\">" + listBroker[i].FullName +
+                             "</span></p>";
+                    chuoi += "<p><span style=\" font-size: 12px; color: red;\">" + listBroker[i].MobilePhone +
+                             "</span></p>";
+                    chuoi += "<p><span style=\" font-size: 12px; color: #535699;\">" + listBroker[i].Address +
+                             "</span></p>";
+                    chuoi += "</div>";
+                    chuoi += "</div>";
+                }
+            }
+            else
+            {
+                chuoi += "<p> <span> Chưa có dữ liệu để hỉển thị!</span></p>";
+            }
+            ltrBroker.Text = chuoi;
+            listBroker.Clear();
+        }
+
         private void LoadNewsImageSlide()
         {
             string chuoiImageLinks = "";
@@ -249,36 +299,16 @@ namespace RealEstate
                     chuoiImageLinks += " <img src=\"" + listRealEstateNewsInfos[i].Images + " \" alt=\" \"/>";
                     chuoiImageLinks += "</a></li>";
 
-                    chuoiTextLink += "<li> <a href=\"#\" target=\"_blank \" >" + listRealEstateNewsInfos[i].Title +
+                    chuoiTextLink += "<li> <a href=\"ViewDetails.aspx?ID= "+listRealEstateNewsInfos[i].RealEstateNewsID + "\" target=\"_blank \" >" + listRealEstateNewsInfos[i].Title +
                                      "</a> </li>";
                 }
                 ltrImagesLink.Text = chuoiImageLinks;
                 ltrTextLink.Text = chuoiTextLink;
+                ltrTextLink2.Text = chuoiTextLink;
                 listRealEstateNewsInfos.Clear();
             }
         }
-
-        private void LoadBroker()
-        {
-            string chuoi = "";
-            List<UsersInfo> listBroker = new List<UsersInfo>();
-            listBroker = UsersService.UsersInfo_GetByTop("5", "GroupID = 4", "");
-            if (listBroker.Count > 0)
-            {
-                for (int i = 0; i < listBroker.Count; i++)
-                {
-                    chuoi += "<div style=\" width: 40%; float: left;\">";
-                    chuoi += "<a href=\" \" alt=\" Xem chi tiết \"><img src=\"" + listBroker[i].Avatar + "\" style=\"  \"/></a>";
-                    chuoi += "</div>";
-
-                    chuoi += "<div style=\" width:55%; float: right; line-height: 10px;\">";
-                    chuoi += "<p><span style=\" font-size: 14px; color: #535699;\">" + listBroker[i].FullName + "</span></p>";
-                    chuoi += "<p><span style=\" font-size: 12px; color: red;\">" + listBroker[i].MobilePhone + "</span></p>";
-                    chuoi += "<p><span style=\" font-size: 12px; color: #535699;\">" + listBroker[i].Address + "</span></p>";
-                    chuoi += "</div>";
-                }
-            }
-        }
+       
         private void LoadHome()
         {
             string chuoi = "";

@@ -20,7 +20,7 @@
                 max-width: 100%;
             }
 
-            .tabbed .tabcont .tabcontent.Active {
+            .tabbed .tabcont .tabcontent.active {
                 display: block;
             }
 
@@ -47,7 +47,7 @@
             color: #3E9409;
         }
 
-        .tabnav li.Active a {
+        .tabnav li.active a {
             background: #404533;
             color: #fff;
         }

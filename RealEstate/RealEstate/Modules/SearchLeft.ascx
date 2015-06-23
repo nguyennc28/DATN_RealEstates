@@ -42,7 +42,7 @@
         background: #eee;
         padding: 18px;
         margin-top: 50px;
-        height: 300px;
+        height: 330px;
     }
 
     .tabbed .tabcont .tabcontent {

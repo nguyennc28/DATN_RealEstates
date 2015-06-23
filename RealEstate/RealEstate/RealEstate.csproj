@@ -532,6 +532,7 @@
     <Content Include="js\modules\uploader.swf" />
     <Content Include="Login2.aspx" />
     <Content Include="Modules\Home.ascx" />
+    <Content Include="Modules\KetQuaTimKiem.ascx" />
     <Content Include="Modules\ModulesDetail\ApartmentsDetail.ascx" />
     <Content Include="Modules\ModulesHome\SaleAdjacentVilla.ascx" />
     <Content Include="Modules\ModulesHome\SaleHousePavement.ascx" />
@@ -614,6 +615,7 @@
     <Content Include="Upload\SlideNewsImages\ImgSlideNew2.jpg" />
     <Content Include="Upload\SlideNewsImages\ImgSlideNew3.jpg" />
     <Content Include="Upload\SlideNewsImages\ImgSlideNew4.jpg" />
+    <Content Include="ViewDetails.aspx" />
     <Content Include="ViewPostNewRE.aspx" />
     <Content Include="ViewPostRentMotel.aspx" />
     <Content Include="ViewRegister.aspx" />
@@ -948,6 +950,13 @@
     <Compile Include="Modules\Home.ascx.designer.cs">
       <DependentUpon>Home.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Modules\KetQuaTimKiem.ascx.cs">
+      <DependentUpon>KetQuaTimKiem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\KetQuaTimKiem.ascx.designer.cs">
+      <DependentUpon>KetQuaTimKiem.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Modules\ModulesDetail\ApartmentsDetail.ascx.cs">
       <DependentUpon>ApartmentsDetail.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1214,6 +1223,13 @@
     </Compile>
     <Compile Include="Tintuc.aspx.designer.cs">
       <DependentUpon>Tintuc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewDetails.aspx.cs">
+      <DependentUpon>ViewDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewDetails.aspx.designer.cs">
+      <DependentUpon>ViewDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewPostNewRE.aspx.cs">
       <DependentUpon>ViewPostNewRE.aspx</DependentUpon>

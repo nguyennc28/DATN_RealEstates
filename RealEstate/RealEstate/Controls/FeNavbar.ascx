@@ -17,7 +17,7 @@
                     <img src="Icons/logo_nav.png" style="height: 55px;" /></a>
             </div>
             <div class="span5">
-                <img src="../Upload/Banner/banner_top_batdongsan.gif"/>                
+                <img src="../Upload/Banner/banner_top_batdongsan.gif" width="70%"/>                
              </div>
             <div class="span2">
                 <p>

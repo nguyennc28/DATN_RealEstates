@@ -27,7 +27,7 @@
     })
 </script>
 
-<div class="row">
+<%--<div class="row">
     <div class="span10">
         <div class="tabbed">
             <ul class="tabnav">
@@ -51,41 +51,10 @@
             </div>
         </div>
     </div>
+</div>--%>
+<div class="row">
+    <asp:Literal ID="ltrTab1" runat="server"></asp:Literal>
 </div>
-<div class="tabbed" style="margin-top: 5px;">
-    <ul class="tabnav">
+   
 
-        <li><a href="#tab1">Tất cả Tin rao</a></li>
-
-        <li><a href="#tab2">Tin rao mới nhất</a></li>
-
-        <li><a href="#tab3">Tin rao có hình</a></li>
-
-        <li><a href="#tab4">Tin rao có video</a></li>
-
-        <li><a href="#tab5">Xem bản đồ</a></li>
-
-    </ul>
-    <div class="tabcont">
-
-        <div id="tab1" class="tabcontent" align="justify">
-            <asp:Literal ID="ltrTab1" runat="server"></asp:Literal>
-
-        </div>
-
-        <div id="tab2" class="tabcontent" align="justify">
-            <asp:Literal ID="ltrTab2" runat="server"></asp:Literal>
-        </div>
-        <div id="tab3" class="tabcontent" align="justify">
-            <asp:Literal ID="ltrTab3" runat="server"></asp:Literal>
-        </div>
-
-        <div id="tab4" class="tabcontent" align="justify">
-            <asp:Literal ID="ltrTab4" runat="server"></asp:Literal>
-        </div>
-
-        <div id="tab5" class="tabcontent" align="justify">
-            <asp:Literal ID="ltrTab5" runat="server"></asp:Literal>
-        </div>
-    </div>
-</div>
+        

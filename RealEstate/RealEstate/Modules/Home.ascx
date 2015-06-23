@@ -80,6 +80,17 @@
     .span2 #tabs {
         margin: 10px;
     }
+    .ListNewsBody {
+        border: 1px solid #404533;
+    }
+    .news_main {
+        height: 140px;
+        background: #E6EBF9;
+        margin-top: 5px;
+    }
+    .news_main ul li {
+        color: blue;
+    }
 </style>
 <div class="row" style="margin-top: -30px;">
     <div class="span2">
@@ -89,7 +100,36 @@
         <ul id="output">            
             <asp:Literal ID="ltrImagesLink" runat="server"></asp:Literal>
         </ul>
-        <div> </div>
+        <div class="news_main">
+            <%--<marquee scrollamount="2" scrolldelay="98" direction="up" onmouseover="this.stop()" onmouseout="this.start()">--%>
+            <ul id="tabs">
+                <li>
+                        <a href="#"> Tin tức 1</a>
+                    </li>
+                    <li>
+                        <a href="#"> Tin tức 1</a>
+                    </li>
+                    <li>
+                        <a href="#"> Tin tức 1</a>
+                    </li>
+                    <li>
+                        <a href="#"> Tin tức 1</a>
+                    </li>
+                    <li>
+                        <a href="#"> Tin tức 1</a>
+                    </li>
+                    <li>
+                        <a href="#"> Tin tức 1</a>
+                    </li>
+                    <li>
+                        <a href="#"> Tin tức 1</a>
+                    </li>
+                    <li>
+                        <a href="#"> Tin tức 1</a>
+                    </li>
+            </ul>
+            <%--</marquee>--%>
+        </div>
     </div>
     <div class="span2">
         <div class="feature-news">
@@ -117,7 +157,6 @@
         <div class="tabList">
             <div class="tabHeader">
                 <h4>Tin rao danh cho bạn</h4>
-
             </div>
             <div class="tabbody" style="height: 100%; background: #EEEEEE;">
                 <asp:Literal ID="ltrTab1" runat="server"></asp:Literal>
@@ -162,7 +201,7 @@
             <div class="ListNewsHeader">
                 <h4>Các nhà môi giới tiêu biểu!</h4>
             </div>
-            <div class="ListNewsBody">
+            <div class="ListNewsBody" style="border: 1px solid olive; height: 378px;">
                 <asp:Literal ID="ltrBroker" runat="server"></asp:Literal>
             </div>
         </div>

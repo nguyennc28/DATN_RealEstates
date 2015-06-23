@@ -17,28 +17,21 @@
             <img alt="" src="/App_Themes/admin/images/icon_system.jpg" /><asp:LinkButton
                 ID="lbtConfig" CausesValidation="false" runat="server" OnClick="LinkButton_Click">Cấu hình</asp:LinkButton></li>
         <li>--%>
+        <li>
             <img alt="" src="/App_Themes/admin/images/icon_user.jpg" /><asp:LinkButton
                 ID="lbtUserManager" CausesValidation="false" runat="server" OnClick="LinkButton_Click">Người dùng</asp:LinkButton></li>
         <li>
             <img alt="" src="/App_Themes/admin/images/icon_user.jpg" /><asp:LinkButton
                 ID="LinkButton2" CausesValidation="false" runat="server" OnClick="LinkButton_Click">Nhà môi giới</asp:LinkButton></li>
-        <li>
+        <%--<li>
             <img alt="" src="/App_Themes/admin/images/icon_page.jpg" />
             <asp:LinkButton
-                ID="lbtPage" CausesValidation="false" runat="server" OnClick="LinkButton_Click">Danh mục trang</asp:LinkButton></li>
+                ID="lbtPage" CausesValidation="false" runat="server" OnClick="LinkButton_Click">Danh mục trang</asp:LinkButton></li>--%>
         <li>
             <img alt="" src="/App_Themes/admin/images/icon_page.jpg" />
             <asp:LinkButton
                 ID="LinkButton1" CausesValidation="false" runat="server" OnClick="LinkButton_Click">Menu</asp:LinkButton></li>
-        <%--<li>
-            <img alt="" src="/App_Themes/admin/images/icon_page.jpg" />
-            <asp:LinkButton
-                ID="LinkButton3" CausesValidation="false" runat="server" OnClick="LinkButton_Click">Bất động sản bán</asp:LinkButton></li>
         <li>
-            <img alt="" src="/App_Themes/admin/images/icon_page.jpg" />
-            <asp:LinkButton
-                ID="LinkButton4" CausesValidation="false" runat="server" OnClick="LinkButton_Click">Bất động sản cho thuê</asp:LinkButton></li>
-        <li>--%>
             <img alt="" src="/App_Themes/admin/images/icon_adv.jpg" /><asp:LinkButton
                 ID="lbtLinksManager" CausesValidation="false" runat="server" OnClick="LinkButton_Click">Liên kết</asp:LinkButton></li>
         <li>

@@ -53,17 +53,29 @@ namespace RealEstate.Modules
             {
                 for (int i = 0; i < listBroker.Count; i++)
                 {
-                    chuoi += "<div style=\" width: 40%; float: left;\">";
-                    chuoi += "<a href=\" \" alt=\" Xem chi tiết \"><img src=\"" + listBroker[i].Avatar + "\" style=\"  \"/></a>";
+                    chuoi += "<div class=\" row \" style=\"border-bottom: 1px solid grey; width: 99%; margin-left: 1px;\">";
+                    chuoi += "<div style=\" width: 40%; float: left; margin-left: 10px;\">";
+                    chuoi += "<a href=\" \" alt=\" Xem chi tiết \"><img src=\"" + listBroker[i].Avatar +
+                             "\" style=\"margin: 5px 0px;\"/></a>";
                     chuoi += "</div>";
 
-                    chuoi += "<div style=\" width:55%; float: right; line-height: 10px;\">";
-                    chuoi += "<p><span style=\" font-size: 14px; color: #535699;\">" + listBroker[i].FullName + "</span></p>";
-                    chuoi += "<p><span style=\" font-size: 12px; color: red;\">" + listBroker[i].MobilePhone + "</span></p>";
-                    chuoi += "<p><span style=\" font-size: 12px; color: #535699;\">" + listBroker[i].Address + "</span></p>";
+                    chuoi += "<div style=\" margin: 5px 0px; width:55%; float: right; line-height: 20px;\">";
+                    chuoi += "<p><span style=\" font-size: 14px; color: blue;\">" + listBroker[i].FullName +
+                             "</span></p>";
+                    chuoi += "<p><span style=\" font-size: 12px; color: red;\">" + listBroker[i].MobilePhone +
+                             "</span></p>";
+                    chuoi += "<p><span style=\" font-size: 12px; color: #535699;\">" + listBroker[i].Address +
+                             "</span></p>";
+                    chuoi += "</div>";
                     chuoi += "</div>";
                 }
             }
+            else
+            {
+                chuoi += "<p> <span> Chưa có dữ liệu để hỉển thị!</span></p>";
+            }
+            ltrBroker.Text = chuoi;
+            listBroker.Clear();
         }
         private void LoadHome()
         {
@@ -90,7 +102,7 @@ namespace RealEstate.Modules
                              listApartmentInfos[0].BedroomNumber + "</span>" + "</p>";
                     chuoi += "<p>" + "<table><tr><td width=\"50%\">Địa chỉ: " + "<span style=\"color: blue;\">" + listApartmentInfos[i].Address + "</span>" + "</td><td width=\"50%\">Người đăng: " + "<span style=\"color: blue; \">" + listApartmentInfos[i].CreateBy + "</span>" + "</td></tr></table></p>";
                     chuoi += "</div>";
-                    chuoi += "<hr style=\" margin-left: 9px; width: 99%; color: grey\">";
+                    chuoi += "<hr style=\" width: 99%; color: grey\">";
                     chuoi += "</div>";
                 }
             }
